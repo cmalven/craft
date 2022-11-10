@@ -1,12 +1,12 @@
 dateModified: 1668116821
 email:
   fromEmail: chris@malven.co
-  fromName: 'Your Project Title'
+  fromName: 'your-project-title'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    33e725ff-6a81-4865-9ac0-079fac72c0cb: 'Your Project Title' # Your Project Title
-    1791e3ba-a3f2-4452-9b01-23bac2984a77: 'Your Project Title' # Your Project Title
+    33e725ff-6a81-4865-9ac0-079fac72c0cb: 'your-project-title' # your-project-title
+    1791e3ba-a3f2-4452-9b01-23bac2984a77: 'your-project-title' # your-project-title
     d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
 plugins:
   aws-s3:
@@ -72,7 +72,7 @@ plugins:
 system:
   edition: solo
   live: true
-  name: 'Your Project Title'
+  name: 'your-project-title'
   schemaVersion: 4.0.0.9
   timeZone: America/Los_Angeles
 users:
