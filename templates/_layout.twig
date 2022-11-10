@@ -1,0 +1,43 @@
+{# =============================================================== #}
+{# Layout Template
+{# =============================================================== #}
+
+{% include '_partials/vite' ignore missing %}
+{% import '_macros/theme' as theme %}
+
+<!DOCTYPE html>
+<html lang="en-US" class="{{ theme.classForEntry(entry ??? null) }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include '_partials/head' %}
+</head>
+
+<body
+  class="{{ bodyClass | default('') }}"
+  data-module-debug-reveal
+>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  {# Global Header #}
+  {% include '_partials/global-header' %}
+
+  {# Main Content Container #}
+  <main class="l-container" tabindex="-1" id="main-content">
+    {% block content %}{% endblock %}
+
+    {% include '_partials/debug-grid' %}
+  </main>
+
+  {# SVG #}
+  <span class="h-hide-visually">
+    {{ source('_svg/symbol/icon.symbol.svg', ignore_missing = true) }}
+    {{ source('_svg/symbol/full.symbol.svg', ignore_missing = true) }}
+  </span>
+
+  {# Bug Tracking #}
+  {% if getenv('CRAFT_ENVIRONMENT') == 'staging' %}
+    {# TODO: Add scripts for bug-tracking software #}
+  {% endif %}
+</body>
+</html>

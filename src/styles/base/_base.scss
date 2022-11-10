@@ -1,0 +1,46 @@
+// ===============================================================
+// Base Styles
+// ===============================================================
+
+/*
+  General styling to provide a clean, solid base
+*/
+
+:root {
+  // Top-level CSS custom properties
+}
+
+html,
+body {
+  background-color: var(--theme-bg);
+}
+
+html {
+  @include custom-scrollbar;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--theme-text);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  color: inherit;
+}

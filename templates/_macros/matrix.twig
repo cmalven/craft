@@ -1,0 +1,69 @@
+{# =============================================================== #}
+{# Matrix
+{# =============================================================== #}
+{#
+  {% import '_macros/matrix' as matrix %}
+#}
+
+{# ------------------------------------------------------------------ #}
+{# Block Classes
+{# ------------------------------------------------------------------ #}
+{#
+  {{ matrix.blockClasses(handle, block) }}
+
+  Returns an array of modifier classes for a given matrix block
+
+  @param handle (string)             - [required] Handle for the block
+  @param block (Matrix Block)        - [required] The block to examine
+#}
+
+{% macro blockClasses(handle, block) %}
+  {% set classes = [] %}
+
+  {# All spacing #}
+  {% if handle not in [] %}
+    {# Top padding #}
+    {% if handle not in [] %}
+      {% set classes = classes | merge(['space-top']) %}
+    {% endif %}
+
+    {# Bottom spacing #}
+    {% if handle not in [] %}
+      {% set classes = classes | merge(['space-bottom']) %}
+    {% endif %}
+  {% else %}
+    {% set classes = classes | merge(['block-top', 'block-bottom']) %}
+  {% endif %}
+
+  {# Block Top / Bottom #}
+  {% if handle in [] %}
+    {% set classes = classes | merge(['block-top']) %}
+  {% endif %}
+
+  {% if handle in [] %}
+    {% set classes = classes | merge(['block-bottom ']) %}
+  {% endif %}
+
+  {# Block Mobile (no top/bottom spacing on mobile) #}
+  {% if handle in [] %}
+    {% set classes = classes | merge(['block-top-mobile', 'block-bottom-mobile']) %}
+  {% endif %}
+
+  {# Max #}
+  {% if handle not in [] %}
+    {% set classes = classes | merge(['max']) %}
+  {% endif %}
+
+  {# Background Color #}
+  {% set defaultBg = 'light' %}
+  {% set hasBgColor = block.backgroundColor ??? false and block.backgroundColor.value != defaultBg %}
+  {% if
+    handle in [] or hasBgColor
+  %}
+    {% set classes = classes | merge(['bg-' ~ block.backgroundColor.value]) %}
+  {% else %}
+    {% set classes = classes | merge(['bg-' ~ defaultBg]) %}
+  {% endif %}
+
+  {% return classes %}
+{% endmacro %}

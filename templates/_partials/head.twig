@@ -1,0 +1,46 @@
+{# Favicons #}
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicons/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="/favicons/manifest.json">
+<meta name="theme-color" content="#000000">
+
+{# Pre-load fonts #}
+{% for font in [
+
+] %}
+  <link rel="preload" href="/fonts/{{ font }}.woff2" as="font" type="font/woff2" crossorigin>
+{% endfor %}
+
+{# Add styling hook class to <html> if javascript enabled #}
+<script>
+  var root = document.getElementsByTagName('html')[0];
+  root.className += ' js';
+</script>
+
+{# Set global variable for Craft devMode #}
+<script>
+  window.devMode = {{ craft.app.config.general.devMode ? 'true' : 'false' }};
+</script>
+
+{# Add a styling hook for devices with touch support #}
+<script>
+  window.addEventListener('touchstart', function() {
+    document.getElementsByTagName('html')[0].classList.add('is-touch');
+    window.isTouch = true;
+  });
+</script>
+
+{# Lazy Sizes #}
+<script>
+  window.lazySizesConfig = {
+    addClasses: true,
+    expand: 1000,
+    lazyClass: 'lazyload',
+    loadingClass: 'is-loading',
+    loadedClass: 'is-loaded',
+    customMedia: {
+      '--small': '(max-width: 768px)'
+    }
+  };
+</script>

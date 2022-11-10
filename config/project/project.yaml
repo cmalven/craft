@@ -1,0 +1,83 @@
+dateModified: 1668116821
+email:
+  fromEmail: chris@malven.co
+  fromName: 'Your Project Title'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    33e725ff-6a81-4865-9ac0-079fac72c0cb: 'Your Project Title' # Your Project Title
+    1791e3ba-a3f2-4452-9b01-23bac2984a77: 'Your Project Title' # Your Project Title
+    d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
+plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '2.0'
+  blitz:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.2.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  craft-ray:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  empty-coalesce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  environment-label:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  imager-x:
+    edition: lite
+    enabled: true
+    schemaVersion: 4.0.0
+  matrixmate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.11
+  sherlock:
+    edition: lite
+    enabled: true
+    schemaVersion: 4.1.0
+  twig-perversion:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Your Project Title'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

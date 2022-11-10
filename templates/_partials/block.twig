@@ -1,0 +1,34 @@
+{# =============================================================== #}
+{# Block
+{# =============================================================== #}
+{#
+  {% include '_partials/block' with {
+    handle: 'foo',
+    block: {
+      …
+    },
+    debug: false
+  } only %}
+#}
+
+{% import '_macros/matrix' as matrix %}
+
+{% set handle = handle | dasherize %}
+
+{% embed '_embeds/l-section' with {
+  classes: "js-block-#{handle} " ~ (classes ?? ''),
+  modifiers: [handle] | merge(matrix.blockClasses(handle, block))
+} %}
+  {% block content %}
+    {% include '_partials/blocks/' ~ handle ignore missing %}
+
+    {% if debug ?? false %}
+      <div
+        style="display: inline-block; left: 0; transform-origin: 0 0; transform: rotate(-90deg); position: absolute; z-index: 1;"
+      >
+        <p
+          style="font-size: 14px; line-height: 1; color: black; background-color: #eee; display: inline-block; position: relative; padding: 8px 12px 7px;">{{ block.type.name }}</p>
+      </div>
+    {% endif %}
+  {% endblock %}
+{% endembed %}
