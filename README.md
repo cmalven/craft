@@ -7,8 +7,8 @@ A solid start for Craft CMS projects at Malven Co.
 ## Create a new project with this template
 
 ```shell
-npx degit https://github.com/cmalven/craft my-project-slug
-cd my-project-slug
+npx degit https://github.com/cmalven/craft your-project-slug
+cd your-project-slug
 ```
 
 - Find-and-replace all occurrences of `your-project-title` and `your-project-slug` in the project with your actual project's title and slug.
