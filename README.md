@@ -11,7 +11,7 @@ npx degit https://github.com/cmalven/craft your-project-slug
 cd your-project-slug
 ```
 
-- Find-and-replace all occurrences of `your-project-title` and `your-project-slug` in the project with your actual project's title and slug.
+- Run `bash ./bin/setup.sh my-actual-slug My\ Actual\ Title`.
 - Follow the steps in `Setup` below.
 - Run `ddev craft update all` to update Craft and plugins.
 - Run `npx npm-check -u` to update all frontend dependencies.
