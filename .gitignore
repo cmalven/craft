@@ -1,4 +1,44 @@
-/.env
-/.idea
-/vendor
+# Craft 3
+# ---------------------------
+/storage/*
+!/storage/rebrand
+/templates/_svg/**/*
+/templates/_partials/vite.twig
+/src/static/images/
+/web/**/*
+!/web/favicons/
+!/web/fonts/
+!/web/.htaccess
+!/web/index.php
+!/web/*.txt
+!/web/*.png
+!/web/*.ico
+!/web/*.webmanifest
+!/web/*.svg
+!/web/*.xml
+
+# Package Managers
+# ---------------------------
+/vendor/
+/node_modules/
+
+# System
+# ---------------------------
 .DS_Store
+Thumbs.db
+
+# Editors
+# ---------------------------
+*.sublime-project
+*.sublime-workspace
+.idea
+
+# Temp
+# ---------------------------
+.env
+*.log
+/tmp
+
+# Compiled Files
+# ---------------------------
+/dist/
