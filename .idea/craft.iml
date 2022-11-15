@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/modules" isTestSource="false" packagePrefix="modules\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.ddev/.global_commands" />
-      <excludeFolder url="file://$MODULE_DIR$/.ddev/commands" />
       <excludeFolder url="file://$MODULE_DIR$/.ddev/homeadditions" />
       <excludeFolder url="file://$MODULE_DIR$/.ddev/providers" />
       <excludeFolder url="file://$MODULE_DIR$/.ddev/xhprof" />
