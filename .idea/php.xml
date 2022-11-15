@@ -15,7 +15,6 @@
       <path value="$PROJECT_DIR$/vendor/webonyx/graphql-php" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-composer" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-shell" />
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-queue" />
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
@@ -69,7 +68,6 @@
       <path value="$PROJECT_DIR$/vendor/voku/stringy" />
       <path value="$PROJECT_DIR$/vendor/voku/email-check" />
       <path value="$PROJECT_DIR$/vendor/voku/arrayy" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-utf8" />
       <path value="$PROJECT_DIR$/vendor/voku/anti-xss" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
@@ -89,7 +87,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/seld/cli-prompt" />
       <path value="$PROJECT_DIR$/vendor/cebe/markdown" />
-      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/voku/urlify" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
@@ -163,7 +160,6 @@
       <path value="$PROJECT_DIR$/vendor/php-science/textrank" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-autocomplete" />
-      <path value="$PROJECT_DIR$/vendor/nystudio107/craft-plugin-manifest" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-emptycoalesce" />
       <path value="$PROJECT_DIR$/vendor/mmikkel/cp-field-inspect" />
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
@@ -178,6 +174,7 @@
       <path value="$PROJECT_DIR$/vendor/topshelfcraft/wordsmith" />
       <path value="$PROJECT_DIR$/vendor/topshelfcraft/base" />
       <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/nystudio107/craft-plugin-vite" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

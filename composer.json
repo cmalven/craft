@@ -7,7 +7,7 @@
     "mmikkel/cp-field-inspect": "^1.4",
     "nystudio107/craft-autocomplete": "^1.10",
     "nystudio107/craft-emptycoalesce": "^4.0",
-    "nystudio107/craft-seomatic": "^4.0",
+    "nystudio107/craft-seomatic": "4.0.13",
     "putyourlightson/craft-blitz": "^4.2",
     "putyourlightson/craft-sherlock": "^4.2",
     "sebastianlenz/linkfield": "^2.1",
