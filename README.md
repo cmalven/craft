@@ -1,6 +1,6 @@
 # your-project-title
 
-A solid start for Craft CMS projects at Malven Co.
+your-project-description
 
 ---
 
@@ -11,7 +11,7 @@ npx degit https://github.com/cmalven/craft your-project-slug
 cd your-project-slug
 ```
 
-- Run `bash ./bin/setup.sh my-actual-slug My\ Actual\ Title`.
+- Run `bash ./bin/setup.sh "my-actual-slug" "My Actual Title" "A brief description of my project"`.
 - Follow the steps in `Setup` below.
 - Run `ddev craft update all` to update Craft and plugins.
 - Run `npx npm-check -u` to update all frontend dependencies.

@@ -1,6 +1,6 @@
 {
   "name": "your-project-slug",
-  "description": "A solid start for Craft CMS projects at Malven Co.",
+  "description": "your-project-description",
   "version": "0.0.0",
   "repository": {
     "type": "git",

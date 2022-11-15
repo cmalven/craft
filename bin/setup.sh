@@ -5,3 +5,6 @@ grep -rl your-project-slug . --exclude-dir={.git,bin,node_modules,vendor} | xarg
 
 echo "Replacing project title..."
 grep -rl your-project-title . --exclude-dir={.git,bin,node_modules,vendor} | xargs sed -i '' -e "s/your-project-title/$2/g"
+
+echo "Replacing project description..."
+grep -rl your-project-description . --exclude-dir={.git,bin,node_modules,vendor} | xargs sed -i '' -e "s/your-project-description/$3/g"
