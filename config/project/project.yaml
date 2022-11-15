@@ -1,13 +1,22 @@
-dateModified: 1668116821
+dateModified: 1668530500
 email:
   fromEmail: chris@malven.co
-  fromName: 'your-project-title'
+  fromName: your-project-title
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    33e725ff-6a81-4865-9ac0-079fac72c0cb: 'your-project-title' # your-project-title
-    1791e3ba-a3f2-4452-9b01-23bac2984a77: 'your-project-title' # your-project-title
+    1b5bb69b-bbe2-4f41-9235-44aef00371cb: Default # Default
+    3a32bed0-f47f-4af6-b970-7770b361e95a: Pages # Pages
+    4e4061ff-782b-4d40-991e-097d89c3f169: SEO # SEO
+    6bde6d29-9e5a-4a8c-9d41-d8e5d12ec33d: 'Page Content' # Page Content
+    8e32402b-e63f-492e-a351-f8c770c4d99e: Homepage # Homepage
+    9e9a874c-a710-4d69-8273-4908f88f25ab: Text # Text
+    33e725ff-6a81-4865-9ac0-079fac72c0cb: your-project-title # your-project-title
+    1791e3ba-a3f2-4452-9b01-23bac2984a77: your-project-title # your-project-title
+    673453b1-7363-4af9-a69b-0f9478e93bfc: Text # Text
     d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
+    db2131d9-42a6-4669-b9f5-6ce27eb2e275: Homepage # Homepage
+    fa35bcb3-3708-420c-b074-15d36e91b1eb: SEO # SEO
 plugins:
   aws-s3:
     edition: standard
@@ -72,7 +81,7 @@ plugins:
 system:
   edition: solo
   live: true
-  name: 'your-project-title'
+  name: your-project-title
   schemaVersion: 4.0.0.9
   timeZone: America/Los_Angeles
 users:
