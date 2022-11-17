@@ -182,6 +182,26 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/topshelfcraft/base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/masterminds/html5" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nystudio107/craft-plugin-vite" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/.dbimageBuild" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/.homeadditions" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/.webimageBuild" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/apache" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/db-build" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/db_snapshots" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/nginx_full" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/web-build" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/commands/db" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/commands/solr" />
+      <excludeFolder url="file://$MODULE_DIR$/.ddev/commands/web" />
+      <excludeFolder url="file://$MODULE_DIR$/web/cpresources" />
+      <excludeFolder url="file://$MODULE_DIR$/config/project" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/backups" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/composer-backups" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/config-deltas" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/logs" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/runtime/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/runtime/compiled_templates" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/runtime/temp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
