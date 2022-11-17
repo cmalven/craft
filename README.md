@@ -1,6 +1,6 @@
 # your-project-title
 
-your-project-description
+> your-project-description
 
 ---
 
