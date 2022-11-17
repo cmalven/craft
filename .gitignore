@@ -5,7 +5,7 @@
 /templates/_svg/**/*
 /templates/_partials/vite.twig
 /src/static/images/
-/web/**/*
+/web/*
 !/web/favicons/
 !/web/fonts/
 !/web/.htaccess
