@@ -13,10 +13,13 @@ cd your-project-slug
 
 - Run `bash ./bin/setup.sh "my-actual-slug" "My Actual Title" "A brief description of my project"`.
 - Follow the steps in `Setup` below.
+- Install Craft with `ddev craft install`
+- Run `ddev craft project-config/apply`
 - Run `ddev craft update all` to update Craft and plugins.
 - Run `npx npm-check -u` to update all frontend dependencies.
-- Run `ddev craft project-config/apply`
-- Delete this section of the README and git commit.
+- Delete this section of the README.
+- Create a git repo with `git init`
+- Commit your changes with `git add . && git commit -m "Initial commit"`
 
 ---
 
@@ -26,7 +29,7 @@ cd your-project-slug
 - `ddev composer install`
 - `cp .env.example.dev .env` and modify the contents of `.env` to match your setup
 - `ddev php craft setup/app-id && ddev php craft setup/security-key`
-- `ddev import-db`
+- `ddev import-db` (if a database already exists)
 
 ### Front End Dependencies
 
