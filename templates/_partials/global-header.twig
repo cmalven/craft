@@ -6,13 +6,25 @@
 #}
 
 <header class="global-header">
-  {# Toggle #}
-  <div class="global-header__toggle">
-    {% include '_partials/global-nav-toggle' with {
-      label: 'Menu',
-      action: 'open',
-      key: 'dialog-global-nav',
-    } %}
+  <div class="global-header__inner">
+
+    {# Logo #}
+    <div class="global-header__logo">
+    
+    </div>
+
+    {# Nav #}
+    <div class="global-header__nav">
+      {# Toggle #}
+      <div class="global-header__toggle">
+        {% include '_partials/global-nav-toggle' with {
+          label: 'Menu',
+          action: 'open',
+          key: 'dialog-global-nav',
+        } %}
+      </div>
+    </div>
+
   </div>
 </header>
 

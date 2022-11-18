@@ -9,7 +9,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
  */
 
 export default class extends Modu {
-  closeDelay = 0;
+  closeDelay = 400;
   dialog!: A11yDialog;
 
   constructor(m: ModuOptions) {
@@ -17,7 +17,7 @@ export default class extends Modu {
 
     this.closeDelay = this.getData('close-delay')
       ? Number(this.getData('close-delay'))
-      : 400;
+      : this.closeDelay;
   }
 
   init() {
