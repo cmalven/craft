@@ -35,6 +35,7 @@ Thumbs.db
 .env
 *.log
 /tmp
+http-client.private.env.json
 
 # Compiled Files
 # ---------------------------
