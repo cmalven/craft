@@ -14,6 +14,11 @@ $isDev = App::env('CRAFT_ENVIRONMENT') === 'dev';
 $isProd = App::env('CRAFT_ENVIRONMENT') === 'production';
 
 return GeneralConfig::create()
+    // Aliases
+    ->aliases([
+        '@assetPath' => App::env('PRIMARY_SITE_URL') . '/assets',
+    ])
+
     // Fuzzy Search
     ->defaultSearchTermOptions([
         'subLeft' => true,

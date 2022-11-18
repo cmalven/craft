@@ -1,8 +1,16 @@
-dateModified: 1668530500
+dateModified: 1668800162
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/images'
+    type: craft\fs\Local
+    url: '@assetPath/images'
 meta:
   __names__:
     1b5bb69b-bbe2-4f41-9235-44aef00371cb: Default # Default
@@ -16,6 +24,7 @@ meta:
     673453b1-7363-4af9-a69b-0f9478e93bfc: Text # Text
     d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
     db2131d9-42a6-4669-b9f5-6ce27eb2e275: Homepage # Homepage
+    f640e8d2-8f8a-4a08-ad63-04b277a4da43: Images
     fa35bcb3-3708-420c-b074-15d36e91b1eb: SEO # SEO
 plugins:
   aws-s3:
