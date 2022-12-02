@@ -69,7 +69,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "*.ts": [
       "npm run lint-scripts",
       "npm run typecheck-scripts"
     ],
