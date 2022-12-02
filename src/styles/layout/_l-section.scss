@@ -59,27 +59,27 @@ spacing and relationships between various vertical sections of the site.
 
 
 // ---------------------------------------------------------------
-// Modifier - Block
+// Modifier - Bleed
 // ---------------------------------------------------------------
 
-// "Block" sections will not automatically have space before or after them.
+// "Bleed" sections will not automatically have space before or after them.
 // This allows them to sit flush with their neighboring blocks.
 
-.l-section--block-top:not(.l-section--block-top-mobile) {
+.l-section--bleed-top:not(.l-section--bleed-top-mobile) {
   @include fluid-size(none, padding-top);
 }
 
-.l-section--block-bottom:not(.l-section--block-bottom-mobile) {
+.l-section--bleed-bottom:not(.l-section--bleed-bottom-mobile) {
   @include fluid-size(none, padding-bottom);
 }
 
-.l-section--block-top-mobile {
+.l-section--bleed-top-mobile {
   @include media('<medium') {
     @include fluid-size(none, padding-top);
   }
 }
 
-.l-section--block-bottom-mobile {
+.l-section--bleed-bottom-mobile {
   @include media('<medium') {
     @include fluid-size(none, padding-bottom);
   }
@@ -109,13 +109,13 @@ $bg-colors: light, dark;
 
 @each $bg-color in $bg-colors {
   @include media('<medium') {
-    .l-section--bg-#{$bg-color}:not(.l-section--block-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--block-top):not(.l-section--block--top-mobile) {
+    .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top):not(.l-section--bleed--top-mobile) {
       @include fluid-size(section-vertical, margin-top, $negative: true);
     }
   }
 
   @include media('>=medium') {
-    .l-section--bg-#{$bg-color}:not(.l-section--block-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--block-top) {
+    .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top) {
       @include fluid-size(section-vertical, margin-top, $negative: true);
     }
   }

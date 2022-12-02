@@ -32,21 +32,21 @@
       {% set classes = classes | merge(['space-bottom']) %}
     {% endif %}
   {% else %}
-    {% set classes = classes | merge(['block-top', 'block-bottom']) %}
+    {% set classes = classes | merge(['bleed-top', 'bleed-bottom']) %}
   {% endif %}
 
-  {# Block Top / Bottom #}
+  {# Bleed Top / Bottom #}
   {% if handle in [] %}
-    {% set classes = classes | merge(['block-top']) %}
+    {% set classes = classes | merge(['bleed-top']) %}
   {% endif %}
 
   {% if handle in [] %}
-    {% set classes = classes | merge(['block-bottom ']) %}
+    {% set classes = classes | merge(['bleed-bottom ']) %}
   {% endif %}
 
-  {# Block Mobile (no top/bottom spacing on mobile) #}
+  {# Bleed Mobile (no top/bottom spacing on mobile) #}
   {% if handle in [] %}
-    {% set classes = classes | merge(['block-top-mobile', 'block-bottom-mobile']) %}
+    {% set classes = classes | merge(['bleed-top-mobile', 'bleed-bottom-mobile']) %}
   {% endif %}
 
   {# Max #}
