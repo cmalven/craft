@@ -51,6 +51,7 @@ return GeneralConfig::create()
     ->allowUpdates($isDev)
     ->allowAdminChanges($isDev)
     ->maxRevisions(10)
+    ->enableGql(false)
 
     // URLs
     ->omitScriptNameInUrls(true)
