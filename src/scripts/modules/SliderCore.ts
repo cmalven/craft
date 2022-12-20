@@ -35,9 +35,11 @@ export default class extends Modu {
       arrowPath: this.getArrowPath(),
       autoplay: true,
       perMove: 1,
+      perPage: 1,
       speed: 1000,
       interval: 3600,
       waitForTransition: false,
+      updateOnMove: true,
       intersection: {},
     };
 
@@ -62,7 +64,17 @@ export default class extends Modu {
    * Create a new Splide slider instance
    */
   getSlider = (el: Element, options: Options = {}) => {
-    return new Splide(el as HTMLElement, this.getDefaultOptions(options)).mount({ Intersection });
+    // Add slider classes
+    this.addSliderClasses();
+
+    // Create the slider
+    const sliderOptions = this.getDefaultOptions(options);
+    const slider = new Splide(el as HTMLElement, sliderOptions).mount({ Intersection });
+
+    // If the slider type is loop we need to re-init Modu on the cloned slides
+    if (sliderOptions.type === 'loop') this.app.init(this.el);
+
+    return slider;
   };
 
   /**
@@ -70,6 +82,7 @@ export default class extends Modu {
    */
   init() {
     this.addEventListeners();
+    this.announceSlideCount(0);
   }
 
   /**
@@ -90,7 +103,7 @@ export default class extends Modu {
 
     // Update slide count
     this.slider.on('move', (newIndex) => {
-      this.call('SlideCount', 'set', newIndex, this.key);
+      this.announceSlideCount(newIndex);
 
       // Add classes for current slide
       this.setProgressClass(newIndex);
@@ -100,8 +113,16 @@ export default class extends Modu {
     this.setProgressClass(0);
   };
 
+  announceSlideCount = (idx: number) => {
+    this.call('SlideCount', 'set', [idx, this.getSlideCount()], this.key);
+  };
+
+  getSlideCount = () => {
+    return this.slider.length;
+  };
+
   setProgressClass = (idx: number) => {
-    const slideCount = this.slider.Components.Slides.getLength();
+    const slideCount = this.getSlideCount();
     const perPage = this.slider.options.perPage ?? 1;
     this.el.classList.toggle('is-first-slide', idx === 0);
     this.el.classList.toggle('is-last-slide', idx + perPage - 1 >= slideCount - 1);
