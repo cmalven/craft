@@ -5,7 +5,7 @@ module.exports = [
   {
     type: 'select',
     name: 'type',
-    message: "What type of component is this?",
+    message: 'What type of component is this?',
     default: 'Twig Include',
     choices: [
       'Twig Include',
@@ -16,18 +16,18 @@ module.exports = [
   {
     type: 'input',
     name: 'name',
-    message: "What should this component be called?",
+    message: 'What should this component be called?',
     default: 'my-new-component',
   },
   {
     type: 'input',
     name: 'description',
-    message: "Briefly describe this component.",
+    message: 'Briefly describe this component.',
   },
   {
     type: 'input',
     name: 'rootElement',
-    message: "What should the root element be?",
+    message: 'What should the root element be?',
     default: 'div',
   },
   {
@@ -35,5 +35,5 @@ module.exports = [
     name: 'emmet',
     message: "What is the emmet abbreviation for this component? (e.g. 'div')",
     default: '',
-  }
-]
+  },
+];
