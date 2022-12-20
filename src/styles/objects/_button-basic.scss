@@ -75,7 +75,6 @@ A flexible, reusable button.
   #{not-touch-selector()} #{$selector}:hover .button-basic__inner,
   #{not-touch-selector()} #{$selector} .button-basic__inner:focus,
   #{not-touch-selector()} a:hover #{$selector} .button-basic__inner {
-    outline: none;
     @content;
   }
 }
