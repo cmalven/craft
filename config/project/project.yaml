@@ -1,4 +1,4 @@
-dateModified: 1668800162
+dateModified: 1674938034
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -11,6 +11,10 @@ fs:
       path: '@webroot/assets/images'
     type: craft\fs\Local
     url: '@assetPath/images'
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
     1b5bb69b-bbe2-4f41-9235-44aef00371cb: Default # Default
@@ -20,11 +24,12 @@ meta:
     8e32402b-e63f-492e-a351-f8c770c4d99e: Homepage # Homepage
     9e9a874c-a710-4d69-8273-4908f88f25ab: Text # Text
     33e725ff-6a81-4865-9ac0-079fac72c0cb: your-project-title # your-project-title
+    59ff1616-3152-42ff-b0db-31a527ccf539: 'Public Schema'
     1791e3ba-a3f2-4452-9b01-23bac2984a77: your-project-title # your-project-title
     673453b1-7363-4af9-a69b-0f9478e93bfc: Text # Text
     d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
     db2131d9-42a6-4669-b9f5-6ce27eb2e275: Homepage # Homepage
-    f640e8d2-8f8a-4a08-ad63-04b277a4da43: Images
+    f640e8d2-8f8a-4a08-ad63-04b277a4da43: Images # Images
     fa35bcb3-3708-420c-b074-15d36e91b1eb: SEO # SEO
 plugins:
   aws-s3:
