@@ -22,12 +22,20 @@ export default class extends Modu {
 
   init() {
     this.dialog = new A11yDialog(this.el);
-    this.dialog.on('hide', this.hideDialog);
+    this.dialog.on('hide', () => { this.close(); });
 
     // Listen for other dialogs to open and close this one
     this.on('Dialog', 'open', () => {
       this.close();
     });
+
+    // Listen for dialog toggle
+    this.on('DialogToggle', 'open', () => {
+      this.open();
+    }, this.key);
+    this.on('DialogToggle', 'close', () => {
+      this.close();
+    }, this.key);
   }
 
   open() {
@@ -37,6 +45,7 @@ export default class extends Modu {
   }
 
   close() {
+    this.hideDialog();
     this.dialog.hide();
   }
 

@@ -31,11 +31,11 @@ export default class extends Modu {
   };
 
   open = () => {
-    this.call('Dialog', 'open', null, this.key);
+    this.emit('open', null);
   };
 
   close = () => {
-    this.call('Dialog', 'close', null, this.key);
+    this.emit('close', null);
   };
 
   set = (state: boolean) => {
