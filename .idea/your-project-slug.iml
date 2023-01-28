@@ -202,9 +202,6 @@
       <excludeFolder url="file://$MODULE_DIR$/storage/runtime/cache" />
       <excludeFolder url="file://$MODULE_DIR$/storage/runtime/compiled_templates" />
       <excludeFolder url="file://$MODULE_DIR$/storage/runtime/temp" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/psy/psysh" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-shell" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

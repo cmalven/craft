@@ -175,9 +175,6 @@
       <path value="$PROJECT_DIR$/vendor/topshelfcraft/base" />
       <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-plugin-vite" />
-      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-shell" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
