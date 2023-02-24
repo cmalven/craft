@@ -10,6 +10,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 export default class extends Modu {
   closeDelay = 400;
+  isOpen = false;
   dialog!: A11yDialog;
 
   constructor(m: ModuOptions) {
@@ -51,6 +52,7 @@ export default class extends Modu {
 
   showDialog = () => {
     this.el.classList.add('is-opening');
+    this.isOpen = true;
     window.requestAnimationFrame(() => {
       this.el.classList.add('is-open');
     });
@@ -61,7 +63,9 @@ export default class extends Modu {
 
   hideDialog = () => {
     this.el.classList.remove('is-open');
+    this.isOpen = false;
     window.setTimeout(() => {
+      if (this.isOpen) return;
       enableBodyScroll(this.el);
       this.el.classList.remove('is-opening');
     }, this.closeDelay);
