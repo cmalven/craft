@@ -17,6 +17,7 @@ return GeneralConfig::create()
     // Aliases
     ->aliases([
         '@assetPath' => App::env('PRIMARY_SITE_URL') . '/assets',
+        '@webroot' => CRAFT_BASE_PATH . '/web',
     ])
 
     // Fuzzy Search
@@ -25,7 +26,7 @@ return GeneralConfig::create()
         'subRight' => true,
     ])
 
-    // Images;
+    // Images
     ->imageDriver(App::env('CRAFT_IMAGE_DRIVER'))
     ->defaultImageQuality(90)
     ->maxUploadFileSize('10M')
