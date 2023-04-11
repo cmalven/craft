@@ -1,4 +1,4 @@
-dateModified: 1674938034
+dateModified: 1681248873
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -24,7 +24,7 @@ meta:
     8e32402b-e63f-492e-a351-f8c770c4d99e: Homepage # Homepage
     9e9a874c-a710-4d69-8273-4908f88f25ab: Text # Text
     33e725ff-6a81-4865-9ac0-079fac72c0cb: your-project-title # your-project-title
-    59ff1616-3152-42ff-b0db-31a527ccf539: 'Public Schema'
+    59ff1616-3152-42ff-b0db-31a527ccf539: 'Public Schema' # Public Schema
     1791e3ba-a3f2-4452-9b01-23bac2984a77: your-project-title # your-project-title
     673453b1-7363-4af9-a69b-0f9478e93bfc: Text # Text
     d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
@@ -39,7 +39,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    schemaVersion: 4.2.0
+    schemaVersion: 4.4.0
   cp-field-inspect:
     edition: standard
     enabled: true
@@ -96,7 +96,7 @@ system:
   edition: solo
   live: true
   name: your-project-title
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
