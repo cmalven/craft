@@ -7,7 +7,7 @@ Wrapper for dialog content
 @mixin dialog-common {
   .l-dialog__content {
     transition-property: opacity, transform;
-    width: 100%;
+    width: 100vw;
     flex: 1 1 auto;
 
     .js & {
@@ -35,6 +35,7 @@ Wrapper for dialog content
 .l-dialog {
   .js & {
     @include fixed;
+    @include custom-scrollbar;
     pointer-events: none;
     overflow: hidden;
     z-index: $z-index-dialog;
@@ -71,24 +72,21 @@ Wrapper for dialog content
 }
 
 .l-dialog__content-close {
-  @include size(outer, top right, $adjust: -15px);
-  color: color(white);
+  @include size(outer, top right);
   position: absolute;
   pointer-events: auto;
   transition: 0.8s ease(out-expo);
   transition-property: transform, opacity;
   transition-delay: 0s;
 
-  @include media('>=medium') {
-    @include size(56, top right);
-  }
-
   > button {
+    --size: 4.4rem;
+
     @include reset-input;
     cursor: pointer;
     transition: opacity $transition-hover-color;
-    width: 4rem;
-    height: 4rem;
+    width: var(--size);
+    height: var(--size);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,8 +97,8 @@ Wrapper for dialog content
   }
 
   svg {
-    width: 2.7rem;
-    height: 2.7rem;
+    width: var(--size);
+    height: var(--size);
   }
 
   .js & {
