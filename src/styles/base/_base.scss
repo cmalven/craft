@@ -8,6 +8,8 @@
 
 :root {
   // Top-level CSS custom properties
+  --scrollbar-width: 0;
+  --100vw: calc(100vw - var(--scrollbar-width));
 }
 
 html,
@@ -16,9 +18,12 @@ body {
 }
 
 html {
-  @include custom-scrollbar;
   font-size: 62.5%;
   box-sizing: border-box;
+
+  &.has-scrollbars {
+    @include custom-scrollbar;
+  }
 }
 
 body {
