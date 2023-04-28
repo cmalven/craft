@@ -1,8 +1,10 @@
+import { Modu, ModuOptions } from '@malven/modu';
+
 /**
  * Nicely transitions images via lazy sizes hooks. Applies a class to the parent of a lazy loaded image when that image has been successfully loaded.
  */
 
-class LazyImageTransitioner {
+export default class extends Modu {
   selectors = [
     '.image',
     '.image-video',
@@ -10,8 +12,8 @@ class LazyImageTransitioner {
 
   readyClass = 'is-ready';
 
-  constructor() {
-    this.init();
+  constructor(m: ModuOptions) {
+    super(m);
   }
 
   init = () => {
@@ -33,6 +35,11 @@ class LazyImageTransitioner {
         }, 300);
       });
     });
+
+    // Handle vimeo video
+    this.on('ImageVideo', 'vimeoPlay', (el) => {
+      this.makeParentVisible(el);
+    });
   };
 
   makeParentVisible = (el: Element) => {
@@ -43,6 +50,8 @@ class LazyImageTransitioner {
       }
     });
   };
-}
 
-export default LazyImageTransitioner;
+  cleanup = () => {
+    // Code to run when the module is destroyed
+  };
+}
