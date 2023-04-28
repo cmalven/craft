@@ -309,7 +309,7 @@ style="background-image: url({{ imageUrl }});"
 
 {%- macro srcset(asset, params) -%}
   {% set srcsetItems = [] %}
-  {% set resolution = 0.75 %}
+  {% set resolution = 1.5 %}
 
   {% set transformedImages = craft.imager.transformImage(asset,
     [{ width: 300 }, { width: 2700 }],
@@ -321,7 +321,7 @@ style="background-image: url({{ imageUrl }});"
     },
     {
       fillTransforms: true,
-      fillInterval: 300
+      fillInterval: 600
     })
   %}
 
