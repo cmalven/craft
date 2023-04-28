@@ -49,20 +49,24 @@
     {% set classes = classes | merge(['bleed-top-mobile', 'bleed-bottom-mobile']) %}
   {% endif %}
 
+  {# Overflow Hidden #}
+  {% if handle in [] %}
+    {% set classes = classes | merge(['overflow-hidden']) %}
+  {% endif %}
+
   {# Max #}
   {% if handle not in [] %}
     {% set classes = classes | merge(['max']) %}
   {% endif %}
 
   {# Background Color #}
-  {% set defaultBg = 'light' %}
-  {% set hasBgColor = block.backgroundColor ??? false and block.backgroundColor.value != defaultBg %}
-  {% if
-    handle in [] or hasBgColor
-  %}
-    {% set classes = classes | merge(['bg-' ~ block.backgroundColor.value]) %}
+  {% set isLightBg = block.color ?? true %}
+  {% if handle in [] or not isLightBg %}
+    {% set classes = classes | merge(['bg-dark']) %}
+  {% elseif handle in [] %}
+    {% set classes = classes | merge([]) %}
   {% else %}
-    {% set classes = classes | merge(['bg-' ~ defaultBg]) %}
+    {% set classes = classes | merge(['bg-light']) %}
   {% endif %}
 
   {% return classes %}
