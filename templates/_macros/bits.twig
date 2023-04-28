@@ -222,13 +222,15 @@
           {%- if options.required ?? false -%}
             required
           {%- endif -%}
-          {% if value ??? null == item.value %}
+          {% if item.value in options.value ??? null %}
             checked
           {% endif %}
           {{ options.inputAttributes | raw }}
         >
         <label class="{{ options.mainClass }}{{ options.itemLabelSuffixClass }}" for="{{ item.value }}">
-          {% if options.unselectedSvg ?? null and options.selectedSvg ?? null %}
+          {% if item.graphic ??? null %}
+            <span class="{{ options.mainClass }}__item-graphic">{{ item.graphic }}</span>
+          {% elseif options.unselectedSvg ?? null and options.selectedSvg ?? null %}
             <span class="{{ options.mainClass }}__item-label-unselected">{{ options.unselectedSvg | raw }}</span>
             <span class="{{ options.mainClass }}__item-label-selected">{{ options.selectedSvg | raw }}</span>
           {% endif %}
@@ -358,20 +360,24 @@ Renders a generic text input.
 #}
 
 {%- macro btn(options = {}) -%}
+{% set defaultEl = 'button' %}
 
 {% set defaults = {
-  el: 'button',
+  el: defaultEl,
   mainClass: 'btn',
   textSuffixClass: '__text',
   bgSuffixClass: '__bg',
   graphicSuffixClass: '__graphic',
   withGraphicModifierClass: '--with-graphic',
+  inlineGraphicSuffixClass: '__inline-graphic',
+  withInlineGraphicModifierClass: '--with-inline-graphic',
   modifiers: [],
   color: null,
   classes: '',
   type: null,
   url: null,
   graphic: null,
+  inlineGraphic: null,
   tabindex: null,
   attributes: null,
   target: null,
@@ -379,16 +385,11 @@ Renders a generic text input.
 
 {% set options = defaults | merge(options) %}
 
-{# Set default element #}
-{% set el = 'button' %}
+{# Set element #}
+{% set el = options.el %}
 
-{# Custom element #}
-{% if options.el ?? null %}
-  {% set el = options.el %}
-{% endif %}
-
-{# Use a link if an url is set #}
-{% if options.url %}
+{# Use a link if an url is set and no custom element is set #}
+{% if options.url and el == defaultEl %}
   {% set el = 'a' %}
 {% endif %}
 
@@ -404,7 +405,7 @@ Renders a generic text input.
   <{{ el }}
     class="{{ options.mainClass }}__inner"
     {% if options.tabindex %}tabindex="{{ options.tabindex }}"{% endif %}
-    {% if options.url %}href="{{ options.url }}"{% endif %}
+    {% if options.url and el =='a' %}href="{{ options.url }}"{% endif %}
     {% if options.type and not options.url %}type="{{ options.type }}"{% endif %}
     {% if options.url and options.target == '_blank' %}
       target="_blank"
@@ -412,7 +413,7 @@ Renders a generic text input.
     {% endif %}
     {% if options.attributes %}{{ options.attributes | raw }}{% endif %}
   >
-    <span class="{{ options.mainClass }}{{ options.textSuffixClass }}"><span>{{ options.text }}</span></span>
+    <span class="{{ options.mainClass }}{{ options.textSuffixClass }}"><span>{{ options.text }}</span>{% if options.inlineGraphic %}<div class="{{ options.mainClass }}{{ options.inlineGraphicSuffixClass }}">{{ options.inlineGraphic }}</div>{% endif %}</span>
   </{{ el }}>
 
   <div class="{{ options.mainClass }}{{ options.bgSuffixClass }}"></div>
@@ -422,6 +423,6 @@ Renders a generic text input.
       {{ options.graphic }}
     </div>
   {% endif %}
-</div>
+  </div>
 
 {%- endmacro %}
