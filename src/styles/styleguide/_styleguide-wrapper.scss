@@ -13,7 +13,7 @@ Wraps all contents within the styleguide.
 }
 
 .styleguide-wrapper__content {
-  @include fluid-size(outer, padding);
+  @include size(outer, padding);
 
   > * + * {
     margin-top: 40px;

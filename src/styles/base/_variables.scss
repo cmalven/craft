@@ -85,12 +85,12 @@ $breakpoints: map-merge($breakpoints, (
   store static spacing values here as well and apply spacing consistently
   across the site.
 
-  Most commonly used as `@include fluid-size(section-vertical, margin-top);`
+  Most commonly used as `@include size(section-vertical, margin-top);`
 
-  https://github.com/cmalven/sass-toolkit#fluid-size
+  https://github.com/cmalven/sass-toolkit#size
 */
 
-$fluid-sizes: (
+$sizes: (
   none: (
     default: 0px,
     max: 0px
@@ -168,7 +168,7 @@ $z-index-global-header: 100;
 
 :root {
   --grid-columns: 12;
-  --grid-gutter: var(--fluid-size-grid-gutter);
+  --grid-gutter: var(--size-grid-gutter);
 }
 
 

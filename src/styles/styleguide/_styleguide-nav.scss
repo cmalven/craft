@@ -5,8 +5,8 @@ Navigation for the styleguide
 */
 
 .styleguide-nav {
-  @include fluid-size(outer, padding-left);
-  @include fluid-size(outer, padding-right);
+  @include size(outer, padding-left);
+  @include size(outer, padding-right);
   background-color: #333;
 }
 

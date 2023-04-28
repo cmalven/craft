@@ -5,7 +5,7 @@ Escape the common outer spacing for the site
 */
 
 @mixin escape-outer($prop: left, $outer-amount: outer) {
-  $outer-calc: var(--fluid-size-#{$outer-amount});
+  $outer-calc: var(--size-#{$outer-amount});
 
   @include media('<max') {
     #{$prop}: calc(#{$outer-calc} * -1);

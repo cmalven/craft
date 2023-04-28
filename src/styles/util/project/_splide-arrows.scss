@@ -6,7 +6,7 @@ Basic styling for splide slider arrows.
 
 @mixin splide-arrows {
   .splide__arrows {
-    @include fluid-size(outer, left right top bottom);
+    @include size(outer, left right top bottom);
     z-index: 1;
     pointer-events: none;
     justify-content: space-between;

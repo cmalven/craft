@@ -71,7 +71,7 @@ Wrapper for dialog content
 }
 
 .l-dialog__content-close {
-  @include fluid-size(outer, top right, $adjust: -15px);
+  @include size(outer, top right, $adjust: -15px);
   color: color(white);
   position: absolute;
   pointer-events: auto;
@@ -80,7 +80,7 @@ Wrapper for dialog content
   transition-delay: 0s;
 
   @include media('>=medium') {
-    @include fluid-size(56, top right);
+    @include size(56, top right);
   }
 
   > button {

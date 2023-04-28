@@ -20,14 +20,14 @@
 
 // Toolkit
 @import '@malven/sass-toolkit/color';
-@import '@malven/sass-toolkit/fluid-size';
+@import '@malven/sass-toolkit/size';
 @import '@malven/sass-toolkit/type-styles';
 
 // Toolkit Properties + Helpers
-@include output-fluid-size-custom-properties;
+@include output-size-custom-properties;
 @include output-color-helpers;
 @include output-type-helpers;
-@include output-fluid-size-helpers;
+@include output-size-helpers;
 
 // Helpers
 @import 'base/helpers';

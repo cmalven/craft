@@ -14,11 +14,11 @@ spacing and relationships between various vertical sections of the site.
 }
 
 @mixin space-top {
-  @include fluid-size(section-vertical, padding-top);
+  @include size(section-vertical, padding-top);
 }
 
 @mixin space-bottom {
-  @include fluid-size(section-vertical, padding-bottom);
+  @include size(section-vertical, padding-bottom);
 }
 
 
@@ -66,22 +66,22 @@ spacing and relationships between various vertical sections of the site.
 // This allows them to sit flush with their neighboring blocks.
 
 .l-section--bleed-top:not(.l-section--bleed-top-mobile) {
-  @include fluid-size(none, padding-top);
+  @include size(none, padding-top);
 }
 
 .l-section--bleed-bottom:not(.l-section--bleed-bottom-mobile) {
-  @include fluid-size(none, padding-bottom);
+  @include size(none, padding-bottom);
 }
 
 .l-section--bleed-top-mobile {
   @include media('<medium') {
-    @include fluid-size(none, padding-top);
+    @include size(none, padding-top);
   }
 }
 
 .l-section--bleed-bottom-mobile {
   @include media('<medium') {
-    @include fluid-size(none, padding-bottom);
+    @include size(none, padding-bottom);
   }
 }
 
@@ -110,13 +110,13 @@ $bg-colors: light, dark;
 @each $bg-color in $bg-colors {
   @include media('<medium') {
     .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top):not(.l-section--bleed--top-mobile) {
-      @include fluid-size(section-vertical, margin-top, $negative: true);
+      @include size(section-vertical, margin-top, $negative: true);
     }
   }
 
   @include media('>=medium') {
     .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top) {
-      @include fluid-size(section-vertical, margin-top, $negative: true);
+      @include size(section-vertical, margin-top, $negative: true);
     }
   }
 }
