@@ -14,7 +14,7 @@ export default class extends SliderCore {
 
     const options = JSON.parse(this.getData('options') ?? '{}');
     this.options = Object.assign({
-      // Custom override options
+      // Custom options
     }, options);
   }
 

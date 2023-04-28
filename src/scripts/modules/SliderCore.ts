@@ -3,6 +3,10 @@ import Splide from '@splidejs/splide';
 import type { Options } from '@splidejs/splide';
 import { Intersection } from '@splidejs/splide-extension-intersection';
 
+type EventOptions = {
+  beforeMount?: (slider: Splide) => void;
+}
+
 /**
  * Core slider functionality
  */
@@ -36,7 +40,7 @@ export default class extends Modu {
       autoplay: true,
       perMove: 1,
       perPage: 1,
-      speed: 1000,
+      speed: 800,
       interval: 3600,
       waitForTransition: false,
       updateOnMove: true,
@@ -63,13 +67,19 @@ export default class extends Modu {
   /**
    * Create a new Splide slider instance
    */
-  getSlider = (el: Element, options: Options = {}) => {
+  getSlider = (el: Element, options: Options = {}, eventOptions: EventOptions = {}) => {
     // Add slider classes
     this.addSliderClasses();
 
     // Create the slider
     const sliderOptions = this.getDefaultOptions(options);
-    const slider = new Splide(el as HTMLElement, sliderOptions).mount({ Intersection });
+    const slider = new Splide(el as HTMLElement, sliderOptions);
+
+    // Custom events
+    if (eventOptions.beforeMount) eventOptions.beforeMount(slider);
+
+    // Mount the slider
+    slider.mount({ Intersection });
 
     // If the slider type is loop we need to re-init Modu on the cloned slides
     if (sliderOptions.type === 'loop') this.app.init(this.el);

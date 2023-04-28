@@ -9,6 +9,12 @@
     label: 'Slider of images',
     controlsSliderKey: 'key-of-slider-to-control',
     slides: [],
+    slides: [
+      {
+        content: '<div>...</div>',
+        classes: 'my-slider__slide--foo',
+      },
+    ],
   } only %}
 #}
 
@@ -32,10 +38,17 @@
   <div class="{{ objectName }}__track" {% if moduleName %}data-{{ moduleName }}="track"{% endif %}>
     <div class="{{ objectName }}__list" {% if moduleName %}data-{{ moduleName }}="list"{% endif %}>
       {% for slide in slides %}
-        <div class="{{ objectName }}__slide" {% if moduleName %}data-{{ moduleName }}="slide"{% endif %}>
-          {{ slide }}
+        <div class="{{ objectName }}__slide {{ slide.classes ??? '' }}" {% if moduleName %}data-{{ moduleName }}="slide"{% endif %}>
+          {{ slide.content ??? slide }}
         </div>
       {% endfor %}
     </div>
   </div>
+
+  {# Nav #}
+  {% if nav ??? null %}
+    <div class="{{ objectName }}__nav">
+      {{ nav }}
+    </div>
+  {% endif %}
 </div>
