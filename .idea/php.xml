@@ -92,7 +92,6 @@
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
       <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
-      <path value="$PROJECT_DIR$/vendor/craftcms/redactor" />
       <path value="$PROJECT_DIR$/vendor/craftcms/flysystem" />
       <path value="$PROJECT_DIR$/vendor/craftcms/aws-s3" />
       <path value="$PROJECT_DIR$/vendor/kornrunner/blurhash" />
@@ -176,6 +175,10 @@
       <path value="$PROJECT_DIR$/vendor/phpcollection/phpcollection" />
       <path value="$PROJECT_DIR$/vendor/cypresslab/gitelephant" />
       <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-shell" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/ckeditor" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

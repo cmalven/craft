@@ -28,27 +28,24 @@ fields:
     handle: text
     instructions: null
     name: Text
-    searchable: false
+    searchable: true
     settings:
       availableTransforms: ''
-      availableVolumes: ''
+      availableVolumes: '*'
+      ckeConfig: 7cf92fda-206d-4960-980e-db5471941101 # Simple
       columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
+      defaultTransform: null
       purifierConfig: null
       purifyHtml: true
-      redactorConfig: Standard.json
       removeEmptyTags: false
       removeInlineStyles: false
       removeNbsp: false
-      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      showWordCount: false
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\ckeditor\Field
 handle: text
 name: Text
 sortOrder: 1
