@@ -223,15 +223,12 @@ $font-stacks: (
 $type-styles: (
   body-1: (
     stack: helvetica,
-    font-smoothing: true,
     sizes: (
-      default: 13,
-      medium: 27
+      default: (
+        font-size: 1.3rem,
+        line-height: 1.4
+      ),
+      medium: 2.7rem
     ),
-    properties: (
-      line-height: 1.8,
-      text-transform: none,
-      letter-spacing: 0
-    )
   )
 );
