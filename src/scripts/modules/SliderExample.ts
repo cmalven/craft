@@ -12,7 +12,7 @@ export default class extends SliderCore {
   constructor(m: ModuOptions) {
     super(m);
 
-    const options = JSON.parse(this.getData('options') ?? '{}');
+    const options = JSON.parse(this.getData('options') as string ?? '{}');
     this.options = Object.assign({
       // Custom options
     }, options);
