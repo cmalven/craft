@@ -2,6 +2,18 @@ defaultPlacement: end
 enableVersioning: true
 handle: homepage
 name: Homepage
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
 propagationMethod: all
 siteSettings:
   33e725ff-6a81-4865-9ac0-079fac72c0cb: # your-project-title

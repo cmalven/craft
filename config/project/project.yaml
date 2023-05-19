@@ -1,4 +1,4 @@
-dateModified: 1682961853
+dateModified: 1683224548
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -67,6 +67,9 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+    settings:
+      expandSingles: true
+      redirectToEntry: true
   imager-x:
     edition: lite
     enabled: true
@@ -102,7 +105,7 @@ plugins:
     enabled: true
     schemaVersion: 0.0.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: your-project-title
   schemaVersion: 4.4.0.4
