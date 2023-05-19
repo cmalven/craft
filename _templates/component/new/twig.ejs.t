@@ -22,5 +22,4 @@ to: <%= h.getDestinationForType(h.changeCase.paramCase(name), type, 'twig') %>
   {% endembed %}
 #}
 <%_ } _%>
-
 <%- h.emmet(slug, rootElement, emmet) %>

@@ -21,14 +21,30 @@ const getClassListFromMarkup = (markup) => {
 
 const getEmmetMarkup = (filename, rootElement, emmetString) => {
     const emmet = `${rootElement}.${filename}>${emmetString}`;
-    return expand(emmet, {
-        options: {
-            'bem.enabled': true,
-            'bem.element': '__',
-            'bem.modifier': '--',
-            'output.indent': '  ',
-        },
+    let markup =  expand(emmet, {
+      options: {
+        'inlineElements': [],
+        'bem.enabled': true,
+        'bem.element': '__',
+        'bem.modifier': '--',
+        'output.indent': '  ',
+        'comment.enabled': true,
+        'comment.after': '',
+        'comment.before': '{# Object - [CLASS] #}\n',
+      },
     });
+
+    // Replace the comment for the filename.
+    markup = markup
+      .replace(`{# Object - ${filename} #}`, '');
+
+    // Loop over every child comment and if we find this pattern, replace it with the formatted version and title case it
+    const pattern = new RegExp(`{# Object - ${filename}__(.*?) #}`, 'g');
+    markup = markup.replace(pattern, function(match, p1) {
+        return `{# ${p1.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} #}`;
+    });
+
+    return markup;
 }
 
 const getDestinationForType = (name, type, extension) => {
