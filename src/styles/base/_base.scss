@@ -49,5 +49,7 @@ svg {
 }
 
 button {
+  // Prevent Safari iOS from adding styles to buttons
   color: inherit;
+  font-weight: normal;
 }
