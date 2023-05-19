@@ -38,7 +38,7 @@ Either an image or a video asset.
     transition: 2s ease(out-expo);
 
     .js & {
-      opacity: 0;
+      opacity: 0.001;
     }
   }
 
