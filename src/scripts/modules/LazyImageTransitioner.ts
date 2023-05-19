@@ -23,7 +23,9 @@ export default class extends Modu {
   addEventListeners = () => {
     // Handle a lazysizes loaded image
     document.addEventListener('lazybeforeunveil', (evt) => {
-      this.makeParentVisible(evt.target as Element);
+      window.setTimeout(() => {
+        this.makeParentVisible(evt.target as Element);
+      }, 300);
     });
 
     // Handle video playback

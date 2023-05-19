@@ -3,10 +3,20 @@ import 'lazysizes/plugins/bgset/ls.bgset.js';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'lazysizes/plugins/respimg/ls.respimg';
 
-// Conditionally load object fit polyfill if needed
-if (!('object-fit' in document.createElement('a').style)) {
-  require('lazysizes/plugins/object-fit/ls.object-fit');
-}
+
+// ---------------------------------------------------------------
+// Modu
+// ---------------------------------------------------------------
+
+import * as initialModules from './modules/initial';
+import { App } from '@malven/modu';
+
+const app = new App({
+  initialModules,
+  importMethod: module => import(`./modules/${module}.ts`),
+});
+app.init();
+
 
 // ---------------------------------------------------------------
 // Smooth Scroll
@@ -21,6 +31,7 @@ new SmoothScroll('a[href*="#"]', {
   updateURL: false,
 });
 
+
 // ---------------------------------------------------------------
 // Fit Videos
 // ---------------------------------------------------------------
@@ -28,16 +39,3 @@ new SmoothScroll('a[href*="#"]', {
 import objectFitVideos from 'object-fit-videos';
 
 objectFitVideos();
-
-// ---------------------------------------------------------------
-// Modu
-// ---------------------------------------------------------------
-
-import * as initialModules from './modules/initial';
-import { App } from '@malven/modu';
-
-const app = new App({
-  initialModules,
-  importMethod: module => import(`./modules/${module}.ts`),
-});
-app.init();
