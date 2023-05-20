@@ -10,8 +10,10 @@
   {# Matrix Page Content #}
   {# Uncomment if/when you have a `pageContent` matrix field for the entry #}
   {#
-  {% include '_partials/matrix-page-content' with {
-    field: 'pageContent',
+  {% include '_partials/blocks' with {
+    groups: [
+      { field: 'pageContent' },
+    ],
   } %}
   #}
 {% endblock %}

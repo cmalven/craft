@@ -9,19 +9,28 @@
 {# Block Classes
 {# ------------------------------------------------------------------ #}
 {#
-  {{ matrix.blockClasses(handle, block) }}
+  {% import '_macros/matrix' as matrix %}
+  {{ matrix.blockClasses(handle, block, previousBlock, nextBlock) }}
 
   Returns an array of modifier classes for a given matrix block
 
-  @param handle (string)             - [required] Handle for the block
-  @param block (Matrix Block)        - [required] The block to examine
+  @param handle (string)                     - [required] Handle for the block
+  @param block (Matrix Block)                - [required] The block to examine
+  @param previousBlock (Matrix Block)        - [optional] The block prior to this one
+  @param nextBlock (Matrix Block)            - [optional] The block after to this one
 #}
 
-{% macro blockClasses(handle, block) %}
+{% macro blockClasses(handle, block, previousBlock = null, nextBlock = null) %}
   {% set classes = [] %}
 
   {# All spacing #}
-  {% if handle not in [] %}
+  {% if handle not in [
+    'hero-video',
+    'hero-text',
+    'team-bio',
+    'values-slider',
+    'hero-slim',
+  ] %}
     {# Top padding #}
     {% if handle not in [] %}
       {% set classes = classes | merge(['space-top']) %}
@@ -35,11 +44,12 @@
     {% set classes = classes | merge(['bleed-top', 'bleed-bottom']) %}
   {% endif %}
 
-  {# Bleed Top / Bottom #}
+  {# Bleed / Top #}
   {% if handle in [] %}
     {% set classes = classes | merge(['bleed-top']) %}
   {% endif %}
 
+  {# Bleed / Bottom #}
   {% if handle in [] %}
     {% set classes = classes | merge(['bleed-bottom ']) %}
   {% endif %}
@@ -57,6 +67,15 @@
   {# Max #}
   {% if handle not in [] %}
     {% set classes = classes | merge(['max']) %}
+  {% endif %}
+
+  {# Borders #}
+  {% set borderedBlocks = [] %}
+  {% if handle in borderedBlocks and (nextBlock.handle ??? null) in borderedBlocks %}
+    {% set classes = classes | merge(['border-bottom', 'bleed-bottom']) %}
+  {% endif %}
+  {% if handle in borderedBlocks and (previousBlock.handle ??? null) in borderedBlocks %}
+    {% set classes = classes | merge(['border-top', 'bleed-top']) %}
   {% endif %}
 
   {# Background Color #}

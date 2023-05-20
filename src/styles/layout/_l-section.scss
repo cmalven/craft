@@ -23,7 +23,7 @@ spacing and relationships between various vertical sections of the site.
 
 
 .l-section {
-
+  position: relative;
 }
 
 .l-section__inner {
@@ -65,23 +65,31 @@ spacing and relationships between various vertical sections of the site.
 // "Bleed" sections will not automatically have space before or after them.
 // This allows them to sit flush with their neighboring blocks.
 
-.l-section--bleed-top:not(.l-section--bleed-top-mobile) {
+@mixin bleed-top {
   @include size(none, padding-top);
 }
 
-.l-section--bleed-bottom:not(.l-section--bleed-bottom-mobile) {
+@mixin bleed-bottom {
   @include size(none, padding-bottom);
+}
+
+.l-section--bleed-top:not(.l-section--bleed-top-mobile) {
+  @include bleed-top;
+}
+
+.l-section--bleed-bottom:not(.l-section--bleed-bottom-mobile) {
+  @include bleed-bottom;
 }
 
 .l-section--bleed-top-mobile {
   @include media('<medium') {
-    @include size(none, padding-top);
+    @include bleed-top;
   }
 }
 
 .l-section--bleed-bottom-mobile {
   @include media('<medium') {
-    @include size(none, padding-bottom);
+    @include bleed-bottom;
   }
 }
 
@@ -127,6 +135,27 @@ $bg-colors: light, dark;
     .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top) {
       @include size(section-vertical, margin-top, $negative: true);
     }
+  }
+}
+
+
+// ---------------------------------------------------------------
+// Borders
+// ---------------------------------------------------------------
+
+.l-section--border-bottom.l-section--space-bottom {
+  @include size(none, padding-bottom);
+
+  .l-section__inner {
+    @include space-bottom;
+  }
+}
+
+.l-section--border-top {
+  border-top: 1px solid var(--theme-rule);
+
+  &.l-section--space-top {
+    @include space-top;
   }
 }
 
