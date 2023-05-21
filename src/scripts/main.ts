@@ -4,6 +4,14 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'lazysizes/plugins/respimg/ls.respimg';
 
 
+//--------------------------------------------------------------------
+// Enable reveal transitions
+//--------------------------------------------------------------------
+
+const root = document.getElementsByTagName('html')[0];
+root.className = root.className.replace('preload-transitions', '');
+
+
 // ---------------------------------------------------------------
 // Modu
 // ---------------------------------------------------------------
