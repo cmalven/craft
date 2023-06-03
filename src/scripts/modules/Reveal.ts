@@ -15,13 +15,16 @@ export default class extends Modu {
   }
 
   init = () => {
+    // Enable reveal transitions
+    const root = document.getElementsByTagName('html')[0];
+    root.className = root.className.replace('preload-transitions', '');
     let triggerEl = this.el;
 
     // Change the trigger element based on settings
     const trigger = this.getData('trigger');
     if (trigger === 'parent') {
       triggerEl = this.el.parentNode as Element;
-    } else if (trigger) {
+    } else if (typeof trigger === 'string') {
       const closestTrigger = this.el.closest(trigger);
       if (closestTrigger) triggerEl = closestTrigger;
     }
