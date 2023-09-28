@@ -101,7 +101,7 @@ export default class extends Modu {
   addEventListeners = () => {
     // Set connected sliders
     const controlsSliderKey = this.getData('controls-slider-key');
-    if (controlsSliderKey) {
+    if (controlsSliderKey && typeof controlsSliderKey === 'string') {
       this.slider.on('move', (newIndex) => {
         [
           'SliderImage',
