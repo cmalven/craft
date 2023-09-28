@@ -1,9 +1,3 @@
-import 'lazysizes';
-import 'lazysizes/plugins/bgset/ls.bgset.js';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-import 'lazysizes/plugins/respimg/ls.respimg';
-
-
 // ---------------------------------------------------------------
 // Modu
 // ---------------------------------------------------------------
@@ -28,14 +22,5 @@ new SmoothScroll('a[href*="#"]', {
   speed: 1000,
   speedAsDuration: true,
   easing: 'easeInOutCubic',
-  updateURL: false,
+  updateURL: true,
 });
-
-
-// ---------------------------------------------------------------
-// Fit Videos
-// ---------------------------------------------------------------
-
-import objectFitVideos from 'object-fit-videos';
-
-objectFitVideos();

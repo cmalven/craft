@@ -10,7 +10,7 @@
 #}
 
 {% import '_macros/class-modifiers' as classModifiers %}
-{% set classes = classModifiers.set('image-video', modifiers ?? ['fade']) %}
+{% set classes = classModifiers.set('image-video', modifiers ?? []) %}
 
 <div class="image-video {{ classes }}" data-module-reveal>
   <div class="image-video__inner">
@@ -20,11 +20,13 @@
         {% import '_macros/image' as image %}
         {{ image.img(asset, {
           transform: transform ?? 'scale',
-          wrapperClasses: "image--fade image--cover"
+          wrapperClasses: ["cover"],
+          lazy: lazy ?? true,
+          size: size ?? null,
         }) }}
       {% endif %}
 
-      {# Video #}
+      {# Vimeo #}
       {% if asset.kind == 'video' %}
         {% include '_partials/video' with {
           url: asset.url,

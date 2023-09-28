@@ -10,6 +10,7 @@
 {# Get Params
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/image' as image %}
   {{ image.getParams(transformKey, quality) }}
 
   Returns a params object that can be used for getting a srcset
@@ -58,9 +59,10 @@
 {# Background Image Srcset
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/image' as image %}
   <div class="lazyload" {{ image.bgSet(CraftAsset, { transform: '7x5' }) }}></div>
 
-  Returns the attributes neccessary to load a background image via lazysizes.
+  Returns the attributes neccessary to load a background lazily.
 #}
 
 {%- macro bgSet(asset, options) -%}
@@ -91,7 +93,7 @@
   }) %}
 
   style="background-position: {{ fpX * 100 }}% {{ fpY * 100 }}%;"
-  data-bgset="{{ image.srcset(asset, params) }}" data-sizes="auto"
+  data-bgset="{{ _self.srcset(asset, params) }}" data-sizes="auto"
 {% endapply %}
 {%- endmacro -%}
 
@@ -100,6 +102,7 @@
 {# Background Image
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/image' as image %}
   {{ image.bgImg(imageUrl) }}
 
   Returns markup for a background image url
@@ -114,6 +117,7 @@ style="background-image: url({{ imageUrl }});"
 {# Image URL
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/image' as image %}
   {{ image.imgUrl(CraftAsset, { transform: '7x5' }, 50) }}
 
   Returns the URL for a single transformed image
@@ -166,10 +170,10 @@ style="background-image: url({{ imageUrl }});"
 {# Simple Lazy Image
 {# ------------------------------------------------------------------ #}
 {#
-{{ image.lazyImg(src, {
-  alt: 'My alt text',
-}) }}
-
+  {% import '_macros/image' as image %}
+  {{ image.lazyImg(src, {
+    alt: 'My alt text',
+  }) }}
 #}
 
 {%- macro lazyImg(src, options = {}) -%}
@@ -186,22 +190,17 @@ style="background-image: url({{ imageUrl }});"
 {# Img
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/image' as image %}
   {{ image.img(CraftAsset, {
     alt: 'My alt text',
     class: 'foo',
     transform: '7x5',
-    wrap: true,
-    wrapperClasses: ''
+    lazy: true,
+    wrapperClasses: ['image--fade'],
+    size: 'full',
   }) }}
 
   Returns an <img> or <picture> for a Craft asset
-
-  "Options" argument will take an optional key of `smallTransform` which is
-  the name of the transform to use at smaller sizes.
-  If the asset has a `smallVersion` field set to an alternate asset, the macro
-  will automatically display that asset at smaller sizes:
-
-  smallTransform: '1x1'
 #}
 
 {%- macro img(asset, options) -%}
@@ -224,7 +223,9 @@ style="background-image: url({{ imageUrl }});"
     class: '',
     transform: '7x5',
     wrap: true,
-    wrapperClasses: 'image--fade'
+    wrapperClasses: [],
+    lazy: true,
+    size: 'full',
   } %}
 
   {# Merge options with defaults #}
@@ -247,20 +248,22 @@ style="background-image: url({{ imageUrl }});"
 
   {% set img %}
     <img
-      class="{{ options.class }} lazyload"
+      class="{{ options.class }}"
       alt="{{ options.alt ??? asset.title ??? '' }}"
       width="{{ placeholderWidth }}"
       height="{{ placeholderHeight }}"
       style="object-position: {{ fpX * 100 }}% {{ fpY * 100 }}%;"
-      src="{{ craft.imager.placeholder({ type: 'svg', width: placeholderWidth, height: placeholderHeight }) }}"
-      data-sizes="auto"
-      data-srcset="{{ image.srcset(asset, fullParams) }}"
+      decoding="async"
+      {{ _self.srcset(asset, fullParams, options.size) }}
+      {% if options.lazy %}
+        loading="lazy"
+      {% endif %}
     >
   {% endset %}
 
   {# Return the element #}
   {% if options.wrap %}
-    {% return image.wrap(img, asset, options) | raw %}
+    {% return _self.wrap(img, asset, options) | raw %}
   {% else %}
     {{ img | raw }}
   {% endif %}
@@ -272,25 +275,24 @@ style="background-image: url({{ imageUrl }});"
 {# Wrap Image
 {# ------------------------------------------------------------------ #}
 {#
-  {{ image.wrap(image, asset, options) }}
+  {{ _self.wrap(image, asset, options) }}
 
   Wraps an image in common markup.
 
-  @param image (HTML)                     - [required] The HTML markup (e.g. <img>, <picture>, etc) to wrap
-  @param asset (CraftAsset)               - [required] Asset to use for <noscript> fallback
-  @param options.transform (String)       - [required] Transform to use for <noscript> fallback
-  @param options.wrapperClasses (String)  - [optional] Class to add to wrapper
+  @param image (HTML)                       - [required] The HTML markup (e.g. <img>, <picture>, etc) to wrap
+  @param asset (CraftAsset)                 - [required] Asset to use for <noscript> fallback
+  @param options.transform (String)         - [required] Transform to use for <noscript> fallback
+  @param options.wrapperClasses (String[])  - [optional] Array of classes too add to image
 #}
 
 {%- macro wrap(image, asset, options = {}) -%}
-  {% import _self as image %}
+{% import _self as image %}
+{% import '_macros/class-modifiers' as classModifiers %}
+{% set classes = classModifiers.set('image', options.wrapperClasses ?? []) %}
 {% set wrappedImg %}
-<div class="image {{ options.wrapperClasses ?? '' }}" data-module-reveal>
+<div class="image {{ classes }}" data-module-reveal>
   <div class="image__inner">
     {{ image | raw }}
-    <noscript>
-      <img class="noscript" src="{{ image.imgUrl(asset, { transform: options.transform }, 50) }}" alt="" />
-    </noscript>
   </div>
 </div>
 {% endset %}
@@ -302,17 +304,14 @@ style="background-image: url({{ imageUrl }});"
 {# Srcset
 {# ------------------------------------------------------------------ #}
 {#
-  {{ image.srcset(CraftAsset, params) }}
+  {{ _self.srcset(CraftAsset, params) }}
 
-  Returns a srcset for a Craft asset
+  Returns a "srcset" and "sizes" attribute for a Craft asset
 #}
 
-{%- macro srcset(asset, params) -%}
-  {% set srcsetItems = [] %}
-  {% set resolution = 1.5 %}
-
+{%- macro srcset(asset, params, size = 'full') -%}
   {% set transformedImages = craft.imager.transformImage(asset,
-    [{ width: 300 }, { width: 2700 }],
+    [{ width: 600 }, { width: 3000 }],
     {
       ratio: params.w and params.h ? (params.w/params.h) : null,
       auto: 'format,compress',
@@ -321,16 +320,37 @@ style="background-image: url({{ imageUrl }});"
     },
     {
       fillTransforms: true,
-      fillInterval: 600
+      fillInterval: 600,
     })
   %}
+  {# Output #}
+  srcset="{{ craft.imager.srcset(transformedImages) }}"
 
-  {% for image in transformedImages %}
-    {% set url = image.url %}
-    {% set srcsetItems = srcsetItems | merge([
-      url ~ " #{(image.width / resolution) | round}w"
-    ]) %}
-  {% endfor %}
-
-  {% return srcsetItems | join(', ') | raw %}
+  {# Get the sizes #}
+  {{ _self.getSizes(size) }}
 {%- endmacro -%}
+
+
+{# ------------------------------------------------------------------ #}
+{# Get Sizes
+{# ------------------------------------------------------------------ #}
+{#
+  {{ image.getSizes(size) }}
+
+  Returns the "sizes" atrribute for an image
+#}
+{% macro getSizes(size = 'full') %}
+  {% switch size %}
+    {% case 'full' %}
+      sizes="100vw"
+
+    {% case 'half' %}
+      sizes="(min-width: 768px) 50vw,
+      100vw"
+
+    {% case 'third' %}
+      sizes="(min-width: 1440px) 33vw,
+      (min-width: 768px) 50vw,
+      100vw"
+  {% endswitch %}
+{% endmacro %}

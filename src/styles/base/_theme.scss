@@ -6,6 +6,7 @@
 
 @mixin theme-light {
   --theme-bg: #{color(white)};
+  --theme-bg-faint: #{rgba(color(black), 0.05)};
   --theme-bg-transparent: #{rgba(color(white), 0)};
   --theme-text: #{color(black)};
   --theme-text-transparent: #{rgba(color(black), 0)};
@@ -18,6 +19,7 @@
 
 @mixin theme-dark {
   --theme-bg: #{color(black)};
+  --theme-bg-faint: #{rgba(color(white), 0.05)};
   --theme-bg-transparent: #{rgba(color(black), 0)};
   --theme-text: #{color(white)};
   --theme-text-transparent: #{rgba(color(black), 0)};

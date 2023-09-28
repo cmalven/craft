@@ -6,6 +6,7 @@ Either an image or a video asset.
 
 .image-video {
   @include absolute;
+  background-color: var(--theme-bg-faint);
   overflow: hidden;
 }
 
@@ -39,6 +40,7 @@ Either an image or a video asset.
 
     .js & {
       opacity: 0.001;
+      transform: scale(1.01);
     }
   }
 
@@ -46,6 +48,7 @@ Either an image or a video asset.
     .image-video__inner,
     .image-video__innermost {
       opacity: 1;
+      transform: scale(1.01);
     }
   }
 }
