@@ -35,8 +35,8 @@ cd your-project-slug
 
 First, make sure you have [Node.js](http://nodejs.org) installed. Then:
 
-* `npm i`
-* `npm start`
+- `npm i`
+- `npm start`
 
 ### Development Server
 
