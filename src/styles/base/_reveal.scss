@@ -4,7 +4,7 @@ Reveal
 Styles for revealed elements
 */
 
-$h-reveal-duration: 1.5s;
+$h-reveal-duration: 0.8s;
 $h-reveal-offset: 0.8rem;
 $h-reveal-delay-increment: 0.05 * $h-reveal-duration;
 
@@ -30,7 +30,7 @@ $h-reveal-delay-increment: 0.05 * $h-reveal-duration;
     'right': translateX(-$h-reveal-offset),
     'scale': scale(0.9),
   );
-  transition: $h-reveal-duration ease(out-quint);
+  transition: $h-reveal-duration ease(out-expo);
   transition-property: opacity, transform;
   opacity: 0;
   transform: map-get($directions, $direction);

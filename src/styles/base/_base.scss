@@ -18,7 +18,6 @@ body {
 }
 
 html {
-  font-size: 62.5%;
   box-sizing: border-box;
 
   // Don't transition anything until we're ready
@@ -32,6 +31,7 @@ html {
 }
 
 body {
+  padding: 3rem;
   color: var(--theme-text);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -57,4 +57,36 @@ button {
   // Prevent Safari iOS from adding styles to buttons
   color: inherit;
   font-weight: normal;
+}
+
+
+// Nav
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+
+// ---------------------------------------------------------------
+// HTMX Transitions
+// ---------------------------------------------------------------
+
+body .l-container {
+  transition: 0.2s ease(out-quart);
+  transition-property: opacity, transform;
+}
+
+body.htmx-swapping {
+  pointer-events: none;
+
+  .l-container {
+    opacity: 0;
+  }
+}
+
+nav a.is-active {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
 }

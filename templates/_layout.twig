@@ -17,15 +17,52 @@
   class="{{ bodyClass | default('') }}"
   data-module-lazy-image-transitioner
   data-module-debug-reveal
+  data-module-resizer
+  data-module-scroller
+  hx-boost="true"
+  hx-swap="outerHTML swap:0.3s settle:0.3s"
 >
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   {# Global Header #}
   {% include '_partials/global-header' %}
 
+  <nav>
+    {% for item in [
+      { text: 'Home', url: '' },
+      { text: 'One', url: 'one' },
+      { text: 'Two', url: 'two' },
+    ] %}
+      <a
+        href="/{{ item.url }}"
+        {% if craft.app.request.pathInfo == item.url %}
+          class="is-active"
+        {% endif %}
+      >{{ item.text }}</a>
+    {% endfor %}
+  </nav>
+
   {# Main Content Container #}
   <main class="l-container" tabindex="-1" id="main-content">
-    {% block content %}{% endblock %}
+    <div data-module-reveal="up">
+
+      {% block content %}{% endblock %}
+
+      <!-- Counter -->
+      <div
+        data-module-counter
+        data-counter-min="-10"
+        data-counter-max="10"
+      >
+        <button data-counter="less">Less</button>
+        <button data-counter="more">More</button>
+      </div>
+
+      <!-- Display -->
+      <div data-module-display>
+        <p data-display="count">0</p>
+      </div>
+    </div>
 
     {% include '_partials/debug-grid' %}
   </main>

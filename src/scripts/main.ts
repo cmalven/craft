@@ -1,3 +1,13 @@
+import htmx from 'htmx.org';
+
+declare global {
+  interface Window {
+    htmx: typeof htmx;
+  }
+}
+
+window.htmx = htmx;
+
 // ---------------------------------------------------------------
 // Modu
 // ---------------------------------------------------------------
@@ -23,4 +33,19 @@ new SmoothScroll('a[href*="#"]', {
   speedAsDuration: true,
   easing: 'easeInOutCubic',
   updateURL: true,
+});
+
+
+//--------------------------------------------------------------------
+// HTMX
+//--------------------------------------------------------------------
+
+// Destroy Modu modules before we swap in new content
+htmx.on('htmx:beforeSwap', function(evt) {
+  if (evt.target) app.destroyModules(evt.target as Element);
+});
+
+// Initialize Modu modules after we swap in new content
+htmx.on('htmx:afterSwap', function(evt) {
+  if (evt.target) app.init(evt.target as Element);
 });
