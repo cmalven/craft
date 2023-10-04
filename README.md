@@ -33,7 +33,7 @@ cd your-project-slug
 
 ### Front End Dependencies
 
-First, make sure you have [NodeJS](http://nodejs.org) installed. Then:
+First, make sure you have [Node.js](http://nodejs.org) installed. Then:
 
 * `npm i`
 * `npm start`
