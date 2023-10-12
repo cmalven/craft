@@ -1,4 +1,4 @@
-dateModified: 1683224548
+dateModified: 1697151631
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -41,7 +41,6 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: ZQOBQ296Y8TJY0ZQMQI6V3DA
     schemaVersion: 4.4.0
   ckeditor:
     edition: standard
@@ -73,7 +72,6 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: 5HEODGW6AHICRJD44Z52GU1D
     schemaVersion: 4.0.0
   matrixmate:
     edition: standard
@@ -86,7 +84,6 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: DP87BV3ZNIOB5QZFDP73BM9M
     schemaVersion: 3.0.11
   sherlock:
     edition: lite
