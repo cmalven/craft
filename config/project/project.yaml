@@ -1,4 +1,4 @@
-dateModified: 1697151631
+dateModified: 1697151821
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -30,6 +30,7 @@ meta:
     673453b1-7363-4af9-a69b-0f9478e93bfc: Text # Text
     d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
     db2131d9-42a6-4669-b9f5-6ce27eb2e275: Homepage # Homepage
+    f33e014d-334d-438a-9f5e-cda4d49c5d45: 'Public Schema'
     f640e8d2-8f8a-4a08-ad63-04b277a4da43: Images # Images
     f6044678-42e4-4fcf-b602-006ebb4d0521: Standard # Standard
     fa35bcb3-3708-420c-b074-15d36e91b1eb: SEO # SEO
