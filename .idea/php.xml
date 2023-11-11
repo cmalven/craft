@@ -50,7 +50,6 @@
       <path value="$PROJECT_DIR$/vendor/illuminate/conditionable" />
       <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/vendor/craftcms/oauth2-craftid" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/craftcms/server-check" />
       <path value="$PROJECT_DIR$/vendor/craftcms/cms" />
@@ -71,7 +70,6 @@
       <path value="$PROJECT_DIR$/vendor/voku/portable-utf8" />
       <path value="$PROJECT_DIR$/vendor/voku/anti-xss" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/vendor/league/oauth2-client" />
       <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
       <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
       <path value="$PROJECT_DIR$/vendor/react/promise" />
@@ -133,7 +131,6 @@
       <path value="$PROJECT_DIR$/vendor/league/uri-parser" />
       <path value="$PROJECT_DIR$/vendor/google/auth" />
       <path value="$PROJECT_DIR$/vendor/sebastianlenz/craft-utils" />
-      <path value="$PROJECT_DIR$/vendor/google/crc32" />
       <path value="$PROJECT_DIR$/vendor/google/cloud-storage" />
       <path value="$PROJECT_DIR$/vendor/google/cloud-core" />
       <path value="$PROJECT_DIR$/vendor/imgix/imgix-php" />
@@ -179,11 +176,12 @@
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-shell" />
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/craftcms/ckeditor" />
+      <path value="$PROJECT_DIR$/vendor/seld/signal-handler" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="3cba21f4-1f52-4567-bbd6-534910bdde9b" name="DDEV" home="docker-compose://DATA" false="false" debugger_id="php.debugger.XDebug">
+      <interpreter id="3cba21f4-1f52-4567-bbd6-534910bdde9b" name="DDEV" home="docker-compose://DATA" auto="false" debugger_id="php.debugger.XDebug">
         <remote_data INTERPRETER_PATH="php8.0" HELPERS_PATH="/opt/.phpstorm_helpers" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_COMPOSE_SERVICE_NAME="web" DOCKER_REMOTE_PROJECT_PATH="/opt/project">
           <PathMappingSettings>
             <option name="pathMappings">

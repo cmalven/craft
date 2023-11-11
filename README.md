@@ -4,25 +4,6 @@
 
 ---
 
-## Create a new project with this template
-
-```shell
-npx degit https://github.com/cmalven/craft your-project-slug
-cd your-project-slug
-```
-
-- Run `bash ./bin/setup.sh "my-actual-slug" "My Actual Title" "A brief description of my project"`.
-- Follow the steps in `Setup` below.
-- Install Craft with `ddev craft install`
-- Run `ddev craft project-config/apply`
-- Run `ddev craft update all` to update Craft and plugins.
-- Run `npx npm-check -u` to update all frontend dependencies.
-- Delete this section of the README.
-- Create a git repo with `git init`
-- Commit your changes with `git add . && git commit -m "Initial commit"`
-
----
-
 ## Setup
 - Install [DDEV](https://ddev.com/get-started/)
 - `ddev start`
