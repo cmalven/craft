@@ -67,6 +67,9 @@ handle: default
 hasTitleField: true
 name: Default
 section: 3a32bed0-f47f-4af6-b970-7770b361e95a # Pages
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

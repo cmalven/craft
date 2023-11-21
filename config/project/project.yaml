@@ -1,4 +1,4 @@
-dateModified: 1699730841
+dateModified: 1700583156
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -25,12 +25,10 @@ meta:
     8e32402b-e63f-492e-a351-f8c770c4d99e: Homepage # Homepage
     9e9a874c-a710-4d69-8273-4908f88f25ab: Text # Text
     33e725ff-6a81-4865-9ac0-079fac72c0cb: your-project-title # your-project-title
-    59ff1616-3152-42ff-b0db-31a527ccf539: 'Public Schema' # Public Schema
     1791e3ba-a3f2-4452-9b01-23bac2984a77: your-project-title # your-project-title
     673453b1-7363-4af9-a69b-0f9478e93bfc: Text # Text
     d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
     db2131d9-42a6-4669-b9f5-6ce27eb2e275: Homepage # Homepage
-    f33e014d-334d-438a-9f5e-cda4d49c5d45: 'Public Schema' # Public Schema
     f640e8d2-8f8a-4a08-ad63-04b277a4da43: Images # Images
     f6044678-42e4-4fcf-b602-006ebb4d0521: Standard # Standard
     fa35bcb3-3708-420c-b074-15d36e91b1eb: SEO # SEO
@@ -42,6 +40,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
+    licenseKey: BLFZXWBU5S13WLBACUD8DOSG
     schemaVersion: 4.5.0
   ckeditor:
     edition: standard
@@ -73,6 +72,7 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
+    licenseKey: V5KMF6IXSEFN5Z2CGMO7RRVR
     schemaVersion: 4.0.0
   matrixmate:
     edition: standard
@@ -85,6 +85,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: 8WOH5GTX1KWK97JV0GXPDAXQ
     schemaVersion: 3.0.12
   sherlock:
     edition: lite
