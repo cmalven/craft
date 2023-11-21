@@ -8,8 +8,6 @@
 
 :root {
   // Top-level CSS custom properties
-  --scrollbar-width: 0;
-  --100vw: calc(100vw - var(--scrollbar-width));
 }
 
 html,
@@ -24,10 +22,6 @@ html {
   // Don't transition anything until we're ready
   &.preload-transitions * {
     transition: none !important;
-  }
-
-  &.has-scrollbars {
-    @include custom-scrollbar;
   }
 }
 

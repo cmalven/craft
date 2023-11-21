@@ -35,7 +35,6 @@ Wrapper for dialog content
 .l-dialog {
   .js & {
     @include fixed;
-    @include custom-scrollbar;
     pointer-events: none;
     overflow: hidden;
     z-index: $z-index-dialog;
