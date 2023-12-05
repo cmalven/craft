@@ -20,7 +20,7 @@ global.GULP_CONFIG = {
 
 // Export tasks
 
-const watch = function (done) {
+const watch = (done) => {
   // Images
   gulp.watch(
     [global.GULP_CONFIG.paths.imageSrc + '**/*'],
