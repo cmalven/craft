@@ -5,7 +5,6 @@ A combination of content used in an accordion.
 */
 
 .l-accordion-group {
-
 }
 
 .l-accordion-group__heading-button {
@@ -22,7 +21,6 @@ A combination of content used in an accordion.
 }
 
 .l-accordion-group__heading-icon {
-
 }
 
 .l-accordion-group__content {
@@ -35,15 +33,13 @@ A combination of content used in an accordion.
 }
 
 .l-accordion-group__content-innermost {
-
 }
-
 
 // ---------------------------------------------------------------
 // State - Expanding
 // ---------------------------------------------------------------
 
-.js .l-accordion-group__content:not([aria-hidden = 'false']) {
+.js .l-accordion-group__content:not([aria-hidden='false']) {
   max-height: 0 !important;
 
   .l-accordion-group__content-inner {
@@ -51,12 +47,10 @@ A combination of content used in an accordion.
   }
 }
 
-.l-accordion-group__heading-button[aria-expanded = 'true'] {
+.l-accordion-group__heading-button[aria-expanded='true'] {
   .l-accordion-group__heading-icon {
-
   }
 }
-
 
 // ---------------------------------------------------------------
 // Hover
@@ -64,8 +58,7 @@ A combination of content used in an accordion.
 
 .l-accordion-group {
   @include not-touch-hover {
-    & .l-accordion-group__heading-button:not([aria-expanded = 'true']) {
-
+    & .l-accordion-group__heading-button:not([aria-expanded='true']) {
     }
   }
 }

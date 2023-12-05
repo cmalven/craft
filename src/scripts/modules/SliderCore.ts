@@ -5,7 +5,7 @@ import { Intersection } from '@splidejs/splide-extension-intersection';
 
 type EventOptions = {
   beforeMount?: (slider: Splide) => void;
-}
+};
 
 /**
  * Core slider functionality
@@ -25,7 +25,9 @@ export default class extends Modu {
     this.el.classList.add('splide');
     this.get('track')?.classList.add('splide__track');
     this.get('list')?.classList.add('splide__list');
-    this.getAll('slide').forEach(slide => slide.classList.add('splide__slide'));
+    this.getAll('slide').forEach((slide) =>
+      slide.classList.add('splide__slide'),
+    );
   };
 
   /**
@@ -67,7 +69,11 @@ export default class extends Modu {
   /**
    * Create a new Splide slider instance
    */
-  getSlider = (el: Element, options: Options = {}, eventOptions: EventOptions = {}) => {
+  getSlider = (
+    el: Element,
+    options: Options = {},
+    eventOptions: EventOptions = {},
+  ) => {
     // Add slider classes
     this.addSliderClasses();
 
@@ -103,9 +109,7 @@ export default class extends Modu {
     const controlsSliderKey = this.getData('controls-slider-key');
     if (controlsSliderKey && typeof controlsSliderKey === 'string') {
       this.slider.on('move', (newIndex) => {
-        [
-          'SliderImage',
-        ].forEach(moduleName => {
+        ['SliderImage'].forEach((moduleName) => {
           this.call(moduleName, 'setSlide', newIndex, controlsSliderKey);
         });
       });
@@ -135,7 +139,10 @@ export default class extends Modu {
     const slideCount = this.getSlideCount();
     const perPage = this.slider.options.perPage ?? 1;
     this.el.classList.toggle('is-first-slide', idx === 0);
-    this.el.classList.toggle('is-last-slide', idx + perPage - 1 >= slideCount - 1);
+    this.el.classList.toggle(
+      'is-last-slide',
+      idx + perPage - 1 >= slideCount - 1,
+    );
   };
 
   /**

@@ -27,7 +27,8 @@ Basic styling for splide slider arrows.
     transition: opacity $transition-hover-color;
     opacity: 0.4;
 
-    &, svg {
+    &,
+    svg {
       width: 5rem;
       height: 5rem;
     }

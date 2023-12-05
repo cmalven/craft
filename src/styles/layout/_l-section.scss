@@ -21,15 +21,12 @@ spacing and relationships between various vertical sections of the site.
   @include size(section-vertical, padding-bottom);
 }
 
-
 .l-section {
   position: relative;
 }
 
 .l-section__inner {
-
 }
-
 
 // ---------------------------------------------------------------
 // Modifier - Max Width
@@ -38,7 +35,6 @@ spacing and relationships between various vertical sections of the site.
 .l-section--max {
   @include l-section-max;
 }
-
 
 // ---------------------------------------------------------------
 // Modifier - Padding
@@ -56,7 +52,6 @@ spacing and relationships between various vertical sections of the site.
   @include space-top;
   @include space-bottom;
 }
-
 
 // ---------------------------------------------------------------
 // Modifier - Bleed
@@ -93,7 +88,6 @@ spacing and relationships between various vertical sections of the site.
   }
 }
 
-
 // ---------------------------------------------------------------
 // Modifier - Overflow Hidden
 // ---------------------------------------------------------------
@@ -101,7 +95,6 @@ spacing and relationships between various vertical sections of the site.
 .l-section--overflow-hidden {
   overflow-x: hidden;
 }
-
 
 // ---------------------------------------------------------------
 // Background Color
@@ -117,7 +110,6 @@ spacing and relationships between various vertical sections of the site.
   background-color: var(--theme-bg);
 }
 
-
 // ---------------------------------------------------------------
 // Adjacent Block Spacing
 // ---------------------------------------------------------------
@@ -126,18 +118,21 @@ $bg-colors: light, dark;
 
 @each $bg-color in $bg-colors {
   @include media('<medium') {
-    .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top):not(.l-section--bleed--top-mobile) {
+    .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom)
+      + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top):not(
+        .l-section--bleed--top-mobile
+      ) {
       @include size(section-vertical, margin-top, $negative: true);
     }
   }
 
   @include media('>=medium') {
-    .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom) + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top) {
+    .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom)
+      + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top) {
       @include size(section-vertical, margin-top, $negative: true);
     }
   }
 }
-
 
 // ---------------------------------------------------------------
 // Borders
@@ -158,7 +153,6 @@ $bg-colors: light, dark;
     @include space-top;
   }
 }
-
 
 // ---------------------------------------------------------------
 // Unique styles

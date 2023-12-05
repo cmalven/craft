@@ -4,7 +4,11 @@ Underline Text
 Assists with adding flexible, animatable underlines to text.
 */
 
-@mixin underline-text($color: currentColor, $size: 1px, $transition: 0.4s ease(out-expo)) {
+@mixin underline-text(
+  $color: currentColor,
+  $size: 1px,
+  $transition: 0.4s ease(out-expo)
+) {
   background-image: linear-gradient($color, $color);
   background-position: 0 100%;
   background-repeat: no-repeat;

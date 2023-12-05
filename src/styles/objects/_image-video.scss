@@ -19,7 +19,6 @@ Either an image or a video asset.
 }
 
 .image-video__inner {
-
 }
 
 .image-video__innermost {
@@ -27,7 +26,6 @@ Either an image or a video asset.
     @include bg-cover;
   }
 }
-
 
 // ---------------------------------------------------------------
 // Modifier - Fade
@@ -52,7 +50,6 @@ Either an image or a video asset.
     }
   }
 }
-
 
 // ---------------------------------------------------------------
 // Modifier - Wipe

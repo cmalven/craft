@@ -41,16 +41,9 @@ $h-reveal-delay-increment: 0.05 * $h-reveal-duration;
   transform: translateY(0) translateX(0) scale(1);
 }
 
-@each $direction in (
-  'fade',
-  'up',
-  'up-less',
-  'down',
-  'left',
-  'right',
-  'scale'
-) {
-  .js [data-module-reveal = #{$direction}] {
+@each $direction in ('fade', 'up', 'up-less', 'down', 'left', 'right', 'scale')
+{
+  .js [data-module-reveal='#{$direction}'] {
     @include reveal-hidden($direction);
 
     &.is-visible {
@@ -61,11 +54,13 @@ $h-reveal-delay-increment: 0.05 * $h-reveal-duration;
 
 // Does nothing on its on, but will trigger the addition of a .is-visible
 // class on the element which can be use to implement custom animation.
-.js [data-module-reveal = 'animate'] {}
+.js [data-module-reveal='animate'] {
+}
 
 // Does nothing on its on, but if set all children will animate in
 // when this element animates in.
-.js [data-module-reveal = 'stagger-children'] {}
+.js [data-module-reveal='stagger-children'] {
+}
 
 // Automatically staggered delays on children based on :nth-child
 @for $idx from 1 through 50 {
@@ -76,7 +71,7 @@ $h-reveal-delay-increment: 0.05 * $h-reveal-duration;
 
 // Manual delays
 @for $idx from 1 through 50 {
-  .js [data-reveal-delay = "#{$idx}"]:nth-child(1n) {
+  .js [data-reveal-delay='#{$idx}']:nth-child(1n) {
     transition-delay: reveal-delay($idx);
   }
 }

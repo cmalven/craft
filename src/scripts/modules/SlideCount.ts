@@ -18,7 +18,9 @@ export default class extends Modu {
   init = () => {
     // Check for necessary elements
     if (!this.numeratorEl || !this.denominatorEl) {
-      return console.error('SlideCount module could not find `numerator` or `denominator` elements.');
+      return console.error(
+        'SlideCount module could not find `numerator` or `denominator` elements.',
+      );
     }
 
     // Zero pad denominator
@@ -27,9 +29,13 @@ export default class extends Modu {
   };
 
   set = (idx: number, of?: number) => {
-    if (!this.numeratorEl) return console.error('SlideCount module could not find `numerator` element.');
+    if (!this.numeratorEl)
+      return console.error(
+        'SlideCount module could not find `numerator` element.',
+      );
     this.numeratorEl.innerHTML = this.padNumber(String(idx + 1));
-    if (of && this.denominatorEl) this.denominatorEl.innerHTML = this.padNumber(String(of));
+    if (of && this.denominatorEl)
+      this.denominatorEl.innerHTML = this.padNumber(String(of));
   };
 
   padNumber = (val: string) => {

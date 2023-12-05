@@ -34,11 +34,16 @@
 
 type Options = {
   rootMargin?: string;
-  inHandler?: (el: Element, direction: string, isTriggered: boolean, currentRatio: number) => void;
+  inHandler?: (
+    el: Element,
+    direction: string,
+    isTriggered: boolean,
+    currentRatio: number,
+  ) => void;
   outHandler?: (el: Element, direction: string, currentRatio: number) => void;
   atHandler?: (el: Element, direction: string) => void;
   ratioSteps?: number;
-}
+};
 
 export default (el: Element, options: Options = {}) => {
   let isTriggered = false;
@@ -59,8 +64,8 @@ export default (el: Element, options: Options = {}) => {
 
   const add = () => {
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           // If it isn't actually in the viewport, we're not concerned with it
           if (!entry.isIntersecting) return;
 
@@ -80,7 +85,13 @@ export default (el: Element, options: Options = {}) => {
 
           // Entering top or bottom
           if (currentRatio > 0 && status === 'entering') {
-            inHandler.call(undefined, entry.target, dir, isTriggered, currentRatio);
+            inHandler.call(
+              undefined,
+              entry.target,
+              dir,
+              isTriggered,
+              currentRatio,
+            );
             isTriggered = true;
           }
 

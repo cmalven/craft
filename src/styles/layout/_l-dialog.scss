@@ -112,7 +112,6 @@ Wrapper for dialog content
   min-height: min-content;
 }
 
-
 // ---------------------------------------------------------------
 // State - Opening
 // ---------------------------------------------------------------
@@ -120,7 +119,6 @@ Wrapper for dialog content
 .l-dialog.is-opening {
   display: flex;
 }
-
 
 // ---------------------------------------------------------------
 // State - Open
@@ -144,7 +142,6 @@ Wrapper for dialog content
     z-index: $z-index-dialog;
   }
 }
-
 
 // ---------------------------------------------------------------
 // Modifier - Global Nav

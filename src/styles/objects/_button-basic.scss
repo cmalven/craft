@@ -56,7 +56,8 @@ A flexible, reusable button.
   transition: var(--transition);
   transition-property: transform, color;
 
-  &, & svg {
+  &,
+  & svg {
     width: 2rem;
     height: 2rem;
     right: 2rem;
@@ -65,7 +66,6 @@ A flexible, reusable button.
     margin: auto 0;
   }
 }
-
 
 // ---------------------------------------------------------------
 // Hover / Focus Mixin
@@ -102,7 +102,6 @@ A flexible, reusable button.
     }
   }
 }
-
 
 // ---------------------------------------------------------------
 // State - Focus / Hover / Active

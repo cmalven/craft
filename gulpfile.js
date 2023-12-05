@@ -20,29 +20,19 @@ global.GULP_CONFIG = {
 
 // Export tasks
 
-const watch = function(done) {
+const watch = function (done) {
   // Images
-  gulp.watch([
-    global.GULP_CONFIG.paths.imageSrc + '**/*',
-  ], gulp.series(images, svg));
+  gulp.watch(
+    [global.GULP_CONFIG.paths.imageSrc + '**/*'],
+    gulp.series(images, svg),
+  );
 
   done();
 };
 
 module.exports = {
-  default: gulp.series(
-    imagesClean,
-    gulp.parallel(
-      watch,
-      images,
-      svg,
-    ),
-    done => done(),
+  default: gulp.series(imagesClean, gulp.parallel(watch, images, svg), (done) =>
+    done(),
   ),
-  build: gulp.series(
-    imagesClean,
-    images,
-    svg,
-    done => done(),
-  ),
+  build: gulp.series(imagesClean, images, svg, (done) => done()),
 };

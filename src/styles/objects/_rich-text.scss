@@ -20,11 +20,9 @@ Styling for common HTML text elements
   // Headings
 
   h2 {
-
   }
 
   h3 {
-
   }
 
   // Links
@@ -40,7 +38,8 @@ Styling for common HTML text elements
 
   ul,
   ol {
-    li {}
+    li {
+    }
 
     li + li,
     ul {

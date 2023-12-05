@@ -13,8 +13,5 @@
     "strict": true
   },
 
-  "exclude": [
-    "node_modules",
-    "vendor"
-  ]
+  "exclude": ["node_modules", "vendor"]
 }

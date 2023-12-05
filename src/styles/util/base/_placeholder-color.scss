@@ -5,25 +5,30 @@ Sets an alternative placeholder color for inputs.
 */
 
 @mixin placeholder-color($color: #000) {
-  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  &::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
     color: $color;
   }
 
-  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: $color;
-    opacity: 1;
-  }
-
-  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
     color: $color;
     opacity: 1;
   }
 
-  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: $color;
   }
 
-  &::-ms-input-placeholder { /* Microsoft Edge */
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: $color;
   }
 }

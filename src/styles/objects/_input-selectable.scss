@@ -6,7 +6,7 @@ A generic radio input.
 
 .input-selectable {
   --input-size: 2rem;
-  --transition:  0.6s #{ease(out-expo)};
+  --transition: 0.6s #{ease(out-expo)};
 }
 
 .input-selectable__label {
@@ -14,7 +14,6 @@ A generic radio input.
 }
 
 .input-selectable__items {
-
 }
 
 .input-selectable__item {
@@ -56,14 +55,14 @@ A generic radio input.
   margin: auto 0;
   color: var(--theme-text);
 
-  &, svg {
+  &,
+  svg {
     width: var(--input-size);
     height: var(--input-size);
   }
 }
 
 .input-selectable__item-label-unselected {
-
 }
 
 .input-selectable__item-label-selected {
@@ -81,7 +80,6 @@ A generic radio input.
 .input-selectable__errors {
   @include form-common-errors;
 }
-
 
 // ---------------------------------------------------------------
 // Modifier - Radio
@@ -112,7 +110,6 @@ A generic radio input.
     }
   }
 }
-
 
 // ---------------------------------------------------------------
 // Modifier - Checkbox

@@ -7,7 +7,9 @@ Helpers for working with grid units
 */
 
 @function grid-width($cols, $modifier, $parent-cols: var(--grid-columns)) {
-  $each-column: calc((100% - (#{$parent-cols} - 1) * var(--grid-gutter)) / #{$parent-cols});
+  $each-column: calc(
+    (100% - (#{$parent-cols} - 1) * var(--grid-gutter)) / #{$parent-cols}
+  );
 
   // Modify the value
   $modifier-space: 0px;
@@ -18,14 +20,16 @@ Helpers for working with grid units
     $modifier-space: calc(var(--grid-gutter) * -1);
   }
 
-  $width: calc(#{$each-column} * #{$cols} + (#{$cols - 1}) * var(--grid-gutter) + #{$modifier-space});
+  $width: calc(
+    #{$each-column} * #{$cols} + (#{$cols - 1}) * var(--grid-gutter) + #{$modifier-space}
+  );
 
   @return $width;
 }
 
 @function grid-span($cols, $modifier: null, $of: null) {
   @if $modifier and $of {
-    @error "grid-span() cannot combine $modifier with $of";
+    @error 'grid-span() cannot combine $modifier with $of';
   }
 
   @if $of {

@@ -24,6 +24,7 @@ cd your-project-slug
 ---
 
 ## Setup
+
 - Install [DDEV](https://ddev.com/get-started/)
 - `ddev start`
 - `ddev composer install`

@@ -7,11 +7,7 @@ module.exports = [
     name: 'type',
     message: 'What type of component is this?',
     default: 'Twig Include',
-    choices: [
-      'Twig Include',
-      'Twig Embed',
-      'Twig Block',
-    ],
+    choices: ['Twig Include', 'Twig Embed', 'Twig Block'],
   },
   {
     type: 'input',

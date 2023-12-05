@@ -5,10 +5,7 @@ import { Modu, ModuOptions } from '@malven/modu';
  */
 
 export default class extends Modu {
-  selectors = [
-    '.image',
-    '.image-video',
-  ];
+  selectors = ['.image', '.image-video'];
 
   readyClass = 'is-ready';
 
@@ -39,7 +36,6 @@ export default class extends Modu {
     }
   };
 
-
   addEventListeners = () => {
     // Add listeners to existing items
     this.watchImages(document.body);
@@ -47,11 +43,11 @@ export default class extends Modu {
     // Watch for new items
     const callback = (mutationsList: MutationRecord[]) => {
       // Look through all mutations that just occured
-      for(const mutation of mutationsList) {
+      for (const mutation of mutationsList) {
         // If the mutation was the addition of nodes
         if (mutation.type === 'childList') {
           // Check each added node
-          for(const node of Array.from(mutation.addedNodes)) {
+          for (const node of Array.from(mutation.addedNodes)) {
             if (node instanceof HTMLElement) {
               this.watchImages(node as HTMLElement);
             }
@@ -73,7 +69,7 @@ export default class extends Modu {
       if (!videoEl.paused && !videoEl.ended && videoEl.readyState > 2) {
         this.makeParentVisible(videoEl);
       } else {
-        videoEl.addEventListener('playing', _evt => {
+        videoEl.addEventListener('playing', (_evt) => {
           window.setTimeout(() => {
             this.makeParentVisible(videoEl);
           }, 300);

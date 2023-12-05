@@ -99,7 +99,7 @@ export default class extends Modu {
     this.updateContentHeight();
 
     // Create a resize observer to update content height
-    this.resizeObserver = new ResizeObserver(_entries => {
+    this.resizeObserver = new ResizeObserver((_entries) => {
       this.updateContentHeight();
     });
     this.resizeObserver.observe(this.contentInnerEl);
@@ -114,7 +114,7 @@ export default class extends Modu {
     this.contentEl.setAttribute('aria-hidden', `${!this.isOpen}`);
 
     // Toggle focus of content links
-    this.contentInnerEl.querySelectorAll('a').forEach(linkEl => {
+    this.contentInnerEl.querySelectorAll('a').forEach((linkEl) => {
       linkEl.setAttribute('tabindex', this.isOpen ? '0' : '-1');
     });
 
