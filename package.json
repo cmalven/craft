@@ -20,6 +20,7 @@
     "lint-styles": "stylelint",
     "check": "prettier . --write",
     "new:component": "hygen component new",
+    "new:modu": "hygen modu new",
     "prepare": "husky install"
   },
   "devDependencies": {
