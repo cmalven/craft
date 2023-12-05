@@ -15,7 +15,7 @@ export default defineConfig(({ command, mode }) => {
     publicDir: './src/static',
     server: {
       port: process.env.VITE_DEV_PORT || 3000,
-      host: true,
+      host: false, // Set to `true` to enable network access
       hmr: {
         host: process.env.VITE_DEV_BASE_ADDRESS, // Necessary only if `https` is true
       },
