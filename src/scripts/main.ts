@@ -7,10 +7,9 @@ import { App } from '@malven/modu';
 
 const app = new App({
   initialModules,
-  importMethod: module => import(`./modules/${module}.ts`),
+  importMethod: (module) => import(`./modules/${module}.ts`),
 });
 app.init();
-
 
 // ---------------------------------------------------------------
 // Smooth Scroll
