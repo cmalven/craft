@@ -3,7 +3,7 @@ to: src/scripts/<%= name %>.ts
 ---
 import { Modu, ModuOptions } from '@malven/modu';
 
-<%_ if (description.length) { %>
+<%_ if (description.length) { -%>
 /**
  * <%= description %>
  */
