@@ -8,8 +8,12 @@ use craft\helpers\App;
  * Multi-environment settings work in this file the same way as in general.php or db.php
  */
 
-return array(
-    'transformer' => 'imgix',
+return [
+    'transformer' => App::env('IMAGER_TRANSFORMER') ?: 'craft',
+    'allowUpscale' => true,
+    'fillTransforms' => true,
+    'fillInterval' => 400,
+
     //'useForCpThumbs' => true,
     //'imgixApiKey' => App::env('IMGIX_API_KEY'),
     //
@@ -23,4 +27,4 @@ return array(
     //        'getExternalImageDimensions' => false,
     //    ]
     //]
-);
+];
