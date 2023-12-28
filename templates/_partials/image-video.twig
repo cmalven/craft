@@ -18,7 +18,7 @@
       {# Image #}
       {% if asset.kind == 'image' %}
         {% import '_macros/image' as image %}
-        {{ image.img(asset, {
+        {{ image.get(asset, {
           transform: transform ?? 'scale',
           wrapperClasses: ["cover"],
           lazy: lazy ?? true,
