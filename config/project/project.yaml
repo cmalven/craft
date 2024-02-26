@@ -1,4 +1,4 @@
-dateModified: 1700583156
+dateModified: 1708974705
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -41,7 +41,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: BLFZXWBU5S13WLBACUD8DOSG
-    schemaVersion: 4.5.0
+    schemaVersion: 4.11.1
   ckeditor:
     edition: standard
     enabled: true
