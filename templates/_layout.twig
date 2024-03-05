@@ -5,6 +5,27 @@
 {% include '_partials/vite' ignore missing %}
 {% import '_macros/theme' as theme %}
 
+{# Eager Load Global #}
+{% do craft.app.elements.eagerLoadElements(
+  className(myGlobalHandle),
+  [myGlobalHandle],
+  [
+    'fieldHandle',
+  ]
+) %}
+
+{# Eager Load Fields #}
+{% if entry.dateUpdated ?? null %}
+  {% do craft.app.elements.eagerLoadElements(
+    className(entry),
+    [entry],
+    [
+      'hero.imageVideo',
+      'pageContent.matrixBlockHandle:blockType.fieldHandle',
+    ]
+  ) %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en-US" class="{{ theme.classForEntry(entry ??? null) }} preload-transitions">
 <head>
