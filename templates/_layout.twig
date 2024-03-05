@@ -6,6 +6,7 @@
 {% import '_macros/theme' as theme %}
 
 {# Eager Load Global #}
+{#
 {% do craft.app.elements.eagerLoadElements(
   className(myGlobalHandle),
   [myGlobalHandle],
@@ -13,6 +14,7 @@
     'fieldHandle',
   ]
 ) %}
+#}
 
 {# Eager Load Fields #}
 {% if entry.dateUpdated ?? null %}
