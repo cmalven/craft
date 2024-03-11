@@ -23,7 +23,10 @@ return [
         'debug' => false,
 
         // With this setting enabled, Blitz will begin caching pages according to the included/excluded URI patterns. Disable this setting to prevent Blitz from caching any new pages.
-        'cachingEnabled' => filter_var(getenv('CRAFT_TEMPLATE_CACHING'), FILTER_VALIDATE_BOOLEAN),
+        'cachingEnabled' => filter_var(
+            getenv('CRAFT_TEMPLATE_CACHING'),
+            FILTER_VALIDATE_BOOLEAN
+        ),
 
         // The URI patterns to include in caching. Set `siteId` to a blank string to indicate all sites.
         'includedUriPatterns' => [

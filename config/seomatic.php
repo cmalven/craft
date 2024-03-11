@@ -6,5 +6,5 @@ return [
 
         // Don't announce that the site is powered by SEOmatic
         'generatorEnabled' => false,
-    ]
+    ],
 ];
