@@ -110,7 +110,6 @@
       <path value="$PROJECT_DIR$/vendor/verbb/expanded-singles" />
       <path value="$PROJECT_DIR$/vendor/verbb/base" />
       <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
-      <path value="$PROJECT_DIR$/vendor/sebastianlenz/linkfield" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown-extra" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/kelunik/certificate" />
@@ -130,7 +129,6 @@
       <path value="$PROJECT_DIR$/vendor/tinify/tinify" />
       <path value="$PROJECT_DIR$/vendor/league/uri-parser" />
       <path value="$PROJECT_DIR$/vendor/google/auth" />
-      <path value="$PROJECT_DIR$/vendor/sebastianlenz/craft-utils" />
       <path value="$PROJECT_DIR$/vendor/google/cloud-storage" />
       <path value="$PROJECT_DIR$/vendor/google/cloud-core" />
       <path value="$PROJECT_DIR$/vendor/imgix/imgix-php" />
@@ -185,6 +183,11 @@
       <path value="$PROJECT_DIR$/vendor/google/protobuf" />
       <path value="$PROJECT_DIR$/vendor/putyourlightson/craft-sprig-core" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem-local" />
+      <path value="$PROJECT_DIR$/vendor/ml/iri" />
+      <path value="$PROJECT_DIR$/vendor/ml/json-ld" />
+      <path value="$PROJECT_DIR$/vendor/oscarotero/html-parser" />
+      <path value="$PROJECT_DIR$/vendor/embed/embed" />
+      <path value="$PROJECT_DIR$/vendor/verbb/hyper" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
