@@ -16,12 +16,12 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  33e725ff-6a81-4865-9ac0-079fac72c0cb: # your-project-title
+  0eec63d1-8a33-4f6a-83a5-00c027db46dc: # your-project-title
     enabledByDefault: true
     hasUrls: true
     template: pages/_entry
-    uriFormat: '{parent.uri}{slug}'
+    uriFormat: '{parent.uri}/{slug}'
 structure:
-  maxLevels: null
-  uid: 6e41ecf7-adca-4515-a6dd-def5d61206c3
+  maxLevels: 2
+  uid: e821412c-15da-40bb-a6bb-6317be4eb4ab
 type: structure

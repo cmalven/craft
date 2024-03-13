@@ -184,6 +184,7 @@
       <path value="$PROJECT_DIR$/vendor/google/longrunning" />
       <path value="$PROJECT_DIR$/vendor/google/protobuf" />
       <path value="$PROJECT_DIR$/vendor/putyourlightson/craft-sprig-core" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-local" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

@@ -16,9 +16,9 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  33e725ff-6a81-4865-9ac0-079fac72c0cb: # your-project-title
+  0eec63d1-8a33-4f6a-83a5-00c027db46dc: # your-project-title
     enabledByDefault: true
     hasUrls: true
-    template: index.twig
+    template: index
     uriFormat: __home__
 type: single

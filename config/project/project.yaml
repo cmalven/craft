@@ -1,37 +1,26 @@
-dateModified: 1708974705
+dateModified: 1710350182
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
   transportType: craft\mail\transportadapters\Sendmail
-fs:
-  images:
-    hasUrls: true
-    name: Images
-    settings:
-      path: '@webroot/assets/images'
-    type: craft\fs\Local
-    url: '@assetPath/images'
 graphql:
   publicToken:
     enabled: false
     expiryDate: null
 meta:
   __names__:
-    1b5bb69b-bbe2-4f41-9235-44aef00371cb: Default # Default
-    3a32bed0-f47f-4af6-b970-7770b361e95a: Pages # Pages
-    4e4061ff-782b-4d40-991e-097d89c3f169: SEO # SEO
-    6bde6d29-9e5a-4a8c-9d41-d8e5d12ec33d: 'Page Content' # Page Content
-    7cf92fda-206d-4960-980e-db5471941101: Simple # Simple
-    8e32402b-e63f-492e-a351-f8c770c4d99e: Homepage # Homepage
-    9e9a874c-a710-4d69-8273-4908f88f25ab: Text # Text
-    33e725ff-6a81-4865-9ac0-079fac72c0cb: your-project-title # your-project-title
-    1791e3ba-a3f2-4452-9b01-23bac2984a77: your-project-title # your-project-title
-    673453b1-7363-4af9-a69b-0f9478e93bfc: Text # Text
-    d062ff62-6a13-4c97-8725-e64d610ac77f: Common # Common
-    db2131d9-42a6-4669-b9f5-6ce27eb2e275: Homepage # Homepage
-    f640e8d2-8f8a-4a08-ad63-04b277a4da43: Images # Images
-    f6044678-42e4-4fcf-b602-006ebb4d0521: Standard # Standard
-    fa35bcb3-3708-420c-b074-15d36e91b1eb: SEO # SEO
+    0eec63d1-8a33-4f6a-83a5-00c027db46dc: your-project-title # your-project-title
+    9d6e156d-8dd4-4224-a69a-f46d32d53774: Standard # Standard
+    31abb75d-dc87-4ff3-a413-bb161bd3a59f: your-project-title # your-project-title
+    223e7dac-c6de-46ba-9144-0ee4c62734c4: 'Page Content' # Page Content
+    380a83b9-344d-415b-a3f4-8b389ef61717: SEO # SEO
+    507bbcf8-f9bf-4845-9b14-829d155d2a96: Simple # Simple
+    253489f3-4e59-48ac-a725-d8592cb0ed1e: Default # Default
+    90775891-8a83-4dd6-b2c0-0462aceb52d4: Homepage # Homepage
+    a41668f7-a432-4cc4-a09b-609538ea0125: Homepage # Homepage
+    adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b: Text # Text
+    b7a660f1-cbad-4067-8031-b237c204ab41: Pages # Pages
+    bfe9a900-d516-42f7-8a87-a91c181779c0: Common # Common
 plugins:
   aws-s3:
     edition: standard
@@ -40,8 +29,8 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: BLFZXWBU5S13WLBACUD8DOSG
-    schemaVersion: 4.11.1
+    licenseKey: 6FV6MMKOYYAFUH5DRWX8J7F5
+    schemaVersion: 4.13.0
   ckeditor:
     edition: standard
     enabled: true
@@ -72,25 +61,301 @@ plugins:
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: V5KMF6IXSEFN5Z2CGMO7RRVR
+    licenseKey: VUS96EVKZZ3XXTQWX1W8WDYZ
     schemaVersion: 4.0.0
   matrixmate:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  redactor:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.3.0
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: 8WOH5GTX1KWK97JV0GXPDAXQ
+    licenseKey: LZI36NJYZALCPQOYAG2L0YDI
     schemaVersion: 3.0.12
   sherlock:
     edition: lite
     enabled: true
     schemaVersion: 4.1.0
+    settings:
+      apiKey: zblzvmppfcewwwpsyxipdxrwqwtkhcuf
+      blowfishHashCost:
+        __assoc__:
+          -
+            - threshold
+            - 13
+      contentSecurityPolicy:
+        __assoc__:
+          -
+            - canFail
+            - true
+      contentSecurityPolicySettings:
+        __assoc__:
+          -
+            - enabled
+            - false
+          -
+            - enforce
+            - false
+          -
+            - header
+            - true
+          -
+            - directives
+            -
+              -
+                - 1
+                - default-src
+                - '''self'''
+      cooldownDuration:
+        __assoc__:
+          -
+            - threshold
+            - 300
+      cors:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      craftFilePermissions:
+        __assoc__:
+          -
+            - canFail
+            - true
+      craftFolderPermissions:
+        __assoc__:
+          -
+            - canFail
+            - true
+      craftFoldersAboveWebRoot:
+        __assoc__:
+          -
+            - canFail
+            - true
+      criticalCraftUpdates:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      criticalPluginUpdates:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      defaultDirMode:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 509
+      defaultFileMode:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 436
+      defaultTokenDuration:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 86400
+      devMode:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      disabledTests: null
+      elevatedSessionDuration:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 300
+      enableCsrfProtection:
+        __assoc__:
+          -
+            - canFail
+            - true
+      expectCT:
+        __assoc__:
+          -
+            - canFail
+            - true
+      headerProtectionSettings:
+        __assoc__:
+          -
+            - enabled
+            - true
+          -
+            - headers
+            -
+              -
+                - true
+                - Referrer-Policy
+                - no-referrer-when-downgrade
+              -
+                - true
+                - Strict-Transport-Security
+                - max-age=15552000
+              -
+                - true
+                - X-Content-Type-Options
+                - nosniff
+              -
+                - true
+                - X-Frame-Options
+                - SAMEORIGIN
+              -
+                - true
+                - X-Xss-Protection
+                - '1; mode=block'
+      highSecurityLevel: false
+      httpsControlPanel:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      httpsFrontEnd:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      integrationSettings: null
+      invalidLoginWindowDuration:
+        __assoc__:
+          -
+            - threshold
+            - 3600
+      maxInvalidLogins:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 5
+      monitor: false
+      notificationEmailAddresses: chris@malven.co
+      phpComposerVersion:
+        __assoc__:
+          -
+            - canFail
+            - true
+      phpVersion:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - thresholds
+            -
+              __assoc__:
+                -
+                  - '8.0'
+                  - '2023-11-26'
+                -
+                  - '8.1'
+                  - '2024-11-25'
+                -
+                  - '8.2'
+                  - '2025-12-08'
+      preventUserEnumeration:
+        __assoc__:
+          -
+            - canFail
+            - true
+      referrerPolicy:
+        __assoc__:
+          -
+            - canFail
+            - true
+      rememberedUserSessionDuration:
+        __assoc__:
+          -
+            - threshold
+            - 12096004
+      requireEmailVerification:
+        __assoc__:
+          -
+            - canFail
+            - true
+      sanitizeSvgUploads:
+        __assoc__:
+          -
+            - canFail
+            - true
+      sendPoweredByHeader:
+        __assoc__:
+          -
+            - canFail
+            - false
+      strictTransportSecurity:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 15552000
+      testToEmailAddress:
+        __assoc__:
+          -
+            - canFail
+            - true
+      translationDebugOutput:
+        __assoc__:
+          -
+            - canFail
+            - true
+      useSecureCookies:
+        __assoc__:
+          -
+            - canFail
+            - true
+      userSessionDuration:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 3600
+      verificationCodeDuration:
+        __assoc__:
+          -
+            - canFail
+            - true
+          -
+            - threshold
+            - 86400
+      webAliasInSiteBaseUrl:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      webAliasInVolumeBaseUrl:
+        __assoc__:
+          -
+            - forceFail
+            - true
+      xContentTypeOptions:
+        __assoc__:
+          -
+            - canFail
+            - true
+      xFrameOptions:
+        __assoc__:
+          -
+            - canFail
+            - true
   twig-perversion:
     edition: standard
     enabled: true

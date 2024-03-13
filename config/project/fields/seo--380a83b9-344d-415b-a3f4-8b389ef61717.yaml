@@ -1,6 +1,6 @@
-columnSuffix: jxvgjqol
+columnSuffix: lrowimxv
 contentColumnType: text
-fieldGroup: 4e4061ff-782b-4d40-991e-097d89c3f169 # SEO
+fieldGroup: bfe9a900-d516-42f7-8a87-a91c181779c0 # Common
 handle: seo
 instructions: null
 name: SEO
@@ -10,10 +10,10 @@ settings:
   facebookEnabledFields: ''
   facebookTabEnabled: ''
   generalEnabledFields:
-    - seoPreview
     - seoTitle
     - seoDescription
     - seoImage
+    - robots
   generalTabEnabled: '1'
   sitemapEnabledFields: ''
   sitemapTabEnabled: ''

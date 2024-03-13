@@ -1,5 +1,5 @@
 fieldLayouts:
-  d089b582-dbe2-4a8a-9833-0c8d74c14eb2:
+  2ec054f7-26b7-4cab-81c0-cd9d58154996:
     tabs:
       -
         elementCondition: null
@@ -12,6 +12,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -26,47 +27,47 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 012ec432-1657-4941-8eac-3428efc0dd54
+            uid: 824b6bdc-741d-412d-8313-1bc4c47db534
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 6bde6d29-9e5a-4a8c-9d41-d8e5d12ec33d # Page Content
+            fieldUid: 223e7dac-c6de-46ba-9144-0ee4c62734c4 # Page Content
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ba6a410c-648c-4cd0-9348-6fa098fc9b94
+            uid: 658a12cc-66b8-4af1-815d-3a0e4e7cc600
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: d5e136e6-160f-4093-91eb-52eb34f64558
+        uid: 8afe90dd-17af-457d-b51a-476ccdc2eafe
         userCondition: null
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: fa35bcb3-3708-420c-b074-15d36e91b1eb # SEO
+            fieldUid: 380a83b9-344d-415b-a3f4-8b389ef61717 # SEO
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c4331e8c-3798-4b7b-b854-4f24feef5463
+            uid: e0e4d1aa-4c18-430e-bb0f-5af3443a7031
             userCondition: null
             warning: null
             width: 100
         name: SEO
-        uid: 49cbcc3a-1c11-4828-984d-7df28b6db7eb
+        uid: 8ff733ec-f62e-4838-87d0-b3aa152e28d4
         userCondition: null
 handle: default
 hasTitleField: true
 name: Default
-section: 3a32bed0-f47f-4af6-b970-7770b361e95a # Pages
+section: b7a660f1-cbad-4067-8031-b237c204ab41 # Pages
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
