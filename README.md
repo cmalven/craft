@@ -14,7 +14,7 @@ cd your-project-slug
 - Run `bash ./bin/setup.sh "my-actual-slug" "My Actual Title" "A brief description of my project"`.
 - Follow the steps in `Setup` below.
 - Install Craft with `ddev craft install`
-- Run `ddev craft project-config/apply`
+- Run `ddev craft project-config/apply --force`
 - Run `ddev craft update all` to update Craft and plugins.
 - Run `npx npm-check -u` to update all frontend dependencies.
 - Delete this section of the README.
