@@ -3,10 +3,6 @@ email:
   fromEmail: chris@malven.co
   fromName: your-project-title
   transportType: craft\mail\transportadapters\Sendmail
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 meta:
   __names__:
     0eec63d1-8a33-4f6a-83a5-00c027db46dc: your-project-title # your-project-title
