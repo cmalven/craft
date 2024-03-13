@@ -13,8 +13,8 @@ return [
     'allowUpscale' => true,
     'fillTransforms' => true,
     'fillInterval' => 400,
+    'useForCpThumbs' => true,
 
-    //'useForCpThumbs' => true,
     //'imgixApiKey' => App::env('IMGIX_API_KEY'),
     //
     //'imgixConfig' => [
