@@ -10,7 +10,7 @@
           someProp: 'blah'
         } %}
         ",
-        classes: 'styleguide-item--dark'
+        modifiers: ['dark'],
       },
       …
     }
@@ -21,6 +21,6 @@
   {% include 'styleguide/_partials/styleguide-item' with {
     name: key,
     code: item.code,
-    classes: item.classes ?? null
+    modifiers: item.modifiers ?? null
   } only %}
 {% endfor %}

@@ -2,12 +2,15 @@
 {# Styleguide Item
 {# =============================================================== #}
 {#
-  {% include 'styleguide/_partials/styleguide-item' with {
-    name: 'My Component',
-    code: '{% include "_partials/card-a" with { foo: 'bar' } only %}',
-    classes: 'styleguide-item--dark'
-  } only %}
+{% include 'styleguide/_partials/styleguide-item' with {
+  name: 'My Component',
+  code: '{% include "_partials/card-a" with { foo: 'bar' } only %}',
+  modifiers: ['dark'],
+} only %}
 #}
+
+{% import '_macros/class-modifiers' as classModifiers %}
+{% set classes = classModifiers.set('styleguide-item', modifiers ?? []) %}
 
 <div class="styleguide-item {{ classes ?? '' }}">
   <div id="{{ name | kebab }}" class="styleguide-item__name">{{ name }} <a href="#{{ name | kebab }}" class="styleguide-item__anchor">#</a></div>
