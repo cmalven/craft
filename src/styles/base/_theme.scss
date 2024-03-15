@@ -12,8 +12,6 @@
   --theme-text-transparent: #{rgba(color(black), 0)};
   --theme-placeholder-text: #{rgba(color(black), 0.4)};
   --theme-rule: #{rgba(color(black), 0.1)};
-  --theme-scrollbar-bg: #666;
-  --theme-scrollbar-fg: #fff;
   color: var(--theme-text);
 }
 
@@ -25,8 +23,6 @@
   --theme-text-transparent: #{rgba(color(black), 0)};
   --theme-placeholder-text: #{rgba(color(white), 0.5)};
   --theme-rule: #{rgba(color(white), 0.1)};
-  --theme-scrollbar-bg: #111;
-  --theme-scrollbar-fg: #555;
   color: var(--theme-text);
 }
 

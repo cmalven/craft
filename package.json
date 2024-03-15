@@ -21,6 +21,7 @@
     "check": "prettier . --write",
     "new:component": "hygen component new",
     "new:modu": "hygen modu new",
+    "new:sass-util": "hygen sass-util new",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -44,8 +45,8 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.2.5",
     "sass": "^1.71.1",
-    "stylelint": "^16.2.1",
-    "stylelint-scss": "^6.2.1",
+    "stylelint": "^15.10.3",
+    "stylelint-scss": "^5.2.1",
     "tsc-files": "^1.1.4",
     "typescript": "^5.4.2",
     "vite": "^5.1.6",
