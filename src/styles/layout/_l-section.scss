@@ -118,8 +118,10 @@ $bg-colors: light, dark;
 
 @each $bg-color in $bg-colors {
   @include media('<medium') {
-    .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom)
-      + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top):not(
+    .l-section--bg-#{''
+      + $bg-color}:not(.l-section--bleed-bottom)
+      + .l-section--bg-#{''
+      + $bg-color}:not(.l-section--bleed-top):not(
         .l-section--bleed--top-mobile
       ) {
       @include size(section-vertical, margin-top, $negative: true);
@@ -127,8 +129,10 @@ $bg-colors: light, dark;
   }
 
   @include media('>=medium') {
-    .l-section--bg-#{$bg-color}:not(.l-section--bleed-bottom)
-      + .l-section--bg-#{$bg-color}:not(.l-section--bleed-top) {
+    .l-section--bg-#{''
+      + $bg-color}:not(.l-section--bleed-bottom)
+      + .l-section--bg-#{''
+      + $bg-color}:not(.l-section--bleed-top) {
       @include size(section-vertical, margin-top, $negative: true);
     }
   }
