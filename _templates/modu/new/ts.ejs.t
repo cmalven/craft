@@ -1,5 +1,5 @@
 ---
-to: src/scripts/<%= name %>.ts
+to: src/scripts/modules/<%= name %>.ts
 ---
 import { Modu, ModuOptions } from '@malven/modu';
 

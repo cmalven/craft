@@ -34,7 +34,7 @@ A flexible, reusable button.
 .button-basic__bg {
   @include absolute;
   z-index: 0;
-  overflow: hidden;
+  overflow: clip;
 
   &:before {
     @include pseudo-absolute;

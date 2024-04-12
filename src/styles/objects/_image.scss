@@ -107,7 +107,7 @@ class when the image is loaded.
 */
 
 .js .image--wipe {
-  overflow: hidden;
+  overflow: clip;
 
   .image__inner,
   .image__img,
@@ -119,7 +119,7 @@ class when the image is loaded.
 
   .image__inner {
     transform: translateY(100%);
-    overflow: hidden;
+    overflow: clip;
   }
 
   .image__img,

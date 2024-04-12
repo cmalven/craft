@@ -36,7 +36,7 @@ Wrapper for dialog content
   .js & {
     @include fixed;
     pointer-events: none;
-    overflow: hidden;
+    overflow: clip;
     z-index: $z-index-dialog;
     display: none;
     overflow-y: scroll;

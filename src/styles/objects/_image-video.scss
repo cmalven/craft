@@ -7,13 +7,13 @@ Either an image or a video asset.
 .image-video {
   @include absolute;
   background-color: var(--theme-bg-faint);
-  overflow: hidden;
+  overflow: clip;
 }
 
 .image-video__inner,
 .image-video__innermost {
   @include absolute;
-  overflow: hidden;
+  overflow: clip;
   transition-property: transform, opacity;
   will-change: transform, opacity;
 }
@@ -64,29 +64,29 @@ Either an image or a video asset.
 
   // Left
   .js &.image-video--wipe--left .image-video__inner {
-    transform: translateX(100.5%);
+    transform: translateX(99.9%);
   }
 
   .js &.image-video--wipe--left .image-video__innermost {
-    transform: translateX(-100.5%) scale(1.5);
+    transform: translateX(-99.9%) scale(1.5);
   }
 
   // Right
   .js &.image-video--wipe--right .image-video__inner {
-    transform: translateX(-100.5%);
+    transform: translateX(-99.9%);
   }
 
   .js &.image-video--wipe--right .image-video__innermost {
-    transform: translateX(100.5%) scale(1.5);
+    transform: translateX(99.9%) scale(1.5);
   }
 
   // Down
   .js &.image-video--wipe--down .image-video__inner {
-    transform: translateY(-100.5%) scale(1.5);
+    transform: translateY(-99.9%) scale(1.5);
   }
 
   .js &.image-video--wipe--down .image-video__innermost {
-    transform: translateY(100.5%) scale(1.5);
+    transform: translateY(99.9%) scale(1.5);
   }
 
   &.is-visible.is-ready {

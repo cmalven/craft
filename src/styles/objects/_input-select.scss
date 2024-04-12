@@ -14,8 +14,7 @@ A generic select input.
 .input-select__input {
   @include form-common-input;
   line-height: 1.2;
-  background: url('/dist/images/svg/icon/select-down.svg') no-repeat center
-    right;
+  background: url('/images/svg/icon/select-down.svg') no-repeat center right;
 }
 
 .input-select__errors {

@@ -41,13 +41,16 @@ $h-reveal-delay-increment: 0.05 * $h-reveal-duration;
   transform: translateY(0) translateX(0) scale(1);
 }
 
-@each $direction in ('fade', 'up', 'up-less', 'down', 'left', 'right', 'scale')
-{
-  .js [data-module-reveal='#{$direction}'] {
-    @include reveal-hidden($direction);
+@media screen and (prefers-reduced-motion: no-preference) {
+  @each $direction
+    in ('fade', 'up', 'up-less', 'down', 'left', 'right', 'scale')
+  {
+    .js [data-module-reveal='#{$direction}'] {
+      @include reveal-hidden($direction);
 
-    &.is-visible {
-      @include reveal;
+      &.is-visible {
+        @include reveal;
+      }
     }
   }
 }

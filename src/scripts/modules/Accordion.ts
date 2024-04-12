@@ -44,7 +44,7 @@ import { Modu, ModuOptions } from '@malven/modu';
  *
  * .accordion-group__content {
  *   transition: max-height 0.5s;
- *   overflow: hidden;
+ *   overflow: clip;
  * }
  *
  * .accordion-group__content-inner {
