@@ -4,15 +4,15 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "ec22aaa884dcd985a7a07ef864c74f0a",
+  "content-hash": "9a37e3cde7131b92f67186cbcc8abc8f",
   "packages": [
     {
       "name": "amphp/amp",
-      "version": "v2.6.2",
+      "version": "v2.6.4",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/amphp/amp/zipball/9d5100cebffa729aaffecd3ad25dc5aeea4f13bb",
-        "reference": "9d5100cebffa729aaffecd3ad25dc5aeea4f13bb",
+        "url": "https://api.github.com/repos/amphp/amp/zipball/ded3d9be08f526089eb7ee8d9f16a9768f9dec2d",
+        "reference": "ded3d9be08f526089eb7ee8d9f16a9768f9dec2d",
         "shasum": ""
       },
       "require": {
@@ -25,12 +25,17 @@
         }
       },
       "autoload": {
-        "files": ["lib/functions.php", "lib/Internal/functions.php"],
+        "files": [
+          "lib/functions.php",
+          "lib/Internal/functions.php"
+        ],
         "psr-4": {
           "Amp\\": "lib"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Daniel Lowrey",
@@ -62,7 +67,7 @@
         "non-blocking",
         "promise"
       ],
-      "time": "2022-02-20T17:52:18+00:00"
+      "time": "2024-03-21T18:52:26+00:00"
     },
     {
       "name": "amphp/byte-stream",
@@ -84,12 +89,16 @@
         }
       },
       "autoload": {
-        "files": ["lib/functions.php"],
+        "files": [
+          "lib/functions.php"
+        ],
         "psr-4": {
           "Amp\\ByteStream\\": "lib"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Aaron Piotrowski",
@@ -102,16 +111,23 @@
       ],
       "description": "A stream abstraction to make working with non-blocking I/O simple.",
       "homepage": "http://amphp.org/byte-stream",
-      "keywords": ["amp", "amphp", "async", "io", "non-blocking", "stream"],
+      "keywords": [
+        "amp",
+        "amphp",
+        "async",
+        "io",
+        "non-blocking",
+        "stream"
+      ],
       "time": "2021-03-30T17:13:30+00:00"
     },
     {
       "name": "amphp/cache",
-      "version": "v1.5.0",
+      "version": "v1.5.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/amphp/cache/zipball/2b6b5dbb70e54cc914df9952ba7c012bc4cbcd28",
-        "reference": "2b6b5dbb70e54cc914df9952ba7c012bc4cbcd28",
+        "url": "https://api.github.com/repos/amphp/cache/zipball/fe78cfae2fb8c92735629b8cd1893029c73c9b63",
+        "reference": "fe78cfae2fb8c92735629b8cd1893029c73c9b63",
         "shasum": ""
       },
       "require": {
@@ -129,7 +145,9 @@
           "Amp\\Cache\\": "lib"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Niklas Keller",
@@ -142,7 +160,7 @@
       ],
       "description": "A promise-aware caching API for Amp.",
       "homepage": "https://github.com/amphp/cache",
-      "time": "2021-06-29T17:12:43+00:00"
+      "time": "2024-03-21T19:35:02+00:00"
     },
     {
       "name": "amphp/dns",
@@ -166,12 +184,16 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["lib/functions.php"],
+        "files": [
+          "lib/functions.php"
+        ],
         "psr-4": {
           "Amp\\Dns\\": "lib"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Chris Wright",
@@ -196,16 +218,23 @@
       ],
       "description": "Async DNS resolution for Amp.",
       "homepage": "https://github.com/amphp/dns",
-      "keywords": ["amp", "amphp", "async", "client", "dns", "resolve"],
+      "keywords": [
+        "amp",
+        "amphp",
+        "async",
+        "client",
+        "dns",
+        "resolve"
+      ],
       "time": "2020-07-21T19:04:57+00:00"
     },
     {
       "name": "amphp/hpack",
-      "version": "v3.2.0",
+      "version": "v3.2.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/amphp/hpack/zipball/95895d29ae577a3a5995b46d16def04e11e39947",
-        "reference": "95895d29ae577a3a5995b46d16def04e11e39947",
+        "url": "https://api.github.com/repos/amphp/hpack/zipball/4f293064b15682a2b178b1367ddf0b8b5feb0239",
+        "reference": "4f293064b15682a2b178b1367ddf0b8b5feb0239",
         "shasum": ""
       },
       "require": {
@@ -222,7 +251,9 @@
           "Amp\\Http\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Daniel Lowrey",
@@ -242,16 +273,20 @@
       ],
       "description": "HTTP/2 HPack implementation.",
       "homepage": "https://github.com/amphp/hpack",
-      "keywords": ["headers", "hpack", "http-2"],
-      "time": "2023-09-05T19:59:20+00:00"
+      "keywords": [
+        "headers",
+        "hpack",
+        "http-2"
+      ],
+      "time": "2024-03-21T19:00:16+00:00"
     },
     {
       "name": "amphp/http",
-      "version": "v1.7.1",
+      "version": "v1.7.3",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/amphp/http/zipball/0d729b09fbace00dd1fd35ae8d4d45eb25f39d96",
-        "reference": "0d729b09fbace00dd1fd35ae8d4d45eb25f39d96",
+        "url": "https://api.github.com/repos/amphp/http/zipball/3a33e68a3b53f7279217238e89748cf0cb30b8a6",
+        "reference": "3a33e68a3b53f7279217238e89748cf0cb30b8a6",
         "shasum": ""
       },
       "require": {
@@ -265,12 +300,16 @@
         }
       },
       "autoload": {
-        "files": ["src/functions.php"],
+        "files": [
+          "src/functions.php"
+        ],
         "psr-4": {
           "Amp\\Http\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Niklas Keller",
@@ -278,15 +317,15 @@
         }
       ],
       "description": "Basic HTTP primitives which can be shared by servers and clients.",
-      "time": "2023-02-08T00:29:51+00:00"
+      "time": "2024-04-03T17:45:14+00:00"
     },
     {
       "name": "amphp/http-client",
-      "version": "v4.6.3",
+      "version": "v4.6.4",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/amphp/http-client/zipball/6d4dcc7b7bd9a6ea58e26652eba632ccbc16c030",
-        "reference": "6d4dcc7b7bd9a6ea58e26652eba632ccbc16c030",
+        "url": "https://api.github.com/repos/amphp/http-client/zipball/f607a33f81c7b3aafe80cf6c6ed438ca245bbbe3",
+        "reference": "f607a33f81c7b3aafe80cf6c6ed438ca245bbbe3",
         "shasum": ""
       },
       "require": {
@@ -315,12 +354,16 @@
         }
       },
       "autoload": {
-        "files": ["src/Internal/functions.php"],
+        "files": [
+          "src/Internal/functions.php"
+        ],
         "psr-4": {
           "Amp\\Http\\Client\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Daniel Lowrey",
@@ -345,7 +388,7 @@
         "non-blocking",
         "rest"
       ],
-      "time": "2023-08-15T20:09:57+00:00"
+      "time": "2024-03-21T19:51:27+00:00"
     },
     {
       "name": "amphp/parallel",
@@ -376,7 +419,9 @@
           "Amp\\Parallel\\": "lib"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Aaron Piotrowski",
@@ -400,11 +445,11 @@
     },
     {
       "name": "amphp/parser",
-      "version": "v1.1.0",
+      "version": "v1.1.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/amphp/parser/zipball/ff1de4144726c5dad5fab97f66692ebe8de3e151",
-        "reference": "ff1de4144726c5dad5fab97f66692ebe8de3e151",
+        "url": "https://api.github.com/repos/amphp/parser/zipball/3cf1f8b32a0171d4b1bed93d25617637a77cded7",
+        "reference": "3cf1f8b32a0171d4b1bed93d25617637a77cded7",
         "shasum": ""
       },
       "require": {
@@ -416,7 +461,9 @@
           "Amp\\Parser\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Aaron Piotrowski",
@@ -429,31 +476,40 @@
       ],
       "description": "A generator parser to make streaming parsers simple.",
       "homepage": "https://github.com/amphp/parser",
-      "keywords": ["async", "non-blocking", "parser", "stream"],
-      "time": "2022-12-30T18:08:47+00:00"
+      "keywords": [
+        "async",
+        "non-blocking",
+        "parser",
+        "stream"
+      ],
+      "time": "2024-03-21T19:16:53+00:00"
     },
     {
       "name": "amphp/process",
-      "version": "v1.1.5",
+      "version": "v1.1.6",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/amphp/process/zipball/04b4517bbfe436ab822b853d511165dafbfe115a",
-        "reference": "04b4517bbfe436ab822b853d511165dafbfe115a",
+        "url": "https://api.github.com/repos/amphp/process/zipball/2cd38052ddb200dcd73d34d8e06654dadb101e7c",
+        "reference": "2cd38052ddb200dcd73d34d8e06654dadb101e7c",
         "shasum": ""
       },
       "require": {
         "amphp/amp": "^2",
         "amphp/byte-stream": "^1.4",
-        "php": ">=7"
+        "php": ">=7.1"
       },
       "type": "library",
       "autoload": {
-        "files": ["lib/functions.php"],
+        "files": [
+          "lib/functions.php"
+        ],
         "psr-4": {
           "Amp\\Process\\": "lib"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Bob Weinand",
@@ -470,7 +526,7 @@
       ],
       "description": "Asynchronous process manager.",
       "homepage": "https://github.com/amphp/process",
-      "time": "2024-02-24T21:06:11+00:00"
+      "time": "2024-03-21T19:24:36+00:00"
     },
     {
       "name": "amphp/serialization",
@@ -486,12 +542,16 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["src/functions.php"],
+        "files": [
+          "src/functions.php"
+        ],
         "psr-4": {
           "Amp\\Serialization\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Aaron Piotrowski",
@@ -504,16 +564,21 @@
       ],
       "description": "Serialization tools for IPC and data storage in PHP.",
       "homepage": "https://github.com/amphp/serialization",
-      "keywords": ["async", "asynchronous", "serialization", "serialize"],
+      "keywords": [
+        "async",
+        "asynchronous",
+        "serialization",
+        "serialize"
+      ],
       "time": "2020-03-25T21:39:07+00:00"
     },
     {
       "name": "amphp/socket",
-      "version": "v1.2.0",
+      "version": "v1.2.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/amphp/socket/zipball/a8af9f5d0a66c5fe9567da45a51509e592788fe6",
-        "reference": "a8af9f5d0a66c5fe9567da45a51509e592788fe6",
+        "url": "https://api.github.com/repos/amphp/socket/zipball/b00528bd75548b7ae06a502358bb3ff8b106f5ab",
+        "reference": "b00528bd75548b7ae06a502358bb3ff8b106f5ab",
         "shasum": ""
       },
       "require": {
@@ -532,12 +597,17 @@
         }
       },
       "autoload": {
-        "files": ["src/functions.php", "src/Internal/functions.php"],
+        "files": [
+          "src/functions.php",
+          "src/Internal/functions.php"
+        ],
         "psr-4": {
           "Amp\\Socket\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Daniel Lowrey",
@@ -563,7 +633,7 @@
         "tcp",
         "tls"
       ],
-      "time": "2021-07-09T18:18:48+00:00"
+      "time": "2024-03-21T18:12:22+00:00"
     },
     {
       "name": "amphp/sync",
@@ -580,12 +650,17 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["src/functions.php", "src/ConcurrentIterator/functions.php"],
+        "files": [
+          "src/functions.php",
+          "src/ConcurrentIterator/functions.php"
+        ],
         "psr-4": {
           "Amp\\Sync\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Aaron Piotrowski",
@@ -627,7 +702,9 @@
           "Amp\\WindowsRegistry\\": "lib"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Niklas Keller",
@@ -654,9 +731,13 @@
       },
       "type": "library",
       "autoload": {
-        "classmap": ["src/"]
+        "classmap": [
+          "src/"
+        ]
       },
-      "license": ["Apache-2.0"],
+      "license": [
+        "Apache-2.0"
+      ],
       "authors": [
         {
           "name": "AWS SDK Common Runtime Team",
@@ -665,16 +746,26 @@
       ],
       "description": "AWS Common Runtime for PHP",
       "homepage": "https://github.com/awslabs/aws-crt-php",
-      "keywords": ["amazon", "aws", "crt", "sdk"],
+      "keywords": [
+        "amazon",
+        "aws",
+        "crt",
+        "sdk"
+      ],
       "time": "2023-11-08T00:42:13+00:00"
     },
     {
       "name": "aws/aws-sdk-php",
-      "version": "3.300.16",
+      "version": "3.304.4",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/aws/aws-sdk-php.git",
+        "reference": "20be41a5f1eef4c8a53a6ae7c0fc8b7346c0c386"
+      },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d6afaeaa0c0e2c3be5f5223f72c0b5e2b2667b67",
-        "reference": "d6afaeaa0c0e2c3be5f5223f72c0b5e2b2667b67",
+        "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/20be41a5f1eef4c8a53a6ae7c0fc8b7346c0c386",
+        "reference": "20be41a5f1eef4c8a53a6ae7c0fc8b7346c0c386",
         "shasum": ""
       },
       "require": {
@@ -688,6 +779,25 @@
         "mtdowling/jmespath.php": "^2.6",
         "php": ">=7.2.5",
         "psr/http-message": "^1.0 || ^2.0"
+      },
+      "require-dev": {
+        "andrewsville/php-token-reflection": "^1.4",
+        "aws/aws-php-sns-message-validator": "~1.0",
+        "behat/behat": "~3.0",
+        "composer/composer": "^1.10.22",
+        "dms/phpunit-arraysubset-asserts": "^0.4.0",
+        "doctrine/cache": "~1.4",
+        "ext-dom": "*",
+        "ext-openssl": "*",
+        "ext-pcntl": "*",
+        "ext-sockets": "*",
+        "nette/neon": "^2.3",
+        "paragonie/random_compat": ">= 2",
+        "phpunit/phpunit": "^5.6.3 || ^8.5 || ^9.5",
+        "psr/cache": "^1.0",
+        "psr/simple-cache": "^1.0",
+        "sebastian/comparator": "^1.2.3 || ^4.0",
+        "yoast/phpunit-polyfills": "^1.0"
       },
       "suggest": {
         "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
@@ -703,12 +813,17 @@
         }
       },
       "autoload": {
-        "files": ["src/functions.php"],
+        "files": [
+          "src/functions.php"
+        ],
         "psr-4": {
           "Aws\\": "src/"
         }
       },
-      "license": ["Apache-2.0"],
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "Apache-2.0"
+      ],
       "authors": [
         {
           "name": "Amazon Web Services",
@@ -727,7 +842,12 @@
         "s3",
         "sdk"
       ],
-      "time": "2024-03-12T18:04:55+00:00"
+      "support": {
+        "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
+        "issues": "https://github.com/aws/aws-sdk-php/issues",
+        "source": "https://github.com/aws/aws-sdk-php/tree/3.304.4"
+      },
+      "time": "2024-04-12T18:06:45+00:00"
     },
     {
       "name": "brick/math",
@@ -747,7 +867,9 @@
           "Brick\\Math\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "Arbitrary-precision arithmetic library",
       "keywords": [
         "Arbitrary-precision",
@@ -774,7 +896,9 @@
         "lib-pcre": "*",
         "php": ">=5.4.0"
       },
-      "bin": ["bin/markdown"],
+      "bin": [
+        "bin/markdown"
+      ],
       "type": "library",
       "extra": {
         "branch-alias": {
@@ -786,7 +910,9 @@
           "cebe\\markdown\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Carsten Brandt",
@@ -797,7 +923,13 @@
       ],
       "description": "A super fast, highly extensible markdown parser for PHP",
       "homepage": "https://github.com/cebe/markdown#readme",
-      "keywords": ["extensible", "fast", "gfm", "markdown", "markdown-extra"],
+      "keywords": [
+        "extensible",
+        "fast",
+        "gfm",
+        "markdown",
+        "markdown-extra"
+      ],
       "time": "2018-03-26T11:24:36+00:00"
     },
     {
@@ -827,7 +959,9 @@
           "CommerceGuys\\Addressing\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Bojan Zivanovic"
@@ -837,22 +971,27 @@
         }
       ],
       "description": "Addressing library powered by CLDR and Google's address data.",
-      "keywords": ["address", "internationalization", "localization", "postal"],
+      "keywords": [
+        "address",
+        "internationalization",
+        "localization",
+        "postal"
+      ],
       "time": "2023-02-15T10:11:14+00:00"
     },
     {
       "name": "composer/ca-bundle",
-      "version": "1.4.1",
+      "version": "1.5.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/composer/ca-bundle/zipball/3ce240142f6d59b808dd65c1f52f7a1c252e6cfd",
-        "reference": "3ce240142f6d59b808dd65c1f52f7a1c252e6cfd",
+        "url": "https://api.github.com/repos/composer/ca-bundle/zipball/0c5ccfcfea312b5c5a190a21ac5cef93f74baf99",
+        "reference": "0c5ccfcfea312b5c5a190a21ac5cef93f74baf99",
         "shasum": ""
       },
       "require": {
         "ext-openssl": "*",
         "ext-pcre": "*",
-        "php": "^5.3.2 || ^7.0 || ^8.0"
+        "php": "^7.2 || ^8.0"
       },
       "type": "library",
       "extra": {
@@ -865,7 +1004,9 @@
           "Composer\\CaBundle\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -874,16 +1015,22 @@
         }
       ],
       "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
-      "keywords": ["cabundle", "cacert", "certificate", "ssl", "tls"],
-      "time": "2024-02-23T10:16:52+00:00"
+      "keywords": [
+        "cabundle",
+        "cacert",
+        "certificate",
+        "ssl",
+        "tls"
+      ],
+      "time": "2024-03-15T14:00:32+00:00"
     },
     {
       "name": "composer/class-map-generator",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/composer/class-map-generator/zipball/953cc4ea32e0c31f2185549c7d216d7921f03da9",
-        "reference": "953cc4ea32e0c31f2185549c7d216d7921f03da9",
+        "url": "https://api.github.com/repos/composer/class-map-generator/zipball/8286a62d243312ed99b3eee20d5005c961adb311",
+        "reference": "8286a62d243312ed99b3eee20d5005c961adb311",
         "shasum": ""
       },
       "require": {
@@ -902,7 +1049,9 @@
           "Composer\\ClassMapGenerator\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -911,8 +1060,10 @@
         }
       ],
       "description": "Utilities to scan PHP code and generate class maps.",
-      "keywords": ["classmap"],
-      "time": "2023-06-30T13:58:57+00:00"
+      "keywords": [
+        "classmap"
+      ],
+      "time": "2024-03-15T12:53:41+00:00"
     },
     {
       "name": "composer/composer",
@@ -951,14 +1102,18 @@
         "ext-zip": "Enabling the zip extension allows you to unzip archives",
         "ext-zlib": "Allow gzip compression of HTTP requests"
       },
-      "bin": ["bin/composer"],
+      "bin": [
+        "bin/composer"
+      ],
       "type": "library",
       "extra": {
         "branch-alias": {
           "dev-main": "2.7-dev"
         },
         "phpstan": {
-          "includes": ["phpstan/rules.neon"]
+          "includes": [
+            "phpstan/rules.neon"
+          ]
         }
       },
       "autoload": {
@@ -966,7 +1121,9 @@
           "Composer\\": "src/Composer/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nils Adermann",
@@ -981,7 +1138,11 @@
       ],
       "description": "Composer helps you declare, manage and install dependencies of PHP projects. It ensures you have the right stack everywhere.",
       "homepage": "https://getcomposer.org/",
-      "keywords": ["autoload", "dependency", "package"],
+      "keywords": [
+        "autoload",
+        "dependency",
+        "package"
+      ],
       "time": "2024-03-11T16:12:18+00:00"
     },
     {
@@ -1007,7 +1168,9 @@
           "Composer\\MetadataMinifier\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -1016,16 +1179,19 @@
         }
       ],
       "description": "Small utility library that handles metadata minification and expansion.",
-      "keywords": ["composer", "compression"],
+      "keywords": [
+        "composer",
+        "compression"
+      ],
       "time": "2021-04-07T13:37:33+00:00"
     },
     {
       "name": "composer/pcre",
-      "version": "3.1.2",
+      "version": "3.1.3",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/composer/pcre/zipball/4775f35b2d70865807c89d32c8e7385b86eb0ace",
-        "reference": "4775f35b2d70865807c89d32c8e7385b86eb0ace",
+        "url": "https://api.github.com/repos/composer/pcre/zipball/5b16e25a5355f1f3afdfc2f954a0a80aec4826a8",
+        "reference": "5b16e25a5355f1f3afdfc2f954a0a80aec4826a8",
         "shasum": ""
       },
       "require": {
@@ -1042,7 +1208,9 @@
           "Composer\\Pcre\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -1051,8 +1219,13 @@
         }
       ],
       "description": "PCRE wrapping library that offers type-safe preg_* replacements.",
-      "keywords": ["PCRE", "preg", "regex", "regular expression"],
-      "time": "2024-03-07T15:38:35+00:00"
+      "keywords": [
+        "PCRE",
+        "preg",
+        "regex",
+        "regular expression"
+      ],
+      "time": "2024-03-19T10:26:25+00:00"
     },
     {
       "name": "composer/semver",
@@ -1077,7 +1250,9 @@
           "Composer\\Semver\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nils Adermann",
@@ -1096,7 +1271,12 @@
         }
       ],
       "description": "Semver library that offers utilities, version constraint parsing and validation.",
-      "keywords": ["semantic", "semver", "validation", "versioning"],
+      "keywords": [
+        "semantic",
+        "semver",
+        "validation",
+        "versioning"
+      ],
       "time": "2023-08-31T09:50:34+00:00"
     },
     {
@@ -1122,7 +1302,9 @@
           "Composer\\Spdx\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nils Adermann",
@@ -1141,16 +1323,20 @@
         }
       ],
       "description": "SPDX licenses list and validation library.",
-      "keywords": ["license", "spdx", "validator"],
+      "keywords": [
+        "license",
+        "spdx",
+        "validator"
+      ],
       "time": "2023-11-20T07:44:33+00:00"
     },
     {
       "name": "composer/xdebug-handler",
-      "version": "3.0.3",
+      "version": "3.0.4",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/ced299686f41dce890debac69273b47ffe98a40c",
-        "reference": "ced299686f41dce890debac69273b47ffe98a40c",
+        "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/4f988f8fdf580d53bdb2d1278fe93d1ed5462255",
+        "reference": "4f988f8fdf580d53bdb2d1278fe93d1ed5462255",
         "shasum": ""
       },
       "require": {
@@ -1164,7 +1350,9 @@
           "Composer\\XdebugHandler\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "John Stevenson",
@@ -1172,16 +1360,19 @@
         }
       ],
       "description": "Restarts a process without Xdebug.",
-      "keywords": ["Xdebug", "performance"],
-      "time": "2022-02-25T21:32:43+00:00"
+      "keywords": [
+        "Xdebug",
+        "performance"
+      ],
+      "time": "2024-03-26T18:29:49+00:00"
     },
     {
       "name": "craftcms/aws-s3",
-      "version": "2.2.0",
+      "version": "2.2.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/dd1d643e15303a6bd9d4c3d0dddbf007396e9939",
-        "reference": "dd1d643e15303a6bd9d4c3d0dddbf007396e9939",
+        "url": "https://api.github.com/repos/craftcms/aws-s3/zipball/a160e2247c9fb16eacb4131b8310088fad33ebfd",
+        "reference": "a160e2247c9fb16eacb4131b8310088fad33ebfd",
         "shasum": ""
       },
       "require": {
@@ -1201,7 +1392,9 @@
           "craft\\awss3\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Pixel & Tonic",
@@ -1209,7 +1402,14 @@
         }
       ],
       "description": "Amazon S3 integration for Craft CMS",
-      "keywords": ["aws", "cms", "craftcms", "flysystem", "s3", "yii2"],
+      "keywords": [
+        "aws",
+        "cms",
+        "craftcms",
+        "flysystem",
+        "s3",
+        "yii2"
+      ],
       "support": {
         "email": "support@craftcms.com",
         "issues": "https://github.com/craftcms/aws-s3/issues?state=open",
@@ -1217,15 +1417,15 @@
         "docs": "https://github.com/craftcms/aws-s3/blob/master/README.md",
         "rss": "https://github.com/craftcms/aws-s3/commits/master.atom"
       },
-      "time": "2024-03-13T13:25:09+00:00"
+      "time": "2024-03-23T01:31:54+00:00"
     },
     {
       "name": "craftcms/ckeditor",
-      "version": "3.8.1",
+      "version": "3.8.3",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/d18fc07fe7546fa6167e0629bd46c66e63c4a8a3",
-        "reference": "d18fc07fe7546fa6167e0629bd46c66e63c4a8a3",
+        "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/2dada986452c8a403c3ca652e87fe3a440fe9bf5",
+        "reference": "2dada986452c8a403c3ca652e87fe3a440fe9bf5",
         "shasum": ""
       },
       "require": {
@@ -1245,7 +1445,9 @@
           "craft\\ckeditor\\": "src/"
         }
       },
-      "license": ["GPL-3.0-or-later"],
+      "license": [
+        "GPL-3.0-or-later"
+      ],
       "authors": [
         {
           "name": "Pixel & Tonic",
@@ -1253,7 +1455,13 @@
         }
       ],
       "description": "Edit rich text content in Craft CMS using CKEditor.",
-      "keywords": ["ckeditor", "cms", "craftcms", "html", "yii2"],
+      "keywords": [
+        "ckeditor",
+        "cms",
+        "craftcms",
+        "html",
+        "yii2"
+      ],
       "support": {
         "email": "support@craftcms.com",
         "issues": "https://github.com/craftcms/ckeditor/issues?state=open",
@@ -1261,15 +1469,15 @@
         "docs": "https://github.com/craftcms/ckeditor/blob/master/README.md",
         "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
       },
-      "time": "2024-03-06T22:45:28+00:00"
+      "time": "2024-03-28T19:52:16+00:00"
     },
     {
       "name": "craftcms/cms",
-      "version": "4.8.2",
+      "version": "4.8.9",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/craftcms/cms/zipball/3d3854612ea7419aabed4dfa45017b7b02201ddf",
-        "reference": "3d3854612ea7419aabed4dfa45017b7b02201ddf",
+        "url": "https://api.github.com/repos/craftcms/cms/zipball/81fc5457658ff2906e9c120f3d3f71621b1d9b73",
+        "reference": "81fc5457658ff2906e9c120f3d3f71621b1d9b73",
         "shasum": ""
       },
       "require": {
@@ -1333,7 +1541,9 @@
           "yii2tech\\ar\\softdelete\\": "lib/ar-softdelete/src/"
         }
       },
-      "license": ["proprietary"],
+      "license": [
+        "proprietary"
+      ],
       "authors": [
         {
           "name": "Pixel & Tonic",
@@ -1342,7 +1552,11 @@
       ],
       "description": "Craft CMS",
       "homepage": "https://craftcms.com",
-      "keywords": ["cms", "craftcms", "yii2"],
+      "keywords": [
+        "cms",
+        "craftcms",
+        "yii2"
+      ],
       "support": {
         "email": "support@craftcms.com",
         "issues": "https://github.com/craftcms/cms/issues?state=open",
@@ -1351,15 +1565,15 @@
         "docs": "https://craftcms.com/docs/4.x/",
         "rss": "https://github.com/craftcms/cms/releases.atom"
       },
-      "time": "2024-03-12T23:00:16+00:00"
+      "time": "2024-04-10T22:40:32+00:00"
     },
     {
       "name": "craftcms/flysystem",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/craftcms/flysystem/zipball/2cb782bf4dc8164886c84973bccad5609c4fa212",
-        "reference": "2cb782bf4dc8164886c84973bccad5609c4fa212",
+        "url": "https://api.github.com/repos/craftcms/flysystem/zipball/04ad4b85a04d4c660b33ee8859e3db0cee6c3c85",
+        "reference": "04ad4b85a04d4c660b33ee8859e3db0cee6c3c85",
         "shasum": ""
       },
       "require": {
@@ -1373,7 +1587,9 @@
           "craft\\flysystem\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Pixel & Tonic",
@@ -1381,7 +1597,11 @@
         }
       ],
       "description": "Base Flysystem implementation for Craft CMS",
-      "keywords": ["craftcms", "flysystem", "yii2"],
+      "keywords": [
+        "craftcms",
+        "flysystem",
+        "yii2"
+      ],
       "support": {
         "email": "support@craftcms.com",
         "issues": "https://github.com/craftcms/flysystem/issues?state=open",
@@ -1389,7 +1609,7 @@
         "docs": "https://github.com/craftcms/flysystem",
         "rss": "https://github.com/craftcms/flysystem/commits/master.atom"
       },
-      "time": "2024-01-17T17:12:23+00:00"
+      "time": "2024-03-22T18:38:04+00:00"
     },
     {
       "name": "craftcms/html-field",
@@ -1410,7 +1630,9 @@
           "craft\\htmlfield\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Pixel & Tonic",
@@ -1449,10 +1671,18 @@
           "craft\\composer\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "Craft CMS Plugin Installer",
       "homepage": "https://craftcms.com/",
-      "keywords": ["cms", "composer", "craftcms", "installer", "plugin"],
+      "keywords": [
+        "cms",
+        "composer",
+        "craftcms",
+        "installer",
+        "plugin"
+      ],
       "time": "2023-02-22T13:17:00+00:00"
     },
     {
@@ -1466,12 +1696,21 @@
       },
       "type": "library",
       "autoload": {
-        "classmap": ["server/requirements"]
+        "classmap": [
+          "server/requirements"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "Craft CMS Server Check",
       "homepage": "https://craftcms.com/",
-      "keywords": ["cms", "craftcms", "requirements", "yii2"],
+      "keywords": [
+        "cms",
+        "craftcms",
+        "requirements",
+        "yii2"
+      ],
       "time": "2023-09-25T17:28:37+00:00"
     },
     {
@@ -1492,7 +1731,9 @@
           "creocoder\\nestedsets\\": "src"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Alexander Kochetov",
@@ -1500,7 +1741,10 @@
         }
       ],
       "description": "The nested sets behavior for the Yii framework",
-      "keywords": ["nested sets", "yii2"],
+      "keywords": [
+        "nested sets",
+        "yii2"
+      ],
       "time": "2015-01-27T10:53:51+00:00"
     },
     {
@@ -1525,7 +1769,9 @@
           "GitElephant": "src/"
         }
       },
-      "license": ["LGPL-3.0+"],
+      "license": [
+        "LGPL-3.0+"
+      ],
       "authors": [
         {
           "name": "Matteo Giachino",
@@ -1534,7 +1780,9 @@
       ],
       "description": "An abstraction layer for git written in PHP",
       "homepage": "http://gitelephant.cypresslab.net/",
-      "keywords": ["git"],
+      "keywords": [
+        "git"
+      ],
       "time": "2022-10-08T12:56:52+00:00"
     },
     {
@@ -1564,7 +1812,9 @@
           "DaveChild\\TextStatistics": "src"
         }
       },
-      "license": ["BSD-2-Clause"],
+      "license": [
+        "BSD-2-Clause"
+      ],
       "authors": [
         {
           "name": "Dave Child",
@@ -1595,14 +1845,20 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["src/functions.php"],
+        "files": [
+          "src/functions.php"
+        ],
         "psr-4": {
           "LibDNS\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "DNS protocol implementation written in pure PHP",
-      "keywords": ["dns"],
+      "keywords": [
+        "dns"
+      ],
       "time": "2022-09-20T18:15:38+00:00"
     },
     {
@@ -1619,14 +1875,18 @@
         "paragonie/random_compat": ">= 2",
         "php": ">=5.6.0"
       },
-      "bin": ["bin/generate-defuse-key"],
+      "bin": [
+        "bin/generate-defuse-key"
+      ],
       "type": "library",
       "autoload": {
         "psr-4": {
           "Defuse\\Crypto\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Taylor Hornby",
@@ -1673,7 +1933,9 @@
           "Doctrine\\Common\\Collections\\": "lib/Doctrine/Common/Collections"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Guilherme Blanco",
@@ -1698,7 +1960,12 @@
       ],
       "description": "PHP Doctrine Collections library that adds additional functionality on top of PHP arrays.",
       "homepage": "https://www.doctrine-project.org/projects/collections.html",
-      "keywords": ["array", "collections", "iterators", "php"],
+      "keywords": [
+        "array",
+        "collections",
+        "iterators",
+        "php"
+      ],
       "time": "2022-09-01T20:12:10+00:00"
     },
     {
@@ -1722,7 +1989,9 @@
           "Doctrine\\Deprecations\\": "lib/Doctrine/Deprecations"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "A small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.",
       "homepage": "https://www.doctrine-project.org/",
       "time": "2024-01-30T19:34:25+00:00"
@@ -1746,7 +2015,9 @@
           "Doctrine\\Common\\Lexer\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Guilherme Blanco",
@@ -1763,7 +2034,13 @@
       ],
       "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
       "homepage": "https://www.doctrine-project.org/projects/lexer.html",
-      "keywords": ["annotations", "docblock", "lexer", "parser", "php"],
+      "keywords": [
+        "annotations",
+        "docblock",
+        "lexer",
+        "parser",
+        "php"
+      ],
       "time": "2024-02-05T11:35:39+00:00"
     },
     {
@@ -1794,7 +2071,9 @@
           "Egulias\\EmailValidator\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Eduardo Gulias Davis"
@@ -1830,9 +2109,14 @@
           "LitEmoji\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "A PHP library simplifying the conversion of unicode, HTML and shortcode emoji.",
-      "keywords": ["emoji", "php-emoji"],
+      "keywords": [
+        "emoji",
+        "php-emoji"
+      ],
       "time": "2022-10-28T02:32:19+00:00"
     },
     {
@@ -1862,12 +2146,16 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["src/functions.php"],
+        "files": [
+          "src/functions.php"
+        ],
         "psr-4": {
           "Embed\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Oscar Otero",
@@ -1878,7 +2166,13 @@
       ],
       "description": "PHP library to retrieve page info using oembed, opengraph, etc",
       "homepage": "https://github.com/oscarotero/Embed",
-      "keywords": ["embed", "embedly", "oembed", "opengraph", "twitter cards"],
+      "keywords": [
+        "embed",
+        "embedly",
+        "oembed",
+        "opengraph",
+        "twitter cards"
+      ],
       "time": "2023-12-10T12:30:47+00:00"
     },
     {
@@ -1902,7 +2196,9 @@
           "enshrined\\svgSanitize\\": "src"
         }
       },
-      "license": ["GPL-2.0-or-later"],
+      "license": [
+        "GPL-2.0-or-later"
+      ],
       "authors": [
         {
           "name": "Daryll Doyle",
@@ -1931,7 +2227,9 @@
           "Parsedown": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Emanuil Rusev",
@@ -1941,7 +2239,10 @@
       ],
       "description": "Parser for Markdown.",
       "homepage": "http://parsedown.org",
-      "keywords": ["markdown", "parser"],
+      "keywords": [
+        "markdown",
+        "parser"
+      ],
       "time": "2019-12-30T22:54:17+00:00"
     },
     {
@@ -1962,7 +2263,9 @@
           "ParsedownExtra": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Emanuil Rusev",
@@ -1972,7 +2275,12 @@
       ],
       "description": "An extension of Parsedown that adds support for Markdown Extra.",
       "homepage": "https://github.com/erusev/parsedown-extra",
-      "keywords": ["markdown", "markdown extra", "parsedown", "parser"],
+      "keywords": [
+        "markdown",
+        "markdown extra",
+        "parsedown",
+        "parser"
+      ],
       "time": "2019-12-30T23:20:37+00:00"
     },
     {
@@ -1995,13 +2303,19 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["library/HTMLPurifier.composer.php"],
+        "files": [
+          "library/HTMLPurifier.composer.php"
+        ],
         "psr-0": {
           "HTMLPurifier": "library/"
         },
-        "exclude-from-classmap": ["/library/HTMLPurifier/Language/"]
+        "exclude-from-classmap": [
+          "/library/HTMLPurifier/Language/"
+        ]
       },
-      "license": ["LGPL-2.1-or-later"],
+      "license": [
+        "LGPL-2.1-or-later"
+      ],
       "authors": [
         {
           "name": "Edward Z. Yang",
@@ -2011,7 +2325,9 @@
       ],
       "description": "Standards compliant HTML filter written in PHP",
       "homepage": "http://htmlpurifier.org/",
-      "keywords": ["html"],
+      "keywords": [
+        "html"
+      ],
       "time": "2023-11-17T15:01:25+00:00"
     },
     {
@@ -2036,7 +2352,9 @@
           "Firebase\\JWT\\": "src"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Neuman Vong",
@@ -2051,16 +2369,19 @@
       ],
       "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
       "homepage": "https://github.com/firebase/php-jwt",
-      "keywords": ["jwt", "php"],
+      "keywords": [
+        "jwt",
+        "php"
+      ],
       "time": "2023-12-01T16:26:39+00:00"
     },
     {
       "name": "google/auth",
-      "version": "v1.37.0",
+      "version": "v1.37.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/5f16f67375b6f202b857183d7ef4e076acd7d4aa",
-        "reference": "5f16f67375b6f202b857183d7ef4e076acd7d4aa",
+        "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/1a7de77b72e6ac60dccf0e6478c4c1005bb0ff46",
+        "reference": "1a7de77b72e6ac60dccf0e6478c4c1005bb0ff46",
         "shasum": ""
       },
       "require": {
@@ -2080,29 +2401,35 @@
           "Google\\Auth\\": "src"
         }
       },
-      "license": ["Apache-2.0"],
+      "license": [
+        "Apache-2.0"
+      ],
       "description": "Google Auth Library for PHP",
       "homepage": "http://github.com/google/google-auth-library-php",
-      "keywords": ["Authentication", "google", "oauth2"],
-      "time": "2024-02-21T17:03:52+00:00"
+      "keywords": [
+        "Authentication",
+        "google",
+        "oauth2"
+      ],
+      "time": "2024-04-03T18:41:12+00:00"
     },
     {
       "name": "google/cloud-core",
-      "version": "v1.56.0",
+      "version": "v1.56.2",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/35ca0fd74685c635a4c027c871de9d716c504933",
-        "reference": "35ca0fd74685c635a4c027c871de9d716c504933",
+        "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/686ffd0bb1328cd2ee963c4444e2ab4b111ba3ba",
+        "reference": "686ffd0bb1328cd2ee963c4444e2ab4b111ba3ba",
         "shasum": ""
       },
       "require": {
         "google/auth": "^1.34",
-        "google/gax": "^1.27.0",
+        "google/gax": "^1.30",
         "guzzlehttp/guzzle": "^6.5.8|^7.4.4",
         "guzzlehttp/promises": "^1.4||^2.0",
         "guzzlehttp/psr7": "^2.6",
         "monolog/monolog": "^2.9|^3.0",
-        "php": ">=7.4",
+        "php": "^8.0",
         "psr/http-message": "^1.0|^2.0",
         "rize/uri-template": "~0.3"
       },
@@ -2110,7 +2437,9 @@
         "opis/closure": "May be used to serialize closures to process jobs in the batch daemon. Please require version ^3.",
         "symfony/lock": "Required for the Spanner cached based session pool. Please require the following commit: 3.3.x-dev#1ba6ac9"
       },
-      "bin": ["bin/google-cloud-batch"],
+      "bin": [
+        "bin/google-cloud-batch"
+      ],
       "type": "library",
       "extra": {
         "component": {
@@ -2125,23 +2454,40 @@
           "Google\\Cloud\\Core\\": "src"
         }
       },
-      "license": ["Apache-2.0"],
+      "license": [
+        "Apache-2.0"
+      ],
       "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
-      "time": "2024-02-23T23:49:35+00:00"
+      "time": "2024-03-15T18:39:38+00:00"
     },
     {
       "name": "google/cloud-storage",
-      "version": "v1.39.0",
+      "version": "v1.41.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/googleapis/google-cloud-php-storage.git",
+        "reference": "dcc9c3847d992be9a9a3d7a0ea8f4bfbdaafff9d"
+      },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/2425a167578084af5c9b87fac6eb59b09b33b8f5",
-        "reference": "2425a167578084af5c9b87fac6eb59b09b33b8f5",
+        "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/dcc9c3847d992be9a9a3d7a0ea8f4bfbdaafff9d",
+        "reference": "dcc9c3847d992be9a9a3d7a0ea8f4bfbdaafff9d",
         "shasum": ""
       },
       "require": {
         "google/cloud-core": "^1.55",
-        "php": ">=7.4",
+        "php": "^8.0",
         "ramsey/uuid": "^4.2.3"
+      },
+      "require-dev": {
+        "erusev/parsedown": "^1.6",
+        "google/cloud-pubsub": "^2.0",
+        "phpdocumentor/reflection": "^5.3.3",
+        "phpdocumentor/reflection-docblock": "^5.3",
+        "phpseclib/phpseclib": "^2.0||^3.0",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.0",
+        "squizlabs/php_codesniffer": "2.*"
       },
       "suggest": {
         "google/cloud-pubsub": "May be used to register a topic to receive bucket notifications.",
@@ -2161,22 +2507,28 @@
           "Google\\Cloud\\Storage\\": "src"
         }
       },
-      "license": ["Apache-2.0"],
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "Apache-2.0"
+      ],
       "description": "Cloud Storage Client for PHP",
-      "time": "2024-02-23T23:49:35+00:00"
+      "support": {
+        "source": "https://github.com/googleapis/google-cloud-php-storage/tree/v1.41.1"
+      },
+      "time": "2024-04-10T23:25:16+00:00"
     },
     {
       "name": "google/common-protos",
-      "version": "v4.5.0",
+      "version": "v4.6.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/dfc232e90823cedca107b56e7371f2e2f35b9427",
-        "reference": "dfc232e90823cedca107b56e7371f2e2f35b9427",
+        "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/f8588298a0a204aef2db15ce501530e476ec883f",
+        "reference": "f8588298a0a204aef2db15ce501530e476ec883f",
         "shasum": ""
       },
       "require": {
-        "google/protobuf": "^3.6.1",
-        "php": ">=7.4"
+        "google/protobuf": "^v3.25.3||^4.26.1",
+        "php": "^8.0"
       },
       "type": "library",
       "autoload": {
@@ -2194,44 +2546,39 @@
           "GPBMetadata\\Google\\Logging\\": "metadata/Logging"
         }
       },
-      "license": ["Apache-2.0"],
+      "license": [
+        "Apache-2.0"
+      ],
       "description": "Google API Common Protos for PHP",
       "homepage": "https://github.com/googleapis/common-protos-php",
-      "keywords": ["google"],
-      "time": "2023-11-29T21:08:16+00:00"
+      "keywords": [
+        "google"
+      ],
+      "time": "2024-04-03T19:11:54+00:00"
     },
     {
       "name": "google/gax",
-      "version": "v1.29.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/googleapis/gax-php.git",
-        "reference": "58ff20e419412046cf4357ed3ff2facc30aa2364"
-      },
+      "version": "v1.30.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/googleapis/gax-php/zipball/58ff20e419412046cf4357ed3ff2facc30aa2364",
-        "reference": "58ff20e419412046cf4357ed3ff2facc30aa2364",
+        "url": "https://api.github.com/repos/googleapis/gax-php/zipball/2deeb24898d0ba3c4faba48f7f0cfcc1ef341613",
+        "reference": "2deeb24898d0ba3c4faba48f7f0cfcc1ef341613",
         "shasum": ""
       },
       "require": {
         "google/auth": "^1.34.0",
         "google/common-protos": "^4.4",
-        "google/grpc-gcp": "^0.2||^0.3",
+        "google/grpc-gcp": "^0.4",
         "google/longrunning": "~0.2",
-        "google/protobuf": "^3.22",
+        "google/protobuf": "^v3.25.3||^4.26.1",
         "grpc/grpc": "^1.13",
-        "guzzlehttp/promises": "^1.4||^2.0",
+        "guzzlehttp/promises": "^2.0",
         "guzzlehttp/psr7": "^2.0",
-        "php": ">=7.4"
+        "php": "^8.0",
+        "ramsey/uuid": "^4.0"
       },
       "conflict": {
         "ext-protobuf": "<3.7.0"
-      },
-      "require-dev": {
-        "phpspec/prophecy-phpunit": "^2.0",
-        "phpunit/phpunit": "^9.0",
-        "squizlabs/php_codesniffer": "3.*"
       },
       "type": "library",
       "autoload": {
@@ -2240,31 +2587,30 @@
           "GPBMetadata\\ApiCore\\": "metadata/ApiCore"
         }
       },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "description": "Google API Core for PHP",
       "homepage": "https://github.com/googleapis/gax-php",
-      "keywords": ["google"],
-      "support": {
-        "issues": "https://github.com/googleapis/gax-php/issues",
-        "source": "https://github.com/googleapis/gax-php/tree/v1.29.0"
-      },
-      "time": "2024-02-26T14:31:35+00:00"
+      "keywords": [
+        "google"
+      ],
+      "time": "2024-04-03T19:04:34+00:00"
     },
     {
       "name": "google/grpc-gcp",
-      "version": "v0.3.0",
+      "version": "v0.4.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/GoogleCloudPlatform/grpc-gcp-php/zipball/4d8b455a45a89f57e1552cadc41a43bc34c40456",
-        "reference": "4d8b455a45a89f57e1552cadc41a43bc34c40456",
+        "url": "https://api.github.com/repos/GoogleCloudPlatform/grpc-gcp-php/zipball/2a80dbf690922aa52bb6bb79b9a32a9637a5c2d9",
+        "reference": "2a80dbf690922aa52bb6bb79b9a32a9637a5c2d9",
         "shasum": ""
       },
       "require": {
         "google/auth": "^1.3",
-        "google/protobuf": "^v3.3.0",
+        "google/protobuf": "^v3.25.3||^4.26.1",
         "grpc/grpc": "^v1.13.0",
-        "php": "^7.4||^8.0",
+        "php": "^8.0",
         "psr/cache": "^1.0.1||^2.0.0||^3.0.0"
       },
       "type": "library",
@@ -2272,19 +2618,23 @@
         "psr-4": {
           "Grpc\\Gcp\\": "src/"
         },
-        "classmap": ["src/generated/"]
+        "classmap": [
+          "src/generated/"
+        ]
       },
-      "license": ["Apache-2.0"],
+      "license": [
+        "Apache-2.0"
+      ],
       "description": "gRPC GCP library for channel management",
-      "time": "2023-04-24T14:37:29+00:00"
+      "time": "2024-04-03T16:37:55+00:00"
     },
     {
       "name": "google/longrunning",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/c21cb8f8794f724ca672dad94bf7d406e62476b9",
-        "reference": "c21cb8f8794f724ca672dad94bf7d406e62476b9",
+        "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/a974fe870d5f57cc21da697923a1f4e8d08829c9",
+        "reference": "a974fe870d5f57cc21da697923a1f4e8d08829c9",
         "shasum": ""
       },
       "type": "library",
@@ -2303,17 +2653,19 @@
           "GPBMetadata\\Google\\Longrunning\\": "metadata/Longrunning"
         }
       },
-      "license": ["Apache-2.0"],
+      "license": [
+        "Apache-2.0"
+      ],
       "description": "Google LongRunning Client for PHP",
-      "time": "2024-01-05T17:46:51+00:00"
+      "time": "2024-03-01T11:25:35+00:00"
     },
     {
       "name": "google/protobuf",
-      "version": "v3.25.3",
+      "version": "v4.26.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/983a87f4f8798a90ca3a25b0f300b8fda38df643",
-        "reference": "983a87f4f8798a90ca3a25b0f300b8fda38df643",
+        "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae",
+        "reference": "5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae",
         "shasum": ""
       },
       "require": {
@@ -2329,11 +2681,15 @@
           "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "description": "proto library for PHP",
       "homepage": "https://developers.google.com/protocol-buffers/",
-      "keywords": ["proto"],
-      "time": "2024-02-15T21:11:49+00:00"
+      "keywords": [
+        "proto"
+      ],
+      "time": "2024-03-27T19:56:50+00:00"
     },
     {
       "name": "graham-campbell/result-type",
@@ -2363,7 +2719,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Graham Campbell",
@@ -2417,10 +2775,14 @@
           "Grpc\\": "src/lib/"
         }
       },
-      "license": ["Apache-2.0"],
+      "license": [
+        "Apache-2.0"
+      ],
       "description": "gRPC library for PHP",
       "homepage": "https://grpc.io",
-      "keywords": ["rpc"],
+      "keywords": [
+        "rpc"
+      ],
       "time": "2023-08-14T23:57:54+00:00"
     },
     {
@@ -2456,12 +2818,16 @@
         }
       },
       "autoload": {
-        "files": ["src/functions_include.php"],
+        "files": [
+          "src/functions_include.php"
+        ],
         "psr-4": {
           "GuzzleHttp\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Graham Campbell",
@@ -2537,7 +2903,9 @@
           "GuzzleHttp\\Promise\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Graham Campbell",
@@ -2561,7 +2929,9 @@
         }
       ],
       "description": "Guzzle promises library",
-      "keywords": ["promise"],
+      "keywords": [
+        "promise"
+      ],
       "time": "2023-12-03T20:19:20+00:00"
     },
     {
@@ -2598,7 +2968,9 @@
           "GuzzleHttp\\Psr7\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Graham Campbell",
@@ -2667,12 +3039,16 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["lib/helpers.php"],
+        "files": [
+          "lib/helpers.php"
+        ],
         "psr-4": {
           "ICanBoogie\\": "lib/"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Olivier Laviale",
@@ -2719,12 +3095,16 @@
         }
       },
       "autoload": {
-        "files": ["helpers.php"],
+        "files": [
+          "helpers.php"
+        ],
         "psr-4": {
           "Illuminate\\Support\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Taylor Otwell",
@@ -2758,7 +3138,9 @@
           "Illuminate\\Support\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Taylor Otwell",
@@ -2794,7 +3176,9 @@
           "Illuminate\\Contracts\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Taylor Otwell",
@@ -2828,7 +3212,9 @@
           "Illuminate\\Support\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Taylor Otwell",
@@ -2857,9 +3243,13 @@
           "Imgix\\": "src/"
         }
       },
-      "license": ["BSD-2-Clause"],
+      "license": [
+        "BSD-2-Clause"
+      ],
       "description": "A PHP client library for generating URLs with imgix.",
-      "keywords": ["imgix"],
+      "keywords": [
+        "imgix"
+      ],
       "time": "2021-03-25T15:10:34+00:00"
     },
     {
@@ -2874,7 +3264,9 @@
       "require": {
         "php": ">=5.3.3"
       },
-      "bin": ["bin/validate-json"],
+      "bin": [
+        "bin/validate-json"
+      ],
       "type": "library",
       "extra": {
         "branch-alias": {
@@ -2886,7 +3278,9 @@
           "JsonSchema\\": "src/JsonSchema/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Bruno Prieto Reis",
@@ -2907,7 +3301,10 @@
       ],
       "description": "A library to validate a json schema.",
       "homepage": "https://github.com/justinrainbow/json-schema",
-      "keywords": ["json", "schema"],
+      "keywords": [
+        "json",
+        "schema"
+      ],
       "time": "2023-09-26T02:20:38+00:00"
     },
     {
@@ -2934,7 +3331,9 @@
           "Kelunik\\Certificate\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Niklas Keller",
@@ -2970,7 +3369,9 @@
           "kornrunner\\Blurhash\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Boris Momčilović",
@@ -3000,7 +3401,9 @@
           "Kraken": "lib"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Kraken Image Optimizer",
@@ -3034,7 +3437,9 @@
           "ColorThief\\": "src/ColorThief"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Kevin Subileau",
@@ -3043,16 +3448,22 @@
       ],
       "description": "Grabs the dominant color or a representative color palette from an image.",
       "homepage": "http://www.kevinsubileau.fr/projets/color-thief-php",
-      "keywords": ["color", "dominant", "palette", "php", "thief"],
+      "keywords": [
+        "color",
+        "dominant",
+        "palette",
+        "php",
+        "thief"
+      ],
       "time": "2022-11-12T10:09:40+00:00"
     },
     {
       "name": "league/flysystem",
-      "version": "3.25.0",
+      "version": "3.27.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4c44347133618cccd9b3df1729647a1577b4ad99",
-        "reference": "4c44347133618cccd9b3df1729647a1577b4ad99",
+        "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4729745b1ab737908c7d055148c9a6b3e959832f",
+        "reference": "4729745b1ab737908c7d055148c9a6b3e959832f",
         "shasum": ""
       },
       "require": {
@@ -3075,7 +3486,9 @@
           "League\\Flysystem\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Frank de Jonge",
@@ -3096,15 +3509,15 @@
         "sftp",
         "storage"
       ],
-      "time": "2024-03-09T17:06:45+00:00"
+      "time": "2024-04-07T19:17:50+00:00"
     },
     {
       "name": "league/flysystem-aws-s3-v3",
-      "version": "3.24.0",
+      "version": "3.27.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/809474e37b7fb1d1f8bcc0f8a98bc1cae99aa513",
-        "reference": "809474e37b7fb1d1f8bcc0f8a98bc1cae99aa513",
+        "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/3e6ce2f972f1470db779f04d29c289dcd2c32837",
+        "reference": "3e6ce2f972f1470db779f04d29c289dcd2c32837",
         "shasum": ""
       },
       "require": {
@@ -3123,7 +3536,9 @@
           "League\\Flysystem\\AwsS3V3\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Frank de Jonge",
@@ -3140,15 +3555,15 @@
         "s3",
         "storage"
       ],
-      "time": "2024-01-26T18:43:21+00:00"
+      "time": "2024-04-07T19:16:54+00:00"
     },
     {
       "name": "league/flysystem-local",
-      "version": "3.23.1",
+      "version": "3.25.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/b884d2bf9b53bb4804a56d2df4902bb51e253f00",
-        "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00",
+        "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/61a6a90d6e999e4ddd9ce5adb356de0939060b92",
+        "reference": "61a6a90d6e999e4ddd9ce5adb356de0939060b92",
         "shasum": ""
       },
       "require": {
@@ -3163,7 +3578,9 @@
           "League\\Flysystem\\Local\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Frank de Jonge",
@@ -3171,8 +3588,14 @@
         }
       ],
       "description": "Local filesystem adapter for Flysystem.",
-      "keywords": ["Flysystem", "file", "files", "filesystem", "local"],
-      "time": "2024-01-26T18:25:23+00:00"
+      "keywords": [
+        "Flysystem",
+        "file",
+        "files",
+        "filesystem",
+        "local"
+      ],
+      "time": "2024-03-15T19:58:44+00:00"
     },
     {
       "name": "league/mime-type-detection",
@@ -3193,7 +3616,9 @@
           "League\\MimeTypeDetection\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Frank de Jonge",
@@ -3238,7 +3663,9 @@
           "League\\Uri\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Ignace Nyamagana Butera",
@@ -3299,7 +3726,9 @@
           "League\\Uri\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Ignace Nyamagana Butera",
@@ -3309,7 +3738,12 @@
       ],
       "description": "Common interface for URI representation",
       "homepage": "http://github.com/thephpleague/uri-interfaces",
-      "keywords": ["rfc3986", "rfc3987", "uri", "url"],
+      "keywords": [
+        "rfc3986",
+        "rfc3987",
+        "uri",
+        "url"
+      ],
       "time": "2021-06-28T04:27:21+00:00"
     },
     {
@@ -3338,9 +3772,13 @@
         "psr-4": {
           "League\\Uri\\": "src"
         },
-        "files": ["src/functions_include.php"]
+        "files": [
+          "src/functions_include.php"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Ignace Nyamagana Butera",
@@ -3350,7 +3788,14 @@
       ],
       "description": "userland URI parser RFC 3986 compliant",
       "homepage": "https://github.com/thephpleague/uri-parser",
-      "keywords": ["parse_url", "parser", "rfc3986", "rfc3987", "uri", "url"],
+      "keywords": [
+        "parse_url",
+        "parser",
+        "rfc3986",
+        "rfc3987",
+        "uri",
+        "url"
+      ],
       "time": "2018-11-22T07:55:51+00:00"
     },
     {
@@ -3386,7 +3831,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Marion Newlevant",
@@ -3394,7 +3841,12 @@
         }
       ],
       "description": "Making twig do things it really shouldn't",
-      "keywords": ["Craft", "craftcms", "plugin", "twigperversion"],
+      "keywords": [
+        "Craft",
+        "craftcms",
+        "plugin",
+        "twigperversion"
+      ],
       "support": {
         "issues": "https://github.com/marionnewlevant/craft-twig_perversion/issues",
         "source": "https://github.com/marionnewlevant/craft-twig_perversion/tree/v3.0.0"
@@ -3425,7 +3877,9 @@
           "Masterminds\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Matt Butcher",
@@ -3471,7 +3925,9 @@
           "mikehaertl\\shellcommand\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Michael Härtl",
@@ -3479,7 +3935,9 @@
         }
       ],
       "description": "An object oriented interface to shell commands",
-      "keywords": ["shell"],
+      "keywords": [
+        "shell"
+      ],
       "time": "2023-04-19T08:25:22+00:00"
     },
     {
@@ -3502,7 +3960,9 @@
           "ML\\IRI": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Markus Lanthaler",
@@ -3513,7 +3973,12 @@
       ],
       "description": "IRI handling for PHP",
       "homepage": "http://www.markus-lanthaler.com",
-      "keywords": ["URN", "iri", "uri", "url"],
+      "keywords": [
+        "URN",
+        "iri",
+        "uri",
+        "url"
+      ],
       "time": "2014-01-21T13:43:39+00:00"
     },
     {
@@ -3536,7 +4001,9 @@
           "ML\\JsonLD\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Markus Lanthaler",
@@ -3547,7 +4014,10 @@
       ],
       "description": "JSON-LD Processor for PHP",
       "homepage": "http://www.markus-lanthaler.com",
-      "keywords": ["JSON-LD", "jsonld"],
+      "keywords": [
+        "JSON-LD",
+        "jsonld"
+      ],
       "time": "2022-09-29T08:45:17+00:00"
     },
     {
@@ -3587,7 +4057,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Mats Mikkel Rummelhoff",
@@ -3627,7 +4099,9 @@
           "": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Dean Tedesco",
@@ -3670,7 +4144,9 @@
           "Money\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Mathias Verraes",
@@ -3688,16 +4164,25 @@
       ],
       "description": "PHP implementation of Fowler's Money pattern",
       "homepage": "http://moneyphp.org",
-      "keywords": ["Value Object", "money", "vo"],
+      "keywords": [
+        "Value Object",
+        "money",
+        "vo"
+      ],
       "time": "2024-01-24T08:29:16+00:00"
     },
     {
       "name": "monolog/monolog",
-      "version": "2.9.2",
+      "version": "2.9.3",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Seldaek/monolog.git",
+        "reference": "a30bfe2e142720dfa990d0a7e573997f5d884215"
+      },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/Seldaek/monolog/zipball/437cb3628f4cf6042cc10ae97fc2b8472e48ca1f",
-        "reference": "437cb3628f4cf6042cc10ae97fc2b8472e48ca1f",
+        "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a30bfe2e142720dfa990d0a7e573997f5d884215",
+        "reference": "a30bfe2e142720dfa990d0a7e573997f5d884215",
         "shasum": ""
       },
       "require": {
@@ -3706,6 +4191,26 @@
       },
       "provide": {
         "psr/log-implementation": "1.0.0 || 2.0.0 || 3.0.0"
+      },
+      "require-dev": {
+        "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+        "doctrine/couchdb": "~1.0@dev",
+        "elasticsearch/elasticsearch": "^7 || ^8",
+        "ext-json": "*",
+        "graylog2/gelf-php": "^1.4.2 || ^2@dev",
+        "guzzlehttp/guzzle": "^7.4",
+        "guzzlehttp/psr7": "^2.2",
+        "mongodb/mongodb": "^1.8",
+        "php-amqplib/php-amqplib": "~2.4 || ^3",
+        "phpspec/prophecy": "^1.15",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^8.5.38 || ^9.6.19",
+        "predis/predis": "^1.1 || ^2.0",
+        "rollbar/rollbar": "^1.3 || ^2 || ^3",
+        "ruflin/elastica": "^7",
+        "swiftmailer/swiftmailer": "^5.3|^6.0",
+        "symfony/mailer": "^5.4 || ^6",
+        "symfony/mime": "^5.4 || ^6"
       },
       "suggest": {
         "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -3734,7 +4239,10 @@
           "Monolog\\": "src/Monolog"
         }
       },
-      "license": ["MIT"],
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -3744,8 +4252,26 @@
       ],
       "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
       "homepage": "https://github.com/Seldaek/monolog",
-      "keywords": ["log", "logging", "psr-3"],
-      "time": "2023-10-27T15:25:26+00:00"
+      "keywords": [
+        "log",
+        "logging",
+        "psr-3"
+      ],
+      "support": {
+        "issues": "https://github.com/Seldaek/monolog/issues",
+        "source": "https://github.com/Seldaek/monolog/tree/2.9.3"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/Seldaek",
+          "type": "github"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+          "type": "tidelift"
+        }
+      ],
+      "time": "2024-04-12T20:52:51+00:00"
     },
     {
       "name": "mtdowling/jmespath.php",
@@ -3760,7 +4286,9 @@
         "php": "^7.2.5 || ^8.0",
         "symfony/polyfill-mbstring": "^1.17"
       },
-      "bin": ["bin/jp.php"],
+      "bin": [
+        "bin/jp.php"
+      ],
       "type": "library",
       "extra": {
         "branch-alias": {
@@ -3768,12 +4296,16 @@
         }
       },
       "autoload": {
-        "files": ["src/JmesPath.php"],
+        "files": [
+          "src/JmesPath.php"
+        ],
         "psr-4": {
           "JmesPath\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Graham Campbell",
@@ -3787,7 +4319,10 @@
         }
       ],
       "description": "Declaratively specify how to extract elements from a JSON document",
-      "keywords": ["json", "jsonpath"],
+      "keywords": [
+        "json",
+        "jsonpath"
+      ],
       "time": "2023-08-25T10:54:48+00:00"
     },
     {
@@ -3805,12 +4340,19 @@
         "masterminds/html5": "^2.5.0",
         "php": ">=7.4.0"
       },
-      "bin": ["src/bin/update-patterns.php", "src/bin/update-iana.php"],
+      "bin": [
+        "src/bin/update-patterns.php",
+        "src/bin/update-iana.php"
+      ],
       "type": "library",
       "autoload": {
-        "classmap": ["src/"]
+        "classmap": [
+          "src/"
+        ]
       },
-      "license": ["GPL-2.0-or-later"],
+      "license": [
+        "GPL-2.0-or-later"
+      ],
       "authors": [
         {
           "name": "Peter Putzer",
@@ -3855,7 +4397,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "nystudio107",
@@ -3892,15 +4436,15 @@
     },
     {
       "name": "nystudio107/craft-code-editor",
-      "version": "1.0.17",
+      "version": "1.0.18",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/d2d9c8706fc1a6f40253fc78762101ce9b5ac386",
-        "reference": "d2d9c8706fc1a6f40253fc78762101ce9b5ac386",
+        "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/e86f71c6e1eb46a5bc2e73898cd22315b5bbc1ed",
+        "reference": "e86f71c6e1eb46a5bc2e73898cd22315b5bbc1ed",
         "shasum": ""
       },
       "require": {
-        "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0-alpha.1",
+        "craftcms/cms": "^3.0.0 || ^4.0.0 || ^5.0.0-beta.1",
         "phpdocumentor/reflection-docblock": "^5.0.0"
       },
       "type": "yii2-extension",
@@ -3912,7 +4456,9 @@
           "nystudio107\\codeeditor\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "nystudio107",
@@ -3932,7 +4478,7 @@
         "markdown",
         "twig"
       ],
-      "time": "2024-01-30T03:18:54+00:00"
+      "time": "2024-03-19T20:14:01+00:00"
     },
     {
       "name": "nystudio107/craft-emptycoalesce",
@@ -3963,7 +4509,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "nystudio107",
@@ -4012,7 +4560,9 @@
           "nystudio107\\pluginvite\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "nystudio107",
@@ -4020,7 +4570,11 @@
         }
       ],
       "description": "Plugin Vite is the conduit between Craft CMS plugins and Vite, with manifest.json & HMR support",
-      "keywords": ["craftcms", "plugin", "vite"],
+      "keywords": [
+        "craftcms",
+        "plugin",
+        "vite"
+      ],
       "support": {
         "docs": "https://github.com/nystudio107/craft-plugin-vite/blob/v4/README.md",
         "issues": "https://github.com/nystudio107/craft-plugin-vite/issues"
@@ -4029,11 +4583,11 @@
     },
     {
       "name": "nystudio107/craft-seomatic",
-      "version": "4.0.43",
+      "version": "4.0.48",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/7020b001572558ad9db323e841cc00a8006133ce",
-        "reference": "7020b001572558ad9db323e841cc00a8006133ce",
+        "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/4f81d00701e3c5cb6882dc76008ad7426177035f",
+        "reference": "4f81d00701e3c5cb6882dc76008ad7426177035f",
         "shasum": ""
       },
       "require": {
@@ -4056,7 +4610,9 @@
           "nystudio107\\seomatic\\": "src/"
         }
       },
-      "license": ["proprietary"],
+      "license": [
+        "proprietary"
+      ],
       "authors": [
         {
           "name": "nystudio107",
@@ -4083,7 +4639,7 @@
         "issues": "https://nystudio107.com/plugins/seomatic/support",
         "source": "https://github.com/nystudio107/craft-seomatic"
       },
-      "time": "2024-03-08T22:02:20+00:00"
+      "time": "2024-04-10T18:16:53+00:00"
     },
     {
       "name": "oscarotero/html-parser",
@@ -4103,7 +4659,9 @@
           "HtmlParser\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Oscar Otero",
@@ -4114,7 +4672,11 @@
       ],
       "description": "Parse html strings to DOMDocument",
       "homepage": "https://github.com/oscarotero/html-parser",
-      "keywords": ["dom", "html", "parser"],
+      "keywords": [
+        "dom",
+        "html",
+        "parser"
+      ],
       "time": "2023-11-29T20:28:41+00:00"
     },
     {
@@ -4133,7 +4695,9 @@
         "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
       },
       "type": "library",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Paragon Initiative Enterprises",
@@ -4142,7 +4706,12 @@
         }
       ],
       "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-      "keywords": ["csprng", "polyfill", "pseudorandom", "random"],
+      "keywords": [
+        "csprng",
+        "polyfill",
+        "pseudorandom",
+        "random"
+      ],
       "time": "2020-10-15T08:29:30+00:00"
     },
     {
@@ -4162,10 +4731,14 @@
       "type": "library",
       "autoload": {
         "psr-4": {
-          "PhpScience\\TextRank\\": ["src/"]
+          "PhpScience\\TextRank\\": [
+            "src/"
+          ]
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "David Belicza",
@@ -4210,7 +4783,9 @@
           "PhpCollection": "src/"
         }
       },
-      "license": ["Apache2"],
+      "license": [
+        "Apache2"
+      ],
       "authors": [
         {
           "name": "Johannes M. Schmitt",
@@ -4218,7 +4793,13 @@
         }
       ],
       "description": "General-Purpose Collection Library for PHP",
-      "keywords": ["collection", "list", "map", "sequence", "set"],
+      "keywords": [
+        "collection",
+        "list",
+        "map",
+        "sequence",
+        "set"
+      ],
       "time": "2022-03-21T13:02:41+00:00"
     },
     {
@@ -4244,7 +4825,9 @@
           "phpDocumentor\\Reflection\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jaap van Otterdijk",
@@ -4264,18 +4847,20 @@
     },
     {
       "name": "phpdocumentor/reflection-docblock",
-      "version": "5.3.0",
+      "version": "5.4.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/622548b623e81ca6d78b721c5e029f4ce664f170",
-        "reference": "622548b623e81ca6d78b721c5e029f4ce664f170",
+        "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/298d2febfe79d03fe714eb871d5538da55205b1a",
+        "reference": "298d2febfe79d03fe714eb871d5538da55205b1a",
         "shasum": ""
       },
       "require": {
+        "doctrine/deprecations": "^1.1",
         "ext-filter": "*",
-        "php": "^7.2 || ^8.0",
+        "php": "^7.4 || ^8.0",
         "phpdocumentor/reflection-common": "^2.2",
-        "phpdocumentor/type-resolver": "^1.3",
+        "phpdocumentor/type-resolver": "^1.7",
+        "phpstan/phpdoc-parser": "^1.7",
         "webmozart/assert": "^1.9.1"
       },
       "type": "library",
@@ -4289,7 +4874,9 @@
           "phpDocumentor\\Reflection\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Mike van Riel",
@@ -4297,11 +4884,11 @@
         },
         {
           "name": "Jaap van Otterdijk",
-          "email": "account@ijaap.nl"
+          "email": "opensource@ijaap.nl"
         }
       ],
       "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-      "time": "2021-10-19T17:43:47+00:00"
+      "time": "2024-04-09T21:13:58+00:00"
     },
     {
       "name": "phpdocumentor/type-resolver",
@@ -4329,7 +4916,9 @@
           "phpDocumentor\\Reflection\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Mike van Riel",
@@ -4366,7 +4955,9 @@
           "PhpOption\\": "src/PhpOption/"
         }
       },
-      "license": ["Apache-2.0"],
+      "license": [
+        "Apache-2.0"
+      ],
       "authors": [
         {
           "name": "Johannes M. Schmitt",
@@ -4380,16 +4971,21 @@
         }
       ],
       "description": "Option Type for PHP",
-      "keywords": ["language", "option", "php", "type"],
+      "keywords": [
+        "language",
+        "option",
+        "php",
+        "type"
+      ],
       "time": "2023-11-12T21:59:55+00:00"
     },
     {
       "name": "phpstan/phpdoc-parser",
-      "version": "1.26.0",
+      "version": "1.28.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/231e3186624c03d7e7c890ec662b81e6b0405227",
-        "reference": "231e3186624c03d7e7c890ec662b81e6b0405227",
+        "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
+        "reference": "cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
         "shasum": ""
       },
       "require": {
@@ -4398,12 +4994,16 @@
       "type": "library",
       "autoload": {
         "psr-4": {
-          "PHPStan\\PhpDocParser\\": ["src/"]
+          "PHPStan\\PhpDocParser\\": [
+            "src/"
+          ]
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "PHPDoc parser with support for nullable, intersection and generic types",
-      "time": "2024-02-23T16:05:55+00:00"
+      "time": "2024-04-03T18:51:33+00:00"
     },
     {
       "name": "pixelandtonic/imagine",
@@ -4434,7 +5034,9 @@
           "Imagine\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Bulat Shakirzyanov",
@@ -4475,7 +5077,9 @@
           "Psr\\Cache\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -4483,7 +5087,11 @@
         }
       ],
       "description": "Common interface for caching libraries",
-      "keywords": ["cache", "psr", "psr-6"],
+      "keywords": [
+        "cache",
+        "psr",
+        "psr-6"
+      ],
       "time": "2021-02-03T23:26:27+00:00"
     },
     {
@@ -4509,7 +5117,9 @@
           "Psr\\Container\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -4550,7 +5160,9 @@
           "Psr\\EventDispatcher\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -4558,7 +5170,11 @@
         }
       ],
       "description": "Standard interfaces for event handling.",
-      "keywords": ["events", "psr", "psr-14"],
+      "keywords": [
+        "events",
+        "psr",
+        "psr-14"
+      ],
       "time": "2019-01-08T18:20:26+00:00"
     },
     {
@@ -4585,7 +5201,9 @@
           "Psr\\Http\\Client\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -4594,7 +5212,12 @@
       ],
       "description": "Common interface for HTTP clients",
       "homepage": "https://github.com/php-fig/http-client",
-      "keywords": ["http", "http-client", "psr", "psr-18"],
+      "keywords": [
+        "http",
+        "http-client",
+        "psr",
+        "psr-18"
+      ],
       "time": "2023-09-23T14:17:50+00:00"
     },
     {
@@ -4621,7 +5244,9 @@
           "Psr\\Http\\Message\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -4664,7 +5289,9 @@
           "Psr\\Http\\Message\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -4706,7 +5333,9 @@
           "Psr\\Log\\": "src"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -4715,7 +5344,11 @@
       ],
       "description": "Common interface for logging libraries",
       "homepage": "https://github.com/php-fig/log",
-      "keywords": ["log", "psr", "psr-3"],
+      "keywords": [
+        "log",
+        "psr",
+        "psr-3"
+      ],
       "time": "2021-07-14T16:46:02+00:00"
     },
     {
@@ -4741,7 +5374,9 @@
           "Psr\\SimpleCache\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -4749,22 +5384,28 @@
         }
       ],
       "description": "Common interfaces for simple caching",
-      "keywords": ["cache", "caching", "psr", "psr-16", "simple-cache"],
+      "keywords": [
+        "cache",
+        "caching",
+        "psr",
+        "psr-16",
+        "simple-cache"
+      ],
       "time": "2021-10-29T13:26:27+00:00"
     },
     {
       "name": "putyourlightson/craft-blitz",
-      "version": "4.13.1",
+      "version": "4.16.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/3a394ac7da71c43d41412a37837c701677f36b25",
-        "reference": "3a394ac7da71c43d41412a37837c701677f36b25",
+        "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/f11ba6fbc3c5f8bdee0e289404c4284f83ec0e06",
+        "reference": "f11ba6fbc3c5f8bdee0e289404c4284f83ec0e06",
         "shasum": ""
       },
       "require": {
         "amphp/http-client": "^4.0",
         "amphp/parallel": "^1.0",
-        "craftcms/cms": "^4.0",
+        "craftcms/cms": "^4.4",
         "cypresslab/gitelephant": "^4.0",
         "php": "^8.0.2",
         "putyourlightson/craft-blitz-hints": "^1.2.2",
@@ -4785,7 +5426,9 @@
           "putyourlightson\\blitz\\": "src/"
         }
       },
-      "license": ["proprietary"],
+      "license": [
+        "proprietary"
+      ],
       "description": "Intelligent static page caching for creating lightning-fast sites.",
       "homepage": "https://putyourlightson.com/plugins/blitz",
       "keywords": [
@@ -4801,7 +5444,7 @@
         "source": "https://github.com/putyourlightson/craft-blitz",
         "issues": "https://github.com/putyourlightson/craft-blitz/issues"
       },
-      "time": "2024-03-12T13:17:11+00:00"
+      "time": "2024-04-12T14:47:01+00:00"
     },
     {
       "name": "putyourlightson/craft-blitz-hints",
@@ -4822,7 +5465,9 @@
           "putyourlightson\\blitzhints\\": "src/"
         }
       },
-      "license": ["mit"],
+      "license": [
+        "mit"
+      ],
       "description": "Provides templating performance hints.",
       "support": {
         "docs": "https://github.com/putyourlightson/craft-blitz-hints",
@@ -4833,11 +5478,11 @@
     },
     {
       "name": "putyourlightson/craft-sherlock",
-      "version": "4.4.1",
+      "version": "4.4.2",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/putyourlightson/craft-sherlock/zipball/1fc82f3230563398040b209491499c023fc04d0f",
-        "reference": "1fc82f3230563398040b209491499c023fc04d0f",
+        "url": "https://api.github.com/repos/putyourlightson/craft-sherlock/zipball/b0ea322825de04abf6fc13cd2e412e1f53509d2e",
+        "reference": "b0ea322825de04abf6fc13cd2e412e1f53509d2e",
         "shasum": ""
       },
       "require": {
@@ -4859,24 +5504,33 @@
           "putyourlightson\\sherlock\\": "src/"
         }
       },
-      "license": ["proprietary"],
+      "license": [
+        "proprietary"
+      ],
       "description": "Security scanner and monitor to keep your site and CMS secure.",
       "homepage": "https://putyourlightson.com/plugins/sherlock",
-      "keywords": ["cms", "craft", "craftcms", "scanner", "secure", "security"],
+      "keywords": [
+        "cms",
+        "craft",
+        "craftcms",
+        "scanner",
+        "secure",
+        "security"
+      ],
       "support": {
         "docs": "https://putyourlightson.com/plugins/sherlock",
         "source": "https://github.com/putyourlightson/craft-sherlock",
         "issues": "https://github.com/putyourlightson/craft-sherlock/issues"
       },
-      "time": "2024-01-12T14:24:32+00:00"
+      "time": "2024-03-25T14:18:36+00:00"
     },
     {
       "name": "putyourlightson/craft-sprig-core",
-      "version": "2.6.7",
+      "version": "2.7.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/d81e3f344fca08eb0b49cd3a4ad6a2c8d9aedbcb",
-        "reference": "d81e3f344fca08eb0b49cd3a4ad6a2c8d9aedbcb",
+        "url": "https://api.github.com/repos/putyourlightson/craft-sprig-core/zipball/bd112b1525a8b42c1d59d5635dbe972418d318bd",
+        "reference": "bd112b1525a8b42c1d59d5635dbe972418d318bd",
         "shasum": ""
       },
       "require": {
@@ -4889,14 +5543,16 @@
           "putyourlightson\\sprig\\": "src/"
         }
       },
-      "license": ["mit"],
+      "license": [
+        "mit"
+      ],
       "description": "A reactive Twig component framework for Craft.",
       "support": {
         "docs": "https://github.com/putyourlightson/craft-sprig-core",
         "source": "https://github.com/putyourlightson/craft-sprig-core",
         "issues": "https://github.com/putyourlightson/craft-sprig-core/issues"
       },
-      "time": "2024-02-09T02:28:56+00:00"
+      "time": "2024-03-27T02:39:57+00:00"
     },
     {
       "name": "ralouphie/getallheaders",
@@ -4912,9 +5568,13 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["src/getallheaders.php"]
+        "files": [
+          "src/getallheaders.php"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Ralph Khattar",
@@ -4951,7 +5611,9 @@
           "Ramsey\\Collection\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Ben Ramsey",
@@ -4960,7 +5622,14 @@
         }
       ],
       "description": "A PHP library for representing and manipulating collections.",
-      "keywords": ["array", "collection", "hash", "map", "queue", "set"],
+      "keywords": [
+        "array",
+        "collection",
+        "hash",
+        "map",
+        "queue",
+        "set"
+      ],
       "time": "2022-12-27T19:12:24+00:00"
     },
     {
@@ -4995,14 +5664,22 @@
         }
       },
       "autoload": {
-        "files": ["src/functions.php"],
+        "files": [
+          "src/functions.php"
+        ],
         "psr-4": {
           "Ramsey\\Uuid\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
-      "keywords": ["guid", "identifier", "uuid"],
+      "keywords": [
+        "guid",
+        "identifier",
+        "uuid"
+      ],
       "time": "2023-11-08T05:53:05+00:00"
     },
     {
@@ -5019,12 +5696,16 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["src/functions_include.php"],
+        "files": [
+          "src/functions_include.php"
+        ],
         "psr-4": {
           "React\\Promise\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jan Sorgalla",
@@ -5048,16 +5729,19 @@
         }
       ],
       "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-      "keywords": ["promise", "promises"],
+      "keywords": [
+        "promise",
+        "promises"
+      ],
       "time": "2023-11-16T16:21:57+00:00"
     },
     {
       "name": "rize/uri-template",
-      "version": "0.3.5",
+      "version": "0.3.6",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/rize/UriTemplate/zipball/5ed4ba8ea34af84485dea815d4b6b620794d1168",
-        "reference": "5ed4ba8ea34af84485dea815d4b6b620794d1168",
+        "url": "https://api.github.com/repos/rize/UriTemplate/zipball/34efe65c79710eed0883884f2285ae6d4a0aad19",
+        "reference": "34efe65c79710eed0883884f2285ae6d4a0aad19",
         "shasum": ""
       },
       "require": {
@@ -5069,7 +5753,9 @@
           "Rize\\": "src/Rize"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Marut K",
@@ -5077,8 +5763,12 @@
         }
       ],
       "description": "PHP URI Template (RFC 6570) supports both expansion & extraction",
-      "keywords": ["RFC 6570", "template", "uri"],
-      "time": "2022-10-12T17:22:51+00:00"
+      "keywords": [
+        "RFC 6570",
+        "template",
+        "uri"
+      ],
+      "time": "2024-03-10T08:07:49+00:00"
     },
     {
       "name": "samdark/yii2-psr-log-target",
@@ -5100,7 +5790,9 @@
           "samdark\\log\\tests\\": "tests"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Alexander Makarov",
@@ -5109,7 +5801,12 @@
       ],
       "description": "Yii 2 log target which uses PSR-3 compatible logger",
       "homepage": "https://github.com/samdark/yii2-psr-log-target",
-      "keywords": ["extension", "log", "psr-3", "yii"],
+      "keywords": [
+        "extension",
+        "log",
+        "psr-3",
+        "yii"
+      ],
       "time": "2023-11-23T14:11:29+00:00"
     },
     {
@@ -5135,7 +5832,9 @@
           "Seld\\CliPrompt\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -5143,7 +5842,13 @@
         }
       ],
       "description": "Allows you to prompt for user input on the command line, and optionally hide the characters they type",
-      "keywords": ["cli", "console", "hidden", "input", "prompt"],
+      "keywords": [
+        "cli",
+        "console",
+        "hidden",
+        "input",
+        "prompt"
+      ],
       "time": "2020-12-15T21:32:01+00:00"
     },
     {
@@ -5158,14 +5863,18 @@
       "require": {
         "php": "^5.3 || ^7.0 || ^8.0"
       },
-      "bin": ["bin/jsonlint"],
+      "bin": [
+        "bin/jsonlint"
+      ],
       "type": "library",
       "autoload": {
         "psr-4": {
           "Seld\\JsonLint\\": "src/Seld/JsonLint/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -5174,7 +5883,12 @@
         }
       ],
       "description": "JSON Linter",
-      "keywords": ["json", "linter", "parser", "validator"],
+      "keywords": [
+        "json",
+        "linter",
+        "parser",
+        "validator"
+      ],
       "time": "2024-02-07T12:57:50+00:00"
     },
     {
@@ -5200,7 +5914,9 @@
           "Seld\\PharUtils\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -5208,7 +5924,9 @@
         }
       ],
       "description": "PHAR file format utilities, for when PHP phars you up",
-      "keywords": ["phar"],
+      "keywords": [
+        "phar"
+      ],
       "time": "2022-08-31T10:31:18+00:00"
     },
     {
@@ -5234,7 +5952,9 @@
           "Seld\\Signal\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Jordi Boggiano",
@@ -5243,21 +5963,27 @@
         }
       ],
       "description": "Simple unix signal handler that silently fails where signals are not supported for easy cross-platform development",
-      "keywords": ["posix", "sigint", "signal", "sigterm", "unix"],
+      "keywords": [
+        "posix",
+        "sigint",
+        "signal",
+        "sigterm",
+        "unix"
+      ],
       "time": "2023-09-03T09:24:00+00:00"
     },
     {
       "name": "spacecatninja/imager-x",
-      "version": "4.3.1",
+      "version": "4.4.0",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/1e73061d5c27011ed55409863f55843f986269ba",
-        "reference": "1e73061d5c27011ed55409863f55843f986269ba",
+        "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/735844afb57151151e6474af209a78552654f8ef",
+        "reference": "735844afb57151151e6474af209a78552654f8ef",
         "shasum": ""
       },
       "require": {
         "aws/aws-sdk-php": "^3.0.0",
-        "craftcms/cms": "^4.0.0-beta",
+        "craftcms/cms": "^4.5.0",
         "google/cloud-storage": "~1.0",
         "imgix/imgix-php": "^3.0",
         "kornrunner/blurhash": "^1.1",
@@ -5284,7 +6010,9 @@
           "spacecatninja\\imagerx\\": "src/"
         }
       },
-      "license": ["proprietary"],
+      "license": [
+        "proprietary"
+      ],
       "authors": [
         {
           "name": "SPACECATNINJA",
@@ -5307,30 +6035,19 @@
         "docs": "http://imager-x.spacecat.ninja/",
         "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
       },
-      "time": "2024-02-09T13:15:14+00:00"
+      "time": "2024-04-05T09:09:27+00:00"
     },
     {
       "name": "spatie/backtrace",
-      "version": "1.4.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/spatie/backtrace.git",
-        "reference": "ec4dd16476b802dbdc6b4467f84032837e316b8c"
-      },
+      "version": "1.5.3",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/spatie/backtrace/zipball/ec4dd16476b802dbdc6b4467f84032837e316b8c",
-        "reference": "ec4dd16476b802dbdc6b4467f84032837e316b8c",
+        "url": "https://api.github.com/repos/spatie/backtrace/zipball/483f76a82964a0431aa836b6ed0edde0c248e3ab",
+        "reference": "483f76a82964a0431aa836b6ed0edde0c248e3ab",
         "shasum": ""
       },
       "require": {
         "php": "^7.3|^8.0"
-      },
-      "require-dev": {
-        "ext-json": "*",
-        "phpunit/phpunit": "^9.3",
-        "spatie/phpunit-snapshot-assertions": "^4.2",
-        "symfony/var-dumper": "^5.1"
       },
       "type": "library",
       "autoload": {
@@ -5338,8 +6055,9 @@
           "Spatie\\Backtrace\\": "src"
         }
       },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Freek Van de Herten",
@@ -5350,44 +6068,26 @@
       ],
       "description": "A better backtrace",
       "homepage": "https://github.com/spatie/backtrace",
-      "keywords": ["Backtrace", "spatie"],
-      "support": {
-        "source": "https://github.com/spatie/backtrace/tree/1.4.0"
-      },
-      "funding": [
-        {
-          "url": "https://github.com/sponsors/spatie",
-          "type": "github"
-        },
-        {
-          "url": "https://spatie.be/open-source/support-us",
-          "type": "other"
-        }
+      "keywords": [
+        "Backtrace",
+        "spatie"
       ],
-      "time": "2023-03-04T08:57:24+00:00"
+      "time": "2023-06-28T12:59:17+00:00"
     },
     {
       "name": "spatie/craft-ray",
-      "version": "2.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/spatie/craft-ray.git",
-        "reference": "8df3ce617578ab67ee207874cfaa1105199662c9"
-      },
+      "version": "2.1.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/spatie/craft-ray/zipball/8df3ce617578ab67ee207874cfaa1105199662c9",
-        "reference": "8df3ce617578ab67ee207874cfaa1105199662c9",
+        "url": "https://api.github.com/repos/spatie/craft-ray/zipball/61320a273f16e8bea7d783a8abbbbd77bc6cc50b",
+        "reference": "61320a273f16e8bea7d783a8abbbbd77bc6cc50b",
         "shasum": ""
       },
       "require": {
-        "craftcms/cms": "^4.0",
+        "craftcms/cms": "^4.0|^5.0",
         "php": "^8.0",
         "spatie/ray": "^1.34",
         "spatie/yii-ray": "^1.2"
-      },
-      "require-dev": {
-        "vlucas/phpdotenv": "^3.0"
       },
       "type": "craft-plugin",
       "extra": {
@@ -5404,8 +6104,9 @@
           "Spatie\\CraftRay\\": "src/"
         }
       },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Spatie",
@@ -5413,32 +6114,22 @@
         }
       ],
       "description": "Easily debug CraftCMS projects",
-      "keywords": ["Craft", "cms", "craft-plugin", "craftcms", "ray"],
+      "keywords": [
+        "cms",
+        "craft",
+        "craft-plugin",
+        "craftcms",
+        "ray"
+      ],
       "support": {
         "docs": "https://github.com/spatie/craft-ray/blob/master/README.md",
-        "issues": "https://github.com/spatie/craft-ray/issues",
-        "source": "https://github.com/spatie/craft-ray/tree/2.0"
+        "issues": "https://github.com/spatie/craft-ray/issues"
       },
-      "funding": [
-        {
-          "url": "https://spatie.be/open-source/support-us",
-          "type": "custom"
-        },
-        {
-          "url": "https://github.com/spatie",
-          "type": "github"
-        }
-      ],
-      "time": "2022-03-17T09:14:18+00:00"
+      "time": "2024-03-21T07:51:09+00:00"
     },
     {
       "name": "spatie/macroable",
       "version": "2.0.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/spatie/macroable.git",
-        "reference": "ec2c320f932e730607aff8052c44183cf3ecb072"
-      },
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/spatie/macroable/zipball/ec2c320f932e730607aff8052c44183cf3ecb072",
@@ -5448,17 +6139,15 @@
       "require": {
         "php": "^8.0"
       },
-      "require-dev": {
-        "phpunit/phpunit": "^8.0|^9.3"
-      },
       "type": "library",
       "autoload": {
         "psr-4": {
           "Spatie\\Macroable\\": "src"
         }
       },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Freek Van der Herten",
@@ -5469,25 +6158,19 @@
       ],
       "description": "A trait to dynamically add methods to a class",
       "homepage": "https://github.com/spatie/macroable",
-      "keywords": ["macroable", "spatie"],
-      "support": {
-        "issues": "https://github.com/spatie/macroable/issues",
-        "source": "https://github.com/spatie/macroable/tree/2.0.0"
-      },
+      "keywords": [
+        "macroable",
+        "spatie"
+      ],
       "time": "2021-03-26T22:39:02+00:00"
     },
     {
       "name": "spatie/ray",
-      "version": "1.37.1",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/spatie/ray.git",
-        "reference": "a915e327f04c0fbed3bdd26e076e39feea091062"
-      },
+      "version": "1.41.1",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/spatie/ray/zipball/a915e327f04c0fbed3bdd26e076e39feea091062",
-        "reference": "a915e327f04c0fbed3bdd26e076e39feea091062",
+        "url": "https://api.github.com/repos/spatie/ray/zipball/051a0facb1d2462fafef87ff77eb74d6f2d12944",
+        "reference": "051a0facb1d2462fafef87ff77eb74d6f2d12944",
         "shasum": ""
       },
       "require": {
@@ -5497,27 +6180,24 @@
         "ramsey/uuid": "^3.0|^4.1",
         "spatie/backtrace": "^1.1",
         "spatie/macroable": "^1.0|^2.0",
-        "symfony/stopwatch": "^4.0|^5.1|^6.0",
-        "symfony/var-dumper": "^4.2|^5.1|^6.0"
+        "symfony/stopwatch": "^4.0|^5.1|^6.0|^7.0",
+        "symfony/var-dumper": "^4.2|^5.1|^6.0|^7.0"
       },
-      "require-dev": {
-        "illuminate/support": "6.x|^8.18|^9.0",
-        "nesbot/carbon": "^2.63",
-        "pestphp/pest": "^1.22",
-        "phpstan/phpstan": "^1.10",
-        "phpunit/phpunit": "^9.5",
-        "spatie/phpunit-snapshot-assertions": "^4.2",
-        "spatie/test-time": "^1.2"
-      },
+      "bin": [
+        "bin/remove-ray.sh"
+      ],
       "type": "library",
       "autoload": {
-        "files": ["src/helpers.php"],
+        "files": [
+          "src/helpers.php"
+        ],
         "psr-4": {
           "Spatie\\Ray\\": "src"
         }
       },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Freek Van der Herten",
@@ -5528,31 +6208,15 @@
       ],
       "description": "Debug with Ray to fix problems faster",
       "homepage": "https://github.com/spatie/ray",
-      "keywords": ["ray", "spatie"],
-      "support": {
-        "issues": "https://github.com/spatie/ray/issues",
-        "source": "https://github.com/spatie/ray/tree/1.37.1"
-      },
-      "funding": [
-        {
-          "url": "https://github.com/sponsors/spatie",
-          "type": "github"
-        },
-        {
-          "url": "https://spatie.be/open-source/support-us",
-          "type": "other"
-        }
+      "keywords": [
+        "ray",
+        "spatie"
       ],
-      "time": "2023-03-06T07:22:28+00:00"
+      "time": "2024-01-25T10:15:50+00:00"
     },
     {
       "name": "spatie/yii-ray",
       "version": "1.2.5",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/spatie/yii-ray.git",
-        "reference": "ab76c87befa4121c74b2db5426110c7ce9b52e63"
-      },
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/spatie/yii-ray/zipball/ab76c87befa4121c74b2db5426110c7ce9b52e63",
@@ -5568,11 +6232,6 @@
         "tightenco/collect": "^5.6|^6.0|^7.0|^8.0",
         "yiisoft/yii2": "^2.0.38"
       },
-      "require-dev": {
-        "phpunit/phpunit": "^9.5",
-        "spatie/phpunit-snapshot-assertions": "^4.2",
-        "vimeo/psalm": "^4.3"
-      },
       "type": "yii2-extension",
       "extra": {
         "bootstrap": "Spatie\\YiiRay\\BootstrapRay"
@@ -5582,8 +6241,9 @@
           "Spatie\\YiiRay\\": "src"
         }
       },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Rias Van der Veken",
@@ -5594,20 +6254,9 @@
       ],
       "description": "Easily debug Yii apps",
       "homepage": "https://spatie.be/products/ray",
-      "keywords": ["spatie", "yii-ray"],
-      "support": {
-        "issues": "https://github.com/spatie/yii-ray/issues",
-        "source": "https://github.com/spatie/yii-ray/tree/1.2.5"
-      },
-      "funding": [
-        {
-          "url": "https://github.com/sponsors/spatie",
-          "type": "github"
-        },
-        {
-          "url": "https://spatie.be/open-source/support-us",
-          "type": "other"
-        }
+      "keywords": [
+        "spatie",
+        "yii-ray"
       ],
       "time": "2021-02-12T12:45:28+00:00"
     },
@@ -5634,7 +6283,9 @@
           "SSNepenthe\\ColorUtils\\": "src/"
         }
       },
-      "license": ["GPL-2.0"],
+      "license": [
+        "GPL-2.0"
+      ],
       "description": "A PHP library for performing SASS-like color manipulations.",
       "homepage": "https://github.com/ssnepenthe/color-utils",
       "keywords": [
@@ -5682,7 +6333,9 @@
           "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Sunra",
@@ -5696,7 +6349,11 @@
       ],
       "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
       "homepage": "https://github.com/sunra/php-simple-html-dom-parser",
-      "keywords": ["dom", "html", "parser"],
+      "keywords": [
+        "dom",
+        "html",
+        "parser"
+      ],
       "time": "2016-11-22T22:57:47+00:00"
     },
     {
@@ -5735,9 +6392,13 @@
         "psr-4": {
           "Symfony\\Component\\Console\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -5750,7 +6411,12 @@
       ],
       "description": "Eases the creation of beautiful and testable command line interfaces",
       "homepage": "https://symfony.com",
-      "keywords": ["cli", "command line", "console", "terminal"],
+      "keywords": [
+        "cli",
+        "command line",
+        "console",
+        "terminal"
+      ],
       "time": "2023-01-01T08:36:10+00:00"
     },
     {
@@ -5776,9 +6442,13 @@
         }
       },
       "autoload": {
-        "files": ["function.php"]
+        "files": [
+          "function.php"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -5822,9 +6492,13 @@
         "psr-4": {
           "Symfony\\Component\\EventDispatcher\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -5870,7 +6544,9 @@
           "Symfony\\Contracts\\EventDispatcher\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -5912,9 +6588,13 @@
         "psr-4": {
           "Symfony\\Component\\Filesystem\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -5946,9 +6626,13 @@
         "psr-4": {
           "Symfony\\Component\\Finder\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -5989,9 +6673,13 @@
         "psr-4": {
           "Symfony\\Component\\HttpClient\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6036,7 +6724,9 @@
           "Symfony\\Contracts\\HttpClient\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6085,9 +6775,13 @@
         "psr-4": {
           "Symfony\\Component\\Mailer\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -6128,9 +6822,13 @@
         "psr-4": {
           "Symfony\\Component\\Mime\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -6143,7 +6841,10 @@
       ],
       "description": "Allows manipulating MIME messages",
       "homepage": "https://symfony.com",
-      "keywords": ["mime", "mime-type"],
+      "keywords": [
+        "mime",
+        "mime-type"
+      ],
       "time": "2023-01-11T11:50:03+00:00"
     },
     {
@@ -6172,12 +6873,16 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Ctype\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Gert de Pagter",
@@ -6190,7 +6895,12 @@
       ],
       "description": "Symfony polyfill for ctype functions",
       "homepage": "https://symfony.com",
-      "keywords": ["compatibility", "ctype", "polyfill", "portable"],
+      "keywords": [
+        "compatibility",
+        "ctype",
+        "polyfill",
+        "portable"
+      ],
       "time": "2024-01-29T20:11:03+00:00"
     },
     {
@@ -6219,12 +6929,16 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Iconv\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6237,7 +6951,13 @@
       ],
       "description": "Symfony polyfill for the Iconv extension",
       "homepage": "https://symfony.com",
-      "keywords": ["compatibility", "iconv", "polyfill", "portable", "shim"],
+      "keywords": [
+        "compatibility",
+        "iconv",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
       "time": "2024-01-29T20:11:03+00:00"
     },
     {
@@ -6263,12 +6983,16 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6316,12 +7040,16 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Intl\\Idn\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Laurent Bassin",
@@ -6371,13 +7099,19 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
         },
-        "classmap": ["Resources/stubs"]
+        "classmap": [
+          "Resources/stubs"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6426,12 +7160,16 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Mbstring\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6444,7 +7182,13 @@
       ],
       "description": "Symfony polyfill for the Mbstring extension",
       "homepage": "https://symfony.com",
-      "keywords": ["compatibility", "mbstring", "polyfill", "portable", "shim"],
+      "keywords": [
+        "compatibility",
+        "mbstring",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
       "time": "2024-01-29T20:11:03+00:00"
     },
     {
@@ -6467,12 +7211,16 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Php72\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6485,7 +7233,12 @@
       ],
       "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
       "homepage": "https://symfony.com",
-      "keywords": ["compatibility", "polyfill", "portable", "shim"],
+      "keywords": [
+        "compatibility",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
       "time": "2024-01-29T20:11:03+00:00"
     },
     {
@@ -6508,13 +7261,19 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Php73\\": ""
         },
-        "classmap": ["Resources/stubs"]
+        "classmap": [
+          "Resources/stubs"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6527,7 +7286,12 @@
       ],
       "description": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
       "homepage": "https://symfony.com",
-      "keywords": ["compatibility", "polyfill", "portable", "shim"],
+      "keywords": [
+        "compatibility",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
       "time": "2024-01-29T20:11:03+00:00"
     },
     {
@@ -6550,13 +7314,19 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Php80\\": ""
         },
-        "classmap": ["Resources/stubs"]
+        "classmap": [
+          "Resources/stubs"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Ion Bazan",
@@ -6573,7 +7343,12 @@
       ],
       "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
       "homepage": "https://symfony.com",
-      "keywords": ["compatibility", "polyfill", "portable", "shim"],
+      "keywords": [
+        "compatibility",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
       "time": "2024-01-29T20:11:03+00:00"
     },
     {
@@ -6596,13 +7371,19 @@
         }
       },
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "Symfony\\Polyfill\\Php81\\": ""
         },
-        "classmap": ["Resources/stubs"]
+        "classmap": [
+          "Resources/stubs"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6615,7 +7396,12 @@
       ],
       "description": "Symfony polyfill backporting some PHP 8.1+ features to lower PHP versions",
       "homepage": "https://symfony.com",
-      "keywords": ["compatibility", "polyfill", "portable", "shim"],
+      "keywords": [
+        "compatibility",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
       "time": "2024-01-29T20:11:03+00:00"
     },
     {
@@ -6635,9 +7421,13 @@
         "psr-4": {
           "Symfony\\Component\\Process\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -6686,7 +7476,9 @@
           "Symfony\\Contracts\\Service\\": ""
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6711,16 +7503,11 @@
     },
     {
       "name": "symfony/stopwatch",
-      "version": "v5.4.21",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/symfony/stopwatch.git",
-        "reference": "f83692cd869a6f2391691d40a01e8acb89e76fee"
-      },
+      "version": "v5.4.35",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/symfony/stopwatch/zipball/f83692cd869a6f2391691d40a01e8acb89e76fee",
-        "reference": "f83692cd869a6f2391691d40a01e8acb89e76fee",
+        "url": "https://api.github.com/repos/symfony/stopwatch/zipball/887762aa99ff16f65dc8b48aafead415f942d407",
+        "reference": "887762aa99ff16f65dc8b48aafead415f942d407",
         "shasum": ""
       },
       "require": {
@@ -6732,10 +7519,13 @@
         "psr-4": {
           "Symfony\\Component\\Stopwatch\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -6748,24 +7538,7 @@
       ],
       "description": "Provides a way to profile code",
       "homepage": "https://symfony.com",
-      "support": {
-        "source": "https://github.com/symfony/stopwatch/tree/v5.4.21"
-      },
-      "funding": [
-        {
-          "url": "https://symfony.com/sponsor",
-          "type": "custom"
-        },
-        {
-          "url": "https://github.com/fabpot",
-          "type": "github"
-        },
-        {
-          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-          "type": "tidelift"
-        }
-      ],
-      "time": "2023-02-14T08:03:56+00:00"
+      "time": "2024-01-23T13:51:25+00:00"
     },
     {
       "name": "symfony/string",
@@ -6788,13 +7561,19 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["Resources/functions.php"],
+        "files": [
+          "Resources/functions.php"
+        ],
         "psr-4": {
           "Symfony\\Component\\String\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6807,16 +7586,23 @@
       ],
       "description": "Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way",
       "homepage": "https://symfony.com",
-      "keywords": ["grapheme", "i18n", "string", "unicode", "utf-8", "utf8"],
+      "keywords": [
+        "grapheme",
+        "i18n",
+        "string",
+        "unicode",
+        "utf-8",
+        "utf8"
+      ],
       "time": "2023-01-01T08:36:10+00:00"
     },
     {
       "name": "symfony/var-dumper",
-      "version": "v5.4.36",
+      "version": "v5.4.38",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2e9c2b11267119d9c90d6b3fdce5e4e9f15e2e90",
-        "reference": "2e9c2b11267119d9c90d6b3fdce5e4e9f15e2e90",
+        "url": "https://api.github.com/repos/symfony/var-dumper/zipball/ae1d949ccc57d3f6662e4256b47ac9fbfa9651ae",
+        "reference": "ae1d949ccc57d3f6662e4256b47ac9fbfa9651ae",
         "shasum": ""
       },
       "require": {
@@ -6832,16 +7618,24 @@
         "ext-intl": "To show region name in time zone dump",
         "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
       },
-      "bin": ["Resources/bin/var-dump-server"],
+      "bin": [
+        "Resources/bin/var-dump-server"
+      ],
       "type": "library",
       "autoload": {
-        "files": ["Resources/functions/dump.php"],
+        "files": [
+          "Resources/functions/dump.php"
+        ],
         "psr-4": {
           "Symfony\\Component\\VarDumper\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -6854,8 +7648,11 @@
       ],
       "description": "Provides mechanisms for walking through any arbitrary PHP variable",
       "homepage": "https://symfony.com",
-      "keywords": ["debug", "dump"],
-      "time": "2024-02-15T11:19:14+00:00"
+      "keywords": [
+        "debug",
+        "dump"
+      ],
+      "time": "2024-03-19T10:19:25+00:00"
     },
     {
       "name": "symfony/yaml",
@@ -6877,15 +7674,21 @@
       "suggest": {
         "symfony/console": "For validating YAML files using the lint command"
       },
-      "bin": ["Resources/bin/yaml-lint"],
+      "bin": [
+        "Resources/bin/yaml-lint"
+      ],
       "type": "library",
       "autoload": {
         "psr-4": {
           "Symfony\\Component\\Yaml\\": ""
         },
-        "exclude-from-classmap": ["/Tests/"]
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -6915,10 +7718,15 @@
       "type": "library",
       "autoload": {
         "psr-4": {
-          "TheIconic\\NameParser\\": ["src/", "tests/"]
+          "TheIconic\\NameParser\\": [
+            "src/",
+            "tests/"
+          ]
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "The Iconic",
@@ -6931,11 +7739,6 @@
     {
       "name": "tightenco/collect",
       "version": "v8.83.27",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/tighten/collect.git",
-        "reference": "07eed6cf7441c7a69c379fdcb118eec1a1fdd0e6"
-      },
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/tighten/collect/zipball/07eed6cf7441c7a69c379fdcb118eec1a1fdd0e6",
@@ -6945,11 +7748,6 @@
       "require": {
         "php": "^7.3|^8.0",
         "symfony/var-dumper": "^3.4 || ^4.0 || ^5.0 || ^6.0"
-      },
-      "require-dev": {
-        "mockery/mockery": "^1.0",
-        "nesbot/carbon": "^2.23.0",
-        "phpunit/phpunit": "^8.3"
       },
       "type": "library",
       "autoload": {
@@ -6961,8 +7759,9 @@
           "Tightenco\\Collect\\": "src/Collect"
         }
       },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Taylor Otwell",
@@ -6970,11 +7769,10 @@
         }
       ],
       "description": "Collect - Illuminate Collections as a separate package.",
-      "keywords": ["collection", "laravel"],
-      "support": {
-        "issues": "https://github.com/tighten/collect/issues",
-        "source": "https://github.com/tighten/collect/tree/v8.83.27"
-      },
+      "keywords": [
+        "collection",
+        "laravel"
+      ],
       "time": "2023-01-13T18:05:42+00:00"
     },
     {
@@ -6994,12 +7792,17 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["lib/Tinify.php", "lib/Tinify/Exception.php"],
+        "files": [
+          "lib/Tinify.php",
+          "lib/Tinify/Exception.php"
+        ],
         "psr-4": {
           "Tinify\\": "lib/Tinify/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Rolf Timmermans",
@@ -7008,7 +7811,14 @@
       ],
       "description": "PHP client for the Tinify API. Tinify compresses your images intelligently. Read more at https://tinify.com.",
       "homepage": "https://tinify.com/developers",
-      "keywords": ["api", "compress", "images", "tinify", "tinyjpg", "tinypng"],
+      "keywords": [
+        "api",
+        "compress",
+        "images",
+        "tinify",
+        "tinyjpg",
+        "tinypng"
+      ],
       "time": "2023-02-21T14:51:21+00:00"
     },
     {
@@ -7059,7 +7869,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["proprietary"],
+      "license": [
+        "proprietary"
+      ],
       "authors": [
         {
           "name": "Top Shelf Craft (Michael Rog)",
@@ -7111,7 +7923,9 @@
           "TopShelfCraft\\Wordsmith\\": "src/"
         }
       },
-      "license": ["proprietary"],
+      "license": [
+        "proprietary"
+      ],
       "authors": [
         {
           "name": "Top Shelf Craft (Michael Rog)",
@@ -7119,7 +7933,13 @@
         }
       ],
       "description": "...because you have the best words.",
-      "keywords": ["cms", "craft", "craft-plugin", "craftcms", "wordsmith"],
+      "keywords": [
+        "cms",
+        "craft",
+        "craft-plugin",
+        "craftcms",
+        "wordsmith"
+      ],
       "support": {
         "docs": "https://wordsmith.docs.topshelfcraft.com/",
         "issues": "https://github.com/TopShelfCraft/Wordsmith/issues"
@@ -7147,7 +7967,9 @@
           "Twig\\": "src/"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Fabien Potencier",
@@ -7167,7 +7989,9 @@
       ],
       "description": "Twig, the flexible, fast, and secure template language for PHP",
       "homepage": "https://twig.symfony.com",
-      "keywords": ["templating"],
+      "keywords": [
+        "templating"
+      ],
       "time": "2023-11-21T18:54:41+00:00"
     },
     {
@@ -7198,7 +8022,9 @@
           "vaersaagod\\matrixmate\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Værsågod",
@@ -7206,7 +8032,13 @@
         }
       ],
       "description": "Welding Matrix into shape, mate!",
-      "keywords": ["cms", "craft", "craft-plugin", "craftcms", "matrixmate"],
+      "keywords": [
+        "cms",
+        "craft",
+        "craft-plugin",
+        "craftcms",
+        "matrixmate"
+      ],
       "support": {
         "docs": "https://github.com/vaersaagod/matrixmate/blob/master/README.md",
         "issues": "https://github.com/vaersaagod/matrixmate/issues"
@@ -7215,11 +8047,11 @@
     },
     {
       "name": "verbb/base",
-      "version": "2.0.4",
+      "version": "2.0.5",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/verbb/verbb-base/zipball/1cd36eeea2448793d0e77b652801c27272c803c5",
-        "reference": "1cd36eeea2448793d0e77b652801c27272c803c5",
+        "url": "https://api.github.com/repos/verbb/verbb-base/zipball/d8bf72792c826fe4f3785c0942f7f74adb5c2670",
+        "reference": "d8bf72792c826fe4f3785c0942f7f74adb5c2670",
         "shasum": ""
       },
       "require": {
@@ -7232,7 +8064,9 @@
           "verbb\\base\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Verbb",
@@ -7240,7 +8074,7 @@
         }
       ],
       "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
-      "time": "2024-03-03T04:45:09+00:00"
+      "time": "2024-03-13T23:35:14+00:00"
     },
     {
       "name": "verbb/expanded-singles",
@@ -7270,7 +8104,9 @@
           "verbb\\expandedsingles\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Verbb",
@@ -7296,11 +8132,11 @@
     },
     {
       "name": "verbb/hyper",
-      "version": "1.1.21",
+      "version": "1.1.27",
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/verbb/hyper/zipball/b4aa8ba03343934f6a35a1fc219a1e070caeb674",
-        "reference": "b4aa8ba03343934f6a35a1fc219a1e070caeb674",
+        "url": "https://api.github.com/repos/verbb/hyper/zipball/97decd1470b6ea43436d7148ae3f655f52f6180f",
+        "reference": "97decd1470b6ea43436d7148ae3f655f52f6180f",
         "shasum": ""
       },
       "require": {
@@ -7322,7 +8158,9 @@
           "verbb\\hyper\\": "src/"
         }
       },
-      "license": ["proprietary"],
+      "license": [
+        "proprietary"
+      ],
       "authors": [
         {
           "name": "Verbb",
@@ -7330,7 +8168,13 @@
         }
       ],
       "description": "A user-friendly links field for Craft.",
-      "keywords": ["cms", "craft", "craft-plugin", "craftcms", "hyper"],
+      "keywords": [
+        "cms",
+        "craft",
+        "craft-plugin",
+        "craftcms",
+        "hyper"
+      ],
       "support": {
         "email": "support@verbb.io",
         "issues": "https://github.com/verbb/hyper/issues?state=open",
@@ -7338,7 +8182,7 @@
         "docs": "https://github.com/verbb/hyper",
         "rss": "https://github.com/verbb/hyper/commits/v2.atom"
       },
-      "time": "2024-03-03T23:31:46+00:00"
+      "time": "2024-04-10T13:14:54+00:00"
     },
     {
       "name": "vlucas/phpdotenv",
@@ -7387,7 +8231,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Graham Campbell",
@@ -7401,7 +8247,11 @@
         }
       ],
       "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-      "keywords": ["dotenv", "env", "environment"],
+      "keywords": [
+        "dotenv",
+        "env",
+        "environment"
+      ],
       "support": {
         "issues": "https://github.com/vlucas/phpdotenv/issues",
         "source": "https://github.com/vlucas/phpdotenv/tree/v5.5.0"
@@ -7442,7 +8292,9 @@
           "voku\\helper\\": "src/voku/helper/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "EllisLab Dev Team",
@@ -7456,7 +8308,12 @@
       ],
       "description": "anti xss-library",
       "homepage": "https://github.com/voku/anti-xss",
-      "keywords": ["anti-xss", "clean", "security", "xss"],
+      "keywords": [
+        "anti-xss",
+        "clean",
+        "security",
+        "xss"
+      ],
       "time": "2023-07-03T14:40:46+00:00"
     },
     {
@@ -7476,12 +8333,16 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["src/Create.php"],
+        "files": [
+          "src/Create.php"
+        ],
         "psr-4": {
           "Arrayy\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Lars Moelleken",
@@ -7524,7 +8385,9 @@
           "voku\\helper\\": "src/voku/helper/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Lars Moelleken",
@@ -7565,7 +8428,9 @@
           "voku\\": "src/voku/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Lars Moelleken",
@@ -7574,7 +8439,11 @@
       ],
       "description": "Portable ASCII library - performance optimized (ascii) string functions for php.",
       "homepage": "https://github.com/voku/portable-ascii",
-      "keywords": ["ascii", "clean", "php"],
+      "keywords": [
+        "ascii",
+        "clean",
+        "php"
+      ],
       "time": "2022-03-08T17:03:00+00:00"
     },
     {
@@ -7605,12 +8474,16 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["bootstrap.php"],
+        "files": [
+          "bootstrap.php"
+        ],
         "psr-4": {
           "voku\\": "src/voku/"
         }
       },
-      "license": ["(Apache-2.0 or GPL-2.0)"],
+      "license": [
+        "(Apache-2.0 or GPL-2.0)"
+      ],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -7627,7 +8500,14 @@
       ],
       "description": "Portable UTF-8 library - performance optimized (unicode) string functions for php.",
       "homepage": "https://github.com/voku/portable-utf8",
-      "keywords": ["UTF", "clean", "php", "unicode", "utf-8", "utf8"],
+      "keywords": [
+        "UTF",
+        "clean",
+        "php",
+        "unicode",
+        "utf-8",
+        "utf8"
+      ],
       "time": "2023-03-08T08:35:38+00:00"
     },
     {
@@ -7648,7 +8528,9 @@
           "voku\\": "src/voku/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Lars Moelleken",
@@ -7656,7 +8538,10 @@
         }
       ],
       "description": "Stop-Words via PHP",
-      "keywords": ["stop words", "stop-words"],
+      "keywords": [
+        "stop words",
+        "stop-words"
+      ],
       "time": "2018-11-23T01:37:27+00:00"
     },
     {
@@ -7684,12 +8569,16 @@
       },
       "type": "library",
       "autoload": {
-        "files": ["src/Create.php"],
+        "files": [
+          "src/Create.php"
+        ],
         "psr-4": {
           "Stringy\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Daniel St. Jules",
@@ -7740,7 +8629,9 @@
           "voku\\helper\\": "src/voku/helper/"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Johnny Broadway",
@@ -7796,7 +8687,9 @@
           "Webmozart\\Assert\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Bernhard Schussek",
@@ -7804,7 +8697,11 @@
         }
       ],
       "description": "Assertions to validate method input/output with nice error messages.",
-      "keywords": ["assert", "check", "validate"],
+      "keywords": [
+        "assert",
+        "check",
+        "validate"
+      ],
       "time": "2022-06-03T18:03:27+00:00"
     },
     {
@@ -7831,10 +8728,15 @@
           "GraphQL\\": "src/"
         }
       },
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "description": "A PHP port of GraphQL reference implementation",
       "homepage": "https://github.com/webonyx/graphql-php",
-      "keywords": ["api", "graphql"],
+      "keywords": [
+        "api",
+        "graphql"
+      ],
       "time": "2023-07-05T14:23:37+00:00"
     },
     {
@@ -7860,7 +8762,9 @@
         "php": ">=5.4.0",
         "yiisoft/yii2-composer": "~2.0.4"
       },
-      "bin": ["yii"],
+      "bin": [
+        "yii"
+      ],
       "type": "library",
       "extra": {
         "branch-alias": {
@@ -7872,7 +8776,9 @@
           "yii\\": ""
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Qiang Xue",
@@ -7922,7 +8828,10 @@
       ],
       "description": "Yii PHP Framework Version 2",
       "homepage": "https://www.yiiframework.com/",
-      "keywords": ["framework", "yii2"],
+      "keywords": [
+        "framework",
+        "yii2"
+      ],
       "time": "2023-05-24T19:04:02+00:00"
     },
     {
@@ -7949,7 +8858,9 @@
           "yii\\composer\\": ""
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Qiang Xue",
@@ -7961,7 +8872,11 @@
         }
       ],
       "description": "The composer plugin for Yii extension installer",
-      "keywords": ["composer", "extension installer", "yii2"],
+      "keywords": [
+        "composer",
+        "extension installer",
+        "yii2"
+      ],
       "time": "2020-06-24T00:04:01+00:00"
     },
     {
@@ -8000,7 +8915,9 @@
           "yii\\debug\\": "src"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Qiang Xue",
@@ -8012,7 +8929,11 @@
         }
       ],
       "description": "The debugger extension for the Yii framework",
-      "keywords": ["debug", "debugger", "yii2"],
+      "keywords": [
+        "debug",
+        "debugger",
+        "yii2"
+      ],
       "time": "2022-11-18T17:29:27+00:00"
     },
     {
@@ -8070,7 +8991,9 @@
           "yii\\queue\\amqp_interop\\": "src/drivers/amqp_interop"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Roman Zhuravlev",
@@ -8117,7 +9040,9 @@
           "yii\\symfonymailer\\": "src"
         }
       },
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Kirill Petrov",
@@ -8159,7 +9084,9 @@
         "ircmaxell/php-yacc": "^0.0.7",
         "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
       },
-      "bin": ["bin/php-parse"],
+      "bin": [
+        "bin/php-parse"
+      ],
       "type": "library",
       "extra": {
         "branch-alias": {
@@ -8172,14 +9099,19 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Nikita Popov"
         }
       ],
       "description": "A PHP parser written in PHP",
-      "keywords": ["parser", "php"],
+      "keywords": [
+        "parser",
+        "php"
+      ],
       "support": {
         "issues": "https://github.com/nikic/PHP-Parser/issues",
         "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.4"
@@ -8220,7 +9152,9 @@
         "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well.",
         "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history."
       },
-      "bin": ["bin/psysh"],
+      "bin": [
+        "bin/psysh"
+      ],
       "type": "library",
       "extra": {
         "branch-alias": {
@@ -8228,13 +9162,17 @@
         }
       },
       "autoload": {
-        "files": ["src/functions.php"],
+        "files": [
+          "src/functions.php"
+        ],
         "psr-4": {
           "Psy\\": "src/"
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Justin Hileman",
@@ -8244,7 +9182,12 @@
       ],
       "description": "An interactive shell for modern PHP.",
       "homepage": "http://psysh.org",
-      "keywords": ["REPL", "console", "interactive", "shell"],
+      "keywords": [
+        "REPL",
+        "console",
+        "interactive",
+        "shell"
+      ],
       "support": {
         "issues": "https://github.com/bobthecow/psysh/issues",
         "source": "https://github.com/bobthecow/psysh/tree/v0.11.16"
@@ -8283,7 +9226,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Daniel Gomez Pan",
@@ -8295,7 +9240,10 @@
         }
       ],
       "description": "The interactive shell extension for Yii framework",
-      "keywords": ["shell", "yii2"],
+      "keywords": [
+        "shell",
+        "yii2"
+      ],
       "support": {
         "forum": "http://www.yiiframework.com/forum/",
         "irc": "irc://irc.freenode.net/yii",
