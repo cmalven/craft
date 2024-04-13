@@ -1,8 +1,16 @@
-dateModified: 1712974323
+dateModified: 1713025837
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  local:
+    hasUrls: true
+    name: Local
+    settings:
+      path: '@webroot/assets'
+    type: craft\fs\Local
+    url: '@assetPath'
 meta:
   __names__:
     0eec63d1-8a33-4f6a-83a5-00c027db46dc: your-project-title # your-project-title
@@ -11,6 +19,7 @@ meta:
     223e7dac-c6de-46ba-9144-0ee4c62734c4: 'Page Content' # Page Content
     380a83b9-344d-415b-a3f4-8b389ef61717: SEO # SEO
     507bbcf8-f9bf-4845-9b14-829d155d2a96: Simple # Simple
+    762c90cb-e904-42b1-a0ea-a82b1ddbe561: Images # Images
     253489f3-4e59-48ac-a725-d8592cb0ed1e: Default # Default
     90775891-8a83-4dd6-b2c0-0462aceb52d4: Homepage # Homepage
     a41668f7-a432-4cc4-a09b-609538ea0125: Homepage # Homepage
