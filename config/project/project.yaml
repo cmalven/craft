@@ -1,4 +1,4 @@
-dateModified: 1712959329
+dateModified: 1712973914
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -17,6 +17,7 @@ meta:
     adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b: Text # Text
     b7a660f1-cbad-4067-8031-b237c204ab41: Pages # Pages
     bfe9a900-d516-42f7-8a87-a91c181779c0: Common # Common
+    db405b1d-69f1-4eca-8a10-2f1545594476: 'Public Schema'
 plugins:
   aws-s3:
     edition: standard
