@@ -1,4 +1,4 @@
-field: 223e7dac-c6de-46ba-9144-0ee4c62734c4 # Page Content
+color: null
 fieldLayouts:
   87909c62-e82d-4f86-ab01-0a1de5f9f7cf:
     tabs:
@@ -8,5 +8,13 @@ fieldLayouts:
         uid: b852bf76-b8db-4acb-9a01-61fe22778bb1
         userCondition: null
 handle: text
+hasTitleField: false
+icon: null
 name: Text
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,17 +1,17 @@
 {
   "require": {
-    "craftcms/aws-s3": "2.2.1",
-    "craftcms/ckeditor": "3.8.3",
-    "craftcms/cms": "4.8.9",
-    "mmikkel/cp-field-inspect": "^1.4",
+    "craftcms/aws-s3": "^2.2.1",
+    "craftcms/ckeditor": "^4.0.3",
+    "craftcms/cms": "^5.0.0",
+    "mmikkel/cp-field-inspect": "^2.0.1",
     "nystudio107/craft-autocomplete": "^1.10",
-    "nystudio107/craft-seomatic": "4.0.48",
-    "putyourlightson/craft-blitz": "4.16.1",
-    "putyourlightson/craft-sherlock": "4.4.2",
-    "spacecatninja/imager-x": "4.4.0",
-    "spatie/craft-ray": "2.1.1",
-    "verbb/expanded-singles": "2.0.5",
-    "verbb/hyper": "1.1.27",
+    "nystudio107/craft-seomatic": "^5.0.2",
+    "putyourlightson/craft-blitz": "^5.1.2",
+    "putyourlightson/craft-sherlock": "^5.0.0",
+    "spacecatninja/imager-x": "^5.0.0",
+    "spatie/craft-ray": "^2.1.1",
+    "verbb/expanded-singles": "^3.0.0-beta.2",
+    "verbb/hyper": "^2.0.0-beta.8",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -22,6 +22,8 @@
       "modules\\": "modules/"
     }
   },
+  "minimum-stability": "beta",
+  "prefer-stable": true,
   "config": {
     "allow-plugins": {
       "craftcms/plugin-installer": true,

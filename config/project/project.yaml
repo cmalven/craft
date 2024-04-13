@@ -1,4 +1,4 @@
-dateModified: 1712973914
+dateModified: 1712974323
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -14,10 +14,8 @@ meta:
     253489f3-4e59-48ac-a725-d8592cb0ed1e: Default # Default
     90775891-8a83-4dd6-b2c0-0462aceb52d4: Homepage # Homepage
     a41668f7-a432-4cc4-a09b-609538ea0125: Homepage # Homepage
-    adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b: Text # Text
     b7a660f1-cbad-4067-8031-b237c204ab41: Pages # Pages
-    bfe9a900-d516-42f7-8a87-a91c181779c0: Common # Common
-    db405b1d-69f1-4eca-8a10-2f1545594476: 'Public Schema'
+    db405b1d-69f1-4eca-8a10-2f1545594476: 'Public Schema' # Public Schema
 plugins:
   aws-s3:
     edition: standard
@@ -27,7 +25,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 6FV6MMKOYYAFUH5DRWX8J7F5
-    schemaVersion: 4.13.0
+    schemaVersion: 5.0.0.4
   ckeditor:
     edition: standard
     enabled: true
@@ -350,7 +348,7 @@ system:
   edition: pro
   live: true
   name: your-project-title
-  schemaVersion: 4.5.3.0
+  schemaVersion: 5.0.0.20
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
