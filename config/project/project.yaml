@@ -1,4 +1,4 @@
-dateModified: 1710353697
+dateModified: 1712959329
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -39,14 +39,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  empty-coalesce:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  environment-label:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   expanded-singles:
     edition: standard
     enabled: true
@@ -64,10 +56,6 @@ plugins:
     enabled: true
     licenseKey: VUS96EVKZZ3XXTQWX1W8WDYZ
     schemaVersion: 4.0.0
-  matrixmate:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
@@ -357,14 +345,6 @@ plugins:
           -
             - canFail
             - true
-  twig-perversion:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  wordsmith:
-    edition: standard
-    enabled: true
-    schemaVersion: 0.0.0.0
 system:
   edition: pro
   live: true

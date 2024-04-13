@@ -95,7 +95,6 @@
       <path value="$PROJECT_DIR$/vendor/kornrunner/blurhash" />
       <path value="$PROJECT_DIR$/vendor/craftcms/html-field" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
-      <path value="$PROJECT_DIR$/vendor/vaersaagod/matrixmate" />
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/vendor/ssnepenthe/color-utils" />
       <path value="$PROJECT_DIR$/vendor/daverandom/libdns" />
@@ -105,13 +104,10 @@
       <path value="$PROJECT_DIR$/vendor/aws/aws-crt-php" />
       <path value="$PROJECT_DIR$/vendor/putyourlightson/craft-blitz" />
       <path value="$PROJECT_DIR$/vendor/aws/aws-sdk-php" />
-      <path value="$PROJECT_DIR$/vendor/icanboogie/inflector" />
       <path value="$PROJECT_DIR$/vendor/putyourlightson/craft-sherlock" />
       <path value="$PROJECT_DIR$/vendor/verbb/expanded-singles" />
       <path value="$PROJECT_DIR$/vendor/verbb/base" />
       <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
-      <path value="$PROJECT_DIR$/vendor/erusev/parsedown-extra" />
-      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/kelunik/certificate" />
       <path value="$PROJECT_DIR$/vendor/spatie/backtrace" />
       <path value="$PROJECT_DIR$/vendor/spatie/macroable" />
@@ -134,7 +130,6 @@
       <path value="$PROJECT_DIR$/vendor/imgix/imgix-php" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/davechild/textstatistics" />
-      <path value="$PROJECT_DIR$/vendor/marionnewlevant/twig-perversion" />
       <path value="$PROJECT_DIR$/vendor/kraken-io/kraken-php" />
       <path value="$PROJECT_DIR$/vendor/ksubileau/color-thief-php" />
       <path value="$PROJECT_DIR$/vendor/amphp/byte-stream" />
@@ -152,20 +147,13 @@
       <path value="$PROJECT_DIR$/vendor/php-science/textrank" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-autocomplete" />
-      <path value="$PROJECT_DIR$/vendor/nystudio107/craft-emptycoalesce" />
       <path value="$PROJECT_DIR$/vendor/mmikkel/cp-field-inspect" />
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
-      <path value="$PROJECT_DIR$/vendor/mundschenk-at/php-typography" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-code-editor" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-seomatic" />
-      <path value="$PROJECT_DIR$/vendor/mofodojodino/profanity-filter" />
       <path value="$PROJECT_DIR$/vendor/brick/math" />
       <path value="$PROJECT_DIR$/vendor/spacecatninja/imager-x" />
-      <path value="$PROJECT_DIR$/vendor/topshelfcraft/environment-label" />
-      <path value="$PROJECT_DIR$/vendor/topshelfcraft/wordsmith" />
-      <path value="$PROJECT_DIR$/vendor/topshelfcraft/base" />
-      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-plugin-vite" />
       <path value="$PROJECT_DIR$/vendor/phpcollection/phpcollection" />
       <path value="$PROJECT_DIR$/vendor/cypresslab/gitelephant" />
@@ -294,7 +282,7 @@
       </interpreter>
     </phpInfoCache>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.0">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpUnit">

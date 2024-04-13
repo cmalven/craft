@@ -2,23 +2,15 @@
 namespace modules;
 
 use Craft;
+use craft\web\twig\variables\CraftVariable;
+use modules\services\Twig;
+use yii\base\Event;
 
 /**
- * Custom module class.
+ * Site module
  *
- * This class will be available throughout the system via:
- * `Craft::$app->getModule('my-module')`.
- *
- * You can change its module ID ("my-module") to something else from
- * config/app.php.
- *
- * If you want the module to get loaded on every request, uncomment this line
- * in config/app.php:
- *
- *     'bootstrap' => ['my-module']
- *
- * Learn more about Yii module development in Yii's documentation:
- * http://www.yiiframework.com/doc-2.0/guide-structure-modules.html
+ * @method static Module getInstance()
+ * @property  Twig $twig
  */
 class Module extends \yii\base\Module
 {
@@ -39,6 +31,27 @@ class Module extends \yii\base\Module
 
         parent::init();
 
-        // Custom initialization code goes here...
+        // Defer most setup tasks until Craft is fully initialized
+        Craft::$app->onInit(function () {
+            $this->attachEventHandlers();
+        });
+    }
+    private function attachEventHandlers(): void
+    {
+        // Services
+        $this->setComponents([
+            'twig' => Twig::class,
+        ]);
+
+        // Variables
+        Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function (
+            Event $e
+        ) {
+            /** @var CraftVariable $variable */
+            $variable = $e->sender;
+
+            // Attach a service
+            $variable->set('twig', Twig::class);
+        });
     }
 }

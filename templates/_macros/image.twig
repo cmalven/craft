@@ -26,7 +26,7 @@
   @param wrapperClasses: (string[])   - [optional] Modifier classes to add to the image wrapper
 #}
 
-{% macro get(asset, options = {}) %}
+{%- macro get(asset, options = {}) -%}
   {% import _self as image %}
 
   {# Set some defaults #}
@@ -48,7 +48,7 @@
   {% endset %}
 
   {# Return raw <img/> if not transformable #}
-  {% if _self.isTransformable(asset) %}
+  {% if craft.twig.isAssetTransformable(asset) %}
     {# Use named transform config to help determine the width, height, and aspect ratio of the transformed image #}
     {% set namedTransform = craft.imagerx.getNamedTransform(options.transform)  %}
     {% set assetWidth = 200 %} {# We can safely hard code a value here—which simplifies things a bit—because the ratio and height below are dynamically generated #}
@@ -81,11 +81,11 @@
 
   {# Return the element #}
   {% if options.wrap %}
-    {% return _self.wrap(img, options.wrapperClasses) | raw %}
+    {{ _self.wrap(img, options.wrapperClasses) | raw  }}
   {% else %}
     {{ img | raw }}
   {% endif %}
-{% endmacro %}
+{%- endmacro -%}
 
 
 {# ------------------------------------------------------------------ #}
@@ -129,18 +129,18 @@
   @param transformIdx (string)  - [optional] Determines which url from the array of generated images to return
 #}
 
-{% macro url(asset, transform = 'scale', transformIdx = 1) %}
+{%- macro url(asset, transform = 'scale', transformIdx = 1) -%}
   {# Return original URL if not transformable #}
-  {% if not _self.isTransformable(asset) %}
-    {% return asset.url %}
+  {% if not craft.twig.isAssetTransformable(asset) %}
+    {{ asset.url }}
   {% endif %}
 
   {# Generate transformed images #}
   {% set transformedImage = craft.imagerx.transformImage(asset, transform) %}
 
   {# Give me that URL #}
-  {% return transformedImage[transformIdx].url %}
-{% endmacro %}
+  {{  transformedImage[transformIdx].url }}
+{%- endmacro -%}
 
 
 {# ------------------------------------------------------------------ #}
@@ -157,8 +157,7 @@ Wraps an image in common markup.
 
 {%- macro wrap(image, classes = []) -%}
   {% import _self as image %}
-  {% import '_macros/class-modifiers' as classModifiers %}
-  {% set classes = classModifiers.set('image', classes ?? []) %}
+  {% set classes = craft.twig.modifiers('image', classes ?? []) %}
   {% set wrappedImg %}
     <div class="image {{ classes }}" data-module-reveal>
       <div class="image__inner">
@@ -166,19 +165,5 @@ Wraps an image in common markup.
       </div>
     </div>
   {% endset %}
-  {% return wrappedImg | raw %}
+  {{ wrappedImg }}
 {%- endmacro -%}
-
-
-{# ------------------------------------------------------------------ #}
-{# Is Transformable
-{# ------------------------------------------------------------------ #}
-{#
-  {{ _self.isTransformable(asset) }}
-
-  @param asset (asset)                - [required] Craft image asset
-#}
-
-{% macro isTransformable(asset) %}
-  {% return asset.extension is defined and asset.extension not in ['gif', 'svg'] %}
-{% endmacro %}

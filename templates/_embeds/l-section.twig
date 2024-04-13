@@ -13,8 +13,7 @@
     {% endembed %}
 #}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-{% set modifierClasses = classModifiers.set('l-section', modifiers ?? []) %}
+{% set modifierClasses = craft.twig.modifiers('l-section', modifiers ?? []) %}
 
 <section class="l-section  {{ modifierClasses }} {{ classes ?? '' }}">
   {% if id ?? null %}

@@ -393,8 +393,7 @@ Renders a generic text input.
   {% set el = 'a' %}
 {% endif %}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-{% set classes = classModifiers.set(options.mainClass, options.modifiers ?? []) %}
+{% set classes = craft.twig.modifiers(options.mainClass, options.modifiers ?? []) %}
 
 <div
   class="{{ options.mainClass }} {{ classes }} {% if options.graphic %}{{ options.mainClass }}{{ options.withGraphicModifierClass }}{% endif %}"

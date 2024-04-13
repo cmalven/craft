@@ -15,8 +15,7 @@
   } only %}
 #}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-{% set classes = classModifiers.set('text-set', modifiers ?? []) %}
+{% set classes = craft.twig.modifiers('text-set', modifiers ?? []) %}
 
 <div class="text-set {{ classes }}">
   {# Subhead #}

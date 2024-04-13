@@ -18,8 +18,7 @@
 
 {# https://a11y-dialog.netlify.app #}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-{% set classes = classModifiers.set('l-dialog', modifiers ?? []) %}
+{% set classes = craft.twig.modifiers('l-dialog', modifiers ?? []) %}
 
 {% set moduleName = moduleName ??? 'dialog' %}
 {% set isAlert = isAlert ?? false %}

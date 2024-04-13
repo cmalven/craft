@@ -14,8 +14,7 @@
   } only %}
 #}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-{% set classes = classModifiers.set('tabs', modifiers ?? []) %}
+{% set classes = craft.twig.modifiers('tabs', modifiers ?? []) %}
 
 <div class="tabs {{ classes }}" data-module-tabs="{{ key }}">
   <div

@@ -8,10 +8,8 @@
   } only %}
 #}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-
 {% if content ?? null %}
-  <div class="rich-text {{ classModifiers.set('rich-text', modifiers ?? []) }}">
+  <div class="rich-text {{ craft.twig.modifiers('rich-text', modifiers ?? []) }}">
     {{ content }}
   </div>
 {% endif %}

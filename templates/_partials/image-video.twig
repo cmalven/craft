@@ -9,8 +9,7 @@
   } only %}
 #}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-{% set classes = classModifiers.set('image-video', modifiers ?? []) %}
+{% set classes = craft.twig.modifiers('image-video', modifiers ?? []) %}
 
 <div class="image-video {{ classes }}" data-module-reveal>
   <div class="image-video__inner">

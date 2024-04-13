@@ -9,8 +9,7 @@
 } only %}
 #}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-{% set classes = classModifiers.set('styleguide-item', modifiers ?? []) %}
+{% set classes = craft.twig.modifiers('styleguide-item', modifiers ?? []) %}
 
 <div class="styleguide-item {{ classes ?? '' }}">
   <div id="{{ name | kebab }}" class="styleguide-item__name">{{ name }} <a href="#{{ name | kebab }}" class="styleguide-item__anchor">#</a></div>

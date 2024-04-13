@@ -12,8 +12,7 @@
   {% endembed %}
 #}
 
-{% import '_macros/class-modifiers' as classModifiers %}
-{% set classes = classModifiers.set('l-slider-navigation', modifiers ?? []) %}
+{% set classes = craft.twig.modifiers('l-slider-navigation', modifiers ?? []) %}
 {% set key = key ??? null %}
 
 <footer class="l-slider-navigation {{ classes }}">
