@@ -72,33 +72,13 @@ A flexible, reusable button.
 // ---------------------------------------------------------------
 
 @mixin button-hover($selector) {
-  #{not-touch-selector()} #{$selector}:hover .button-basic__inner,
-  #{not-touch-selector()} #{$selector} .button-basic__inner:focus,
-  #{not-touch-selector()} a:hover #{$selector} .button-basic__inner {
-    @content;
-  }
-}
-
-@mixin button-hover-graphic($selector) {
-  @include button-hover($selector) {
-    & + .button-basic__bg + .button-basic__graphic {
-      @content;
-    }
-  }
-}
-
-@mixin button-hover-bg($selector) {
-  @include button-hover($selector) {
-    & + .button-basic__bg {
-      @content;
-    }
-  }
-}
-
-@mixin button-hover-text($selector) {
-  @include button-hover($selector) {
-    .button-basic__text {
-      @content;
+  #{$selector} {
+    @include not-touch {
+      &:has(#{$selector}__inner:hover, #{$selector}__inner:focus),
+      a:hover:has(&),
+      a:focus:has(&) {
+        @content;
+      }
     }
   }
 }
@@ -107,19 +87,13 @@ A flexible, reusable button.
 // State - Focus / Hover / Active
 // ---------------------------------------------------------------
 
-@include button-hover-bg('.button-basic') {
-  &:before {
-    opacity: 1;
-    transform: scaleX(1);
-    transform-origin: 0 0;
+@include button-hover('.button-basic') {
+  .button-basic__text {
+    transform: translateY(calc(-30% - 1px));
+    opacity: 0;
   }
-}
 
-@include button-hover-text('.button-basic') {
-  color: var(--theme-bg);
-}
-
-@include button-hover-graphic('.button-basic') {
-  color: var(--theme-bg);
-  transform: translateX(0.3rem);
+  .button-basic__text--duplicate {
+    transform: translateY(0);
+  }
 }
