@@ -15,17 +15,17 @@ jobs:
     steps:
       # Pull repository into the current pipeline
       - name: Pull repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Setup container with private SSH Key (used by rsync)
       - name: Load private SSH key
-        uses: webfactory/ssh-agent@v0.5.3
+        uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
       # Use a specific version of Node
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: '18.17.0'
 
@@ -44,7 +44,7 @@ jobs:
       # rsync
       - name: Deploy with rsync
         run: |
-          rsync -v -a -z --delete --recursive --exclude={".babelrc",".browserslistrc",".dockerignore",".editorconfig",".env*",".eslintignore",".eslintrc",".git",".gitignore",".hygen.js",".nvmrc",".prettierrc",".prettierignore",".stylelintrc",".swcrc","/.cache/","/.composer/","/.config/","/.idea","/.local/","/.npm/","/.github/","/.swc/","/bin/","/bower_components/","/cypress/","/docker/","/gulp/","/log/","/node_modules/","/resources/","/src/","/storage/logs/","/_templates","/tmp/","/web/assets/","auth.json","babel.config.json","bower.json","buddy.yml","composer.json","composer.lock","cypress.json","docker-compose.yml","Dockerfile","env.sample","FauxTwigExtension.php","gsap-bonus.tgz","gulpfile.js","package.json","package-lock.json","public","README.md","tsconfig.json","vite.config.js","yarn.lock"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DEPLOY_PATH }}
+          rsync -v -a -z --delete --recursive --exclude={".babelrc",".browserslistrc",".dockerignore",".editorconfig",".env*",".eslintignore",".eslintrc",".git",".gitattributes",".gitignore",".hygen.js",".nvmrc",".prettierrc",".prettierignore",".stylelintrc",".swcrc","/.cache/","/.composer/","/.config/","/.ddev/","/.husky/","/.idea/","/.local/","/.npm/","/.github/","/.swc/","/bin/","/bower_components/","/cypress/","/docker/","/gulp/","/log/","/node_modules/","/resources/","/src/","/storage/logs/","/_templates/","/tmp/","/types/","/web/assets/","auth.json","babel.config.json","bower.json","buddy.yml","composer.json","composer.lock","cypress.json","docker-compose.yml","Dockerfile","env.sample","FauxTwigExtension.php","gsap-bonus.tgz","gulpfile.js","package.json","package-lock.json","public","README.md","tsconfig.json","vite.config.js","yarn.lock"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DEPLOY_PATH }}
 
       # execute Craft commands on remote server
       - name: Execute SSH commands on remote server
@@ -71,3 +71,4 @@ jobs:
           job-status: ${{ job.status }}
           pushover-api-token: ${{ secrets.PUSHOVER_API_TOKEN }}
           pushover-user-key: ${{ secrets.PUSHOVER_USER_KEY }}
+
