@@ -137,7 +137,7 @@ class Twig extends Component
     /**
      * Converts any string into a dash-separated version
      *
-     * {{ craft.twig.dasherize('My custom text) }}
+     * {{ craft.twig.dasherize('My custom text') }}
      *
      * @param string $string
      * @return string
