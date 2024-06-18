@@ -22,7 +22,7 @@ return GeneralConfig::create()
 
     // Fuzzy Search
     ->defaultSearchTermOptions([
-        'subLeft' => true,
+        'subLeft' => false,
         'subRight' => true,
     ])
 
