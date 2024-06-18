@@ -17,6 +17,13 @@ Styling for common HTML text elements
     font-style: italic;
   }
 
+  // Subscript / Superscript
+
+  sup {
+    font-variant-position: super;
+    top: 0;
+  }
+
   // Headings
 
   h2 {
