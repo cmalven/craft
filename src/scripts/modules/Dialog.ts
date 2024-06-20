@@ -1,4 +1,5 @@
-import { Modu, ModuOptions } from '@malven/modu';
+import { Modu } from '@malven/modu';
+import type { ModuOptions } from '@malven/modu';
 import A11yDialog from 'a11y-dialog';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
