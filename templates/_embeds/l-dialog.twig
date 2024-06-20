@@ -2,18 +2,22 @@
 {# Layout - Dialog
 {# =============================================================== #}
 {#
-  {% embed '_embeds/l-dialog' with {
-    key: 'my-unique-key',
-    modifiers: ['my-modifiers'],
-    moduleName: 'dialog',
-    includeClose: true,
-    isAlert: false,
-    closeDelay: 400,
-  } %}
-    {% block content %}
-      …
-    {% endblock %}
-  {% endembed %}
+{% embed '_embeds/l-dialog' with {
+  key: 'my-unique-key',
+  modifiers: ['my-modifiers'],
+  moduleName: 'dialog',
+  includeClose: true,
+  isAlert: false,
+  closeDelay: 400,
+  isClosedByOthers: false,
+} %}
+  {% block content %}
+    …
+  {% endblock %}
+{% endembed %}
+
+The close button can be output with either `includeClose: true`
+or by using `{{ dialogCloseContent }}` inside of your `{% block content %}`
 #}
 
 {# https://a11y-dialog.netlify.app #}
@@ -23,11 +27,30 @@
 {% set moduleName = moduleName ??? 'dialog' %}
 {% set isAlert = isAlert ?? false %}
 
+{# Close #}
+{% set dialogCloseContent %}
+  <button
+    aria-label="Close dialog"
+    type="button"
+    data-module-dialog-toggle="{{ key }}"
+    data-dialog-toggle-action="close"
+    data-a11y-dialog-hide
+  >
+    {% block close %}
+      {% import '_macros/svg' as svg %}
+      {{ svg.use('x-large') }}
+    {% endblock %}
+  </button>
+{% endset %}
+
 <div
   class="l-dialog {{ classes }}"
   aria-hidden="true"
   id="{{ key }}"
   data-module-{{ moduleName }}="{{ key }}"
+  {% if isClosedByOthers ?? null == false %}
+    data-{{ moduleName }}-closed-by-others="false"
+  {% endif %}
   {% if closeDelay is defined %}data-{{ moduleName }}-close-delay="{{ closeDelay }}"{% endif %}
   {% if isAlert %}
     role="alertdialog"
@@ -52,19 +75,16 @@
         {# Close #}
         {% if includeClose ?? true %}
           <div class="l-dialog__content-close">
-            <button
-              aria-label="Close dialog"
-              type="button"
-              data-module-dialog-toggle="{{ key }}"
-              data-dialog-toggle-action="close"
-              data-a11y-dialog-hide
-            >{% block close %}Close{% endblock %}</button>
+            {{ dialogCloseContent }}
           </div>
         {% endif %}
 
         {# Content #}
-        {% block content %}{% endblock %}
+        {% with { dialogCloseContent: dialogCloseContent } %}
+          {% block content %}{% endblock %}
+        {% endwith %}
       </div>
     </div>
   </div>
 </div>
+

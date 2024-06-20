@@ -12,6 +12,7 @@ export default class extends Modu {
   closeDelay = 400;
   isOpen = false;
   dialog!: A11yDialog;
+  isClosedByOthers: boolean;
 
   constructor(m: ModuOptions) {
     super(m);
@@ -19,6 +20,10 @@ export default class extends Modu {
     this.closeDelay = this.getData('close-delay')
       ? Number(this.getData('close-delay'))
       : this.closeDelay;
+
+    // Should this dialog trigger others to close?
+    this.isClosedByOthers = (this.getData('closed-by-others') ??
+      true) as boolean;
   }
 
   init() {
@@ -29,7 +34,7 @@ export default class extends Modu {
 
     // Listen for other dialogs to open and close this one
     this.on('Dialog', 'open', () => {
-      this.close();
+      if (this.isClosedByOthers) this.close();
     });
 
     // Listen for dialog toggle
