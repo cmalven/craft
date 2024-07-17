@@ -54,7 +54,7 @@ containing an element/entry and the handle of a matrix field on that element/ent
 
 {# Output blocks #}
 {% for block in allBlocks %}
-  {% if block.handle %}
+  {% if block and block.handle %}
     {% include '_partials/block' with block | merge({
       previousBlock: allBlocks[loop.index0 - 1] ??? null,
       nextBlock: allBlocks[loop.index0 + 1] ??? null,
