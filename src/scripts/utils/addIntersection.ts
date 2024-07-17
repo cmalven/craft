@@ -16,7 +16,7 @@
  *
  * @example
  *
- *    import addIntersection from './modules/addIntersection';
+ *    import addIntersection from '../utils/addIntersection';
  *
  *    addIntersection(
  *      document.querySelectorAll('.js-foo'),
