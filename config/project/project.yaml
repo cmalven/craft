@@ -1,4 +1,4 @@
-dateModified: 1713025837
+dateModified: 1721760048
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -34,7 +34,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 6FV6MMKOYYAFUH5DRWX8J7F5
-    schemaVersion: 5.0.0.4
+    schemaVersion: 5.5.0
   ckeditor:
     edition: standard
     enabled: true
@@ -72,7 +72,7 @@ plugins:
   sherlock:
     edition: lite
     enabled: true
-    schemaVersion: 4.1.0
+    schemaVersion: 5.1.0
     settings:
       apiKey: zblzvmppfcewwwpsyxipdxrwqwtkhcuf
       blowfishHashCost:
@@ -239,6 +239,7 @@ plugins:
           -
             - threshold
             - 5
+      maxScans: false
       monitor: false
       notificationEmailAddresses: chris@malven.co
       phpComposerVersion:
@@ -357,7 +358,7 @@ system:
   edition: pro
   live: true
   name: your-project-title
-  schemaVersion: 5.0.0.20
+  schemaVersion: 5.0.0.21
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
