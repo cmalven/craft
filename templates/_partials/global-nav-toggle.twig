@@ -12,8 +12,7 @@
 <button
   aria-label="{{ label }}"
   class="global-nav-toggle global-nav-toggle--{{ action }}"
-  data-module-dialog-toggle="{{ key }}"
-  data-dialog-toggle-action="{{ action }}"
+  {{ attr(craft.twig.dialogToggleAttr(key)) }}
 >
   {{ label }}
 </button>

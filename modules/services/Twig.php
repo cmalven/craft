@@ -158,4 +158,20 @@ class Twig extends Component
 
         return $string;
     }
+
+    /**
+     * Returns an array of attributes for a dialog toggle
+     *
+     * {{ attr(craft.twig.dialogToggleAttr('my-unique-key')) }}
+     *
+     * @param string $key
+     * @return string[]
+     */
+    public function dialogToggleAttr(string $key): array
+    {
+        return [
+            'data-a11y-dialog-show' => $key,
+            'data-module-dialog-toggle' => $key,
+        ];
+    }
 }

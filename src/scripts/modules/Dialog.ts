@@ -29,43 +29,28 @@ export default class extends Modu {
 
   init() {
     this.dialog = new A11yDialog(this.el as HTMLElement);
-    this.dialog.on('hide', () => {
-      this.close();
-    });
+
+    // Hide when a11y-dialog hides
+    this.dialog.on('hide', () => this.close());
+
+    // Show when a11y-dialog shows
+    this.dialog.on('show', () => this.open());
 
     // Listen for other dialogs to open and close this one
     this.on('Dialog', 'open', () => {
       if (this.isClosedByOthers) this.close();
     });
-
-    // Listen for dialog toggle
-    this.on(
-      'DialogToggle',
-      'open',
-      () => {
-        this.open();
-      },
-      this.key,
-    );
-    this.on(
-      'DialogToggle',
-      'close',
-      () => {
-        this.close();
-      },
-      this.key,
-    );
   }
 
   open() {
-    this.showDialog();
     this.dialog.show();
+    this.showDialog();
     this.emit('open', null);
   }
 
   close() {
-    this.hideDialog();
     this.dialog.hide();
+    this.hideDialog();
   }
 
   showDialog = () => {

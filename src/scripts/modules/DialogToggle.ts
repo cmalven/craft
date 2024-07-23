@@ -1,41 +1,15 @@
-import { Modu, ModuOptions } from '@malven/modu';
+import { Modu } from '@malven/modu';
 
 /**
  * Toggles dialog open and closed.
  */
 
-type Action = 'open' | 'close';
-
 export default class extends Modu {
   isOpen = false;
   isOpenClass = 'is-open';
-  action: Action;
-
-  constructor(m: ModuOptions) {
-    super(m);
-
-    this.action = this.getData('action') as Action;
-  }
 
   init = () => {
-    this.addEventListeners();
-  };
-
-  addEventListeners = () => {
-    this.el.addEventListener('click', this.onClick);
-  };
-
-  onClick = (evt: Event) => {
-    evt.preventDefault();
-    this[this.action]();
-  };
-
-  open = () => {
-    this.emit('open', null);
-  };
-
-  close = () => {
-    this.emit('close', null);
+    // Nothing needed
   };
 
   set = (state: boolean) => {
@@ -46,6 +20,6 @@ export default class extends Modu {
   };
 
   cleanup = () => {
-    this.el.removeEventListener('click', this.onClick);
+    // Code to run when the module is destroyed
   };
 }

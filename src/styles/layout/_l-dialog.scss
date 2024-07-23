@@ -116,7 +116,7 @@ Wrapper for dialog content
 // State - Opening
 // ---------------------------------------------------------------
 
-.l-dialog.is-opening {
+.l-dialog:not([aria-hidden='true']) {
   display: flex;
 }
 
