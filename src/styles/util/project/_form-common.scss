@@ -12,7 +12,6 @@ Common restyling for form elements
 
 @mixin form-common-input {
   @include reset-input;
-  @include placeholder-color(var(--theme-placeholder-text));
   border: 1px solid var(--theme-text);
   background-color: var(--theme-bg);
   color: var(--theme-text);
@@ -23,6 +22,7 @@ Common restyling for form elements
   transition: 0.5s ease(out-expo);
   transition-property: border-color;
   will-change: border-color;
+  @include placeholder-color(var(--theme-placeholder-text));
 
   @include media('<medium') {
     font-size: 1.6rem; // Prevent viewport zooming on iOS

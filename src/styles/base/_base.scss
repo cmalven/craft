@@ -29,6 +29,7 @@ body {
   color: var(--theme-text);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  @include type-style(body-1);
 }
 
 *,

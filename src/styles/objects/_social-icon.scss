@@ -12,8 +12,8 @@ Social media icon link
 }
 
 .social-icon__inner {
-  @include responsive-svg(1);
   display: block;
+  @include responsive-svg(1);
 }
 
 // ---------------------------------------------------------------
