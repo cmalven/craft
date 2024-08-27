@@ -36,7 +36,7 @@ export default defineConfig(({ command, mode }) => {
       }),
       sassGlobImports(),
       viteRestart({
-        reload: ['./templates/**/*'],
+        reload: ['./templates/**/*', './modules/**/*'],
       }),
       vitePluginCraftCms({
         outputFile: './templates/_partials/vite.twig',
