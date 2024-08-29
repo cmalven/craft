@@ -99,6 +99,10 @@ export default class extends Modu {
   init() {
     this.addEventListeners();
     this.announceSlideCount(0);
+
+    // HACK: Prevent slider from awkwardly re-loading a cloned slide image.
+    this.slider.go('>');
+    this.slider.go(0);
   }
 
   /**
