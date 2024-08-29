@@ -189,6 +189,9 @@
       <path value="$PROJECT_DIR$/vendor/web-auth/cose-lib" />
       <path value="$PROJECT_DIR$/vendor/symfony/type-info" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/generator" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
