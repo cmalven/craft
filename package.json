@@ -27,7 +27,7 @@
   "devDependencies": {
     "@malven/eslint-config": "^3.0.0",
     "@malven/eslint-config-typescript": "^2.0.0",
-    "@malven/gulp-tasks": "^2.1.0",
+    "@malven/gulp-tasks": "^2.2.0",
     "@malven/sass-toolkit": "^7.0.0",
     "@malven/stylelint-config": "^2.0.1",
     "@prettier/plugin-php": "^0.22.2",
