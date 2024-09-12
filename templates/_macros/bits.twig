@@ -368,6 +368,7 @@ Renders a generic text input.
   textSuffixClass: '__text',
   bgSuffixClass: '__bg',
   graphicSuffixClass: '__graphic',
+  attributes: null,
   withGraphicModifierClass: '--with-graphic',
   inlineGraphicSuffixClass: '__inline-graphic',
   withInlineGraphicModifierClass: '--with-inline-graphic',
@@ -379,7 +380,7 @@ Renders a generic text input.
   graphic: null,
   inlineGraphic: null,
   tabindex: null,
-  attributes: null,
+  innerAttributes: null,
   target: null,
 } %}
 
@@ -400,6 +401,7 @@ Renders a generic text input.
   {% if options.color ?? null %}
     style="--color: {{ options.color }};"
   {% endif %}
+  {% if options.attributes %}{{ attr(options.attributes) }}{% endif %}
 >
   <{{ el }}
     class="{{ options.mainClass }}__inner"
@@ -410,7 +412,7 @@ Renders a generic text input.
       target="_blank"
       rel="noopener noreferrer"
     {% endif %}
-    {% if options.attributes %}{{ options.attributes | raw }}{% endif %}
+    {% if options.innerAttributes %}{{ attr(options.innerAttributes) }}{% endif %}
   >
     <span class="{{ options.mainClass }}{{ options.textSuffixClass }}"><span>{{ options.text }}</span>{% if options.inlineGraphic %}<div class="{{ options.mainClass }}{{ options.inlineGraphicSuffixClass }}">{{ options.inlineGraphic }}</div>{% endif %}</span>
   </{{ el }}>
