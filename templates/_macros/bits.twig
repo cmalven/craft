@@ -10,6 +10,7 @@
 {# Input: Text
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/bits' as bits %}
   {{ text({
     mainClass: 'input-text',
     classes: '',
@@ -110,6 +111,7 @@
 {# Input: Textarea
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/bits' as bits %}
   {{ textarea({
     mainClass: 'input-textarea',
     classes: '',
@@ -151,6 +153,7 @@
 {# Input: Selectable
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/bits' as bits %}
   {{ selectable({
     value: 'foo',
     mainClass: 'input-checkbox',
@@ -257,7 +260,8 @@
 {# Input: Select
 {# ------------------------------------------------------------------ #}
 {#
-{{ select({
+  {% import '_macros/bits' as bits %}
+  {{ select({
   mainClass: 'input-select',
   classes: '',
   labelSuffixClass: '__label',
@@ -276,9 +280,9 @@
     }
   ],
   required: false
-}) }}
+  }) }}
 
-Renders a generic text input.
+  Renders a generic text input.
 #}
 
 {%- macro select(options = {}) -%}
@@ -336,6 +340,7 @@ Renders a generic text input.
 {# Button
 {# ------------------------------------------------------------------ #}
 {#
+  {% import '_macros/bits' as bits %}
   {{ btn({
     mainClass: 'btn',
     modifiers: [],
@@ -368,11 +373,11 @@ Renders a generic text input.
   textSuffixClass: '__text',
   bgSuffixClass: '__bg',
   graphicSuffixClass: '__graphic',
-  attributes: null,
   withGraphicModifierClass: '--with-graphic',
   inlineGraphicSuffixClass: '__inline-graphic',
   withInlineGraphicModifierClass: '--with-inline-graphic',
   modifiers: [],
+  duplicate: false,
   color: null,
   classes: '',
   type: null,
@@ -380,7 +385,7 @@ Renders a generic text input.
   graphic: null,
   inlineGraphic: null,
   tabindex: null,
-  innerAttributes: null,
+  attributes: null,
   target: null,
 } %}
 
@@ -401,7 +406,6 @@ Renders a generic text input.
   {% if options.color ?? null %}
     style="--color: {{ options.color }};"
   {% endif %}
-  {% if options.attributes %}{{ attr(options.attributes) }}{% endif %}
 >
   <{{ el }}
     class="{{ options.mainClass }}__inner"
@@ -412,9 +416,12 @@ Renders a generic text input.
       target="_blank"
       rel="noopener noreferrer"
     {% endif %}
-    {% if options.innerAttributes %}{{ attr(options.innerAttributes) }}{% endif %}
+    {% if options.attributes %}{{ options.attributes | raw }}{% endif %}
   >
     <span class="{{ options.mainClass }}{{ options.textSuffixClass }}"><span>{{ options.text }}</span>{% if options.inlineGraphic %}<div class="{{ options.mainClass }}{{ options.inlineGraphicSuffixClass }}">{{ options.inlineGraphic }}</div>{% endif %}</span>
+    {% if options.duplicate %}
+      <span aria-hidden="true" tabindex='-1' class="{{ options.mainClass }}{{ options.textSuffixClass }}--duplicate"><span>{{ options.text }}</span>{% if options.inlineGraphic %}<div class="{{ options.mainClass }}{{ options.inlineGraphicSuffixClass }}">{{ options.inlineGraphic }}</div>{% endif %}</span>
+    {% endif %}
   </{{ el }}>
 
   <div class="{{ options.mainClass }}{{ options.bgSuffixClass }}"></div>
