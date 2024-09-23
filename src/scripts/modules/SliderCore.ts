@@ -1,10 +1,14 @@
 import { Modu, ModuOptions } from '@malven/modu';
 import Splide from '@splidejs/splide';
-import type { Options } from '@splidejs/splide';
+import type { Options, BaseComponent } from '@splidejs/splide';
 import { Intersection } from '@splidejs/splide-extension-intersection';
 
 type EventOptions = {
   beforeMount?: (slider: Splide) => void;
+};
+
+type BaseComponentMap = {
+  [key: string]: BaseComponent;
 };
 
 /**
@@ -73,6 +77,7 @@ export default class extends Modu {
     el: Element,
     options: Options = {},
     eventOptions: EventOptions = {},
+    extensions: BaseComponentMap = {},
   ) => {
     // Add slider classes
     this.addSliderClasses();
@@ -85,7 +90,7 @@ export default class extends Modu {
     if (eventOptions.beforeMount) eventOptions.beforeMount(slider);
 
     // Mount the slider
-    slider.mount({ Intersection });
+    slider.mount({ Intersection, ...extensions });
 
     // If the slider type is loop we need to re-init Modu on the cloned slides
     if (sliderOptions.type === 'loop') this.app.init(this.el);
@@ -101,8 +106,10 @@ export default class extends Modu {
     this.announceSlideCount(0);
 
     // HACK: Prevent slider from awkwardly re-loading a cloned slide image.
-    this.slider.go('>');
-    this.slider.go(0);
+    if (!this.slider.Components.AutoScroll) {
+      this.slider.go('>');
+      this.slider.go(0);
+    }
   }
 
   /**
