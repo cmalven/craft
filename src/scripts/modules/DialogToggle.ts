@@ -9,7 +9,12 @@ export default class extends Modu {
   isOpenClass = 'is-open';
 
   init = () => {
-    // Nothing needed
+    // Prevent default clicks
+    this.el.addEventListener('click', this.onClick);
+  };
+
+  onClick = (evt: Event) => {
+    evt.preventDefault();
   };
 
   set = (state: boolean) => {
