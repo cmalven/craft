@@ -1,6 +1,6 @@
 import { Modu, ModuOptions } from '@malven/modu';
 import Splide from '@splidejs/splide';
-import type { Options, BaseComponent } from '@splidejs/splide';
+import type { Options, BaseComponent, Components } from '@splidejs/splide';
 import { Intersection } from '@splidejs/splide-extension-intersection';
 
 type EventOptions = {
@@ -8,7 +8,11 @@ type EventOptions = {
 };
 
 type BaseComponentMap = {
-  [key: string]: BaseComponent;
+  [key: string]: (
+    Splide: Splide,
+    Components: Components,
+    options: Options,
+  ) => BaseComponent;
 };
 
 /**
