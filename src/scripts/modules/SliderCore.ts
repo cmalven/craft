@@ -140,6 +140,15 @@ export default class extends Modu {
 
     // Set initial progress class
     this.setProgressClass(0);
+
+    // Listen for a dialog to open and update this slide if the dialog is a parent
+    this.on('Dialog', 'open', (dialogEl: unknown) => {
+      if (dialogEl instanceof Element) {
+        if (dialogEl.contains(this.el)) {
+          this.slider.refresh();
+        }
+      }
+    });
   };
 
   announceSlideCount = (idx: number) => {

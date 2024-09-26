@@ -45,7 +45,7 @@ export default class extends Modu {
   open() {
     this.dialog.show();
     this.showDialog();
-    this.emit('open', null);
+    this.emit('open', this.el);
   }
 
   close() {
