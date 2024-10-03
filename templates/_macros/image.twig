@@ -53,7 +53,7 @@
     {% set namedTransform = craft.imagerx.getNamedTransform(options.transform)  %}
     {% set assetWidth = 200 %} {# We can safely hard code a value here—which simplifies things a bit—because the ratio and height below are dynamically generated #}
     {% set assetRatio = asset.height / asset.width %}
-    {% set assetHeight = (namedTransform.defaults.ratio ??? null) ? (namedTransform.defaults.ratio * assetWidth) : (assetRatio * assetWidth) %}
+    {% set assetHeight = (namedTransform.defaults.ratio ??? null) ? ((1/namedTransform.defaults.ratio) * assetWidth) : (assetRatio * assetWidth) %}
 
     {# Generate transformed images #}
     {% set transformedImages = craft.imagerx.transformImage(asset, options.transform) %}
