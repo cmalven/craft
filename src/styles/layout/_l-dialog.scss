@@ -11,7 +11,7 @@ Wrapper for dialog content
     flex: 1 1 auto;
 
     .js & {
-      transition: 0.9s ease(out-expo);
+      transition: var(--transition-duration) ease(out-expo);
     }
   }
 
@@ -33,15 +33,35 @@ Wrapper for dialog content
 }
 
 .l-dialog {
+  --transition-duration: 0.4s;
+
   .js & {
     @include fixed;
     pointer-events: none;
     overflow: clip;
     z-index: $z-index-dialog;
-    display: none;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     min-height: env(safe-area-inset-bottom);
+    opacity: 0;
+    display: none;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: ease(out-expo);
+    transition-property: opacity, transform, display;
+    transition-behavior: allow-discrete;
+
+    &:not([aria-hidden='true']) {
+      opacity: 1;
+      display: flex;
+    }
+  }
+}
+
+@starting-style {
+  .l-dialog {
+    .js & {
+      opacity: 0;
+    }
   }
 }
 
@@ -52,7 +72,7 @@ Wrapper for dialog content
 }
 
 .l-dialog__close-overlay {
-  transition: opacity 0.7s ease(out-expo);
+  transition: opacity var(--transition-duration) ease(out-expo);
   background-color: black;
   opacity: 0;
 
