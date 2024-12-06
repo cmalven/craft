@@ -11,7 +11,7 @@
 {# ------------------------------------------------------------------ #}
 {#
   {% import '_macros/bits' as bits %}
-  {{ text({
+  {{ bits.text({
     mainClass: 'input-text',
     classes: '',
     labelSuffixClass: '__label',
@@ -112,7 +112,7 @@
 {# ------------------------------------------------------------------ #}
 {#
   {% import '_macros/bits' as bits %}
-  {{ textarea({
+  {{ bits.textarea({
     mainClass: 'input-textarea',
     classes: '',
     showLabel: true,
@@ -154,7 +154,7 @@
 {# ------------------------------------------------------------------ #}
 {#
   {% import '_macros/bits' as bits %}
-  {{ selectable({
+  {{ bits.selectable({
     value: 'foo',
     mainClass: 'input-checkbox',
     classes: '',
@@ -175,7 +175,6 @@
         value: 'foo',
       }
     ],
-    required: false
   }) }}
 
   Renders a "selectable" input, which is either a "radio" or a "checkbox".
@@ -261,28 +260,27 @@
 {# ------------------------------------------------------------------ #}
 {#
   {% import '_macros/bits' as bits %}
-  {{ select({
-  mainClass: 'input-select',
-  classes: '',
-  labelSuffixClass: '__label',
-  inputSuffixClass: '__input',
-  errorsSuffixClass: '__errors',
-  inputAttributes: '',
-  name: 'options',
-  label: null,
-  errors: [],
-  required: false,
-  value: null,
-  items: [
-    {
-      label: 'Foo',
-      value: 'foo',
-    }
-  ],
-  required: false
+  {{ bits.select({
+    mainClass: 'input-select',
+    classes: '',
+    labelSuffixClass: '__label',
+    inputSuffixClass: '__input',
+    errorsSuffixClass: '__errors',
+    inputAttributes: '',
+    name: 'options',
+    label: null,
+    errors: [],
+    required: false,
+    value: null,
+    items: [
+      {
+        label: 'Foo',
+        value: 'foo',
+      }
+    ],
   }) }}
 
-  Renders a generic text input.
+  Renders a <select> dropdown.
 #}
 
 {%- macro select(options = {}) -%}
@@ -341,7 +339,7 @@
 {# ------------------------------------------------------------------ #}
 {#
   {% import '_macros/bits' as bits %}
-  {{ btn({
+  {{ bits.btn({
     mainClass: 'btn',
     modifiers: [],
     text: 'Submit',
@@ -352,7 +350,7 @@
     {{ source('/example.svg') }}
   {% endset %}
 
-  {{ btn({
+  {{ bits.btn({
     mainClass: 'btn',
     modifiers: [],
     text: 'Visit Our Website',
@@ -373,6 +371,7 @@
   textSuffixClass: '__text',
   bgSuffixClass: '__bg',
   graphicSuffixClass: '__graphic',
+  attributes: null,
   withGraphicModifierClass: '--with-graphic',
   inlineGraphicSuffixClass: '__inline-graphic',
   withInlineGraphicModifierClass: '--with-inline-graphic',
@@ -385,7 +384,7 @@
   graphic: null,
   inlineGraphic: null,
   tabindex: null,
-  attributes: null,
+  innerAttributes: null,
   target: null,
 } %}
 
@@ -406,6 +405,7 @@
   {% if options.color ?? null %}
     style="--color: {{ options.color }};"
   {% endif %}
+  {% if options.attributes %}{{ attr(options.attributes) }}{% endif %}
 >
   <{{ el }}
     class="{{ options.mainClass }}__inner"
@@ -416,7 +416,7 @@
       target="_blank"
       rel="noopener noreferrer"
     {% endif %}
-    {% if options.attributes %}{{ options.attributes | raw }}{% endif %}
+    {% if options.innerAttributes %}{{ attr(options.innerAttributes) }}{% endif %}
   >
     <span class="{{ options.mainClass }}{{ options.textSuffixClass }}"><span>{{ options.text }}</span>{% if options.inlineGraphic %}<div class="{{ options.mainClass }}{{ options.inlineGraphicSuffixClass }}">{{ options.inlineGraphic }}</div>{% endif %}</span>
     {% if options.duplicate %}
