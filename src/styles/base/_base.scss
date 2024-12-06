@@ -49,8 +49,10 @@ svg {
   height: auto;
 }
 
-button {
-  // Prevent Safari iOS from adding styles to buttons
+button,
+select,
+::file-selector-button {
+  // Prevent Safari iOS from adding styles to elements
   color: inherit;
   font-weight: normal;
 }
