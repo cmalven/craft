@@ -44,6 +44,11 @@ A generic radio input.
     bottom: 0;
     margin: auto 0;
   }
+
+  .input-selectable__item-input:focus-visible + & {
+    box-shadow: 0 0 0 1px black;
+    background-color: rgba(black, 0.1);
+  }
 }
 
 .input-selectable__item-label-selected,
