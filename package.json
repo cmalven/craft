@@ -36,7 +36,7 @@
     "@types/smooth-scroll": "^16.1.4",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
-    "@vitejs/plugin-legacy": "^5.4.1",
+    "@vitejs/plugin-legacy": "^6.0.0",
     "emmet": "^2.4.7",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -51,11 +51,11 @@
     "stylelint-scss": "^5.2.1",
     "tsc-files": "^1.1.4",
     "typescript": "^5.4.2",
-    "vite": "^5.3.4",
-    "vite-plugin-craftcms": "^2.1.0",
-    "vite-plugin-mkcert": "^1.17.5",
-    "vite-plugin-restart": "^0.4.1",
-    "vite-plugin-sass-glob-import": "^3.0.2"
+    "vite": "^6.0.3",
+    "vite-plugin-craftcms": "3.0.0",
+    "vite-plugin-mkcert": "^1.17.6",
+    "vite-plugin-restart": "^0.4.2",
+    "vite-plugin-sass-glob-import": "^5.0.0"
   },
   "dependencies": {
     "@malven/modu": "^2.4.71",
