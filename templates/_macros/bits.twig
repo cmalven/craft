@@ -168,11 +168,27 @@
     type: 'checkbox|radio',
     unselectedSvg: '<svg … />',
     selectedSvg: '<svg … />'',
-    inputAttributes: 'data-filter-form="input"',
+    inputAttributes: {},
     items: [
       {
         label: 'Foo',
         value: 'foo',
+        sub: {
+          name: 'subOptions',
+          value: 'sub1
+          label: 'Sub Options',
+          type: 'radio',
+          items: [
+            {
+              label: 'Sub 1',
+              value: 'sub-1',
+            },
+            {
+              label: 'Sub 2',
+              value: 'sub-2',
+            },
+          ]
+        },
       }
     ],
   }) }}
@@ -191,13 +207,13 @@
   itemInputSuffixClass: '__item-input',
   itemLabelSuffixClass: '__item-label',
   errorsSuffixClass: '__errors',
-  inputAttributes: '',
+  inputAttributes: {},
   name: 'options',
   type: 'checkbox',
   label: null,
   unselectedSvg: null,
   selectedSvg: null,
-  items: [],
+  options: [],
   errors: [],
   required: false,
   value: null,
@@ -205,15 +221,19 @@
 
 {% set options = defaults | merge(options) %}
 
-<div class="{{ options.mainClass }} {{ options.classes }}">
+<div class="{{ options.mainClass }} {{ options.mainClass }}--{{ options.type }} {{ options.classes }}">
   {% if options.label %}
     <h3 class="{{ options.mainClass }}{{ options.labelSuffixClass }}">{{ options.label }}</h3>
   {% endif %}
 
   <div class="{{ options.mainClass }}{{ options.itemsSuffixClass }}">
     {% for item in options.items %}
-
-      <div class="{{ options.mainClass }}{{ options.itemSuffixClass }}">
+      <div
+        class="{{ options.mainClass }}{{ options.itemSuffixClass }}"
+        {% if item.sub ?? false %}
+          data-selectable-has-sub-items
+        {% endif %}
+      >
         <input
           name="{{ options.name }}"
           id="{{ item.value }}"
@@ -227,7 +247,13 @@
           {% if item.value in options.value ??? null %}
             checked
           {% endif %}
-          {{ options.inputAttributes | raw }}
+          {% if item.disabled ?? false %}
+            disabled
+          {% endif %}
+          {% if item.sub ?? false %}
+            data-selectable-item-has-sub-items
+          {% endif %}
+          {{ attr(options.inputAttributes) }}
         >
         <label class="{{ options.mainClass }}{{ options.itemLabelSuffixClass }}" for="{{ item.value }}">
           {% if item.graphic ??? null %}
@@ -238,6 +264,13 @@
           {% endif %}
           {{ item.label }}
         </label>
+
+        {# Sub-Options #}
+        {% if item.sub ?? null %}
+          <div class="{{ options.mainClass }}{{ options.itemSuffixClass }}__sub" data-selectable-sub-items>
+            {{ _self.selectable(options | merge(item.sub)) }}
+          </div>
+        {% endif %}
       </div>
 
     {% endfor %}
@@ -272,7 +305,7 @@
     errors: [],
     required: false,
     value: null,
-    items: [
+    options: [
       {
         label: 'Foo',
         value: 'foo',
@@ -294,7 +327,7 @@
     inputAttributes: '',
     name: 'options',
     label: null,
-    items: [],
+    options: [],
     errors: [],
     required: false,
     value: null,
@@ -314,11 +347,11 @@
         class="{{ options.mainClass}}{{ options.inputSuffixClass }}"
         {% if options.required ?? false %}required{% endif %}
       >
-        {% for item in options.items ?? [] %}
+        {% for option in options.options ?? [] %}
           <option
-            value="{{ item.value }}"
-            {% if options.value ?? null == item.value %}selected{% endif %}
-          >{{ item.label }}</option>
+            value="{{ option.value }}"
+            {% if options.value ?? null == option.value %}selected{% endif %}
+          >{{ option.label }}</option>
         {% endfor %}
       </select>
     </div>
@@ -391,7 +424,7 @@
 {% set options = defaults | merge(options) %}
 
 {# Set element #}
-{% set el = options.el %}
+{% set el = options.el ??? defaultEl %}
 
 {# Use a link if an url is set and no custom element is set #}
 {% if options.url and el == defaultEl %}
