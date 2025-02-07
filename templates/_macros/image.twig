@@ -121,25 +121,25 @@
 {# ------------------------------------------------------------------ #}
 {#
   {% import '_macros/image' as image %}
-  {{ image.url(asset, '1x1', 2) }}
+  {{ image.url(asset, '1x1', 1000) }}
 
   Returns the URL of a single transformed image
 
   @param transform (string)     - [optional] Determines which transform config to use (should match an option defined in `config/imager-x-transforms.php`)
-  @param transformIdx (string)  - [optional] Determines which url from the array of generated images to return
+  @param width (number)         - [optional] Custom width to transform the image to. By default keeps original image width.
 #}
 
-{%- macro url(asset, transform = 'scale', transformIdx = 1) -%}
+{%- macro url(asset, transform = 'scale', width = null) -%}
   {# Return original URL if not transformable #}
   {% if not craft.twig.isAssetTransformable(asset) %}
     {{ asset.url }}
   {% endif %}
 
   {# Generate transformed images #}
-  {% set transformedImage = craft.imagerx.transformImage(asset, transform) %}
+  {% set transformedImage = craft.imagerx.transformImage(asset, transform, { width: width ?? null }) %}
 
   {# Give me that URL #}
-  {{  transformedImage[transformIdx].url }}
+  {{  transformedImage.url }}
 {%- endmacro -%}
 
 
