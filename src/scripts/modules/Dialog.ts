@@ -31,10 +31,10 @@ export default class extends Modu {
     this.dialog = new A11yDialog(this.el as HTMLElement);
 
     // Hide when a11y-dialog hides
-    this.dialog.on('hide', () => this.close());
+    this.dialog.on('hide', () => this.close(true));
 
     // Show when a11y-dialog shows
-    this.dialog.on('show', () => this.open());
+    this.dialog.on('show', () => this.open(true));
 
     // Listen for other dialogs to open and close this one
     this.on('Dialog', 'open', () => {
@@ -42,14 +42,14 @@ export default class extends Modu {
     });
   }
 
-  open() {
-    this.dialog.show();
+  open(triggeredByAlly = false) {
+    if (!triggeredByAlly) this.dialog.show();
     this.showDialog();
     this.emit('open', this.el);
   }
 
-  close() {
-    this.dialog.hide();
+  close(triggeredByAlly = false) {
+    if (!triggeredByAlly) this.dialog.hide();
     this.hideDialog();
   }
 
