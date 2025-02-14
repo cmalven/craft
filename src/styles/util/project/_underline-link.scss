@@ -16,7 +16,7 @@ Adds a common underline to link text.
 
     &:hover,
     &:focus-visible {
-      @include underline-hover;
+      @include underline-reveal;
     }
   }
 }

@@ -12,6 +12,6 @@ Apply consistent underline to text.
   text-decoration-color: transparent;
 }
 
-@mixin underline-hover {
+@mixin underline-reveal {
   text-decoration-color: currentcolor;
 }
