@@ -21,7 +21,8 @@ Helpers for working with grid units
   }
 
   $width: calc(
-    #{$each-column} * #{$cols} + (#{$cols - 1}) * var(--grid-gutter) + #{$modifier-space}
+    #{$each-column} * #{$cols} + (#{$cols - 1}) * var(--grid-gutter) +
+      #{$modifier-space}
   );
 
   @return $width;

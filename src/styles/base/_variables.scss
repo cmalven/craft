@@ -100,8 +100,7 @@ $sizes: (
   ),
   outer: (
     default: 25px,
-    max:
-      math.div(
+    max: math.div(
         map-get($breakpoints, max) - map-get($breakpoints, content-max),
         2
       ),
