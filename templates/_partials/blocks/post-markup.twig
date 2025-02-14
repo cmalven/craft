@@ -1,0 +1,10 @@
+{# =============================================================== #}
+{# Block - Post Markup
+{# =============================================================== #}
+
+<div class="post-markup">
+  {% include '_partials/rich-text' with {
+    content: block.markup,
+    modifiers: [],
+  } only %}
+</div>
