@@ -1,6 +1,5 @@
 import { Modu, ModuOptions } from '@malven/modu';
-
-import addIntersection from '../utils/addIntersection';
+import { inView } from 'motion';
 
 /**
  * Handles reveal animations on scroll.
@@ -8,7 +7,7 @@ import addIntersection from '../utils/addIntersection';
 
 export default class extends Modu {
   visibleClass = 'is-visible';
-  observer?: IntersectionObserver;
+  stopInView?: VoidFunction;
 
   constructor(m: ModuOptions) {
     super(m);
@@ -29,18 +28,18 @@ export default class extends Modu {
       if (closestTrigger) triggerEl = closestTrigger;
     }
 
-    this.observer = addIntersection(triggerEl, {
-      rootMargin: '0px 0px -80px 0px',
-      inHandler: (el, direction, isAlreadyRevealed) => {
-        // Fires when element enters view
-        if (!isAlreadyRevealed) {
-          this.el.classList.add(this.visibleClass);
-        }
+    this.stopInView = inView(
+      triggerEl,
+      (_info) => {
+        this.el.classList.add(this.visibleClass);
       },
-    });
+      {
+        margin: '0px 0px -80px 0px',
+      },
+    );
   };
 
   cleanup = () => {
-    if (this.observer) this.observer.disconnect();
+    if (this.stopInView) this.stopInView();
   };
 }
