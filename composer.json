@@ -1,7 +1,7 @@
 {
   "require": {
     "craftcms/aws-s3": "^2.2.1",
-    "craftcms/ckeditor": "4.1.0",
+    "craftcms/ckeditor": "4.6.0",
     "craftcms/cms": "5.6.10.2",
     "mmikkel/cp-field-inspect": "2.0.4",
     "nystudio107/craft-autocomplete": "^1.10",
