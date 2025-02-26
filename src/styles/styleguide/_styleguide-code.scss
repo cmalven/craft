@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 /*
 Styleguide Code
 
@@ -8,7 +10,7 @@ A formatted block of code
   $styleguide-code-color: #99c9c0;
   font-family: monospace;
   font-size: 14px;
-  color: darken($styleguide-code-color, 17);
+  color: color.adjust($styleguide-code-color, $lightness: -17%);
   background-color: rgba($styleguide-code-color, 0.15);
   border-radius: 3px;
   padding: 15px 17px;
