@@ -71,12 +71,24 @@ A flexible, reusable button.
 // Hover / Focus Mixin
 // ---------------------------------------------------------------
 
-@mixin button-hover($selector) {
-  #{$selector} {
+@mixin button-hover($base-selector, $variant-selector: null) {
+  @if not $variant-selector {
+    $variant-selector: $base-selector;
+  }
+
+  // Hovering the button itself
+  #{$variant-selector} {
     @include not-touch {
-      &:has(#{$selector}__inner:hover, #{$selector}__inner:focus),
-      a:hover:has(&),
-      a:focus:has(&) {
+      &:has(#{$base-selector}__inner:hover, #{$base-selector}__inner:focus) {
+        @content;
+      }
+    }
+  }
+
+  // Hovering a link that contains the button
+  a:has(#{$variant-selector}) {
+    @include not-touch-hover {
+      #{$variant-selector} {
         @content;
       }
     }
