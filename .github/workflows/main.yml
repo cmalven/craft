@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18.17.0'
+          node-version: '20.12.2'
 
       # Install PHP dependencies
       - name: Composer install
@@ -44,18 +44,18 @@ jobs:
       # rsync
       - name: Deploy with rsync
         run: |
-          rsync -v -a -z --delete --recursive --exclude={".babelrc",".browserslistrc",".dockerignore",".editorconfig",".env*",".eslintignore",".eslintrc",".git",".gitattributes",".gitignore",".hygen.js",".nvmrc",".prettierrc",".prettierignore",".stylelintrc",".swcrc","/.cache/","/.composer/","/.config/","/.ddev/","/.husky/","/.idea/","/.local/","/.npm/","/.github/","/.swc/","/bin/","/bower_components/","/cypress/","/docker/","/gulp/","/log/","/node_modules/","/resources/","/src/","/storage/logs/","/_templates/","/tmp/","/types/","/web/assets/","auth.json","babel.config.json","bower.json","buddy.yml","composer.json","composer.lock","cypress.json","docker-compose.yml","Dockerfile","env.sample","FauxTwigExtension.php","gsap-bonus.tgz","gulpfile.js","package.json","package-lock.json","public","README.md","tsconfig.json","vite.config.js","yarn.lock"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DEPLOY_PATH }}
+          rsync -v -a -z --delete --recursive --exclude={".babelrc",".browserslistrc",".dockerignore",".editorconfig",".env*",".eslintignore",".eslintrc",".git",".gitignore",".hygen.js",".nvmrc",".prettierrc",".prettierignore",".stylelintrc",".swcrc","/.cache/","/.composer/","/.config/","/.local/","/.npm/","/.github/","/.swc/","/bin/","/bower_components/","/cypress/","/docker/","/gulp/","/log/","/node_modules/","/resources/","/src/","/storage/logs/","_templates","/tmp/","/web/assets/","auth.json","babel.config.json","bower.json","buddy.yml","composer.json","composer.lock","cypress.json","docker-compose.yml","Dockerfile","env.sample","FauxTwigExtension.php","gsap-bonus.tgz","gulpfile.js","package.json","package-lock.json","public","README.md","tsconfig.json","vite.config.js","vite.config.mjs","yarn.lock"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }}:${{ vars.SSH_DEPLOY_PATH }}
 
       # execute Craft commands on remote server
       - name: Execute SSH commands on remote server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
+          host: ${{ vars.SSH_HOST }}
+          username: ${{ vars.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd ${{ secrets.SSH_DEPLOY_PATH }}
-            ln -s web ${{ secrets.SSH_DEPLOY_PATH }}/public
+            cd ${{ vars.SSH_DEPLOY_PATH }}
+            ln -s ${{ vars.SSH_DEPLOY_PATH }}/web ${{ vars.SSH_DEPLOY_PATH }}/public
             chmod a+x craft
             php craft db/backup
             php craft migrate/all
@@ -70,4 +70,4 @@ jobs:
         with:
           job-status: ${{ job.status }}
           pushover-api-token: ${{ secrets.PUSHOVER_API_TOKEN }}
-          pushover-user-key: ${{ secrets.PUSHOVER_USER_KEY }}
+          pushover-user-key: ${{ vars.PUSHOVER_USER_KEY }}
