@@ -1,8 +1,9 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 253489f3-4e59-48ac-a725-d8592cb0ed1e # Default
+  - 253489f3-4e59-48ac-a725-d8592cb0ed1e # Page
 handle: pages
+maxAuthors: 1
 name: Pages
 previewTargets:
   -

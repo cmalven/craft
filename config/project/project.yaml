@@ -1,4 +1,4 @@
-dateModified: 1721760048
+dateModified: 1740606969
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -14,17 +14,27 @@ fs:
 meta:
   __names__:
     0eec63d1-8a33-4f6a-83a5-00c027db46dc: your-project-title # your-project-title
+    0f62a524-edb1-4f42-8319-5fa437d5a756: 'Text (Rich - Simple)' # Text (Rich - Simple)
+    1eb79bf6-fb1c-4811-83fc-135aca7bfc89: Heading # Heading
+    6d6999fd-cf25-4011-91bb-6ea9b844274b: 'Post Content' # Post Content
+    8e9916cc-4334-4a7e-9ba6-e6aae9238c81: 'Text (Plain - Single Line)' # Text (Plain - Single Line)
     9d6e156d-8dd4-4224-a69a-f46d32d53774: Standard # Standard
     31abb75d-dc87-4ff3-a413-bb161bd3a59f: your-project-title # your-project-title
+    109bc20e-6e6a-4466-885c-030237bbbc46: 'Text (Plain - Multiline)' # Text (Plain - Multiline)
     223e7dac-c6de-46ba-9144-0ee4c62734c4: 'Page Content' # Page Content
     380a83b9-344d-415b-a3f4-8b389ef61717: SEO # SEO
     507bbcf8-f9bf-4845-9b14-829d155d2a96: Simple # Simple
     762c90cb-e904-42b1-a0ea-a82b1ddbe561: Images # Images
-    253489f3-4e59-48ac-a725-d8592cb0ed1e: Default # Default
+    253489f3-4e59-48ac-a725-d8592cb0ed1e: Page # Page
     90775891-8a83-4dd6-b2c0-0462aceb52d4: Homepage # Homepage
     a41668f7-a432-4cc4-a09b-609538ea0125: Homepage # Homepage
+    ac35dbca-18f6-4f3d-a9ac-94c95bd7bf1c: 'Link Item' # Link Item
+    ad966c15-02a7-47c1-b099-8822cd581301: 'Image / Video (Multiple)' # Image / Video (Multiple)
+    adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b: Text # Text
     b7a660f1-cbad-4067-8031-b237c204ab41: Pages # Pages
+    cdebb3ec-ae8f-4b56-ab25-7afbf135a0d3: 'Post Content' # Post Content
     db405b1d-69f1-4eca-8a10-2f1545594476: 'Public Schema' # Public Schema
+    dbbb6437-d106-40f2-a3ca-d539087f53a6: 'Image / Video' # Image / Video
 plugins:
   aws-s3:
     edition: standard
@@ -34,7 +44,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 6FV6MMKOYYAFUH5DRWX8J7F5
-    schemaVersion: 5.5.0
+    schemaVersion: 5.9.0
   ckeditor:
     edition: standard
     enabled: true
@@ -358,7 +368,7 @@ system:
   edition: pro
   live: true
   name: your-project-title
-  schemaVersion: 5.0.0.21
+  schemaVersion: 5.6.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

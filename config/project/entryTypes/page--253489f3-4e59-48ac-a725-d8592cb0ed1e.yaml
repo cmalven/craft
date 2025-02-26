@@ -1,3 +1,4 @@
+color: null
 fieldLayouts:
   2ec054f7-26b7-4cab-81c0-cd9d58154996:
     tabs:
@@ -12,6 +13,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -34,8 +37,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 223e7dac-c6de-46ba-9144-0ee4c62734c4 # Page Content
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -52,8 +58,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 380a83b9-344d-415b-a3f4-8b389ef61717 # SEO
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -64,13 +73,14 @@ fieldLayouts:
         name: SEO
         uid: 8ff733ec-f62e-4838-87d0-b3aa152e28d4
         userCondition: null
-handle: default
+handle: page
 hasTitleField: true
-name: Default
+icon: ''
+name: Page
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

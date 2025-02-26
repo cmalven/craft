@@ -6,7 +6,7 @@ name: 'Page Content'
 searchable: false
 settings:
   entryTypes:
-    - adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b
+    - adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b # Text
   maxEntries: null
   minEntries: null
   propagationKeyFormat: null

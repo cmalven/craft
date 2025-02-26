@@ -1,0 +1,38 @@
+columnSuffix: null
+handle: imageVideoMultiple
+instructions: null
+name: 'Image / Video (Multiple)'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+    - video
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add an image or mp4 video'
+  showCardsInGrid: false
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,18 @@
+headingLevels:
+  - 2
+  - 3
+  - 4
+name: 'Post Content'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - blockQuote
+  - link
+  - '|'
+  - bulletedList
+  - numberedList
+  - '|'
+  - createEntry
+  - sourceEditing
