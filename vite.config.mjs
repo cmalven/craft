@@ -16,6 +16,7 @@ export default defineConfig(({ command, mode }) => {
     server: {
       port: process.env.VITE_DEV_PORT || 3000,
       host: false, // Set to `true` to enable network access
+      cors: { origin: 'https://your-project-slug.ddev.site' },
       hmr: {
         host: process.env.VITE_DEV_BASE_ADDRESS, // Necessary only if `https` is true
       },
