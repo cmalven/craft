@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 /*
 Easing
 
@@ -36,8 +38,8 @@ $eases: (
 );
 
 @function ease($ease: in-out-sine) {
-  @if map-has-key($eases, $ease) {
-    @return map-get($eases, $ease);
+  @if map.has-key($eases, $ease) {
+    @return map.get($eases, $ease);
   } @else {
     @warn 'Key #{$ease} doesn’t exist in map #{$eases}';
   }

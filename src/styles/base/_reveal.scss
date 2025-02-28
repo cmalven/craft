@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 /*
 Reveal
 
@@ -33,7 +35,7 @@ $h-reveal-delay-increment: 0.05 * $h-reveal-duration;
   transition: $h-reveal-duration ease(out-quint);
   transition-property: opacity, transform;
   opacity: 0;
-  transform: map-get($directions, $direction);
+  transform: map.get($directions, $direction);
 }
 
 @mixin reveal {
