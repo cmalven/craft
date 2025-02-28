@@ -1,0 +1,49 @@
+{# =============================================================== #}
+{# Layout - Nav Menu
+{# =============================================================== #}
+{#
+  {% embed '_embeds/l-nav-menu' with {
+    key: 'my-unique-key',
+    label: 'My Menu',
+    modifiers: [],
+  } only %}
+    {% block toggle %}
+      …
+    {% endblock %}
+
+    {% block items %}
+      …
+    {% endblock %}
+  {% endembed %}
+#}
+
+{% set key = 'nav-menu-' ~ label | kebab %}
+
+{% set classes = craft.twig.modifiers('l-nav-menu', modifiers ?? []) %}
+
+<nav
+  class="l-nav-menu {{ classes }}"
+  data-module-nav-menu="{{ key }}"
+>
+  {# Toggle #}
+  {% set toggleEl = 'button' %}
+  {% tag toggleEl with {
+    'class': 'l-nav-menu__toggle',
+    'data-nav-menu': 'toggle',
+    'aria-expanded': 'false',
+    'aria-controls': key,
+  } %}
+    {% block toggle %}{% endblock %}
+  {% endtag %}
+
+  {# Items #}
+  <div
+    class="l-nav-menu__items"
+    id="{{ key }}"
+    data-nav-menu="menu"
+  >
+    <ul class="l-nav-menu__items-inner">
+      {% block items %}{% endblock %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,86 @@
+/*
+Layout - Nav Menu
+
+A reusable navigation menu.
+*/
+
+// ---------------------------------------------------------------
+// Base Styling
+// ---------------------------------------------------------------
+
+.l-nav-menu {
+  position: relative;
+}
+
+.l-nav-menu__toggle {
+  @include reset-input;
+  cursor: pointer;
+  width: 100%;
+  z-index: 1;
+}
+
+.l-nav-menu__items-inner {
+  width: 100%;
+
+  .js & {
+    position: absolute;
+  }
+}
+
+.l-nav-menu__items {
+  position: relative;
+}
+
+// ---------------------------------------------------------------
+// State - Collapsed
+// ---------------------------------------------------------------
+
+@mixin nav-menu-collapsed($base-class: '.l-nav-menu') {
+  .js #{$base-class} .l-nav-menu__toggle:not([aria-expanded='true']) {
+    @content;
+  }
+}
+
+@include nav-menu-collapsed('.l-nav-menu') {
+  & + .l-nav-menu__items {
+    pointer-events: none;
+    opacity: 0.0001;
+  }
+}
+
+// ---------------------------------------------------------------
+// Project Customizations
+// ---------------------------------------------------------------
+
+// ---------------------------------------------------------------
+// Modifier - Dropdown Expand
+// ---------------------------------------------------------------
+
+.l-nav-menu--dropdown-expand {
+  display: flex;
+  flex-direction: column;
+
+  .l-nav-menu__items {
+    transition:
+      opacity 0.2s,
+      transform 0.6s ease(out-expo);
+    will-change: transform, opacity;
+  }
+}
+
+@include nav-menu-collapsed('.l-nav-menu--dropdown-expand') {
+  & .search-nav-menu__toggle {
+  }
+
+  & .search-nav-menu__toggle-text {
+    color: var(--theme-text);
+  }
+
+  & .search-nav-menu__toggle-carat {
+    @include expand-carat;
+  }
+
+  & + .l-nav-menu__items {
+    transform: translateY(-1rem);
+  }
+}
