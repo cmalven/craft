@@ -29,6 +29,15 @@ export default defineConfig(({ command, mode }) => {
         input: './src/entry.html',
       },
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+          quietDeps: true,
+          silenceDeprecations: ['import', 'mixed-decls'],
+        },
+      },
+    },
     plugins: [
       mkcert(),
       legacy({
