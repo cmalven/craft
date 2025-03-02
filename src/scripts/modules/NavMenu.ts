@@ -55,7 +55,7 @@ export default class extends Modu {
     if (evt.key === 'Escape') this.set(false);
   };
 
-  onLinkClick = (evt: Event) => {};
+  onLinkClick = (_evt: Event) => {};
 
   toggle = (evt: MouseEvent | KeyboardEvent) => {
     evt.preventDefault();
