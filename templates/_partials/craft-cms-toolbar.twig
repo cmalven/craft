@@ -1,0 +1,40 @@
+{# =============================================================== #}
+{# Craft Cms Toolbar
+{# =============================================================== #}
+{#
+  {% include '_partials/craft-cms-toolbar' %}
+#}
+
+{% set element = null %}
+{% if entryId ??? null %}
+  {% set element = craft.entries.id(entryId).one() %}
+{% endif %}
+{% if categoryId ??? null %}
+  {% set element = craft.categories.id(categoryId).one() %}
+{% endif %}
+
+{% if element and canView(element) %}
+  {% set elementSection = element.section.name ??? element.group.name %}
+  {% set elementTitle = element.title %}
+
+  <div class="craft-cms-toolbar">
+    {# Toggle #}
+    <a href="{{ siteUrl }}{{ craft.app.config.general.cpTrigger }}" target="_blank" rel="nofollow" class="craft-cms-toolbar__toggle">
+      <span class="craft-cms-toolbar__toggle-inner">
+      {{ source('_svg/inline/craft-cms-logo.svg') }}
+      </span>
+    </a>
+
+    {# Content #}
+    <div class="craft-cms-toolbar__content">
+      {# Content Inner #}
+      <div class="craft-cms-toolbar__content-inner">
+        {# Links #}
+        <a class="craft-cms-toolbar__link" href="{{ element.cpEditUrl }}" target="_blank" rel="nofollow">Edit Entry</a>
+
+        {# Details #}
+        <p class="craft-cms-toolbar__badge">{{ elementSection }}{% if elementSection != elementTitle and 'Index' not in elementSection %} <span>&#9658;</span> {{ elementTitle | truncate(25, splitSingleWord=false) }}{% endif %}</p>
+      </div>
+    </div>
+  </div>
+{% endif %}
