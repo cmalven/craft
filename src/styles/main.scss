@@ -20,13 +20,11 @@
 @import 'base/variables';
 
 // Toolkit
-@import '@malven/sass-toolkit/color';
 @import '@malven/sass-toolkit/size';
 @import '@malven/sass-toolkit/type-styles';
 
 // Toolkit Properties + Helpers
 @include output-size-custom-properties;
-@include output-color-helpers;
 @include output-type-helpers;
 @include output-size-helpers;
 

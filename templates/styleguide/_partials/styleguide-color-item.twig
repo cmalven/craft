@@ -8,11 +8,11 @@
 #}
 
 <div class="styleguide-color-item">
-  <div class="styleguide-color-item__example h-color-bg-{{ name }}"></div>
+  <div class="styleguide-color-item__example" style="--color: var(--color-{{ name }});"></div>
 
   <div class="styleguide-color-item__code">
     {% include 'styleguide/_partials/styleguide-code' with {
-      code: "color(#{ name });"
+      code: "var(--color-#{ name })"
     } only %}
   </div>
 </div>

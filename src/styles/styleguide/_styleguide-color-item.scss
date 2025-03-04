@@ -12,6 +12,7 @@ Represents an individual color as a styleguide swatch.
   padding-bottom: 100%;
   border-radius: 6px;
   box-shadow: 0 0 0 1px rgba(black, 0.07) inset;
+  background-color: var(--color);
 }
 
 .styleguide-color-item__code {
