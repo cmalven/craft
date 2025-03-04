@@ -5,5 +5,6 @@ Applies common outer padding.
 */
 
 @mixin outer-padding {
-  @include size(outer, padding-left padding-right);
+  padding-left: var(--size-outer);
+  padding-right: var(--size-outer);
 }

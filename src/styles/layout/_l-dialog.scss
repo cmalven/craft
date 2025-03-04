@@ -57,6 +57,7 @@ Wrapper for dialog content
   }
 }
 
+/* stylelint-disable-next-line scss/at-rule-no-unknown */
 @starting-style {
   .l-dialog {
     .js & {
@@ -91,7 +92,8 @@ Wrapper for dialog content
 }
 
 .l-dialog__content-close {
-  @include size(outer, top right);
+  top: var(--size-outer);
+  right: var(--size-outer);
   position: absolute;
   pointer-events: auto;
   transition: 0.8s ease(out-expo);

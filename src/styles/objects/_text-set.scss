@@ -15,11 +15,11 @@ Common combinations of text.
 }
 
 .text-set__text {
-  @include size(32, margin-top);
+  margin-top: var(--size-32);
 }
 
 .text-set__footer {
-  @include size(32, margin-top);
+  margin-top: var(--size-32);
 }
 
 // ---------------------------------------------------------------
@@ -28,7 +28,7 @@ Common combinations of text.
 
 .text-set--large {
   .text-set__heading {
-    @include size(32, margin-top);
+    margin-top: var(--size-32);
   }
 }
 

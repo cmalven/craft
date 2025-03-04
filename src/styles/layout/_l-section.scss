@@ -14,11 +14,11 @@ spacing and relationships between various vertical sections of the site.
 }
 
 @mixin space-top {
-  @include size(section-vertical, padding-top);
+  padding-top: var(--size-section-vertical);
 }
 
 @mixin space-bottom {
-  @include size(section-vertical, padding-bottom);
+  padding-bottom: var(--size-section-vertical);
 }
 
 .l-section {
@@ -61,11 +61,11 @@ spacing and relationships between various vertical sections of the site.
 // This allows them to sit flush with their neighboring blocks.
 
 @mixin bleed-top {
-  @include size(none, padding-top);
+  padding-top: var(--size-none);
 }
 
 @mixin bleed-bottom {
-  @include size(none, padding-bottom);
+  padding-bottom: var(--size-none);
 }
 
 .l-section--bleed-top:not(.l-section--bleed-top-mobile) {
@@ -123,14 +123,14 @@ $bg-colors: light, dark;
       + .l-section--bg-#{$color}:not(.l-section--bleed-top):not(
         .l-section--bleed--top-mobile
       ) {
-      @include size(section-vertical, margin-top, $negative: true);
+      margin-top: calc(-1 * var(--size-section-vertical));
     }
   }
 
   @include media('>=medium') {
     .l-section--bg-#{$color}:not(.l-section--bleed-bottom)
       + .l-section--bg-#{$color}:not(.l-section--bleed-top) {
-      @include size(section-vertical, margin-top, $negative: true);
+      margin-top: calc(-1 * var(--size-section-vertical));
     }
   }
 }
@@ -140,7 +140,7 @@ $bg-colors: light, dark;
 // ---------------------------------------------------------------
 
 .l-section--border-bottom.l-section--space-bottom {
-  @include size(none, padding-bottom);
+  padding-bottom: var(--size-none);
 
   .l-section__inner {
     @include space-bottom;

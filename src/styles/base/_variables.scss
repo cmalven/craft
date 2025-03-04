@@ -72,7 +72,7 @@ $breakpoints: map.merge(
   store static spacing values here as well and apply spacing consistently
   across the site.
 
-  Most commonly used as `@include size(section-vertical, margin-top);`
+  Most commonly used via CSS variable, such as `margin-top: var(--size-32);`
 
   https://github.com/cmalven/sass-toolkit#size
 */

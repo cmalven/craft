@@ -11,7 +11,7 @@ Wraps all contents within the styleguide.
 }
 
 .styleguide-wrapper__content {
-  @include size(outer, padding);
+  padding: var(--size-outer);
 
   > * + * {
     margin-top: 40px;

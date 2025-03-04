@@ -6,8 +6,8 @@ Navigation for the styleguide
 
 .styleguide-nav {
   @include theme-dark;
-  @include size(outer, padding-left);
-  @include size(outer, padding-right);
+  padding-left: var(--size-outer);
+  padding-right: var(--size-outer);
   background-color: var(--theme-bg);
 }
 
