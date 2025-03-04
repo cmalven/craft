@@ -1,0 +1,19 @@
+/*
+Type Styleguide Overlay
+
+Overlay for working with type in development.
+*/
+
+/* stylelint-disable-next-line selector-type-no-unknown */
+sl-drawer {
+  --size: 80vh;
+  --header-spacing: 3rem;
+
+  &::part(title) {
+    @include font-stack-styles(system);
+    font-size: 3em;
+  }
+}
+
+.type-styleguide-overlay {
+}

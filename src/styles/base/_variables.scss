@@ -200,6 +200,24 @@ $transition-hover-color: 0.5s ease(out-quint);
 */
 
 $font-stacks: (
+  system: (
+    font-family: (
+      system-ui,
+      blinkmacsystemfont,
+      -apple-system,
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif,
+    ),
+    font-weight: normal,
+    font-style: normal,
+  ),
   helvetica: (
     font-family: (
       'Helvetica Neue',

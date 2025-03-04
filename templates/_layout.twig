@@ -57,6 +57,9 @@
   {# Craft CMS Editor Toolbar #}
   {{ craft.blitz.includeDynamic('_partials/craft-cms-toolbar', { entryId: entry.id ??? null, categoryId: category.id ??? null }) }}
 
+  {# Styleguide Overlay #}
+  {% include '_partials/type-styleguide-overlay' %}
+
   {# SVG #}
   <span class="h-hide-visually">
     {{ source('_svg/symbol/icon.symbol.svg', ignore_missing = true) }}

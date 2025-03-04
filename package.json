@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "@malven/modu": "^2.4.71",
+    "@shoelace-style/shoelace": "^2.20.0",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-intersection": "^0.2.0",
     "a11y-dialog": "^8.0.4",
