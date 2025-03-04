@@ -16,11 +16,8 @@
 // Colors
 // ---------------------------------------------------------------
 /*
-  Each color will be available to use via the `color(black)` mixin
-  or via the auto-generated `h-color-bg-black` or `h-color-text-black`
-  helper classes in your markup.
-
-  https://github.com/cmalven/sass-toolkit#color
+  Each color will be available to use through a CSS custom property.
+  Example: `color: var(--color-black);`
 */
 
 :root {
