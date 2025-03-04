@@ -4,4 +4,5 @@
 /.idea
 /.git
 /.ddev
+composer.json
 composer.lock
