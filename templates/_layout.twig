@@ -16,18 +16,6 @@
 ) %}
 #}
 
-{# Eager Load Fields #}
-{% if entry.dateUpdated ?? null %}
-  {% do craft.app.elements.eagerLoadElements(
-    className(entry),
-    [entry],
-    [
-      'hero.imageVideo',
-      'pageContent.matrixBlockHandle:blockType.fieldHandle',
-    ]
-  ) %}
-{% endif %}
-
 <!DOCTYPE html>
 <html lang="en-US" class="{{ theme.classForEntry(entry ??? null) }} preload-transitions">
 <head>
