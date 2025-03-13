@@ -73,9 +73,11 @@ export default class extends Modu {
   buttonEl: HTMLElement;
   contentEl: HTMLElement;
   contentInnerEl: HTMLElement;
+  activeClass = 'is-active';
   isOpen = false;
   resizeObserver?: ResizeObserver;
   contentHiddenClass = 'is-hidden';
+  defaultOpen: boolean;
 
   constructor(m: ModuOptions) {
     super(m);
@@ -83,14 +85,21 @@ export default class extends Modu {
     this.buttonEl = this.get('button') as HTMLElement;
     this.contentEl = this.get('content') as HTMLElement;
     this.contentInnerEl = this.get('content-inner') as HTMLElement;
+    this.defaultOpen = (this.getData('default-open') ?? false) === true;
 
     // Should other accordions be closed when this one is opened?
     this.closeOthers = (this.getData('close-others') ?? 'false') === 'true';
   }
 
   init = () => {
+    // Add the active class to the element
+    this.el.classList.add(this.activeClass);
+
+    // Don't prevent buttons from being clicked
+    this.buttonEl.removeAttribute('aria-disabled');
+
     // Set initial state to close
-    this.toggle(null, false);
+    this.toggle(null, this.defaultOpen);
 
     // Add event listener
     this.buttonEl.addEventListener('click', this.toggle);

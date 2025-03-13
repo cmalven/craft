@@ -1,23 +1,30 @@
-{# =============================================================== #}
-{# Layout - Accordion Group
-{# =============================================================== #}
-{#
-  {% embed '_embeds/l-accordion-group' with {
-    heading: 'My Group Heading',
-    modifiers: [],
-    key: 'my-unique-key',
-  } only %}
-    {% block main %}
-      …
-    {% endblock %}
-  {% endembed %}
+  {# =============================================================== #}
+  {# Layout - Accordion Group
+  {# =============================================================== #}
+  {#
+    {% embed '_embeds/l-accordion-group' with {
+      heading: 'My Group Heading',
+      modifiers: [],
+      key: 'my-unique-key',
+      defaultOpen: false,
+    } only %}
+      {% block main %}
+        …
+      {% endblock %}
+    {% endembed %}
 #}
 
 {% set contentKey = key ~ '-content' %}
 
 {% set classes = craft.twig.modifiers('l-accordion-group', modifiers ?? []) %}
 
-<div class="l-accordion-group {{ classes }}" data-module-accordion="{{ key }}">
+<div
+  class="l-accordion-group {{ classes }}"
+  data-module-accordion="{{ key }}"
+  {% if defaultOpen ?? false %}
+    data-accordion-default-open="true"
+  {% endif %}
+>
   {# Heading #}
   <h4 class="l-accordion-group__heading">
     <button
