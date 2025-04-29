@@ -43,5 +43,5 @@
   window.addEventListener('touchstart', function() {
     document.getElementsByTagName('html')[0].classList.add('is-touch');
     window.isTouch = true;
-  });
+  }, { passive: true });
 </script>
