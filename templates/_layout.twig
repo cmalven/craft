@@ -55,7 +55,7 @@
   </span>
 
   {# Bug Tracking #}
-  {% if getenv('CRAFT_ENVIRONMENT') == 'staging' %}
+  {% if craft.app.env in ['dev', 'staging'] %}
     {# TODO: Add scripts for bug-tracking software #}
   {% endif %}
 </body>
