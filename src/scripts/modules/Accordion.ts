@@ -88,7 +88,7 @@ export default class extends Modu {
     this.defaultOpen = (this.getData('default-open') ?? false) === true;
 
     // Should other accordions be closed when this one is opened?
-    this.closeOthers = (this.getData('close-others') ?? 'false') === 'true';
+    this.closeOthers = (this.getData('close-others') ?? false) === true;
   }
 
   init = () => {
