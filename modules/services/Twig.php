@@ -123,9 +123,17 @@ class Twig extends Component
         }
 
         // Background Color
-        $blockColor = $block['color'] ?? null;
-        $isLightBg = $blockColor === null || $blockColor;
-        if (in_array($handle, []) || !$isLightBg) {
+        $blockColor = null;
+        try {
+            if (isset($block->color)) {
+                $blockColor = $block->color->value ?? null; // Background color from dropdown field
+            } elseif (isset($block['color'])) {
+                $blockColor = $block['color'] ?? null; // Background color set from Twig block
+            }
+        } catch (\Throwable $e) {
+            $blockColor = null;
+        }
+        if (in_array($handle, []) || $blockColor === 'dark') {
             array_push($classes, 'bg-dark');
         } else {
             array_push($classes, 'bg-light');
