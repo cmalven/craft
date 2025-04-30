@@ -39,7 +39,7 @@ Wrapper for dialog content
     @include fixed;
     pointer-events: none;
     overflow: clip;
-    z-index: $z-index-dialog;
+    z-index: var(--z-index-dialog);
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     min-height: env(safe-area-inset-bottom);
@@ -161,7 +161,7 @@ Wrapper for dialog content
     opacity: 1;
     transform: translateX(0);
     transition-delay: 0.3s;
-    z-index: $z-index-dialog;
+    z-index: var(--z-index-dialog);
   }
 }
 
