@@ -56,3 +56,21 @@ select,
   color: inherit;
   font-weight: normal;
 }
+
+// reCAPTCHA Badge
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+// No transitions with reduced motion
+@include reduced-motion {
+  * {
+    transition: none !important;
+    transition-delay: 0s !important;
+  }
+}
+
+// Hide custom elements until they are ready
+:not(:defined) {
+  visibility: hidden;
+}
