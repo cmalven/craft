@@ -2,6 +2,7 @@
 
 namespace modules\services;
 
+use craft\ckeditor\data\FieldData;
 use craft\elements\Entry;
 use yii\base\Component;
 use craft\elements\Asset;
@@ -141,6 +142,32 @@ class Twig extends Component
         }
 
         return $classes;
+    }
+
+    public function postContentBlocks(FieldData $field, array $blockData = [])
+    {
+        $blockGroups = [];
+
+        foreach ($field as $chunk) {
+            $block = [
+                'handle' =>
+                    $chunk->type === 'markup'
+                        ? 'post-markup'
+                        : $this->dasherize($chunk->entry->type->handle),
+                'block' =>
+                    $chunk->type === 'markup'
+                        ? array_merge(
+                            [
+                                'markup' => $chunk,
+                            ],
+                            $blockData
+                        )
+                        : $chunk->entry,
+            ];
+            array_push($blockGroups, $block);
+        }
+
+        return $blockGroups;
     }
 
     /**
