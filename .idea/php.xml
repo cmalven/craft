@@ -193,6 +193,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
       <path value="$PROJECT_DIR$/vendor/league/html-to-markdown" />
       <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php84" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

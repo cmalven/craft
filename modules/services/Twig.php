@@ -5,6 +5,7 @@ namespace modules\services;
 use craft\elements\Entry;
 use yii\base\Component;
 use craft\elements\Asset;
+use \Throwable;
 
 /**
  * Twig service
@@ -130,7 +131,7 @@ class Twig extends Component
             } elseif (isset($block['color'])) {
                 $blockColor = $block['color'] ?? null; // Background color set from Twig block
             }
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             $blockColor = null;
         }
         if (in_array($handle, []) || $blockColor === 'dark') {

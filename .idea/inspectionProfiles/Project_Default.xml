@@ -337,6 +337,7 @@
     <inspection_tool class="HibernateMappingDomInspection" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="HtmlMissingClosingTag" enabled="false" level="INFORMATION" enabled_by_default="false" />
     <inspection_tool class="HtmlRequiredAltAttribute" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlRequiredTitleElement" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="HtmlUnknownTag" enabled="false" level="WARNING" enabled_by_default="false">
       <option name="myValues">
         <value>
@@ -352,6 +353,7 @@
       </option>
       <option name="myCustomValuesEnabled" value="true" />
     </inspection_tool>
+    <inspection_tool class="HtmlUnknownTarget" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="HtmlWrongAttributeValue" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="HttpClientInappropriateProtocolUsageInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="HttpClientRunRequestNameInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
@@ -1134,7 +1136,11 @@
     <inspection_tool class="SortModifiers" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="SortedCollectionWithNonComparableKeys" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="SourceToSinkFlow" enabled="false" level="WARNING" enabled_by_default="false" />
-    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false" />
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
     <inspection_tool class="SpringAopErrorsInspection" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="SpringAopPointcutExpressionInspection" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="SpringAopWarningsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
