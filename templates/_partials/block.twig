@@ -31,16 +31,17 @@ which uses this internally.
 {% embed '_embeds/l-section' with {
   classes: "js-block-#{handle} " ~ (classes ?? ''),
   modifiers: [handle] | merge(craft.twig.blockClasses(handle, block, previousBlock ?? null, nextBlock ?? null)),
+  id: id ??? null,
 } %}
   {% block content %}
     {% include '_partials/blocks/' ~ handle ignore missing %}
 
-    {% if debug ?? false %}
+    {% if (craft.app.config.env == 'dev' and craft.app.config.general.devMode) or debug ?? false %}
       <div
         style="display: inline-block; left: 0; transform-origin: 0 0; transform: rotate(-90deg); position: absolute; z-index: 1;"
       >
         <p
-          style="font-family: 'Atlas Typewriter', monospace; font-size: 12px; line-height: 1; color: black; background-color: #eee; display: inline-block; position: relative; padding: 8px 12px 7px;">{{ handle | title | replace('-', ' ') }}</p>
+          style="font-family: 'Atlas Typewriter', monospace; font-size: 10px; line-height: 1; color: white; background-color: rgba(0, 0, 0, 0.45); backdrop-filter: blur(10px); display: inline-block; position: relative; padding: 8px 12px 7px;">{{ handle | title | replace('-', ' ') }}</p>
       </div>
     {% endif %}
   {% endblock %}

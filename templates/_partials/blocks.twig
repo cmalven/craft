@@ -41,7 +41,9 @@ containing an element/entry and the handle of a matrix field on that element/ent
           handle: block.type.handle,
           entry: entry ??? category ??? null,
           block: block,
-          id: field == 'pageContent' and idx == 0 ? 'first-content',
+          id: field == 'pageContent' and idx == 0
+            ? 'first-content'
+            : block.anchorId ??? null ? block.anchorId,
         }) %}
         {% set allBlocks = allBlocks | merge(matrixBlocks) %}
       {% endif %}
