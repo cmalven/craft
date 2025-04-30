@@ -17,6 +17,11 @@ A formatted block of code
   cursor: pointer;
   overflow-x: scroll;
 
+  &::selection {
+    color: oklch(from var(--color) calc(l * 0.4) c h);
+    background-color: oklch(from var(--color) l c h / 0.4);
+  }
+
   &:hover {
     box-shadow: 0 0 0 1px oklch(from var(--color) l c h / 0.7);
   }
