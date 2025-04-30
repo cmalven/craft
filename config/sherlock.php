@@ -41,7 +41,7 @@ return [
                 [
                     true,
                     'Expect-CT',
-                    'max-age=86400, report-uri="https://o199825.ingest.sentry.io/api/6688350/security/?sentry_key=768e9aaf789540c196b9840a5f12ece6"',
+                    'max-age=86400, report-uri="https://xxxxx.ingest.sentry.io/api/xxxxx/security/?sentry_key=xxxxxxxxxxxxxxxxxxxx"',
                 ],
             ],
         ],
@@ -49,40 +49,44 @@ return [
         // Enables a content security policy on the front-end of your site.
         // See https://content-security-policy.com/
         'contentSecurityPolicySettings' => [
-            'enabled' => false,
-            'enforce' => false,
+            'enabled' => true,
+            'enforce' => true,
             'header' => true,
             'directives' => [
                 [
                     true,
                     'report-uri',
-                    'https://xxxxx.ingest.sentry.io/api/xxxxx/security/?sentry_key=768e9aaf789540c196b9840a5f12ece6',
+                    'https://xxxxx.ingest.sentry.io/api/xxxxx/security/?sentry_key=xxxxxxxxxxxxxxxxxxxx',
                 ],
                 [true, 'default-src', "'self' https"],
                 [
                     true,
                     'script-src',
-                    "'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://unpkg.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.bugherd.com https://sidebar.bugherd.com",
+                    "'self' 'unsafe-inline' 'unsafe-eval' https://localhost:3111 https://*.marker.io https://www.googletagmanager.com https://unpkg.com https://www.google.com https://www.gstatic.com",
                 ],
                 [
                     true,
                     'style-src',
-                    "'self' 'unsafe-inline' https://fonts.googleapis.com",
+                    "'self' 'unsafe-inline' https://localhost:3111 https://unpkg.com https://fonts.googleapis.com",
                 ],
                 [true, 'worker-src', 'blob: '],
-                [true, 'frame-src', 'https://www.google.com'],
-                [true, 'media-src', 'https://xxxxx.cloudfront.net data: '],
+                [
+                    true,
+                    'frame-src',
+                    'https://www.google.com https://player.vimeo.com',
+                ],
+                [true, 'media-src', 'https://servd-xxxxxxxxx.b-cdn.net data: '],
                 [true, 'child-src', 'blob: '],
-                [true, 'font-src', "'self' https://fonts.gstatic.com data: "],
+                [true, 'font-src', "'self' https://localhost:3111  data: "],
                 [
                     true,
                     'img-src',
-                    "'self' https://my-site.imgix.net https://xxxxx.cloudfront.net https://maps.googleapis.com https://maps.gstatic.com data: ",
+                    "'self' https://localhost:3111 https://xxxxxxxxx.files.svdcdn.com https://xxxxxxxxx.transforms.svdcdn.com data: ",
                 ],
                 [
                     true,
                     'connect-src',
-                    "'self' https://*.ingest.sentry.io https://maps.googleapis.com https://www.google-analytics.com",
+                    "'self' wss://localhost:3111 https://*.ingest.sentry.io https://*.marker.io https://www.google-analytics.com data:",
                 ],
                 [true, 'manifest-src', "'self'"],
             ],
@@ -104,7 +108,8 @@ return [
         'monitor' => false,
 
         'contentSecurityPolicySettings' => [
-            'enabled' => false,
+            'enabled' => true,
+            'enforce' => true,
         ],
     ],
 ];
