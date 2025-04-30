@@ -48,19 +48,19 @@ const getEmmetMarkup = (filename, rootElement, emmetString) => {
   return markup;
 };
 
-const getDestinationForType = (name, type, extension) => {
+const getDestinationForType = (name, type, extension, prefix = '') => {
   const destinations = {
     'Twig Include': {
-      twig: `templates/_partials/${name}.twig`,
-      scss: `src/styles/objects/_${name}.scss`,
+      twig: `templates/_partials/${prefix}${name}.twig`,
+      scss: `src/styles/objects/_${prefix}${name}.scss`,
     },
     'Twig Embed': {
-      twig: `templates/_embeds/l-${name}.twig`,
-      scss: `src/styles/layout/_l-${name}.scss`,
+      twig: `templates/_embeds/l-${prefix}${name}.twig`,
+      scss: `src/styles/layout/_l-${prefix}${name}.scss`,
     },
     'Twig Block': {
-      twig: `templates/_partials/blocks/${name}.twig`,
-      scss: `src/styles/objects/_${name}.scss`,
+      twig: `templates/_partials/blocks/${prefix}${name}.twig`,
+      scss: `src/styles/objects/_${prefix}${name}.scss`,
     },
   };
 
