@@ -1,4 +1,4 @@
-dateModified: 1740606969
+dateModified: 1746031433
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -44,7 +44,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 6FV6MMKOYYAFUH5DRWX8J7F5
-    schemaVersion: 5.9.0
+    schemaVersion: 5.10.0
   ckeditor:
     edition: standard
     enabled: true
@@ -368,7 +368,7 @@ system:
   edition: pro
   live: true
   name: your-project-title
-  schemaVersion: 5.6.0.2
+  schemaVersion: 5.7.0.3
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
