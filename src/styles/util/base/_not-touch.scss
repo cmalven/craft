@@ -12,10 +12,13 @@ Apply styles only if we're not on a touch device
 
 @mixin not-touch-hover {
   @include not-touch {
-    &:hover,
-    &:focus {
+    &:hover {
       @content;
     }
+  }
+
+  &:focus {
+    @content;
   }
 }
 
