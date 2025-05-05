@@ -48,7 +48,7 @@ containing an element/entry and the handle of a matrix field on that element/ent
         {% set allBlocks = allBlocks | merge(matrixBlocks) %}
       {% endif %}
     {% endif %}
-  {% else %}
+  {% elseif group ??? null %}
     {# Manual Blocks #}
     {% set allBlocks = allBlocks | merge(group) %}
   {% endif %}
