@@ -4,9 +4,8 @@ Rich Text
 Styling for common HTML text elements
 */
 
-.rich-text {
+@mixin rich-text-inline-styles {
   // Body, Bold + Italic
-
   strong,
   b {
     font-weight: bold;
@@ -18,11 +17,15 @@ Styling for common HTML text elements
   }
 
   // Subscript / Superscript
-
   sup {
     font-variant-position: super;
     top: 0;
   }
+}
+
+.rich-text {
+  // Basic Inline Styles
+  @include rich-text-inline-styles;
 
   // Headings
 
