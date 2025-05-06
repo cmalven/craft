@@ -36,6 +36,7 @@ $h-reveal-delay-increment: 0.05 * $h-reveal-duration;
   transition-property: opacity, transform;
   opacity: 0;
   transform: map.get($directions, $direction);
+  transition-delay: var(--reveal-delay, 0s);
 }
 
 @mixin reveal {
