@@ -49,6 +49,12 @@ svg {
   height: auto;
 }
 
+// Text selection
+*::selection {
+  color: var(--theme-selection-text);
+  background-color: var(--theme-selection-bg);
+}
+
 button,
 select,
 ::file-selector-button {

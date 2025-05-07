@@ -12,6 +12,8 @@
   --theme-text-transparent: rgba(from var(--color-black) r g b / 0);
   --theme-placeholder-text: rgba(from var(--color-black) r g b / 0.4);
   --theme-rule: rgba(from var(--color-black) r g b / 0.1);
+  --theme-selection-text: oklch(from var(--color-white) calc(l * 110%) c h);
+  --theme-selection-bg: oklch(from var(--color-white) calc(l * 90%) c h);
   color: var(--theme-text);
 }
 
@@ -23,6 +25,8 @@
   --theme-text-transparent: rgba(from var(--color-white) r g b / 0);
   --theme-placeholder-text: rgba(from var(--color-white) r g b / 0.5);
   --theme-rule: rgba(from var(--color-white) r g b / 0.1);
+  --theme-selection-text: oklch(from var(--color-black) calc(l * 90%) c h);
+  --theme-selection-bg: oklch(from var(--color-black) calc(l * 110%) c h);
   color: var(--theme-text);
 }
 
