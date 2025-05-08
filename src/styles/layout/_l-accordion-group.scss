@@ -35,7 +35,6 @@ A combination of content used in an accordion.
   .l-accordion-group__heading-icon {
     @include expand-carat;
     --arrow-segment-width: 1.5rem;
-    --arrow-segment-thickness: 0.2rem;
   }
 
   .l-accordion-group__content {
