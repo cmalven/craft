@@ -5,17 +5,6 @@
 {% include '_partials/vite' ignore missing %}
 {% import '_macros/theme' as theme %}
 
-{# Eager Load Global #}
-{#
-{% do craft.app.elements.eagerLoadElements(
-  className(myGlobalHandle),
-  [myGlobalHandle],
-  [
-    'fieldHandle',
-  ]
-) %}
-#}
-
 <!DOCTYPE html>
 <html lang="en-US" class="{{ theme.classForEntry(entry ??? null) }} preload-transitions">
 <head>
