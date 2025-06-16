@@ -73,7 +73,7 @@ return [
                 [
                     true,
                     'frame-src',
-                    'https://www.google.com https://player.vimeo.com',
+                    'https://www.google.com https://player.vimeo.com https://app.marker.io',
                 ],
                 [true, 'media-src', 'https://servd-xxxxxxxxx.b-cdn.net data: '],
                 [true, 'child-src', 'blob: '],
