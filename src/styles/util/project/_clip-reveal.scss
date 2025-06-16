@@ -5,30 +5,28 @@ Reusable clip-path reveal animations.
 */
 
 @mixin clip-reveal($direction) {
-  will-change: transform, clip-path, opacity;
-
   @if $direction == 'right' {
     /* stylelint-disable-next-line number-max-precision */
-    clip-path: inset(0px 99.999999% 0px 0px);
-    transition: clip-path 0.8s ease(wipe);
+    clip-path: inset(0px 99.99999% 0px 0px);
+    transition: clip-path 1.2s ease(wipe);
   }
 
   @if $direction == 'left' {
     /* stylelint-disable-next-line number-max-precision */
-    clip-path: inset(0px 0px 0px 099.999999%);
-    transition: clip-path 0.8s ease(wipe);
+    clip-path: inset(0px 0px 0px 099.99999%);
+    transition: clip-path 1.2s ease(wipe);
   }
 
   @if $direction == 'down' {
     /* stylelint-disable-next-line number-max-precision */
-    clip-path: inset(0px 0px 99.999999% 0px);
-    transition: clip-path 0.8s ease(wipe);
+    clip-path: inset(0px 0px 99.99999% 0px);
+    transition: clip-path 1.2s ease(wipe);
   }
 
   @if $direction == 'up' {
     /* stylelint-disable-next-line number-max-precision */
-    clip-path: inset(99.999999% 0px 0px 0px);
-    transition: clip-path 0.8s ease(wipe);
+    clip-path: inset(99.99999% 0px 0px 0px);
+    transition: clip-path 1.2s ease(wipe);
   }
 }
 
