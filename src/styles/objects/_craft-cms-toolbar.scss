@@ -68,14 +68,18 @@ Custom toolbar visible to Craft CMS editors.
 }
 
 .craft-cms-toolbar__content-inner {
+  --craft-cms-toolbar-content-inner-gap: 20px;
   padding-left: 23px;
   display: flex;
-  gap: 20px;
+  gap: var(--craft-cms-toolbar-content-inner-gap);
   align-items: center;
 }
 
 .craft-cms-toolbar__badge {
-  background-color: rgba(255, 255, 255, 0.15);
+  --craft-cms-toolbar-badge-bg-color: #{rgba(white, 0.1)};
+  --craft-cms-toolbar-badge-color: currentcolor;
+  background-color: var(--craft-cms-toolbar-badge-bg-color);
+  color: var(--craft-cms-toolbar-badge-color);
   font-size: 0.9em;
   padding: 0.6em 0.9em;
   border-radius: 1.2em;
@@ -90,6 +94,11 @@ Custom toolbar visible to Craft CMS editors.
     position: relative;
     top: -1px;
   }
+
+  // Sibling badge
+  & + & {
+    margin-left: calc(-0.6 * var(--craft-cms-toolbar-content-inner-gap));
+  }
 }
 
 .craft-cms-toolbar__link {
@@ -103,4 +112,12 @@ Custom toolbar visible to Craft CMS editors.
   &:focus {
     text-decoration: underline;
   }
+}
+
+// ---------------------------------------------------------------
+// Badge Modifiers
+// ---------------------------------------------------------------
+
+.craft-cms-toolbar__badge--warning {
+  --craft-cms-toolbar-badge-bg-color: #8d7b45;
 }

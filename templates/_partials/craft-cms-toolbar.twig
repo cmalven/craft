@@ -34,6 +34,12 @@
 
         {# Details #}
         <p class="craft-cms-toolbar__badge">{{ elementSection }}{% if elementSection != elementTitle and 'Index' not in elementSection %} <span>&#9658;</span> {{ elementTitle | truncate(25, splitSingleWord=false) }}{% endif %}</p>
+
+        {# Dev Mode #}
+        {% set env = craft.app.config.env %}
+        {% if env not in ['production'] %}
+          <p class="craft-cms-toolbar__badge craft-cms-toolbar__badge--warning" title="The current environment is {{ env | title }}">{{ env | title }}</p>
+        {% endif %}
       </div>
     </div>
   </div>
