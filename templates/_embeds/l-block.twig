@@ -1,8 +1,8 @@
 {# =============================================================== #}
-{# Embed - Section
+{# Embed - Block
 {# =============================================================== #}
 {#
-    {% embed '_embeds/l-section' with {
+    {% embed '_embeds/l-block' with {
       classes: '',
       modifiers: ['max'],
       id: 'some-id'
@@ -13,16 +13,16 @@
     {% endembed %}
 #}
 
-{% set modifierClasses = craft.twig.modifiers('l-section', modifiers ?? []) %}
+{% set modifierClasses = craft.twig.modifiers('l-block', modifiers ?? []) %}
 
-<section class="l-section  {{ modifierClasses }} {{ classes ?? '' }}">
+<section class="l-block  {{ modifierClasses }} {{ classes ?? '' }}">
   {% if id ?? null %}
     {% include '_partials/anchor' with {
       id: id,
     } only %}
   {% endif %}
 
-  <div class="l-section__inner">
+  <div class="l-block__inner">
     {% block content %}{% endblock %}
   </div>
 </section>

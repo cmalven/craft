@@ -28,7 +28,7 @@ which uses this internally.
   {% set nextBlock = nextBlock | merge({ handle: craft.twig.dasherize(nextBlock.handle) }) %}
 {% endif %}
 
-{% embed '_embeds/l-section' with {
+{% embed '_embeds/l-block' with {
   classes: "js-block-#{handle} " ~ (classes ?? ''),
   modifiers: [handle] | merge(craft.twig.blockClasses(handle, block, previousBlock ?? null, nextBlock ?? null)),
   id: id ??? null,

@@ -1,54 +1,54 @@
 /*
-Layout - Section
+Layout - Block
 
 Reusable content container, primarily responsible for managing common
-spacing and relationships between various vertical sections of the site.
+spacing and relationships between various vertical blocks of the site.
 */
 
-@mixin l-section-max {
+@mixin l-block-max {
   @include outer-padding;
 
-  .l-section__inner {
+  .l-block__inner {
     @include max-width;
   }
 }
 
 @mixin space-top {
-  padding-top: var(--size-section-vertical);
+  padding-top: var(--size-block-vertical);
 }
 
 @mixin space-bottom {
-  padding-bottom: var(--size-section-vertical);
+  padding-bottom: var(--size-block-vertical);
 }
 
-.l-section {
+.l-block {
   position: relative;
 }
 
-.l-section__inner {
+.l-block__inner {
 }
 
 // ---------------------------------------------------------------
 // Modifier - Max Width
 // ---------------------------------------------------------------
 
-.l-section--max {
-  @include l-section-max;
+.l-block--max {
+  @include l-block-max;
 }
 
 // ---------------------------------------------------------------
 // Modifier - Padding
 // ---------------------------------------------------------------
 
-.l-section--space-top {
+.l-block--space-top {
   @include space-top;
 }
 
-.l-section--space-bottom {
+.l-block--space-bottom {
   @include space-bottom;
 }
 
-.l-section--space-vert {
+.l-block--space-vert {
   @include space-top;
   @include space-bottom;
 }
@@ -68,21 +68,21 @@ spacing and relationships between various vertical sections of the site.
   padding-bottom: var(--size-none);
 }
 
-.l-section--bleed-top:not(.l-section--bleed-top-mobile) {
+.l-block--bleed-top:not(.l-block--bleed-top-mobile) {
   @include bleed-top;
 }
 
-.l-section--bleed-bottom:not(.l-section--bleed-bottom-mobile) {
+.l-block--bleed-bottom:not(.l-block--bleed-bottom-mobile) {
   @include bleed-bottom;
 }
 
-.l-section--bleed-top-mobile {
+.l-block--bleed-top-mobile {
   @include media('<medium') {
     @include bleed-top;
   }
 }
 
-.l-section--bleed-bottom-mobile {
+.l-block--bleed-bottom-mobile {
   @include media('<medium') {
     @include bleed-bottom;
   }
@@ -92,7 +92,7 @@ spacing and relationships between various vertical sections of the site.
 // Modifier - Overflow Hidden
 // ---------------------------------------------------------------
 
-.l-section--overflow-hidden {
+.l-block--overflow-hidden {
   overflow-x: clip;
 }
 
@@ -100,12 +100,12 @@ spacing and relationships between various vertical sections of the site.
 // Background Color
 // ---------------------------------------------------------------
 
-.l-section--bg-light {
+.l-block--bg-light {
   @include theme-light;
   background-color: var(--theme-bg);
 }
 
-.l-section--bg-dark {
+.l-block--bg-dark {
   @include theme-dark;
   background-color: var(--theme-bg);
 }
@@ -119,18 +119,18 @@ $bg-colors: light, dark;
 @each $bg-color in $bg-colors {
   $color: '' + $bg-color;
   @include media('<medium') {
-    .l-section--bg-#{$color}:not(.l-section--bleed-bottom)
-      + .l-section--bg-#{$color}:not(.l-section--bleed-top):not(
-        .l-section--bleed--top-mobile
+    .l-block--bg-#{$color}:not(.l-block--bleed-bottom)
+      + .l-block--bg-#{$color}:not(.l-block--bleed-top):not(
+        .l-block--bleed--top-mobile
       ) {
-      margin-top: calc(-1 * var(--size-section-vertical));
+      margin-top: calc(-1 * var(--size-block-vertical));
     }
   }
 
   @include media('>=medium') {
-    .l-section--bg-#{$color}:not(.l-section--bleed-bottom)
-      + .l-section--bg-#{$color}:not(.l-section--bleed-top) {
-      margin-top: calc(-1 * var(--size-section-vertical));
+    .l-block--bg-#{$color}:not(.l-block--bleed-bottom)
+      + .l-block--bg-#{$color}:not(.l-block--bleed-top) {
+      margin-top: calc(-1 * var(--size-block-vertical));
     }
   }
 }
@@ -139,18 +139,18 @@ $bg-colors: light, dark;
 // Borders
 // ---------------------------------------------------------------
 
-.l-section--border-bottom.l-section--space-bottom {
+.l-block--border-bottom.l-block--space-bottom {
   padding-bottom: var(--size-none);
 
-  .l-section__inner {
+  .l-block__inner {
     @include space-bottom;
   }
 }
 
-.l-section--border-top {
+.l-block--border-top {
   border-top: 1px solid var(--theme-rule);
 
-  &.l-section--space-top {
+  &.l-block--space-top {
     @include space-top;
   }
 }
@@ -159,6 +159,6 @@ $bg-colors: light, dark;
 // Unique styles
 // ---------------------------------------------------------------
 
-// .l-section--foo + .l-section--bar {
+// .l-block--foo + .l-block--bar {
 
 // }
