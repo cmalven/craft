@@ -5,9 +5,9 @@ Overlay for working with type in development.
 */
 
 /* stylelint-disable-next-line selector-type-no-unknown */
-sl-drawer {
+wa-drawer {
   --size: 80vh;
-  --header-spacing: 3rem;
+  --spacing: 3rem;
 
   &::part(title) {
     @include font-stack-styles(system);
