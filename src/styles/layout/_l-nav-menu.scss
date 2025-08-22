@@ -1,3 +1,5 @@
+@use '~/common' as *;
+
 /*
 Layout - Nav Menu
 
@@ -63,7 +65,7 @@ A reusable navigation menu.
   .l-nav-menu__items {
     transition:
       opacity 0.2s,
-      transform 0.6s ease(out-expo);
+      transform 0.6s var(--ease-out-expo);
     will-change: transform, opacity;
   }
 }

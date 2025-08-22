@@ -36,7 +36,7 @@ Helpers for creating scroll animations
   $timeline-name: reveal-timeline,
   $animation-name: my-animation,
   $animation-range: entry-crossing 0% entry-crossing 100%,
-  $animation-ease: ease(out-quad)
+  $animation-ease: var(--ease-out-quad)
 ) {
   @supports (view-timeline-axis: block) {
     $prefers-reduced-motion: no-preference;

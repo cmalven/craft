@@ -3,6 +3,8 @@ to: <%= h.getDestinationForType(h.changeCase.paramCase(name), type, 'scss') %>
 ---
 <%_ const title = h.changeCase.title(name) _%>
 <%_ const slug = h.formatSlug(h.changeCase.paramCase(name), type) _%>
+@use '~/common' as *;
+
 /*
 <%= h.getTitlePrefixForType(type) %><%= title %>
 <%_ if (description.length) { %>

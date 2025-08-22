@@ -1,3 +1,5 @@
+@use '~/common' as *;
+
 /*
 Input Radio
 
@@ -6,7 +8,7 @@ A generic radio input.
 
 .input-selectable {
   --input-size: 2rem;
-  --transition: 0.6s #{ease(out-expo)};
+  --transition: 0.6s var(--ease-out-expo);
 }
 
 .input-selectable__label {

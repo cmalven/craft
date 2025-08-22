@@ -22,6 +22,11 @@ export default defineConfig(({ command, mode }) => {
       },
       https: true,
     },
+    resolve: {
+      alias: {
+        '~': '/src/styles',
+      },
+    },
     build: {
       emptyOutDir: true,
       manifest: true,
@@ -34,8 +39,6 @@ export default defineConfig(({ command, mode }) => {
       preprocessorOptions: {
         scss: {
           api: 'modern',
-          quietDeps: true,
-          silenceDeprecations: ['import', 'mixed-decls'],
         },
       },
     },

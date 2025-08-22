@@ -1,3 +1,7 @@
+@use '../base/reset-input' as *;
+@use '../base/placeholder-color' as *;
+@use '../../common/media' as *;
+
 /*
 Form Common
 
@@ -19,7 +23,7 @@ Common restyling for form elements
   height: 4.2rem;
   padding: 0.2rem 1rem;
   width: 100%;
-  transition: 0.5s ease(out-expo);
+  transition: 0.5s var(--ease-out-expo);
   transition-property: border-color;
   will-change: border-color;
   @include placeholder-color(var(--theme-placeholder-text));

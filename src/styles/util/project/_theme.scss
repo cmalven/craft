@@ -29,13 +29,3 @@
   --theme-selection-bg: oklch(from var(--color-black) calc(l * 110%) c h);
   color: var(--theme-text);
 }
-
-// Helpers
-
-.h-theme-light {
-  @include theme-light;
-}
-
-.h-theme-dark {
-  @include theme-dark;
-}

@@ -1,3 +1,5 @@
+@use '~/common' as *;
+
 /*
 Image
 
@@ -50,7 +52,7 @@ class when the image is loaded.
 .js .image--fade {
   .image__img,
   img {
-    transition: 2s ease(out-expo);
+    transition: 2s var(--ease-out-expo);
     transition-property: opacity;
     will-change: opacity;
     opacity: 0.001;
@@ -112,7 +114,7 @@ class when the image is loaded.
   .image__inner,
   .image__img,
   img {
-    transition: 2s ease(in-out-quint);
+    transition: 2s var(--ease-wipe);
     transition-property: transform, opacity;
     will-change: transform, opacity;
   }

@@ -5,7 +5,7 @@ Adds common link styling
 */
 
 @mixin text-link {
-  transition: $transition-hover-color;
+  transition: var(--transition-hover-color);
   transition-property: text-decoration-color, opacity, color;
   text-decoration: underline;
   text-underline-offset: 0.4em;

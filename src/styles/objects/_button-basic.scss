@@ -1,3 +1,5 @@
+@use '~/common' as *;
+
 /*
 Button - Basic
 
@@ -5,7 +7,7 @@ A flexible, reusable button.
 */
 
 .button-basic {
-  --transition: 0.6s #{ease(out-expo)};
+  --transition: 0.6s var(--ease-out-expo);
   position: relative;
   display: inline-block;
 }

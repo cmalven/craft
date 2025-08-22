@@ -1,0 +1,45 @@
+@use 'sass:map';
+
+/*
+Reveal
+
+For creating element reveals.
+*/
+
+$h-reveal-duration: 1.5s;
+$h-reveal-offset: 0.8rem;
+$h-reveal-delay-increment: 0.05 * $h-reveal-duration;
+
+@function reveal-delay($idx) {
+  @return $idx * $h-reveal-delay-increment;
+}
+
+@mixin reveal-delay-cols($num) {
+  @for $idx from 1 through $num {
+    .js &:nth-child(#{$num}n + #{$idx}) {
+      transition-delay: reveal-delay($idx);
+    }
+  }
+}
+
+@mixin reveal-hidden($direction) {
+  $directions: (
+    'fade': translateY(0),
+    'up': translateY($h-reveal-offset),
+    'up-less': translateY(1rem),
+    'down': translateY(-$h-reveal-offset),
+    'left': translateX($h-reveal-offset * 2),
+    'right': translateX(-$h-reveal-offset),
+    'scale': scale(0.9),
+  );
+  transition: $h-reveal-duration var(--ease-out-quint);
+  transition-property: opacity, transform;
+  opacity: 0;
+  transform: map.get($directions, $direction);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+@mixin reveal {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}

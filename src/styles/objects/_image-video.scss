@@ -1,3 +1,5 @@
+@use '~/common' as *;
+
 /*
 Image Video
 
@@ -34,7 +36,7 @@ Either an image or a video asset.
 .image-video--fade {
   .image-video__inner,
   .image-video__innermost {
-    transition: 2s ease(out-expo);
+    transition: 2s var(--ease-out-expo);
 
     .js & {
       opacity: 0.001;
@@ -58,7 +60,7 @@ Either an image or a video asset.
 .image-video--wipe {
   .image-video__inner,
   .image-video__innermost {
-    transition: transform 1.5s ease(out-expo);
+    transition: transform 1.5s var(--ease-out-expo);
     will-change: transform;
   }
 

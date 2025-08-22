@@ -1,0 +1,6 @@
+@use './variables' as vars;
+
+// Media Queries
+@forward 'include-media/dist/include-media' show media with (
+  $breakpoints: vars.$breakpoints
+);

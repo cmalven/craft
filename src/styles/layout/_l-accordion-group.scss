@@ -1,3 +1,5 @@
+@use '~/common' as *;
+
 /*
 Layout - Accordion Group
 
@@ -38,7 +40,7 @@ A combination of content used in an accordion.
   }
 
   .l-accordion-group__content {
-    transition: max-height 0.5s ease(out-expo);
+    transition: max-height 0.5s var(--ease-out-expo);
     overflow: clip;
   }
 

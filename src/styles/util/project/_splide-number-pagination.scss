@@ -1,3 +1,6 @@
+@use '../base/reset-input' as *;
+@use '../base/not-touch' as *;
+
 /*
 Splide Number Pagination
 
@@ -20,7 +23,7 @@ Common pagination style for Splide sliders
     }
 
     @include not-touch {
-      transition: color $transition-hover-color;
+      transition: color var(--transition-hover-color);
       cursor: pointer;
 
       &:hover,

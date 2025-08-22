@@ -1,3 +1,5 @@
+@use '~/common' as *;
+
 /*
 Layout - Dialog
 
@@ -11,7 +13,7 @@ Wrapper for dialog content
     flex: 1 1 auto;
 
     .js & {
-      transition: var(--transition-duration) ease(out-expo);
+      transition: var(--transition-duration) var(--ease-out-expo);
     }
   }
 
@@ -46,7 +48,7 @@ Wrapper for dialog content
     opacity: 0;
     display: none;
     transition-duration: var(--transition-duration);
-    transition-timing-function: ease(out-expo);
+    transition-timing-function: var(--ease-out-expo);
     transition-property: opacity, transform, display;
     transition-behavior: allow-discrete;
 
@@ -73,7 +75,7 @@ Wrapper for dialog content
 }
 
 .l-dialog__close-overlay {
-  transition: opacity var(--transition-duration) ease(out-expo);
+  transition: opacity var(--transition-duration) var(--ease-out-expo);
   background-color: black;
   opacity: 0;
 
@@ -96,7 +98,7 @@ Wrapper for dialog content
   right: var(--size-outer);
   position: absolute;
   pointer-events: auto;
-  transition: 0.8s ease(out-expo);
+  transition: 0.8s var(--ease-out-expo);
   transition-property: transform, opacity;
   transition-delay: 0s;
 
@@ -105,7 +107,7 @@ Wrapper for dialog content
 
     @include reset-input;
     cursor: pointer;
-    transition: opacity $transition-hover-color;
+    transition: opacity var(--transition-hover-color);
     width: var(--size);
     height: var(--size);
     display: flex;

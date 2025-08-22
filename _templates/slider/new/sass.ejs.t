@@ -3,6 +3,8 @@ to: <%= h.getDestinationForType(h.changeCase.paramCase(name), 'Twig Include', 's
 ---
 <%_ const title = h.changeCase.title(name) _%>
 <%_ const slug = 'slider-' + h.formatSlug(h.changeCase.paramCase(name), 'Twig Include') _%>
+@use '~/common' as *;
+
 /*
 Slider - <%= h.getTitlePrefixForType('Twig Include') %><%= title %>
 <%_ if (description.length) { %>

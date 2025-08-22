@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+// Sass Toolkit
+@forward '@malven/sass-toolkit' with (
+  $-breakpoints: $breakpoints,
+  $-font-stacks: $font-stacks,
+  $-type-styles: $type-styles,
+  $-sizes: $sizes
+);

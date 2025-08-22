@@ -1,3 +1,5 @@
+@use '~/common' as *;
+
 /*
 Social Icon
 
@@ -8,7 +10,7 @@ Social media icon link
   display: block;
   width: 2.6rem;
   height: 2.6rem;
-  transition: opacity $transition-hover-color;
+  transition: opacity var(--transition-hover-color);
 }
 
 .social-icon__inner {

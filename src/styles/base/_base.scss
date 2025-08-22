@@ -1,3 +1,5 @@
+@use '../common' as *;
+
 // ===============================================================
 // Base Styles
 // ===============================================================
@@ -5,6 +7,11 @@
 /*
   General styling to provide a clean, solid base
 */
+
+// Toolkit Properties + Helpers
+@include output-size-custom-properties;
+@include output-type-helpers;
+@include output-size-helpers;
 
 :root {
   // Top-level CSS custom properties
@@ -79,4 +86,12 @@ select,
 // Hide custom elements until they are ready
 :not(:defined) {
   visibility: hidden;
+}
+
+h1 {
+  transition: color var(--transition-hover-color);
+
+  &:hover {
+    color: red;
+  }
 }

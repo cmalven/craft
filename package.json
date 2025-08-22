@@ -1,7 +1,7 @@
 {
   "name": "your-project-slug",
   "description": "your-project-description",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/cmalven/your-project-slug"
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@eslint/js": "^9.30.1",
     "@malven/gulp-tasks": "^2.2.0",
-    "@malven/sass-toolkit": "^7.0.0",
+    "@malven/sass-toolkit": "8.0.0-beta.1",
     "@malven/stylelint-config": "^3.0.0",
     "@prettier/plugin-php": "^0.22.4",
     "@types/body-scroll-lock": "^3.1.2",
@@ -45,7 +45,7 @@
     "lint-staged": "^15.5.1",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.6.2",
-    "sass": "^1.89.2",
+    "sass-embedded": "^1.90.0",
     "stylelint": "^16.21.1",
     "stylelint-scss": "^6.12.1",
     "tsc-files": "^1.1.4",
