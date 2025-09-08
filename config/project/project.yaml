@@ -1,4 +1,4 @@
-dateModified: 1746031433
+dateModified: 1756756672
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -49,10 +49,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
-  cp-field-inspect:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   craft-ray:
     edition: standard
     enabled: true

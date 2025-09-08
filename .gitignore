@@ -1,4 +1,4 @@
-# Craft 3
+# Craft CMS
 # ---------------------------
 /templates/_svg/**/*
 /templates/_partials/vite.twig

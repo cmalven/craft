@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "9693b9454b3f77dee95272bfd6a7ab39",
+  "content-hash": "f75ded661bde512b93649d8e5d2e88e8",
   "packages": [
     {
       "name": "amphp/amp",
@@ -4038,57 +4038,6 @@
         "jsonld"
       ],
       "time": "2022-09-29T08:45:17+00:00"
-    },
-    {
-      "name": "mmikkel/cp-field-inspect",
-      "version": "2.0.4",
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/ac990c3c3102880649136ddc543781b36b296833",
-        "reference": "ac990c3c3102880649136ddc543781b36b296833",
-        "shasum": ""
-      },
-      "require": {
-        "craftcms/cms": "^5.0.0",
-        "php": "^8.2"
-      },
-      "type": "craft-plugin",
-      "extra": {
-        "name": "CP Field Inspect",
-        "handle": "cp-field-inspect",
-        "schemaVersion": "1.0.0",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/mmikkel/CpFieldInspect-Craft/master/CHANGELOG.md",
-        "class": "mmikkel\\cpfieldinspect\\CpFieldInspect"
-      },
-      "autoload": {
-        "psr-4": {
-          "mmikkel\\cpfieldinspect\\": "src/"
-        }
-      },
-      "license": [
-        "MIT"
-      ],
-      "authors": [
-        {
-          "name": "Mats Mikkel Rummelhoff",
-          "homepage": "https://vaersaagod.no"
-        }
-      ],
-      "description": "Inspect field handles and easily edit field and element source settings",
-      "keywords": [
-        "cms",
-        "cp field inspect",
-        "craft",
-        "craft-plugin",
-        "craftcms"
-      ],
-      "support": {
-        "docs": "https://github.com/mmikkel/CpFieldInspect-Craft/blob/master/README.md",
-        "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues"
-      },
-      "time": "2025-01-26T11:01:13+00:00"
     },
     {
       "name": "moneyphp/money",

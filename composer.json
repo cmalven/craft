@@ -3,7 +3,6 @@
     "craftcms/aws-s3": "2.2.2",
     "craftcms/ckeditor": "4.7.0",
     "craftcms/cms": "5.7.4",
-    "mmikkel/cp-field-inspect": "2.0.4",
     "nystudio107/craft-autocomplete": "^1.10",
     "nystudio107/craft-seomatic": "5.1.11",
     "putyourlightson/craft-blitz": "5.10.5",

@@ -143,7 +143,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-science/textrank" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nystudio107/craft-autocomplete" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/mmikkel/cp-field-inspect" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/firebase/php-jwt" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nystudio107/craft-code-editor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nystudio107/craft-seomatic" />

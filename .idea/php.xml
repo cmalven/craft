@@ -137,7 +137,6 @@
       <path value="$PROJECT_DIR$/vendor/php-science/textrank" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-autocomplete" />
-      <path value="$PROJECT_DIR$/vendor/mmikkel/cp-field-inspect" />
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-code-editor" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-seomatic" />
