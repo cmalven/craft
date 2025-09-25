@@ -87,11 +87,3 @@ select,
 :not(:defined) {
   visibility: hidden;
 }
-
-h1 {
-  transition: color var(--transition-hover-color);
-
-  &:hover {
-    color: red;
-  }
-}
