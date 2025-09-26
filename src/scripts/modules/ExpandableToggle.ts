@@ -30,9 +30,8 @@ export default class extends Modu {
     // Add event listener
     this.buttonEl.addEventListener('click', this.onClick);
 
-    // Set initial state when modules are ready
+    // Ensure all ExpandableContent modules are ready before setting initial state
     this.app.modulesReady?.then(() => {
-      // Set initial state
       this.toggle(this.defaultOpen);
     });
   };
