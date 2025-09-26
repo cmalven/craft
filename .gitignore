@@ -40,3 +40,9 @@ http-client.private.env.json
 # Compiled Files
 # ---------------------------
 /dist/
+
+# AI Context
+# ---------------------------
+CLAUDE.md
+
+
