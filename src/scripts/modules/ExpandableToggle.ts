@@ -27,11 +27,14 @@ export default class extends Modu {
     // Don't prevent buttons from being clicked
     this.el.removeAttribute('aria-disabled');
 
-    // Set initial state to close
-    this.toggle(this.defaultOpen);
-
     // Add event listener
     this.buttonEl.addEventListener('click', this.onClick);
+
+    // Set initial state when modules are ready
+    this.app.modulesReady?.then(() => {
+      // Set initial state
+      this.toggle(this.defaultOpen);
+    });
   };
 
   onClick = (_evt: MouseEvent) => {
