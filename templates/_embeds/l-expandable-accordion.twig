@@ -1,0 +1,44 @@
+  {# =============================================================== #}
+  {# Layout - Expandable Accordion
+  {# =============================================================== #}
+  {#
+    {% embed '_embeds/l-expandable-accordion' with {
+      heading: 'My Group Heading',
+      modifiers: [],
+      key: 'my-unique-key',
+      defaultOpen: false,
+      closeOthers: false,
+    } only %}
+      {% block main %}
+        …
+      {% endblock %}
+    {% endembed %}
+#}
+
+{% set content %}
+  {% block main %}{% endblock %}
+{% endset %}
+
+{# Toggle #}
+{% embed '_embeds/l-expandable-toggle' with {
+  key: key,
+  modifiers: modifiers ?? [],
+  defaultOpen: defaultOpen ?? false,
+  closeOthers: closeOthers ?? false,
+} %}
+  {% block content %}
+    {{ heading }}
+  {% endblock %}
+{% endembed %}
+{# Heading #}
+
+{# Content #}
+{% embed '_embeds/l-expandable-content' with {
+  key: key,
+  isCollapsible: true,
+  modifiers: modifiers ?? [],
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,40 @@
+{# =============================================================== #}
+{# Layout - Expandable Content
+{# =============================================================== #}
+{#
+  {% embed '_embeds/l-expandable-content' with {
+    key: 'my-unique-key',
+    isCollapsible: false,
+    modifiers: [],
+  } only %}
+    {% block content %}
+      …
+    {% endblock %}
+  {% endembed %}
+#}
+
+{% set modifiers = modifiers ?? [] %}
+
+{# Collapsible #}
+{% set isCollapsible = isCollapsible ?? false %}
+
+{% if isCollapsible ?? false %}
+  {% set modifiers = modifiers | push('collapsible') %}
+{% endif %}
+
+{% set classes = craft.twig.modifiers('l-expandable-content', modifiers) %}
+
+<div
+  class="l-expandable-content {{ classes }}"
+  id="{{ key }}"
+  role="region"
+  aria-labelledby="{{ key }}"
+  data-module-expandable-content="{{ key }}"
+  data-expandable-content-is-collapsible="{{ isCollapsible ? 'true' : 'false' }}"
+>
+  <div class="l-expandable-content__inner" data-expandable-content="inner">
+    <div class="l-expandable-content__innermost">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+</div>

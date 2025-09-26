@@ -1,0 +1,31 @@
+@use '~/common' as *;
+
+/*
+Layout - Expandable Toggle
+
+Toggles expandable content.
+*/
+
+.l-expandable-toggle {
+  @include reset-input;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  padding-right: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.l-expandable-toggle__text {
+}
+
+.l-expandable-toggle__icon {
+  @include expand-carat;
+  --arrow-segment-width: 1.5rem;
+}
+
+.l-expandable-toggle[aria-expanded='true'] {
+  .l-expandable-toggle__icon {
+    @include expand-carat-expanded;
+  }
+}

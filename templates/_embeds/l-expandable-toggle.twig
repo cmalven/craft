@@ -1,0 +1,41 @@
+{# =============================================================== #}
+{# Layout - Expandable Toggle
+{# =============================================================== #}
+{#
+  {% embed '_embeds/l-expandable-toggle' with {
+    key: 'my-unique-key',
+    modifiers: [],
+    defaultOpen: false,
+    closeOthers: false,
+    attr: {},
+  } only %}
+    {% block content %}
+      …
+    {% endblock %}
+  {% endembed %}
+#}
+
+{% set classes = craft.twig.modifiers('l-expandable-toggle', modifiers ?? []) %}
+
+<button
+  class="l-expandable-toggle {{ classes }}"
+  data-module-expandable-toggle="{{ key }}"
+  type="button"
+  aria-controls="{{ key }}"
+  id="{{ key }}"
+  {{ attr(attr ?? {}) }}
+  {% if defaultOpen ?? false %}
+    data-expandable-toggle-default-open="true"
+  {% endif %}
+  {% if closeOthers ?? false %}
+    data-expandable-toggle-close-others="true"
+  {% endif %}
+>
+  {# Text #}
+  <h4 class="l-expandable-toggle__text">
+    {% block content %}{% endblock %}
+  </h4>
+
+  {# Icon #}
+  <span class="l-expandable-toggle__icon"></span>
+</button>

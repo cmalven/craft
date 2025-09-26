@@ -1,0 +1,41 @@
+@use '~/common' as *;
+
+/*
+Layout - Expandable Content
+
+Content revealed by an expandable toggle.
+*/
+
+.l-expandable-content {
+  transition: max-height 0.5s var(--ease-out-expo);
+  overflow: clip;
+}
+
+.l-expandable-content__inner {
+  transition: opacity 0.8s var(--ease-out-expo);
+}
+
+.l-expandable-content__innermost {
+}
+
+// ---------------------------------------------------------------
+// Hidden
+// ---------------------------------------------------------------
+
+.l-expandable-content:not([aria-hidden='false']) {
+  pointer-events: none;
+
+  .l-expandable-content__inner {
+    opacity: 0;
+  }
+}
+
+// ---------------------------------------------------------------
+// Modifier - Collapsible
+// ---------------------------------------------------------------
+
+.l-expandable-content--collapsible {
+  &:not([aria-hidden='false']) {
+    max-height: 0 !important;
+  }
+}
