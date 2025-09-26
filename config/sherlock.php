@@ -75,13 +75,17 @@ return [
                     'frame-src',
                     'https://www.google.com https://player.vimeo.com https://app.marker.io',
                 ],
-                [true, 'media-src', 'https://servd-xxxxxxxxx.b-cdn.net data: '],
+                [
+                    true,
+                    'media-src',
+                    'https://servd-your-project-slug.b-cdn.net data: ',
+                ],
                 [true, 'child-src', 'blob: '],
                 [true, 'font-src', "'self' https://localhost:3111  data: "],
                 [
                     true,
                     'img-src',
-                    "'self' https://localhost:3111 https://xxxxxxxxx.files.svdcdn.com https://xxxxxxxxx.transforms.svdcdn.com data: ",
+                    "'self' https://localhost:3111 https://your-project-slug.files.svdcdn.com https://your-project-slug.transforms.svdcdn.com data: ",
                 ],
                 [
                     true,
