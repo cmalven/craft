@@ -45,4 +45,4 @@ Run `ddev start` and `npm start` to start the development server. Then you can a
 
 ## Build for deployment
 
-Run `npm run build --omit=dev --ignore-scripts` to build prepare all assets for deployment.
+Run `npm run build` to build prepare all assets for deployment.
