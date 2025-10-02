@@ -1,4 +1,51 @@
-dateModified: 1759421893
+dateModified: 1759422105
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      heading: Pages
+      type: heading
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'single:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+      tableAttributes:
+        - status
+        - postDate
+        - dateUpdated
+        - uri
+      type: native
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -73,6 +120,7 @@ plugins:
   navigation:
     edition: standard
     enabled: true
+    licenseKey: 4TH2AWI8M809O4SJIJAE3G0O
     schemaVersion: 2.1.1
   seomatic:
     edition: standard

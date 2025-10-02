@@ -1,3 +1,4 @@
+color: null
 fieldLayouts:
   652a0fc1-f149-4771-b305-cd4f90ce03a7:
     tabs:
@@ -5,42 +6,56 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
+            dateAdded: '2025-10-02T16:21:45+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            inputType: null
+            fieldUid: 223e7dac-c6de-46ba-9144-0ee4c62734c4 # Page Content
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: false
-            size: null
-            step: null
+            providesThumbs: false
+            required: false
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 5b7d983d-386c-444f-9033-dbf25d5576d2
+            type: craft\fieldlayoutelements\CustomField
+            uid: a83fa2a9-1c8c-4b95-8b37-36cf4ad27b16
             userCondition: null
             warning: null
             width: 100
         name: Content
         uid: 27cdd8b2-1cf5-4ffb-ac52-299cefb3ca42
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-10-02T16:21:45+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 380a83b9-344d-415b-a3f4-8b389ef61717 # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6bfb1c98-0477-4329-a739-b45e1b1a144e
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: a5512dab-6a42-4245-a09d-50648beba000
+        userCondition: null
 handle: homepage
 hasTitleField: false
+icon: null
 name: Homepage
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
