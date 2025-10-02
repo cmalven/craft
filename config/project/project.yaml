@@ -1,4 +1,4 @@
-dateModified: 1756756672
+dateModified: 1759421893
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -43,7 +43,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
-    licenseKey: 6FV6MMKOYYAFUH5DRWX8J7F5
+    licenseKey: HGVNS2HNHYNTF992JUBYGSEL
     schemaVersion: 5.10.0
   ckeditor:
     edition: standard
@@ -63,17 +63,21 @@ plugins:
   hyper:
     edition: standard
     enabled: true
-    licenseKey: GQEZUFKNOZRKG5K6I1I9WLBT
+    licenseKey: 0S7BAJ9N082V9A5ZY8B2PCKU
     schemaVersion: 1.0.0
   imager-x:
     edition: lite
     enabled: true
-    licenseKey: VUS96EVKZZ3XXTQWX1W8WDYZ
+    licenseKey: P2W66U20QF34WYF2Y3OWGYGM
     schemaVersion: 4.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.1
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: LZI36NJYZALCPQOYAG2L0YDI
+    licenseKey: 3N7V5B8W827NHW54ZF1MOWVI
     schemaVersion: 3.0.12
   sherlock:
     edition: lite

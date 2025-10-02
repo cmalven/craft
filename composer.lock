@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "f75ded661bde512b93649d8e5d2e88e8",
+  "content-hash": "90a2da0fddc85263b327760de5a73e6d",
   "packages": [
     {
       "name": "amphp/amp",
@@ -8585,16 +8585,16 @@
     },
     {
       "name": "verbb/base",
-      "version": "3.0.8",
+      "version": "3.0.9",
       "source": {
         "type": "git",
         "url": "https://github.com/verbb/verbb-base.git",
-        "reference": "a92deca1ae8443479b8b01d78bd0fe3b4375b722"
+        "reference": "c731693efdd65c4d7015e98c62631b79422bcd8a"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/verbb/verbb-base/zipball/a92deca1ae8443479b8b01d78bd0fe3b4375b722",
-        "reference": "a92deca1ae8443479b8b01d78bd0fe3b4375b722",
+        "url": "https://api.github.com/repos/verbb/verbb-base/zipball/c731693efdd65c4d7015e98c62631b79422bcd8a",
+        "reference": "c731693efdd65c4d7015e98c62631b79422bcd8a",
         "shasum": ""
       },
       "require": {
@@ -8631,7 +8631,7 @@
           "type": "github"
         }
       ],
-      "time": "2025-04-16T05:18:31+00:00"
+      "time": "2025-06-17T02:49:50+00:00"
     },
     {
       "name": "verbb/expanded-singles",
@@ -8740,6 +8740,59 @@
         "rss": "https://github.com/verbb/hyper/commits/v2.atom"
       },
       "time": "2025-02-02T01:15:38+00:00"
+    },
+    {
+      "name": "verbb/navigation",
+      "version": "3.0.13",
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/verbb/navigation/zipball/efaef223aca6a6f4a6a65f0c7f96437e33a23451",
+        "reference": "efaef223aca6a6f4a6a65f0c7f96437e33a23451",
+        "shasum": ""
+      },
+      "require": {
+        "craftcms/cms": "^5.0.0",
+        "php": "^8.2",
+        "verbb/base": "^3.0.0"
+      },
+      "type": "craft-plugin",
+      "extra": {
+        "name": "Navigation",
+        "handle": "navigation",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/navigation/craft-5/CHANGELOG.md",
+        "class": "verbb\\navigation\\Navigation"
+      },
+      "autoload": {
+        "psr-4": {
+          "verbb\\navigation\\": "src/"
+        }
+      },
+      "license": [
+        "proprietary"
+      ],
+      "authors": [
+        {
+          "name": "Verbb",
+          "homepage": "https://verbb.io"
+        }
+      ],
+      "description": "Create navigation menus for your site.",
+      "keywords": [
+        "cms",
+        "craft",
+        "craft-plugin",
+        "craftcms",
+        "menu",
+        "navigation"
+      ],
+      "support": {
+        "email": "support@verbb.io",
+        "issues": "https://github.com/verbb/navigation/issues?state=open",
+        "source": "https://github.com/verbb/navigation",
+        "docs": "https://github.com/verbb/navigation",
+        "rss": "https://github.com/verbb/navigation/commits/v2.atom"
+      },
+      "time": "2025-09-16T03:17:02+00:00"
     },
     {
       "name": "vlucas/phpdotenv",
@@ -10195,11 +10248,11 @@
   ],
   "aliases": [],
   "minimum-stability": "beta",
-  "stability-flags": [],
+  "stability-flags": {},
   "prefer-stable": true,
   "prefer-lowest": false,
-  "platform": [],
-  "platform-dev": [],
+  "platform": {},
+  "platform-dev": {},
   "platform-overrides": {
     "php": "8.2.0"
   },
