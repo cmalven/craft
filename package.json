@@ -12,7 +12,7 @@
     "url": "https://malven.co"
   },
   "scripts": {
-    "start": "vite & npm run svg",
+    "start": "npm run svg && vite",
     "build": "npm run svg && vite build",
     "svg": "svg-build",
     "test": "echo \"No tests specified\" && exit 0",
