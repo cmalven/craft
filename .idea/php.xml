@@ -199,6 +199,9 @@
       <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php84" />
       <path value="$PROJECT_DIR$/vendor/mmikkel/cp-field-inspect" />
+      <path value="$PROJECT_DIR$/vendor/verbb/navigation" />
+      <path value="$PROJECT_DIR$/vendor/nystudio107/craft-twig-sandbox" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
