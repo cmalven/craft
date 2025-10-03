@@ -20,5 +20,17 @@ Primary header for the site.
 .global-header__nav {
 }
 
+.global-header__nav-full {
+  @include media('<nav-full') {
+    display: none;
+  }
+}
+
+.global-header__nav-mobile {
+  @include media('>=nav-full') {
+    display: none;
+  }
+}
+
 .global-header__toggle {
 }

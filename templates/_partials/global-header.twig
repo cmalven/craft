@@ -15,13 +15,21 @@
 
     {# Nav #}
     <div class="global-header__nav">
-      {# Toggle #}
-      <div class="global-header__toggle">
-        {% include '_partials/global-nav-toggle' with {
-          label: 'Menu',
-          action: 'open',
-          key: 'dialog-global-nav',
-        } %}
+      {# Full Nav #}
+      <div class="global-header__nav-full">
+        {{ craft.navigation.render('primary') }}
+      </div>
+
+      {# Mobile Nav #}
+      <div class="global-header__nav-mobile">
+        {# Toggle #}
+        <div class="global-header__toggle">
+          {% include '_partials/global-nav-toggle' with {
+            label: 'Menu',
+            action: 'open',
+            key: 'dialog-global-nav',
+          } %}
+        </div>
       </div>
     </div>
 
