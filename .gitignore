@@ -2,7 +2,7 @@
 # ---------------------------
 /templates/_svg/**/*
 /templates/_partials/vite.twig
-/src/static/images/
+/src/static/svg/
 /web/*
 !/web/favicons/
 !/web/fonts/
