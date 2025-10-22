@@ -7,10 +7,13 @@ import { inView } from 'motion';
 
 export default class extends Modu {
   visibleClass = 'is-visible';
+  offset = -80;
   stopInView?: VoidFunction;
 
   constructor(m: ModuOptions) {
     super(m);
+
+    this.offset = (this.getData('offset') ?? this.offset) as number;
   }
 
   init = () => {
@@ -34,7 +37,7 @@ export default class extends Modu {
         this.el.classList.add(this.visibleClass);
       },
       {
-        margin: '0px 0px -80px 0px',
+        margin: `0px 0px ${this.offset}px 0px`,
       },
     );
   };
