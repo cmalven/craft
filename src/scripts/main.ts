@@ -9,6 +9,18 @@ declare global {
   }
 }
 
+//--------------------------------------------------------------------
+// Third-Party Styles
+//--------------------------------------------------------------------
+
+async function loadThirdPartyStyles() {
+  await import(
+    // @ts-expect-error Dynamically loading third-party CSS confuses TypeScript
+    '@awesome.me/webawesome/dist/styles/themes/default.css'
+  );
+}
+loadThirdPartyStyles();
+
 // ---------------------------------------------------------------
 // Modu
 // ---------------------------------------------------------------
