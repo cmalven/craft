@@ -202,6 +202,9 @@
       <path value="$PROJECT_DIR$/vendor/verbb/navigation" />
       <path value="$PROJECT_DIR$/vendor/nystudio107/craft-twig-sandbox" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/vendor/nystudio107/craft-retour" />
+      <path value="$PROJECT_DIR$/vendor/league/csv" />
+      <path value="$PROJECT_DIR$/vendor/jean85/pretty-package-versions" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
