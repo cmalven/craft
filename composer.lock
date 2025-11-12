@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "e252e34e154530b1ad34c8f3c87dc117",
+  "content-hash": "ada5cc9c7803b66dbd45981dc86cc31e",
   "packages": [
     {
       "name": "amphp/amp",
@@ -3563,6 +3563,66 @@
       "time": "2021-03-25T15:10:34+00:00"
     },
     {
+      "name": "jean85/pretty-package-versions",
+      "version": "2.1.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Jean85/pretty-package-versions.git",
+        "reference": "4d7aa5dab42e2a76d99559706022885de0e18e1a"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/4d7aa5dab42e2a76d99559706022885de0e18e1a",
+        "reference": "4d7aa5dab42e2a76d99559706022885de0e18e1a",
+        "shasum": ""
+      },
+      "require": {
+        "composer-runtime-api": "^2.1.0",
+        "php": "^7.4|^8.0"
+      },
+      "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.2",
+        "jean85/composer-provided-replaced-stub-package": "^1.0",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^7.5|^8.5|^9.6",
+        "rector/rector": "^2.0",
+        "vimeo/psalm": "^4.3 || ^5.0"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Jean85\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Alessandro Lai",
+          "email": "alessandro.lai85@gmail.com"
+        }
+      ],
+      "description": "A library to get pretty versions strings of installed dependencies",
+      "keywords": [
+        "composer",
+        "package",
+        "release",
+        "versions"
+      ],
+      "support": {
+        "issues": "https://github.com/Jean85/pretty-package-versions/issues",
+        "source": "https://github.com/Jean85/pretty-package-versions/tree/2.1.1"
+      },
+      "time": "2025-03-19T14:43:43+00:00"
+    },
+    {
       "name": "kelunik/certificate",
       "version": "v1.1.3",
       "dist": {
@@ -3763,6 +3823,97 @@
       ],
       "description": "Yet another clock abstraction",
       "time": "2024-09-24T20:45:14+00:00"
+    },
+    {
+      "name": "league/csv",
+      "version": "9.27.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/thephpleague/csv.git",
+        "reference": "26de738b8fccf785397d05ee2fc07b6cd8749797"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/thephpleague/csv/zipball/26de738b8fccf785397d05ee2fc07b6cd8749797",
+        "reference": "26de738b8fccf785397d05ee2fc07b6cd8749797",
+        "shasum": ""
+      },
+      "require": {
+        "ext-filter": "*",
+        "php": "^8.1.2"
+      },
+      "require-dev": {
+        "ext-dom": "*",
+        "ext-xdebug": "*",
+        "friendsofphp/php-cs-fixer": "^3.75.0",
+        "phpbench/phpbench": "^1.4.1",
+        "phpstan/phpstan": "^1.12.27",
+        "phpstan/phpstan-deprecation-rules": "^1.2.1",
+        "phpstan/phpstan-phpunit": "^1.4.2",
+        "phpstan/phpstan-strict-rules": "^1.6.2",
+        "phpunit/phpunit": "^10.5.16 || ^11.5.22 || ^12.3.6",
+        "symfony/var-dumper": "^6.4.8 || ^7.3.0"
+      },
+      "suggest": {
+        "ext-dom": "Required to use the XMLConverter and the HTMLConverter classes",
+        "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters",
+        "ext-mbstring": "Needed to ease transcoding CSV using mb stream filters",
+        "ext-mysqli": "Requiered to use the package with the MySQLi extension",
+        "ext-pdo": "Required to use the package with the PDO extension",
+        "ext-pgsql": "Requiered to use the package with the PgSQL extension",
+        "ext-sqlite3": "Required to use the package with the SQLite3 extension"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "9.x-dev"
+        }
+      },
+      "autoload": {
+        "files": [
+          "src/functions_include.php"
+        ],
+        "psr-4": {
+          "League\\Csv\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Ignace Nyamagana Butera",
+          "email": "nyamsprod@gmail.com",
+          "homepage": "https://github.com/nyamsprod/",
+          "role": "Developer"
+        }
+      ],
+      "description": "CSV data manipulation made easy in PHP",
+      "homepage": "https://csv.thephpleague.com",
+      "keywords": [
+        "convert",
+        "csv",
+        "export",
+        "filter",
+        "import",
+        "read",
+        "transform",
+        "write"
+      ],
+      "support": {
+        "docs": "https://csv.thephpleague.com",
+        "issues": "https://github.com/thephpleague/csv/issues",
+        "rss": "https://github.com/thephpleague/csv/releases.atom",
+        "source": "https://github.com/thephpleague/csv"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/sponsors/nyamsprod",
+          "type": "github"
+        }
+      ],
+      "time": "2025-10-25T08:35:20+00:00"
     },
     {
       "name": "league/flysystem",
@@ -4823,6 +4974,58 @@
         "issues": "https://github.com/nystudio107/craft-plugin-vite/issues"
       },
       "time": "2024-08-14T02:02:01+00:00"
+    },
+    {
+      "name": "nystudio107/craft-retour",
+      "version": "5.0.12",
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/ea13abef1d2aef6712ba6e8ce449b92733c38c61",
+        "reference": "ea13abef1d2aef6712ba6e8ce449b92733c38c61",
+        "shasum": ""
+      },
+      "require": {
+        "craftcms/cms": "^5.0.0",
+        "jean85/pretty-package-versions": "^1.5 || ^2.0",
+        "league/csv": "^8.2 || ^9.0",
+        "nystudio107/craft-plugin-vite": "^5.0.0",
+        "php": "^8.2"
+      },
+      "type": "craft-plugin",
+      "extra": {
+        "class": "nystudio107\\retour\\Retour",
+        "handle": "retour",
+        "name": "Retour"
+      },
+      "autoload": {
+        "psr-4": {
+          "nystudio107\\retour\\": "src/"
+        }
+      },
+      "license": [
+        "proprietary"
+      ],
+      "authors": [
+        {
+          "name": "nystudio107",
+          "homepage": "https://nystudio107.com/"
+        }
+      ],
+      "description": "Retour allows you to intelligently redirect legacy URLs, so that you don't lose SEO value when rebuilding & restructuring a website",
+      "keywords": [
+        "404",
+        "craft-plugin",
+        "craftcms",
+        "redirect",
+        "retour",
+        "statistics"
+      ],
+      "support": {
+        "docs": "https://nystudio107.com/docs/retour/",
+        "issues": "https://nystudio107.com/plugins/retour/support",
+        "source": "https://github.com/nystudio107/craft-retour"
+      },
+      "time": "2025-08-17T21:59:07+00:00"
     },
     {
       "name": "nystudio107/craft-seomatic",
@@ -11591,11 +11794,11 @@
   ],
   "aliases": [],
   "minimum-stability": "beta",
-  "stability-flags": [],
+  "stability-flags": {},
   "prefer-stable": true,
   "prefer-lowest": false,
-  "platform": [],
-  "platform-dev": [],
+  "platform": {},
+  "platform-dev": {},
   "platform-overrides": {
     "php": "8.2.0"
   },

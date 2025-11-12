@@ -1,4 +1,4 @@
-dateModified: 1759422190
+dateModified: 1762988168
 elementSources:
   craft\elements\Entry:
     -
@@ -124,6 +124,30 @@ plugins:
     enabled: true
     licenseKey: 4TH2AWI8M809O4SJIJAE3G0O
     schemaVersion: 2.1.1
+  retour:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.12
+    settings:
+      alwaysStripQueryString: false
+      automaticallyTrimStatistics: true
+      createUriChangeRedirects: true
+      csvColumnDelimiter: ','
+      dynamicRedirectDisplayLimit: 100
+      enableApiEndpoint: false
+      enableStatistics: true
+      pluginName: Redirects
+      preserveQueryString: false
+      recordRemoteIp: true
+      refreshIntervalSecs: 5
+      resolveCraftSites: true
+      setNoCacheHeaders: true
+      staticRedirectDisplayLimit: 100
+      statisticsRateLimitMs: 3600000
+      statsDisplayLimit: 1000
+      statsStoredLimit: 1000
+      stripQueryStringFromStats: true
+      uriChangeRedirectSrcMatch: pathonly
   seomatic:
     edition: standard
     enabled: true

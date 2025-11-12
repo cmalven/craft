@@ -4,6 +4,7 @@
     "craftcms/ckeditor": "4.10.1",
     "craftcms/cms": "5.8.19",
     "nystudio107/craft-autocomplete": "^1.10",
+    "nystudio107/craft-retour": "^5.0.12",
     "nystudio107/craft-seomatic": "5.1.19",
     "putyourlightson/craft-blitz": "5.12.5",
     "putyourlightson/craft-sherlock": "5.2.0",
