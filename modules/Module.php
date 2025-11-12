@@ -45,7 +45,7 @@ class Module extends \yii\base\Module
 
         // Variables
         Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function (
-            Event $e
+            Event $e,
         ) {
             /** @var CraftVariable $variable */
             $variable = $e->sender;

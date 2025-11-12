@@ -65,7 +65,7 @@ class Twig extends Component
         string $handle,
         array|Entry $block,
         array|Entry $previousBlock = null,
-        array|Entry $nextBlock = null
+        array|Entry $nextBlock = null,
     ): array {
         $classes = [];
 
@@ -160,7 +160,7 @@ class Twig extends Component
                             [
                                 'markup' => $chunk,
                             ],
-                            $blockData
+                            $blockData,
                         )
                         : $chunk->entry,
             ];

@@ -6,7 +6,7 @@ return [
         FILTER_VALIDATE_REGEXP,
         [
             'options' => ['regexp' => '/.*/'],
-        ]
+        ],
     ),
     'labelText' => getenv('CRAFT_ENV_LABEL'),
     'prefix' => null,
