@@ -1,14 +1,10 @@
-@use '~/common' as *;
-
 /*
-Tabs
+Tab List
 
-Accessible tabbed content
-
-https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html
+A list of tabs to be used with tab-panel.
 */
 
-.tabs {
+.tab-list {
   // ---------------------------------------------------------------
   // Behavioral Styles
   // ---------------------------------------------------------------
@@ -21,16 +17,6 @@ https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html
   }
 
   [role='tab'] span.focus {
-  }
-
-  [role='tabpanel'] {
-  }
-
-  [role='tabpanel'].is-hiding {
-  }
-
-  .js & [role='tabpanel'].is-hidden {
-    display: none;
   }
 
   // ---------------------------------------------------------------
@@ -57,26 +43,5 @@ https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html
   }
 
   [role='tab'][aria-selected='false']:hover span.focus {
-  }
-
-  [role='tabpanel'] {
-  }
-
-  // Panel Transition
-
-  [role='tabpanel'].is-hiding,
-  [role='tabpanel'].is-hidden {
-    // This doesn't itself do anything, but you can use this for children to trigger transitions
-  }
-}
-
-// ---------------------------------------------------------------
-// Modifier - Modifier Name
-// ---------------------------------------------------------------
-
-.tabs--foo {
-  @include media('>=medium') {
-    [role='tablist'] {
-    }
   }
 }

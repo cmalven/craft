@@ -1,56 +1,14 @@
 import { Modu, ModuOptions } from '@malven/modu';
 
 /**
- * Accessible tabbed content
- *
- * https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html
- *
- * @example
- *
- * {% include '_partials/tabs' with {
- *   label: 'Important content',
- *   tabs: [
- *      {
- *        label: 'Tab Title',
- *        content: '<p>Some content for the tab</p>',
- *      },
- *   ],
- * } only %}
- *
- * .tabs {
- *   // Behavioral styles = Do not modify these
- *
- *   [role="tab"],
- *   [role="tab"]:focus,
- *   [role="tab"]:hover {
- *     z-index: 2;
- *     overflow: visible;
- *     outline: none;
- *   }
- *
- *   [role="tab"] span.focus {
- *     display: inline-block;
- *   }
- *
- *   [role="tabpanel"] {
- *     overflow: auto;
- *   }
- *
- *   [role="tabpanel"].is-hidden {
- *     display: none;
- *   }
+ * List of tabs.
  */
 
 export default class extends Modu {
   tabs: HTMLElement[] = [];
-  tabpanels: Element[] = [];
   firstTab: HTMLElement | null = null;
   lastTab: HTMLElement | null = null;
-  hidingClass = 'is-hiding';
-  hiddenClass = 'is-hidden';
-  hideDelay = 500;
   tabSelector = '[role=tab]';
-  tablistNode: Element | null = null;
   tablistSelector = '[role="tablist"]';
 
   constructor(m: ModuOptions) {
@@ -58,23 +16,14 @@ export default class extends Modu {
   }
 
   init = () => {
-    this.tablistNode = this.el.querySelector(this.tablistSelector);
-    if (!this.tablistNode) return;
-
-    this.tabs = Array.from(this.tablistNode.querySelectorAll(this.tabSelector));
+    this.tabs = Array.from(this.el.querySelectorAll(this.tabSelector));
 
     for (let i = 0; i < this.tabs.length; i += 1) {
       const tab = this.tabs[i] as HTMLElement;
       if (!tab) continue;
 
-      const tabpanel = this.el.querySelector(
-        '#' + tab.getAttribute('aria-controls'),
-      );
-      if (!tabpanel) continue;
-
       tab.tabIndex = -1;
       tab.setAttribute('aria-selected', 'false');
-      this.tabpanels.push(tabpanel);
 
       tab.addEventListener('keydown', this.onKeydown.bind(this));
       tab.addEventListener('click', this.onClick.bind(this));
@@ -94,19 +43,13 @@ export default class extends Modu {
       if (currentTab === tab) {
         tab.setAttribute('aria-selected', 'true');
         tab.removeAttribute('tabindex');
-        this.emit('selected', this.tabpanels[i]);
-        this.tabpanels[i].classList.remove(this.hiddenClass);
-        window.requestAnimationFrame(() => {
-          this.tabpanels[i].classList.remove(this.hidingClass);
-        });
+        this.emit('selected', tab.getAttribute('aria-controls'));
         if (setFocus) {
           tab.focus();
         }
       } else {
         tab.setAttribute('aria-selected', 'false');
         tab.tabIndex = -1;
-        this.tabpanels[i].classList.add(this.hidingClass);
-        this.tabpanels[i].classList.add(this.hiddenClass);
       }
     }
   }
@@ -171,6 +114,7 @@ export default class extends Modu {
   }
 
   onClick(event: MouseEvent) {
+    console.log('clicked');
     this.setSelectedTab(event.currentTarget as HTMLElement);
   }
 

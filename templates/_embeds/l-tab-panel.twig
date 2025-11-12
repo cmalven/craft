@@ -1,0 +1,30 @@
+{# =============================================================== #}
+{# Layout - Tab Panel
+{# =============================================================== #}
+{#
+  {% embed '_embeds/l-tab-panel' with {
+    key: 'my-unique-key',
+    label: 'Tab Content One',
+  } %}
+    {% block content %}
+      …
+    {% endblock %}
+  {% endembed %}
+#}
+
+{% set classes = craft.twig.modifiers('tab-panel', modifiers ?? []) %}
+{% set id = label | kebab %}
+
+<div
+  class="l-tab-panel {{ classes }}"
+  id="tabpanel-{{ id }}"
+  role="tabpanel"
+  tabindex="0"
+  aria-labelledby="tab-{{ id }}"
+  {% if not loop.first %}
+    class="is-hidden"
+  {% endif %}
+  data-module-tab-panel="{{ key }}"
+>
+  {% block content %}{% endblock %}
+</div>

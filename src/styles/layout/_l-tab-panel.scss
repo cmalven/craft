@@ -1,0 +1,39 @@
+/*
+Layout - Tab Panel
+
+An individual tabpanel to be used with tab-list.
+*/
+
+.l-tab-panel {
+  // ---------------------------------------------------------------
+  // Behavioral Styles
+  // ---------------------------------------------------------------
+
+  // Do not modify these
+
+  &[role='tabpanel'] {
+  }
+
+  &[role='tabpanel'].is-hiding {
+  }
+
+  .js &[role='tabpanel'].is-hidden {
+    display: none;
+  }
+
+  // ---------------------------------------------------------------
+  // Decorative Styles
+  // ---------------------------------------------------------------
+
+  // Change these to suit the design
+
+  &[role='tabpanel'] {
+  }
+
+  // Panel Transition
+
+  &[role='tabpanel'].is-hiding,
+  &[role='tabpanel'].is-hidden {
+    // This doesn't itself do anything, but you can use this for children to trigger transitions
+  }
+}
