@@ -7,25 +7,45 @@ Either an image or a video asset.
 */
 
 .image-video {
-  @include absolute;
-  background-color: var(--theme-bg-faint);
-  overflow: clip;
-}
-
-.image-video__inner,
-.image-video__innermost {
-  @include absolute;
-  overflow: clip;
-  transition-property: transform, opacity;
-  will-change: transform, opacity;
+  background-color: var(--image-video-bg-color, var(--theme-bg-faint));
 }
 
 .image-video__inner {
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+  }
 }
 
-.image-video__innermost {
-  > .video {
-    @include bg-cover;
+// ---------------------------------------------------------------
+// Modifier - Cover / Contain
+// ---------------------------------------------------------------
+
+.image-video--cover,
+.image-video--contain {
+  @include absolute;
+
+  .image-video__inner {
+    @include absolute;
+  }
+}
+
+.image-video--cover {
+  .image-video__inner {
+    > img,
+    > .video {
+      @include bg-cover;
+    }
+  }
+}
+
+.image-video--contain {
+  .image-video__inner {
+    > img,
+    > .video {
+      @include bg-cover($fit: contain);
+    }
   }
 }
 
@@ -34,9 +54,9 @@ Either an image or a video asset.
 // ---------------------------------------------------------------
 
 .image-video--fade {
-  .image-video__inner,
-  .image-video__innermost {
+  .image-video__inner {
     transition: 2s var(--ease-out-expo);
+    transition-property: transform, opacity;
 
     .js & {
       opacity: 0.001;
@@ -45,8 +65,9 @@ Either an image or a video asset.
   }
 
   &.is-visible.is-ready {
-    .image-video__inner,
-    .image-video__innermost {
+    --load-opacity: 0;
+
+    .image-video__inner {
       opacity: 1;
       transform: scale(1.01);
     }
@@ -58,43 +79,24 @@ Either an image or a video asset.
 // ---------------------------------------------------------------
 
 .image-video--wipe {
-  .image-video__inner,
-  .image-video__innermost {
-    transition: transform 1.5s var(--ease-out-expo);
-    will-change: transform;
-  }
-
   // Left
   .js &.image-video--wipe--left .image-video__inner {
-    transform: translateX(99.9%);
-  }
-
-  .js &.image-video--wipe--left .image-video__innermost {
-    transform: translateX(-99.9%) scale(1.5);
+    @include clip-reveal('left');
   }
 
   // Right
   .js &.image-video--wipe--right .image-video__inner {
-    transform: translateX(-99.9%);
-  }
-
-  .js &.image-video--wipe--right .image-video__innermost {
-    transform: translateX(99.9%) scale(1.5);
+    @include clip-reveal('right');
   }
 
   // Down
   .js &.image-video--wipe--down .image-video__inner {
-    transform: translateY(-99.9%) scale(1.5);
-  }
-
-  .js &.image-video--wipe--down .image-video__innermost {
-    transform: translateY(99.9%) scale(1.5);
+    @include clip-reveal('down');
   }
 
   &.is-visible.is-ready {
-    .image-video__inner,
-    .image-video__innermost {
-      transform: translateX(0);
+    .image-video__inner {
+      @include clip-reveal-visible;
     }
   }
 }

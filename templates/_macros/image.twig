@@ -22,8 +22,6 @@
   @param options.alt (string)         - [optional] Text for alt tag
   @param options.lazy (boolean)       - [optional] Native lazy loading
   @param options.size (string)        - [optional] Determine which sizes attribute should be used
-  @param wrap: (boolean)              - [optional] Whether to wrap the img element in additional markup
-  @param wrapperClasses: (string[])   - [optional] Modifier classes to add to the image wrapper
 #}
 
 {%- macro get(asset, options = {}) -%}
@@ -33,8 +31,6 @@
   {% set defaults = {
     transform: 'scale',
     alt: asset.alt ?? '',
-    wrap: true,
-    wrapperClasses: [],
     lazy: true,
     size: 'full',
   } %}
@@ -52,11 +48,8 @@
     {# Use named transform config to help determine the width, height, and aspect ratio of the transformed image #}
     {% set namedTransform = craft.imagerx.getNamedTransform(options.transform)  %}
     {% set assetWidth = 200 %} {# We can safely hard code a value here—which simplifies things a bit—because the ratio and height below are dynamically generated #}
-    {% set assetRatio = asset.height / asset.width %}
+    {% set assetRatio = asset.height ??? 1 / asset.width ??? 1 %}
     {% set assetHeight = (namedTransform.defaults.ratio ??? null) ? ((1/namedTransform.defaults.ratio) * assetWidth) : (assetRatio * assetWidth) %}
-
-    {# Generate transformed images #}
-    {% set transformedImages = craft.imagerx.transformImage(asset, options.transform) %}
 
     {# Output images #}
     {% set img %}
@@ -64,9 +57,8 @@
         alt="{{ options.alt }}"
         width="{{ assetWidth }}"
         height="{{ assetHeight }}"
-        srcset="{{ craft.imager.srcset(transformedImages) }}"
+        srcset="{{ _self.getSrcset(asset, options.transform) }}"
         style="object-position: {{ asset.getFocalPoint().x * 100 }}% {{ asset.getFocalPoint().y * 100 }}%;"
-        decoding="async"
 
         {# Lazy loading #}
         {% if options.lazy %}
@@ -80,11 +72,26 @@
   {% endif %}
 
   {# Return the element #}
-  {% if options.wrap %}
-    {{ _self.wrap(img, options.wrapperClasses) | raw  }}
-  {% else %}
-    {{ img | raw }}
-  {% endif %}
+  {{ img | raw }}
+{%- endmacro -%}
+
+
+{# ------------------------------------------------------------------ #}
+{# Get Srcset
+{# ------------------------------------------------------------------ #}
+{#
+  {% import '_macros/image' as image %}
+  {{ image.getSrcset(craft.assets.filename('*.jpg').orderBy('RAND()').one(), '16x9') }}
+
+  Generate a srcset attribute for an image.
+
+  @param asset (asset)                - [required] Craft image asset
+  @param transform (string)           - [required] Determines which transform config to use (should match an option defined in `config/imager-x-transforms.php`)
+#}
+
+{%- macro getSrcset(asset, transform) -%}
+{% set transformedImages = craft.imagerx.transformImage(asset, transform) %}
+{{ craft.imager.srcset(transformedImages) }}
 {%- endmacro -%}
 
 
@@ -92,7 +99,8 @@
 {# Get Sizes
 {# ------------------------------------------------------------------ #}
 {#
-  {{ _self.getSizes(size) }}
+  {% import '_macros/image' as image %}
+  {{ image.getSizes(size) }}
 
   Returns the "sizes" atrribute for an image
 
@@ -113,6 +121,27 @@
       (min-width: 768px) 50vw,
       100vw"
   {% endswitch %}
+{% endmacro %}
+
+
+{# ------------------------------------------------------------------ #}
+{# Preload
+{# ------------------------------------------------------------------ #}
+{#
+  {% import '_macros/image' as image %}
+  {{ image.preload(imageAsset, transform', size) }}
+
+  Preload an image asset in the head of the page
+
+  @param imageAsset (Asset)        - [required] The image asset to include
+  @param transform (string)   - [optional] The transform to use (Example: '16x9')
+  @param size (string)        - [optional] The size of the resulting image (Example: 'half')
+#}
+
+{% macro preload(imageAsset, transform = 'scale', size = 'full') %}
+  {% html at head %}
+    <link rel="preload" as="image" href="{{ imageAsset.url }}" imagesrcset="{{ _self.getSrcset(imageAsset, transform) }}" imagesizes="{{  _self.getSizes(size)  }}">
+  {% endhtml %}
 {% endmacro %}
 
 
@@ -142,30 +171,4 @@ Returns the URL of a single transformed image
     {# Give me that URL #}
     {{ transformedImage.url }}
   {% endapply %}
-{%- endmacro -%}
-
-
-{# ------------------------------------------------------------------ #}
-{# Wrap Image
-{# ------------------------------------------------------------------ #}
-{#
-{{ _self.wrap(image, classes) }}
-
-Wraps an image in common markup.
-
-@param image (HTML)                - [required] The HTML markup (e.g. <img>, <picture>, etc) to wrap
-@param classes (string[])          - [optional] Array of classes to add to image
-#}
-
-{%- macro wrap(image, classes = []) -%}
-  {% import _self as image %}
-  {% set classes = craft.twig.modifiers('image', classes ?? []) %}
-  {% set wrappedImg %}
-    <div class="image {{ classes }}" data-module-reveal>
-      <div class="image__inner">
-        {{ image | raw }}
-      </div>
-    </div>
-  {% endset %}
-  {{ wrappedImg }}
 {%- endmacro -%}
