@@ -69,15 +69,27 @@ class Twig extends Component
     ): array {
         $classes = [];
 
+        // Config
+        $noSpacing = [];
+        $noSpacingTop = [];
+        $noSpacingBottom = [];
+        $bleedTop = [];
+        $bleedBottom = [];
+        $bleedMobile = [];
+        $overflowHidden = [];
+        $noMax = [];
+        $bordered = [];
+        $bgDark = [];
+
         // All Spacing
-        if (!in_array($handle, [])) {
+        if (!in_array($handle, $noSpacing)) {
             // Top Spacing
-            if (!in_array($handle, [])) {
+            if (!in_array($handle, $noSpacingTop)) {
                 array_push($classes, 'space-top');
             }
 
             // Bottom Spacing
-            if (!in_array($handle, [])) {
+            if (!in_array($handle, $noSpacingBottom)) {
                 array_push($classes, 'space-bottom');
             }
         } else {
@@ -85,41 +97,40 @@ class Twig extends Component
         }
 
         // Bleed / Top
-        if (in_array($handle, [])) {
+        if (in_array($handle, $bleedTop)) {
             array_push($classes, 'bleed-top');
         }
 
         // Bleed / Bottom
-        if (in_array($handle, [])) {
+        if (in_array($handle, $bleedBottom)) {
             array_push($classes, 'bleed-bottom');
         }
 
         // Bleed Mobile (no top/bottom spacing on mobile)
-        if (in_array($handle, [])) {
+        if (in_array($handle, $bleedMobile)) {
             array_push($classes, 'bleed-top-mobile', 'bleed-bottom-mobile');
         }
 
         // Overflow Hidden
-        if (in_array($handle, [])) {
+        if (in_array($handle, $overflowHidden)) {
             array_push($classes, 'overflow-hidden');
         }
 
         // Max
-        if (!in_array($handle, [])) {
+        if (!in_array($handle, $noMax)) {
             array_push($classes, 'max');
         }
 
         // Borders
-        $borderedBlocks = [];
         if (
-            in_array($handle, $borderedBlocks) and
-            in_array($nextBlock['handle'] ?? null, $borderedBlocks)
+            in_array($handle, $bordered) and
+            in_array($nextBlock['handle'] ?? null, $bordered)
         ) {
             array_push($classes, 'border-bottom', 'bleed-bottom');
         }
         if (
-            in_array($handle, $borderedBlocks) and
-            in_array($previousBlock['handle'] ?? null, $borderedBlocks)
+            in_array($handle, $bordered) and
+            in_array($previousBlock['handle'] ?? null, $bordered)
         ) {
             array_push($classes, 'border-top', 'bleed-top');
         }
@@ -135,7 +146,7 @@ class Twig extends Component
         } catch (Throwable $e) {
             $blockColor = null;
         }
-        if (in_array($handle, []) || $blockColor === 'dark') {
+        if (in_array($handle, $bgDark) || $blockColor === 'dark') {
             array_push($classes, 'bg-dark');
         } else {
             array_push($classes, 'bg-light');
