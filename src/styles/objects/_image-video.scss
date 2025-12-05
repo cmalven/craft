@@ -8,6 +8,7 @@ Either an image or a video asset.
 
 .image-video {
   background-color: var(--image-video-bg-color, var(--theme-bg-faint));
+  overflow: hidden;
 }
 
 .image-video__inner {
