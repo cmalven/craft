@@ -26,6 +26,10 @@ Styling for common HTML text elements
 }
 
 .rich-text {
+  --rich-text-spacing: 3rem;
+  --rich-text-list-indent: 3rem;
+  --rich-text-list-item-margin: 1.2rem;
+
   // Basic Inline Styles
   @include rich-text-inline-styles;
 
@@ -55,7 +59,7 @@ Styling for common HTML text elements
 
     li + li,
     ul {
-      margin-top: 1.2rem;
+      margin-top: var(--rich-text-list-item-margin);
     }
   }
 
@@ -67,7 +71,7 @@ Styling for common HTML text elements
     }
 
     li {
-      padding-left: 3rem;
+      padding-left: var(--rich-text-list-indent);
       position: relative;
     }
 
@@ -82,7 +86,7 @@ Styling for common HTML text elements
     }
 
     ul > li {
-      padding-left: 3rem;
+      padding-left: var(--rich-text-list-indent);
     }
 
     ul > li:before {
@@ -97,7 +101,7 @@ Styling for common HTML text elements
     li {
       counter-increment: ol-counter;
       position: relative;
-      padding-left: 3rem;
+      padding-left: var(--rich-text-list-indent);
     }
 
     li:before {
@@ -110,6 +114,6 @@ Styling for common HTML text elements
   // Common Spacing
 
   > * + * {
-    margin-top: 3rem;
+    margin-top: var(--rich-text-spacing);
   }
 }
