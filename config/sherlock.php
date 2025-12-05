@@ -90,7 +90,7 @@ return [
                 [
                     true,
                     'connect-src',
-                    "'self' wss://localhost:3111 https://*.ingest.sentry.io https://*.marker.io https://www.google-analytics.com data:",
+                    "'self' wss://localhost:3111 https://www.google.com https://*.ingest.sentry.io https://*.marker.io https://www.google-analytics.com data:",
                 ],
                 [true, 'manifest-src', "'self'"],
             ],
