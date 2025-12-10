@@ -8,8 +8,9 @@ A flexible, reusable button.
 
 .button-basic {
   --transition: 0.6s var(--ease-out-expo);
+  width: var(--button-basic-width, auto);
+  display: var(--button-basic-display, inline-block);
   position: relative;
-  display: inline-block;
 }
 
 .button-basic__inner {
