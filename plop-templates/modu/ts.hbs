@@ -1,21 +1,11 @@
 import { Modu, ModuOptions } from '@malven/modu';
 
 {{#if description}}
-/**
- * {{description}}
- */
+  /** *
+  {{description}}
+  */
 {{/if}}
 
-export default class extends Modu {
-  constructor(m: ModuOptions) {
-    super(m);
-  }
-
-  init = () => {
-
-  };
-
-  cleanup = () => {
-    // Code to run when the module is destroyed
-  };
-}
+export default class extends Modu { constructor(m: ModuOptions) { super(m); }
+init = () => { }; cleanup = () => { // Code to run when the module is destroyed
+}; }
