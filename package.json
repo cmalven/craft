@@ -2,6 +2,7 @@
   "name": "your-project-slug",
   "description": "your-project-description",
   "version": "1.0.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/cmalven/your-project-slug"
@@ -20,9 +21,10 @@
     "lint-scripts": "eslint --fix",
     "lint-styles": "stylelint",
     "check": "prettier . --write",
-    "new:component": "hygen component new",
-    "new:modu": "hygen modu new",
-    "new:sass-util": "hygen sass-util new",
+    "new:component": "plop component",
+    "new:modu": "plop modu",
+    "new:sass-util": "plop sass-util",
+    "new:slider": "plop slider",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -58,8 +60,8 @@
     "eslint-config-prettier": "10.1.8",
     "gulp": "5.0.1",
     "husky": "9.1.7",
-    "hygen": "6.2.11",
     "lint-staged": "15.5.1",
+    "plop": "4.0.4",
     "postcss-scss": "4.0.9",
     "prettier": "3.6.2",
     "sass-embedded": "1.93.3",

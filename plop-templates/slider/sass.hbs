@@ -1,0 +1,26 @@
+@use '~/common' as *;
+
+/*
+Slider - {{getTitle name}}
+{{#if description}}
+{{description}}
+{{/if}}
+*/
+
+.{{sliderSlug}} {
+  @include hide-splide-slides-js({{sliderSlug}}__slider);
+  @include splide-number-pagination;
+  @include splide-arrows;
+}
+
+.{{sliderSlug}}__slider__slide {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    flex: 1 1 auto;
+  }
+}
+
+.{{sliderSlug}}__item {
+}

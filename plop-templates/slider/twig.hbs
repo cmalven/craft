@@ -1,13 +1,8 @@
----
-to: <%= h.getDestinationForType(h.changeCase.paramCase(name), 'Twig Include', 'twig', 'slider-') %>
----
-<%_ const title = h.changeCase.title(name) _%>
-<%_ const slug = 'slider-' + h.formatSlug(h.changeCase.paramCase(name), 'Twig Include') _%>
 {# =============================================================== #}
-{# Slider - <%= h.getTitlePrefixForType('Twig Include') %><%= title %>
+{# Slider - {{getTitle name}}
 {# =============================================================== #}
 {#
-  {% include '_partials/<%= slug %>' with {
+  {% include '_partials/{{sliderSlug}}' with {
     items: [
       '<p>Any html can go in here</p>',
     ],
@@ -21,7 +16,7 @@ to: <%= h.getDestinationForType(h.changeCase.paramCase(name), 'Twig Include', 't
 
 {% for itemContent in items ??? [] %}
   {% set slide %}
-      <div class="<%= slug %>__item">
+      <div class="{{sliderSlug}}__item">
         {# Slide content goes here #}
         {{ itemContent }}
       </div>
@@ -30,10 +25,10 @@ to: <%= h.getDestinationForType(h.changeCase.paramCase(name), 'Twig Include', 't
   {% set slides = slides | push(slide) %}
 {% endfor %}
 
-<div class="<%= slug %>">
+<div class="{{sliderSlug}}">
   {% include '_partials/slider-base' with {
-    objectName: '<%= slug %>__slider',
-    moduleName: '<%= slug %>',
+    objectName: '{{sliderSlug}}__slider',
+    moduleName: '{{sliderSlug}}',
     key: key,
     label: label,
     slides: slides,

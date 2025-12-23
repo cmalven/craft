@@ -1,13 +1,10 @@
----
-to: src/scripts/modules/<%= name %>.ts
----
 import { Modu, ModuOptions } from '@malven/modu';
 
-<%_ if (description.length) { -%>
+{{#if description}}
 /**
- * <%= description %>
+ * {{description}}
  */
-<% } -%>
+{{/if}}
 
 export default class extends Modu {
   constructor(m: ModuOptions) {

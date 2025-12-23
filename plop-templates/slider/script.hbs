@@ -1,15 +1,12 @@
----
-to: src/scripts/modules/Slider<%= h.changeCase.pascalCase(name) %>.ts
----
 import { ModuOptions } from '@malven/modu';
 import SliderCore from './SliderCore';
 import type { Options } from '@splidejs/splide';
 
-<%_ if (description.length) { -%>
+{{#if description}}
 /**
- * <%= description %>
+ * {{description}}
  */
-<% } -%>
+{{/if}}
 
 
 export default class extends SliderCore {
