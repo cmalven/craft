@@ -1,19 +1,37 @@
-{# =============================================================== #} {# Slider
--
-{{getTitle name}}
-{# =============================================================== #} {# {%
-include '_partials/{{sliderSlug}}' with { items: [ '<p>Any html can go in here</p>',
-], label: 'Appropriate accessibility label for item.', key: 'my-unique-key',
-options: {}, } %} #} {% set slides = [] %} {% for itemContent in items ??? [] %}
-{% set slide %}
-<div class='{{sliderSlug}}__item'>
-  {# Slide content goes here #}
-  {{itemContent}}
-</div>
-{% endset %} {% set slides = slides | push(slide) %} {% endfor %}
+{# =============================================================== #}
+{# Slider - {{getTitle name}}
+{# =============================================================== #}
+{#
+  {% include '_partials/{{sliderSlug}}' with {
+    items: [
+      '<p>Any html can go in here</p>',
+    ],
+    label: 'Appropriate accessibility label for item.',
+    key: 'my-unique-key',
+    options: {},
+  } %}
+#}
 
-<div class='{{sliderSlug}}'>
-  {% include '_partials/slider-base' with { objectName: '{{sliderSlug}}__slider',
-  moduleName: '{{sliderSlug}}', key: key, label: label, slides: slides, options:
-  options ?? {}, } only %}
+{% set slides = [] %}
+
+{% for itemContent in items ??? [] %}
+  {% set slide %}
+      <div class="{{sliderSlug}}__item">
+        {# Slide content goes here #}
+        {{ itemContent }}
+      </div>
+  {% endset %}
+
+  {% set slides = slides | push(slide) %}
+{% endfor %}
+
+<div class="{{sliderSlug}}">
+  {% include '_partials/slider-base' with {
+    objectName: '{{sliderSlug}}__slider',
+    moduleName: '{{sliderSlug}}',
+    key: key,
+    label: label,
+    slides: slides,
+    options: options ?? {},
+  } only %}
 </div>

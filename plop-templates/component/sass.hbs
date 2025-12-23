@@ -1,12 +1,15 @@
-@use '~/common' as *; /*
+@use '~/common' as *;
+
+/*
 {{titlePrefix}}{{getTitle name}}
 {{#if description}}
 
-  {{description}}
+{{description}}
 {{/if}}
 */
 {{#each classList}}
 
-  .{{this}}
-  { }
+.{{this}} {
+
+}
 {{/each}}

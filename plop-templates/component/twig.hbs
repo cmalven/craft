@@ -1,11 +1,20 @@
-{# =============================================================== #} {#
-{{titlePrefix}}{{getTitle name}}
+{# =============================================================== #}
+{# {{titlePrefix}}{{getTitle name}}
 {# =============================================================== #}
 {{#if (eq type 'Twig Include')}}
-  {# {% include '_partials/{{slug}}' with { } only %} #}
+{#
+  {% include '_partials/{{slug}}' with {
+
+  } only %}
+#}
 {{/if}}
 {{#if (eq type 'Twig Embed')}}
-  {# {% embed '_embeds/{{slug}}' %} {% block main %} … {% endblock %} {%
-  endembed %} #}
+{#
+  {% embed '_embeds/{{slug}}' %}
+    {% block main %}
+      …
+    {% endblock %}
+  {% endembed %}
+#}
 {{/if}}
 {{{emmetMarkup}}}
