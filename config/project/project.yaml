@@ -1,4 +1,4 @@
-dateModified: 1762988168
+dateModified: 1770925535
 elementSources:
   craft\elements\Entry:
     -
@@ -123,10 +123,11 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 4TH2AWI8M809O4SJIJAE3G0O
-    schemaVersion: 2.1.1
+    schemaVersion: 2.1.2
   retour:
     edition: standard
     enabled: true
+    licenseKey: FY52PHR9RN31K932TUWF6TS2
     schemaVersion: 3.0.12
     settings:
       alwaysStripQueryString: false
@@ -442,7 +443,7 @@ system:
   edition: pro
   live: true
   name: your-project-title
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
