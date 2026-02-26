@@ -1,4 +1,4 @@
-dateModified: 1770925535
+dateModified: 1772129015
 elementSources:
   craft\elements\Entry:
     -
@@ -124,6 +124,10 @@ plugins:
     enabled: true
     licenseKey: 4TH2AWI8M809O4SJIJAE3G0O
     schemaVersion: 2.1.2
+  queue-monitor:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   retour:
     edition: standard
     enabled: true

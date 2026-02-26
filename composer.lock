@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "a546cac2e761b125a3166abb24ac2e9e",
+  "content-hash": "8264d9e21774072b4c9580fb798336a9",
   "packages": [
     {
       "name": "amphp/amp",
@@ -11071,6 +11071,58 @@
       "time": "2026-02-07T02:49:24+00:00"
     },
     {
+      "name": "verbb/queue-monitor",
+      "version": "2.0.3",
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/verbb/queue-monitor/zipball/2f66cb5f7b069628275680cf5b2d1366c1c7c90b",
+        "reference": "2f66cb5f7b069628275680cf5b2d1366c1c7c90b",
+        "shasum": ""
+      },
+      "require": {
+        "craftcms/cms": "^5.0.0",
+        "php": "^8.2",
+        "verbb/base": "^3.0.0"
+      },
+      "type": "craft-plugin",
+      "extra": {
+        "name": "Queue Monitor",
+        "handle": "queue-monitor",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/queue-monitor/craft-5/CHANGELOG.md",
+        "class": "verbb\\queuemonitor\\QueueMonitor"
+      },
+      "autoload": {
+        "psr-4": {
+          "verbb\\queuemonitor\\": "src/"
+        }
+      },
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Verbb",
+          "homepage": "https://verbb.io"
+        }
+      ],
+      "description": "Monitor the Craft queue to know when jobs fail.",
+      "keywords": [
+        "cms",
+        "craft",
+        "craft-plugin",
+        "craftcms",
+        "queue-monitor"
+      ],
+      "support": {
+        "email": "support@verbb.io",
+        "issues": "https://github.com/verbb/queue-monitor/issues?state=open",
+        "source": "https://github.com/verbb/queue-monitor",
+        "docs": "https://github.com/verbb/queue-monitor",
+        "rss": "https://github.com/verbb/queue-monitor/commits/v2.atom"
+      },
+      "time": "2025-11-06T03:27:54+00:00"
+    },
+    {
       "name": "vlucas/phpdotenv",
       "version": "v5.6.0",
       "dist": {
@@ -12319,11 +12371,11 @@
   ],
   "aliases": [],
   "minimum-stability": "beta",
-  "stability-flags": [],
+  "stability-flags": {},
   "prefer-stable": true,
   "prefer-lowest": false,
-  "platform": [],
-  "platform-dev": [],
+  "platform": {},
+  "platform-dev": {},
   "platform-overrides": {
     "php": "8.2.0"
   },
