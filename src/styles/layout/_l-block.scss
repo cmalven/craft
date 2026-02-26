@@ -158,6 +158,64 @@ $bg-colors: light, dark;
 }
 
 // ---------------------------------------------------------------
+// Entry Edit Highlight
+// ---------------------------------------------------------------
+
+body:has(.entry-edit-button) {
+  .l-block:before {
+    @include pseudo-absolute;
+    pointer-events: none;
+    inset: 0;
+    box-shadow:
+      0 0 0 1px var(--theme-text),
+      0 0 20px var(--theme-text);
+    transition: 0.3s;
+    transition-property: display, opacity;
+    transition-behavior: allow-discrete;
+    opacity: 0;
+    display: none;
+    z-index: var(--z-index-block-edit);
+  }
+}
+
+/* stylelint-disable-next-line scss/at-rule-no-unknown */
+@starting-style {
+  .l-block:before {
+    opacity: 0;
+    display: block;
+  }
+}
+
+.l-block__inner {
+  transition: opacity 0.3s;
+}
+
+body:has(
+  .l-block .entry-edit-button__inner:hover,
+  .l-block .entry-edit-button__inner:focus-visible
+) {
+  .l-block:not(
+      :has(
+        .entry-edit-button__inner:hover,
+        .entry-edit-button__inner:focus-visible
+      )
+    )
+    .l-block__inner {
+    opacity: 0.2;
+  }
+}
+
+.l-block:has(
+  .entry-edit-button__inner:hover,
+  .entry-edit-button__inner:focus-visible
+) {
+  &:before {
+    opacity: 0.2;
+    display: block;
+  }
+}
+
+// ---------------------------------------------------------------
 // Unique styles
 // ---------------------------------------------------------------
 

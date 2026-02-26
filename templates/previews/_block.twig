@@ -1,0 +1,39 @@
+{# ================================================================== #}
+{# Block Previews - Entry
+{# ================================================================== #}
+
+{% extends "_layout" %}
+
+{# Meta #}
+{% do seomatic.meta.robots('none') %}
+{% do seomatic.meta.seoTitle("Preview: #{entry.type.name}") %}
+
+{# Restrict access #}
+{% if not canView(entry) %}
+  {% exit 404 %}
+{% endif %}
+
+{# Remove default header and footer #}
+{% block globalHeader %}{% endblock %}
+{% block globalFooter %}{% endblock %}
+
+{# Get the owner entry in case the block needs access to it #}
+{% set primaryOwnerEntry = craft.entries.id(entry.primaryOwnerId).one() %}
+
+{% block content %}
+  {% embed '_embeds/l-block-preview' %}
+    {% block content %}
+      {% include '_partials/blocks' with {
+        groups: [
+          [
+            {
+              entry: primaryOwnerEntry ??? null,
+              handle: entry.type.handle,
+              block: entry,
+            },
+          ],
+        ],
+      } %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

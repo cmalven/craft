@@ -32,6 +32,7 @@ which uses this internally.
   classes: "js-block-#{handle} " ~ (classes ?? ''),
   modifiers: [handle] | merge(craft.twig.blockClasses(handle, block, previousBlock ?? null, nextBlock ?? null)),
   id: id ??? null,
+  attr: block.cpEditUrl ??? null ? { 'data-block-id': block.id },
 } %}
   {% block content %}
     {% include '_partials/blocks/' ~ handle ignore missing %}

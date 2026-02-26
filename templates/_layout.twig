@@ -24,7 +24,9 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   {# Global Header #}
-  {% include '_partials/global-header' %}
+  {% block globalHeader %}
+    {% include '_partials/global-header' %}
+  {% endblock %}
 
   {# Main Content Container #}
   <main class="l-container" tabindex="-1" id="main-content" data-module-reveal>
@@ -32,6 +34,9 @@
 
     {% include '_partials/debug-grid' %}
   </main>
+
+  {# Global Footer #}
+  {% block globalFooter %}{% endblock %}
 
   {# Craft CMS Editor Toolbar #}
   {{ craft.blitz.includeDynamic('_partials/craft-cms-toolbar', { entryId: entry.id ??? null, categoryId: category.id ??? null }) }}

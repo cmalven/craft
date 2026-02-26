@@ -41,7 +41,12 @@ return [
         ],
 
         // The URI patterns to exclude from caching (overrides any matching patterns to include). Set `siteId` to a blank string to indicate all sites.
-        'excludedUriPatterns' => [],
+        'excludedUriPatterns' => [
+            [
+                'siteId' => '',
+                'uriPattern' => '/preview',
+            ],
+        ],
 
         // The generator settings.
         'cacheGeneratorSettings' => ['concurrency' => 3],
