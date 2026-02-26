@@ -1,23 +1,23 @@
-dateModified: 1772129160
+dateModified: 1772134641
 elementSources:
   craft\elements\Entry:
     -
       defaultSort:
-        - postDate
+        - dateUpdated
         - desc
       defaultViewMode: ''
       disabled: false
       key: '*'
+      page: Content
       tableAttributes:
-        - status
         - section
-        - postDate
-        - expiryDate
-        - authors
-        - link
+        - dateUpdated
+        - uri
       type: native
     -
       heading: Pages
+      key: 'heading:6647ee96-16f2-42da-81f8-5a5614bd5445'
+      page: Content
       type: heading
     -
       defaultSort:
@@ -26,11 +26,10 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'single:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+      page: Content
       tableAttributes:
         - status
-        - postDate
-        - expiryDate
-        - authors
+        - dateUpdated
         - link
       type: native
     -
@@ -40,12 +39,31 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'section:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+      page: Content
       tableAttributes:
-        - status
-        - postDate
         - dateUpdated
         - uri
       type: native
+    -
+      heading: Global
+      key: 'heading:0ea7cbf3-7a05-4464-afac-6e698600f758'
+      page: Global
+      type: heading
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'single:c9b07bce-eaac-4cc4-82ab-d7536fd463a0' # Global Social
+      page: Global
+      tableAttributes:
+        - dateUpdated
+      type: native
+elementSourcesPages:
+  craft\elements\Entry:
+    Global:
+      icon: globe
 email:
   fromEmail: chris@malven.co
   fromName: your-project-title
@@ -64,6 +82,7 @@ meta:
     0f62a524-edb1-4f42-8319-5fa437d5a756: 'Text (Rich - Simple)' # Text (Rich - Simple)
     1eb79bf6-fb1c-4811-83fc-135aca7bfc89: Heading # Heading
     6d6999fd-cf25-4011-91bb-6ea9b844274b: 'Post Content' # Post Content
+    7b4eb678-108a-4921-9361-93e866c44efa: 'User Editors' # User Editors
     8e9916cc-4334-4a7e-9ba6-e6aae9238c81: 'Text (Plain - Single Line)' # Text (Plain - Single Line)
     9d6e156d-8dd4-4224-a69a-f46d32d53774: Standard # Standard
     31abb75d-dc87-4ff3-a413-bb161bd3a59f: your-project-title # your-project-title
@@ -73,15 +92,22 @@ meta:
     507bbcf8-f9bf-4845-9b14-829d155d2a96: Simple # Simple
     762c90cb-e904-42b1-a0ea-a82b1ddbe561: Images # Images
     253489f3-4e59-48ac-a725-d8592cb0ed1e: Page # Page
+    364133aa-0996-4ac2-8361-def609a990a0: 'Global Social' # Global Social
     90775891-8a83-4dd6-b2c0-0462aceb52d4: Homepage # Homepage
     a41668f7-a432-4cc4-a09b-609538ea0125: Homepage # Homepage
     ac35dbca-18f6-4f3d-a9ac-94c95bd7bf1c: 'Link Item' # Link Item
     ad966c15-02a7-47c1-b099-8822cd581301: 'Image / Video (Multiple)' # Image / Video (Multiple)
     adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b: Text # Text
     b7a660f1-cbad-4067-8031-b237c204ab41: Pages # Pages
+    bcb6b0c7-7c1f-4d59-8d27-520b3d9ecca9: 'Social Site Name' # Social Site Name
+    bdf04aed-258a-4c46-b577-0436c1c68003: 'Social Site URL' # Social Site URL
+    c9b07bce-eaac-4cc4-82ab-d7536fd463a0: 'Global Social' # Global Social
+    cdb419d9-a1e7-471e-ae31-20361997cf3b: 'Social Sites' # Social Sites
     cdebb3ec-ae8f-4b56-ab25-7afbf135a0d3: 'Post Content' # Post Content
+    d89eaa6c-1910-44f4-a943-5c8e27658de7: 'Social Site' # Social Site
     db405b1d-69f1-4eca-8a10-2f1545594476: 'Public Schema' # Public Schema
     dbbb6437-d106-40f2-a3ca-d539087f53a6: 'Image / Video' # Image / Video
+    f213dd53-a8ec-4985-b00c-f544ba83c531: Editors # Editors
 plugins:
   aws-s3:
     edition: standard
@@ -455,9 +481,3 @@ system:
   name: your-project-title
   schemaVersion: 5.9.0.8
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true

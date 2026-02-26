@@ -1,10 +1,10 @@
 columnSuffix: null
-handle: pageContent
+handle: socialSites
 instructions: null
-name: 'Page Content'
+name: 'Social Sites'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'New site'
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
@@ -12,7 +12,7 @@ settings:
       __assoc__:
         -
           - uid
-          - adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b # Text
+          - d89eaa6c-1910-44f4-a943-5c8e27658de7 # Social Site
         -
           - group
           - General
@@ -23,18 +23,6 @@ settings:
   propagationKeyFormat: null
   propagationMethod: all
   showCardsInGrid: false
-  siteSettings:
-    __assoc__:
-      -
-        - 0eec63d1-8a33-4f6a-83a5-00c027db46dc # your-project-title
-        -
-          __assoc__:
-            -
-              - uriFormat
-              - 'preview/block/{id}'
-            -
-              - template
-              - previews/_block.twig
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

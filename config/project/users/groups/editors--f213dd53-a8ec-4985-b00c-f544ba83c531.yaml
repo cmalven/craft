@@ -1,0 +1,60 @@
+description: null
+handle: editors
+name: Editors
+permissions:
+  - accesscp
+  - accessplugin-navigation
+  - accessplugin-retour
+  - accessplugin-seomatic
+  - 'blitz:refresh'
+  - 'changeauthorforpeerentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'createentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'createfolders:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'deleteassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'deleteentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'deletepeerassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'deletepeerentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'deletepeerentrydrafts:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'deletepeerentrydrafts:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'editimages:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'editpeerimages:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'replacefiles:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'replacepeerfiles:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'retour:dashboard'
+  - 'retour:redirects'
+  - 'retour:shortlinks'
+  - 'saveassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'saveentries:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'saveentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'savepeerassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'savepeerentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'savepeerentrydrafts:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'savepeerentrydrafts:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'seomatic:content-meta'
+  - 'seomatic:content-meta:facebook'
+  - 'seomatic:content-meta:general'
+  - 'seomatic:content-meta:sitemap'
+  - 'seomatic:content-meta:twitter'
+  - 'seomatic:dashboard'
+  - 'seomatic:global-meta'
+  - 'seomatic:global-meta:ads'
+  - 'seomatic:global-meta:facebook'
+  - 'seomatic:global-meta:general'
+  - 'seomatic:global-meta:humans'
+  - 'seomatic:global-meta:robots'
+  - 'seomatic:global-meta:security'
+  - 'seomatic:global-meta:twitter'
+  - 'seomatic:site-settings'
+  - 'seomatic:site-settings:creator'
+  - 'seomatic:site-settings:identity'
+  - 'seomatic:site-settings:miscellaneous'
+  - 'seomatic:site-settings:sitemap'
+  - 'seomatic:site-settings:social'
+  - 'utility:blitz-cache'
+  - 'viewassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'viewentries:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'viewentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'viewpeerassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'viewpeerentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'viewpeerentrydrafts:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'viewpeerentrydrafts:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages

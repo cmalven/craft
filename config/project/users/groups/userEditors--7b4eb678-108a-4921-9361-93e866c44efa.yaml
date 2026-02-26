@@ -1,0 +1,13 @@
+description: null
+handle: userEditors
+name: 'User Editors'
+permissions:
+  - administrateusers
+  - 'assignusergroup:f213dd53-a8ec-4985-b00c-f544ba83c531' # Editors
+  - assignuserpermissions
+  - deleteusers
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - registerusers
+  - viewusers

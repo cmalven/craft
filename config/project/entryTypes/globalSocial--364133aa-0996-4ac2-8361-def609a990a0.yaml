@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  62c2cd1e-ea56-4053-9810-b5cee4a6855b:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-02-26T19:34:26+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: cdb419d9-a1e7-471e-ae31-20361997cf3b # Social Sites
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c196052-5e78-4aa5-8169-13f27914d7e7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f316b5ce-b994-45bc-b594-5f70c2d42d2e
+        userCondition: null
+    thumbFieldKey: null
+handle: globalSocial
+hasTitleField: false
+icon: null
+name: 'Global Social'
+showSlugField: true
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

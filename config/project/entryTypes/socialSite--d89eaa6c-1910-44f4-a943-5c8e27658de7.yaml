@@ -1,0 +1,58 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  d23e4261-bd12-4f6d-93d9-8b49a693be4a:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-02-26T19:34:20+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bcb6b0c7-7c1f-4d59-8d27-520b3d9ecca9 # Social Site Name
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ef09172-2241-4feb-af57-f37ab31a3f05
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-02-26T19:34:20+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bdf04aed-258a-4c46-b577-0436c1c68003 # Social Site URL
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 21db9d06-c555-4c63-8f74-b66cf08b38dc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b3f4af84-949a-48ea-a2bf-2b0b4209c3ad
+        userCondition: null
+    thumbFieldKey: null
+handle: socialSite
+hasTitleField: false
+icon: null
+name: 'Social Site'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{socialSiteName.label}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

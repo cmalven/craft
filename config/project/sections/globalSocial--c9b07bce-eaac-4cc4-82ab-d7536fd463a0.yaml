@@ -1,0 +1,16 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 364133aa-0996-4ac2-8361-def609a990a0 # Global Social
+handle: globalSocial
+maxAuthors: 1
+name: 'Global Social'
+propagationMethod: all
+siteSettings:
+  0eec63d1-8a33-4f6a-83a5-00c027db46dc: # your-project-title
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single
