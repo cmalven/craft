@@ -1,4 +1,4 @@
-dateModified: 1772129015
+dateModified: 1772129160
 elementSources:
   craft\elements\Entry:
     -
@@ -128,6 +128,12 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+    settings:
+      failedJobUserGroup: null
+      restartFailedJobs: true
+      restartInterval: 10
+      restartMaxTries: 3
+      sendFailedJobEmail: false
   retour:
     edition: standard
     enabled: true
