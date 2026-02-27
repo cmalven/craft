@@ -2,10 +2,8 @@
 {# 503 Unavailable Error Template
 {# =============================================================== #}
 
-{% extends "_layout" %}
+{% set entry = craft.entries.section('errorPages').slug('503').eagerly().one() %}
 
-{% do seomatic.meta.seoTitle('Site Unavailable') %}
+{% extends "pages/_entry" %}
 
-{% block content %}
-  <h1>Site Unavailable</h1>
-{% endblock %}
+{% do seomatic.meta.seoTitle(entry.title) %}

@@ -1,0 +1,72 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  b441ecc7-4538-4045-9abe-87684a270e74:
+    cardThumbAlignment: end
+    cardView:
+      - slug
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-02-27T21:29:01+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 419bc0c4-c603-4547-a666-c608d703ed0d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-02-27T21:30:49+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 223e7dac-c6de-46ba-9144-0ee4c62734c4 # Page Content
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef66b16e-9629-4a44-a8f8-fd1f21579cd5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c7688706-e30c-4d36-b985-f99895621c34
+        userCondition: null
+    thumbFieldKey: null
+handle: errorPage
+hasTitleField: true
+icon: null
+name: 'Error Page'
+showSlugField: true
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

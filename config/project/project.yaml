@@ -1,4 +1,4 @@
-dateModified: 1772134641
+dateModified: 1772228049
 elementSources:
   craft\elements\Entry:
     -
@@ -60,6 +60,22 @@ elementSources:
       tableAttributes:
         - dateUpdated
       type: native
+    -
+      heading: 'Error Pages'
+      key: 'heading:2f1b7a47-cf5c-408e-92d7-e20515543041'
+      page: Global
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:a8919477-f7b3-4f9b-be48-596ba606e393' # Error Pages
+      page: Global
+      tableAttributes:
+        - slug
+      type: native
 elementSourcesPages:
   craft\elements\Entry:
     Global:
@@ -91,10 +107,12 @@ meta:
     380a83b9-344d-415b-a3f4-8b389ef61717: SEO # SEO
     507bbcf8-f9bf-4845-9b14-829d155d2a96: Simple # Simple
     762c90cb-e904-42b1-a0ea-a82b1ddbe561: Images # Images
+    9912afa3-ca03-49ab-a46b-7aabfa7f263d: 'Error Page' # Error Page
     253489f3-4e59-48ac-a725-d8592cb0ed1e: Page # Page
     364133aa-0996-4ac2-8361-def609a990a0: 'Global Social' # Global Social
     90775891-8a83-4dd6-b2c0-0462aceb52d4: Homepage # Homepage
     a41668f7-a432-4cc4-a09b-609538ea0125: Homepage # Homepage
+    a8919477-f7b3-4f9b-be48-596ba606e393: 'Error Pages' # Error Pages
     ac35dbca-18f6-4f3d-a9ac-94c95bd7bf1c: 'Link Item' # Link Item
     ad966c15-02a7-47c1-b099-8822cd581301: 'Image / Video (Multiple)' # Image / Video (Multiple)
     adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b: Text # Text

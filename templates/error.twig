@@ -2,10 +2,8 @@
 {# General Error Template
 {# =============================================================== #}
 
-{% extends "_layout" %}
+{% set entry = craft.entries.section('errorPages').slug('error').eagerly().one() %}
 
-{% do seomatic.meta.seoTitle('Page Error') %}
+{% extends "pages/_entry" %}
 
-{% block content %}
-  <h1>Page Error</h1>
-{% endblock %}
+{% do seomatic.meta.seoTitle(entry.title) %}

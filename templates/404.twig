@@ -2,10 +2,8 @@
 {# 404 Error Template
 {# =============================================================== #}
 
-{% extends "_layout" %}
+{% set entry = craft.entries.section('errorPages').slug('404').eagerly().one() %}
 
-{% do seomatic.meta.seoTitle('Page Not Found') %}
+{% extends "pages/_entry" %}
 
-{% block content %}
-  <h1>Page Not Found</h1>
-{% endblock %}
+{% do seomatic.meta.seoTitle(entry.title) %}
