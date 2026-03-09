@@ -1,4 +1,4 @@
-dateModified: 1773081802
+dateModified: 1773082337
 elementSources:
   craft\elements\Entry:
     -
@@ -89,7 +89,7 @@ email:
   transportSettings:
     host: $CRAFT_EMAIL_SMTP_HOST_NAME
     password: $CRAFT_EMAIL_SMTP_PASSWORD
-    port: CRAFT_EMAIL_SMTP_PORT
+    port: $CRAFT_EMAIL_SMTP_PORT
     useAuthentication: $CRAFT_EMAIL_USE_AUTHENTICATION
     username: $CRAFT_EMAIL_SMTP_USERNAME
   transportType: craft\mail\transportadapters\Smtp
