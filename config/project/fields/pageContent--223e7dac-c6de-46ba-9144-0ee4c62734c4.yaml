@@ -2,7 +2,7 @@ columnSuffix: null
 handle: pageContent
 instructions: null
 name: 'Page Content'
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
