@@ -6,15 +6,34 @@ searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: '*'
-  ckeConfig: cdebb3ec-ae8f-4b56-ab25-7afbf135a0d3 # Post Content
-  createButtonLabel: null
+  css: null
   defaultTransform: null
   enableSourceEditingForNonAdmins: false
+  fullGraphqlData: false
+  headingLevels:
+    - 2
+    - 3
+    - 4
+  js: null
+  options: null
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   showWordCount: false
+  toolbar:
+    - heading
+    - '|'
+    - bold
+    - italic
+    - blockQuote
+    - link
+    - '|'
+    - bulletedList
+    - numberedList
+    - '|'
+    - createEntry
+    - sourceEditing
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

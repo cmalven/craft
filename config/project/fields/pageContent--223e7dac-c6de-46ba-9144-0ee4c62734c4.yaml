@@ -4,7 +4,7 @@ instructions: null
 name: 'Page Content'
 searchable: true
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'Add a block'
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:

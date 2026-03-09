@@ -1,17 +1,17 @@
 {
   "require": {
     "craftcms/aws-s3": "^2.3.0",
-    "craftcms/ckeditor": "^4.11.1",
+    "craftcms/ckeditor": "^5.1.0",
     "craftcms/cms": "^5.9.14",
     "nystudio107/craft-autocomplete": "^1.10",
     "nystudio107/craft-retour": "5.0.14",
     "nystudio107/craft-seomatic": "5.1.20",
     "putyourlightson/craft-blitz": "^5.12.7",
     "putyourlightson/craft-sherlock": "5.2.0",
-    "spacecatninja/imager-x": "5.1.7",
+    "spacecatninja/imager-x": "^5.2.1",
     "spatie/craft-ray": "^2.1.4",
     "verbb/expanded-singles": "3.0.3",
-    "verbb/hyper": "2.3.1",
+    "verbb/hyper": "^2.3.2",
     "verbb/navigation": "3.0.17",
     "verbb/queue-monitor": "^2.0.3",
     "vlucas/phpdotenv": "^5.6.0"

@@ -3,9 +3,14 @@ enableVersioning: true
 entryTypes:
   -
     uid: 9912afa3-ca03-49ab-a46b-7aabfa7f263d # Error Page
-handle: errorPages
+handle: errorGeneral
 maxAuthors: 1
-name: 'Error Pages'
+name: 'General Error'
+previewTargets:
+  -
+    label: 'General Error'
+    refresh: '1'
+    urlFormat: error
 propagationMethod: all
 siteSettings:
   0eec63d1-8a33-4f6a-83a5-00c027db46dc: # your-project-title
@@ -13,4 +18,4 @@ siteSettings:
     hasUrls: false
     template: null
     uriFormat: null
-type: channel
+type: single

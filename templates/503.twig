@@ -2,7 +2,7 @@
 {# 503 Unavailable Error Template
 {# =============================================================== #}
 
-{% set entry = craft.entries.section('errorPages').slug('503').eagerly().one() %}
+{% set entry = craft.entries.section('error503').eagerly().one() %}
 
 {% extends "pages/_entry" %}
 
