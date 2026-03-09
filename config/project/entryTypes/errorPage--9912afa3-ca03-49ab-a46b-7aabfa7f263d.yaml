@@ -62,7 +62,7 @@ handle: errorPage
 hasTitleField: true
 icon: null
 name: 'Error Page'
-showSlugField: true
+showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
