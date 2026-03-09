@@ -9,6 +9,10 @@ grep -rl your-project-title . --exclude-dir={.git,bin,node_modules,vendor} | xar
 echo "Replacing project description..."
 grep -rl your-project-description . --exclude-dir={.git,bin,node_modules,vendor} | xargs sed -i '' -e "s/your-project-description/$3/g"
 
+echo "Replacing port 3111 with random port..."
+RANDOM_PORT="3$(shuf -i 100-999 -n 1)"
+grep -rl 3111 . --exclude-dir={.git,bin,node_modules,vendor} | xargs sed -i '' -e "s/3111/$RANDOM_PORT/g"
+
 echo "Renaming IDEA config file..."
 mv ./.idea/your-project-slug.iml ./.idea/$1.iml
 
