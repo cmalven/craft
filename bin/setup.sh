@@ -31,3 +31,4 @@ if [ -d "bin" ]; then
   echo "Deleting bin setup scripts..."
   rm -rf bin
 fi
+

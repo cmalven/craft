@@ -1,4 +1,4 @@
-dateModified: 1773081133
+dateModified: 1773081802
 elementSources:
   craft\elements\Entry:
     -
@@ -83,8 +83,16 @@ elementSourcesPages:
       icon: globe
 email:
   fromEmail: chris@malven.co
-  fromName: your-project-title
-  transportType: craft\mail\transportadapters\Sendmail
+  fromName: $CRAFT_EMAIL_SENDER_NAME
+  replyToEmail: $CRAFT_EMAIL_ADDRESS
+  template: ''
+  transportSettings:
+    host: $CRAFT_EMAIL_SMTP_HOST_NAME
+    password: $CRAFT_EMAIL_SMTP_PASSWORD
+    port: CRAFT_EMAIL_SMTP_PORT
+    useAuthentication: $CRAFT_EMAIL_USE_AUTHENTICATION
+    username: $CRAFT_EMAIL_SMTP_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
 fs:
   local:
     hasUrls: true
