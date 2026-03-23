@@ -5,6 +5,9 @@
  *
  * All of your system's general configuration settings go in here. You can see a
  * list of the available settings in vendor/craftcms/cms/src/config/GeneralConfig.php.
+ *
+ * @see \craft\config\GeneralConfig
+ * @link https://craftcms.com/docs/5.x/reference/config/general.html
  */
 
 use craft\helpers\App;
@@ -62,4 +65,6 @@ return GeneralConfig::create()
     ->coolDownDuration('PT5M')
     ->invalidLoginWindowDuration('PT1H')
     ->userSessionDuration(3600)
+    ->preventUserEnumeration()
+    ->enableTwigSandbox()
     ->sendPoweredByHeader(false);
