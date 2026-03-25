@@ -90,8 +90,10 @@
 #}
 
 {%- macro getSrcset(asset, transform) -%}
-{% set transformedImages = craft.imagerx.transformImage(asset, transform) %}
-{{ craft.imager.srcset(transformedImages) }}
+  {% apply spaceless %}
+    {% set transformedImages = craft.imagerx.transformImage(asset, transform) %}
+    {{ craft.imager.srcset(transformedImages) }}
+  {% endapply %}
 {%- endmacro -%}
 
 
@@ -108,19 +110,21 @@
 #}
 
 {% macro getSizes(size = 'full') %}
-  {% switch size %}
-    {% case 'full' %}
-      sizes="100vw"
+  {% apply spaceless %}
+    {% switch size %}
+      {% case 'full' %}
+        sizes="100vw"
 
-    {% case 'half' %}
-      sizes="(min-width: 768px) 50vw,
-      100vw"
+      {% case 'half' %}
+        sizes="(min-width: 768px) 50vw,
+        100vw"
 
-    {% case 'third' %}
-      sizes="(min-width: 1440px) 33vw,
-      (min-width: 768px) 50vw,
-      100vw"
-  {% endswitch %}
+      {% case 'third' %}
+        sizes="(min-width: 1440px) 33vw,
+        (min-width: 768px) 50vw,
+        100vw"
+    {% endswitch %}
+  {% endapply %}
 {% endmacro %}
 
 
@@ -140,7 +144,7 @@
 
 {% macro preload(imageAsset, transform = 'scale', size = 'full') %}
   {% html at head %}
-    <link rel="preload" as="image" href="{{ imageAsset.url }}" imagesrcset="{{ _self.getSrcset(imageAsset, transform) }}" imagesizes="{{  _self.getSizes(size)  }}">
+    <link rel="preload" as="image" href="{{ imageAsset.url }}" imagesrcset="{{ _self.getSrcset(imageAsset, transform) }}" imagesizes="{{ _self.getSizes(size) }}">
   {% endhtml %}
 {% endmacro %}
 
