@@ -62,7 +62,57 @@ jobs:
       # rsync
       - name: Deploy with rsync
         run: |
-          rsync -v -a -z --delete --recursive --exclude={".babelrc",".browserslistrc",".dockerignore",".editorconfig",".env*",".eslintignore",".eslintrc",".git",".gitignore",".hygen.js",".nvmrc",".prettierrc",".prettierignore",".stylelintrc",".swcrc","/.cache/","/.composer/","/.config/","/.local/","/.npm/","/.github/","/.swc/","/bin/","/bower_components/","/cypress/","/docker/","/gulp/","/log/","/node_modules/","/resources/","/src/","/storage/logs/","_templates","/tmp/","/web/assets/","auth.json","babel.config.json","bower.json","buddy.yml","composer.json","composer.lock","cypress.json","docker-compose.yml","Dockerfile","env.sample","FauxTwigExtension.php","gsap-bonus.tgz","gulpfile.js","package.json","package-lock.json","public","README.md","tsconfig.json","vite.config.js","vite.config.mjs","yarn.lock"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }}:${{ vars.SSH_DEPLOY_PATH }}
+          rsync -v -a -z \
+          --delete \
+          --recursive \
+          --exclude=".babelrc" \
+          --exclude=".browserslistrc" \
+          --exclude=".dockerignore" \
+          --exclude=".editorconfig" \
+          --exclude=".env*" \
+          --exclude=".eslintignore" \
+          --exclude=".eslintrc" \
+          --exclude=".git" \
+          --exclude=".gitignore" \
+          --exclude=".nvmrc" \
+          --exclude=".prettierignore" \
+          --exclude=".prettierrc" \
+          --exclude=".stylelintrc" \
+          --exclude="/.cache/" \
+          --exclude="/.composer/" \
+          --exclude="/.config/" \
+          --exclude="/.github/" \
+          --exclude="/.local/" \
+          --exclude="/.npm/" \
+          --exclude="/bin/" \
+          --exclude="/cypress/" \
+          --exclude="/docker/" \
+          --exclude="/gulp/" \
+          --exclude="/log/" \
+          --exclude="/node_modules/" \
+          --exclude="/resources/" \
+          --exclude="/src/" \
+          --exclude="/storage/logs/" \
+          --exclude="/tmp/" \
+          --exclude="/web/assets/" \
+          --exclude="Dockerfile" \
+          --exclude="FauxTwigExtension.php" \
+          --exclude="README.md" \
+          --exclude="auth.json" \
+          --exclude="composer.json" \
+          --exclude="composer.lock" \
+          --exclude="cypress.json" \
+          --exclude="docker-compose.yml" \
+          --exclude="package-lock.json" \
+          --exclude="package.json" \
+          --exclude="plop-templates" \
+          --exclude="plopfile.js" \
+          --exclude="public" \
+          --exclude="tsconfig.json" \
+          --exclude="vite.config.js" \
+          --exclude="vite.config.mjs" \
+          -e "ssh -o StrictHostKeyChecking=no" \
+          ./ ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }}:${{ vars.SSH_DEPLOY_PATH }}
 
       # execute Craft commands on remote server
       - name: Execute SSH commands on remote server
