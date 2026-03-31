@@ -145,8 +145,7 @@ jobs:
             ln -s ${{ vars.SSH_DEPLOY_PATH }}/web ${{ vars.SSH_DEPLOY_PATH }}/public
             chmod a+x craft
             php craft db/backup
-            php craft migrate/all
-            php craft project-config/apply
+            php craft up
             php craft invalidate-tags/template
             php craft blitz/cache/refresh
 
