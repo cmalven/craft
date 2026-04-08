@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="MessDetector">
+    <phpmd_settings>
+      <phpmd_by_interpreter asDefaultInterpreter="true" interpreter_id="3cba21f4-1f52-4567-bbd6-534910bdde9b" timeout="30000" />
+    </phpmd_settings>
+  </component>
   <component name="PhpCodeSniffer">
     <phpcs_settings>
       <phpcs_by_interpreter asDefaultInterpreter="true" interpreter_id="3cba21f4-1f52-4567-bbd6-534910bdde9b" timeout="30000" />
@@ -205,6 +210,45 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/verbb/queue-monitor" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/oauth2-craftid" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/voku/stop-words" />
+      <path value="$PROJECT_DIR$/vendor/voku/stringy" />
+      <path value="$PROJECT_DIR$/vendor/voku/email-check" />
+      <path value="$PROJECT_DIR$/vendor/voku/arrayy" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-utf8" />
+      <path value="$PROJECT_DIR$/vendor/voku/anti-xss" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-client" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/voku/urlify" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/redactor" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/vaersaagod/matrixmate" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/collect" />
+      <path value="$PROJECT_DIR$/vendor/putyourlightson/craft-blitz-hints" />
+      <path value="$PROJECT_DIR$/vendor/icanboogie/inflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastianlenz/linkfield" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown-extra" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/amphp/windows-registry" />
+      <path value="$PROJECT_DIR$/vendor/league/uri-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastianlenz/craft-utils" />
+      <path value="$PROJECT_DIR$/vendor/google/crc32" />
+      <path value="$PROJECT_DIR$/vendor/marionnewlevant/twig-perversion" />
+      <path value="$PROJECT_DIR$/vendor/nystudio107/craft-emptycoalesce" />
+      <path value="$PROJECT_DIR$/vendor/mundschenk-at/php-typography" />
+      <path value="$PROJECT_DIR$/vendor/mofodojodino/profanity-filter" />
+      <path value="$PROJECT_DIR$/vendor/topshelfcraft/environment-label" />
+      <path value="$PROJECT_DIR$/vendor/topshelfcraft/wordsmith" />
+      <path value="$PROJECT_DIR$/vendor/topshelfcraft/base" />
+      <path value="$PROJECT_DIR$/vendor/phpcollection/phpcollection" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
