@@ -75,10 +75,12 @@
   },
   "license": "UNLICENSED",
   "lint-staged": {
-    "*.{js,ts}": [
+    "*.{js,ts,mjs,mts,cjs}": [
       "npm run lint-scripts",
-      "npm run typecheck-scripts",
       "npm run check"
+    ],
+    "*.{ts,mts}": [
+      "npm run typecheck-scripts"
     ],
     "*.{css,scss}": [
       "npm run lint-styles",
