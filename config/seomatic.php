@@ -12,5 +12,8 @@ return [
 
         // Should Description tags be truncated at the max length, on word boundaries?
         'truncateDescriptionTags' => false,
+
+        // Disable the default social media preview target
+        'socialMediaPreviewTarget' => false,
     ],
 ];
