@@ -14,7 +14,8 @@
 {% endif %}
 
 {% if element and canView(element) %}
-  {% set elementSection = element.section.name ??? element.group.name ??? 'Preview' %}
+  {% set primaryOwnerEntry = craft.entries.id(element.primaryOwnerId ??? null).one() ??? null %}
+  {% set elementSection = element.section.name ??? element.group.name ??? primaryOwnerEntry.title ??? 'Preview' %}
   {% set elementTitle = element.title ??? element.type.name %}
 
   {# Editible Blocks #}
@@ -31,29 +32,23 @@
     class="craft-cms-toolbar"
     data-editable-blocks="{{ editableBlocks | json_encode }}"
   >
-    {# Toggle #}
-    <a href="{{ siteUrl }}{{ craft.app.config.general.cpTrigger }}" target="_blank" rel="nofollow" class="craft-cms-toolbar__toggle">
-      <span class="craft-cms-toolbar__toggle-inner">
-      {{ source('_svg/inline/craft-cms-logo.svg') }}
-      </span>
-    </a>
+    {% set env = craft.app.config.env %}
 
-    {# Content #}
-    <div class="craft-cms-toolbar__content">
-      {# Content Inner #}
-      <div class="craft-cms-toolbar__content-inner">
-        {# Links #}
-        <a class="craft-cms-toolbar__link" href="{{ element.cpEditUrl }}" target="_blank" rel="nofollow">Edit Entry</a>
-
-        {# Details #}
-        <p class="craft-cms-toolbar__badge">{{ elementSection }}{% if elementSection != elementTitle and 'Index' not in elementSection %} <span>&#9658;</span> {{ elementTitle | truncate(25, splitSingleWord=false) }}{% endif %}</p>
-
-        {# Dev Mode #}
-        {% set env = craft.app.config.env %}
-        {% if env not in ['production'] %}
-          <p class="craft-cms-toolbar__badge craft-cms-toolbar__badge--warning" title="The current environment is {{ env | title }}">{{ env | title }}</p>
-        {% endif %}
-      </div>
-    </div>
+    {% include '_partials/craft-cms-bar' with {
+      link: {
+        label: 'Edit Entry',
+        url: element.cpEditUrl,
+      },
+      breadcrumbs: [
+        { label: elementSection, url: primaryOwnerEntry.cpEditUrl ??? null },
+        elementSection != elementTitle and 'Index' not in elementSection
+          ? { label: elementTitle, url: null },
+      ],
+      environmentBadge: env not in ['production'] ? {
+        label: env | title,
+        modifiers: ['warning'],
+        description: "The current environment is #{env | title}",
+      },
+    } only %}
   </div>
 {% endif %}

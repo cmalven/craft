@@ -1,0 +1,63 @@
+{# =============================================================== #}
+{# Craft Cms Bar
+{# =============================================================== #}
+{#
+  {% include '_partials/craft-cms-bar' with {
+    link: {
+      label: 'Edit Entry',
+      url: '',
+    },
+    breadcrumbs: [
+      { label: 'Homepage', url: siteUrl },
+      { label: 'Another Item Title', url: '' },
+    ],
+    environmentBadge: {
+      label: 'Dev',
+      modifiers: ['warning'],
+      description: 'The current environment is development',
+    },
+  } only %}
+#}
+
+<div class="craft-cms-bar">
+  {# Toggle #}
+  <a href="{{ siteUrl }}{{ craft.app.config.general.cpTrigger }}" target="_blank" rel="nofollow" class="craft-cms-bar__toggle">
+    <span class="craft-cms-bar__toggle-inner">
+      {{ source('_svg/inline/craft-cms-logo.svg') }}
+    </span>
+  </a>
+
+  {# Content #}
+  <div class="craft-cms-bar__content">
+    {# Content Inner #}
+    <div class="craft-cms-bar__content-inner">
+      {# Links #}
+      {% if link.url ??? null %}
+        <a class="craft-cms-bar__link" href="{{ link.url }}" target="_blank" rel="nofollow">{{ link.label }}</a>
+      {% endif %}
+
+      {# Details #}
+      <p class="craft-cms-bar__badge">
+        {% for item in breadcrumbs %}
+          {% set itemEl = item.url ??? null ? 'a' : 'span' %}
+          {% tag itemEl with {
+            href: item.url ??? null,
+            target: item.url ??? null ? '_blank',
+          } %}
+            {{ item.label  | truncate(25, splitSingleWord=false) }}
+          {% endtag %}
+
+          {% if not loop.last %}
+            <span class="craft-cms-bar__badge-arrow-divider">&#9658;</span>
+          {% endif %}
+        {% endfor %}
+      </p>
+
+      {# Dev Mode #}
+      {% if environmentBadge.label ??? null %}
+        {% set environmentBadgeClasses = craft.twig.modifiers('craft-cms-bar__badge', environmentBadge.modifiers ?? null) %}
+        <p class="craft-cms-bar__badge {{ environmentBadgeClasses }}" title="{{ environmentBadge.description }}">{{ environmentBadge.label }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>

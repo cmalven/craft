@@ -1,0 +1,103 @@
+@use '~/common' as *;
+
+/*
+Craft Cms Bar
+
+A flexible bar for craft CMS admin editing.
+*/
+
+.craft-cms-bar {
+  --craft-cms-bar-bg-color: #32363d;
+  @include font-stack-styles(system);
+  color: white;
+  padding-inline: 15px 10px;
+  background: linear-gradient(
+    to bottom,
+    oklch(from var(--craft-cms-bar-bg-color) l c h / 0.6),
+    oklch(from var(--craft-cms-bar-bg-color) l c h / 0.7)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  padding-block: 7px;
+
+  @include media('<768px') {
+    display: none;
+  }
+}
+
+.craft-cms-bar__toggle {
+  display: block;
+  width: 75px;
+  transition: opacity 0.15s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.craft-cms-bar__toggle-inner {
+  @include responsive-svg(0.25);
+  display: block;
+}
+
+.craft-cms-bar__content {
+}
+
+.craft-cms-bar__content-inner {
+  --craft-cms-bar-content-inner-gap: 20px;
+  padding-left: 23px;
+  display: flex;
+  gap: var(--craft-cms-bar-content-inner-gap);
+  align-items: center;
+}
+
+.craft-cms-bar__badge {
+  --craft-cms-bar-badge-bg-color: rgb(from white r g b / 0.1);
+  --craft-cms-bar-badge-color: currentcolor;
+  background-color: var(--craft-cms-bar-badge-bg-color);
+  color: var(--craft-cms-bar-badge-color);
+  font-size: 0.9em;
+  padding: 0.6em 0.9em;
+  border-radius: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+
+  // Sibling badge
+  & + & {
+    margin-left: calc(-0.6 * var(--craft-cms-bar-content-inner-gap));
+  }
+}
+
+.craft-cms-bar__badge-arrow-divider {
+  font-size: 6px;
+  display: inline-block;
+  padding-inline: 2px;
+  position: relative;
+  top: -1px;
+}
+
+.craft-cms-bar__link {
+  font-size: 1.2em;
+  line-height: 2em;
+  text-underline-offset: 0.4em;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+// ---------------------------------------------------------------
+// Badge Modifiers
+// ---------------------------------------------------------------
+
+.craft-cms-bar__badge--warning {
+  --craft-cms-bar-badge-bg-color: #8d7b45;
+}

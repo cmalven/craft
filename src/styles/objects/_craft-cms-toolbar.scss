@@ -7,119 +7,15 @@ Custom toolbar visible to Craft CMS editors.
 */
 
 .craft-cms-toolbar {
-  --craft-cms-toolbar-bg-color: #32363d;
-  @include font-stack-styles(system);
-  color: white;
   z-index: 9999;
   position: fixed;
   bottom: 20px;
   left: 20px;
-  padding-inline: 15px 10px;
-  background: linear-gradient(
-    to bottom,
-    oklch(from var(--craft-cms-toolbar-bg-color) l c h / 0.6),
-    oklch(from var(--craft-cms-toolbar-bg-color) l c h / 0.7)
-  );
-  backdrop-filter: blur(10px);
-  border-radius: 200px;
-  display: flex;
-  align-items: center;
-  padding-block: 7px;
   transition: opacity 0.5s;
   opacity: 1;
-
-  @include media('<768px') {
-    display: none;
-  }
 
   /* stylelint-disable-next-line scss/at-rule-no-unknown */
   @starting-style {
     opacity: 0;
   }
-}
-
-.craft-cms-toolbar__toggle {
-  display: block;
-  width: 75px;
-  transition: opacity 0.15s;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-}
-
-.craft-cms-toolbar__toggle-inner {
-  position: relative;
-  height: 0;
-  width: 100%;
-  padding: 0 0 25%;
-  display: block;
-
-  > svg {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-}
-
-.craft-cms-toolbar__content {
-}
-
-.craft-cms-toolbar__content-inner {
-  --craft-cms-toolbar-content-inner-gap: 20px;
-  padding-left: 23px;
-  display: flex;
-  gap: var(--craft-cms-toolbar-content-inner-gap);
-  align-items: center;
-}
-
-.craft-cms-toolbar__badge {
-  --craft-cms-toolbar-badge-bg-color: #{rgba(white, 0.1)};
-  --craft-cms-toolbar-badge-color: currentcolor;
-  background-color: var(--craft-cms-toolbar-badge-bg-color);
-  color: var(--craft-cms-toolbar-badge-color);
-  font-size: 0.9em;
-  padding: 0.6em 0.9em;
-  border-radius: 1.2em;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 0.15em;
-
-  > span {
-    font-size: 6px;
-    display: inline-block;
-    padding-inline: 2px;
-    position: relative;
-    top: -1px;
-  }
-
-  // Sibling badge
-  & + & {
-    margin-left: calc(-0.6 * var(--craft-cms-toolbar-content-inner-gap));
-  }
-}
-
-.craft-cms-toolbar__link {
-  font-size: 1.2em;
-  line-height: 2em;
-  text-underline-offset: 0.4em;
-  text-decoration-thickness: 1px;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-}
-
-// ---------------------------------------------------------------
-// Badge Modifiers
-// ---------------------------------------------------------------
-
-.craft-cms-toolbar__badge--warning {
-  --craft-cms-toolbar-badge-bg-color: #8d7b45;
 }
