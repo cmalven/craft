@@ -144,7 +144,7 @@
 
 {% macro preload(imageAsset, transform = 'scale', size = 'full') %}
   {% html at head %}
-    <link rel="preload" as="image" href="{{ imageAsset.url }}" imagesrcset="{{ _self.getSrcset(imageAsset, transform) }}" imagesizes="{{ _self.getSizes(size) }}">
+    <link rel="preload" as="image" fetchpriority="high" href="{{ imageAsset.url }}" imagesrcset="{{ _self.getSrcset(imageAsset, transform) }}" imagesizes="{{ _self.getSizes(size) }}">
   {% endhtml %}
 {% endmacro %}
 
