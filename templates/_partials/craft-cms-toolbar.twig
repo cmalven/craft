@@ -34,16 +34,22 @@
   >
     {% set env = craft.app.config.env %}
 
+    {# Section Breadcrumb #}
+    {% set breadcrumbs = [
+      { label: elementSection, url: primaryOwnerEntry.cpEditUrl ??? null },
+    ] %}
+
+    {# Additional Breadcrumbs #}
+    {% if elementSection != elementTitle and 'Index' not in elementSection %}
+      {% set breadcrumbs = breadcrumbs | push({ label: elementTitle,url: null }) %}
+    {% endif %}
+
     {% include '_partials/craft-cms-bar' with {
       link: {
         label: 'Edit Entry',
         url: element.cpEditUrl,
       },
-      breadcrumbs: [
-        { label: elementSection, url: primaryOwnerEntry.cpEditUrl ??? null },
-        elementSection != elementTitle and 'Index' not in elementSection
-          ? { label: elementTitle, url: null },
-      ],
+      breadcrumbs: breadcrumbs,
       environmentBadge: env not in ['production'] ? {
         label: env | title,
         modifiers: ['warning'],
