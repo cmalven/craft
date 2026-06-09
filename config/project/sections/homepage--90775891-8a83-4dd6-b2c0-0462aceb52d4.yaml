@@ -1,22 +1,17 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - a41668f7-a432-4cc4-a09b-609538ea0125 # Homepage
+  -
+    uid: a41668f7-a432-4cc4-a09b-609538ea0125 # Homepage
 handle: homepage
 maxAuthors: 1
+minAuthors: 1
 name: Homepage
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   0eec63d1-8a33-4f6a-83a5-00c027db46dc: # your-project-title

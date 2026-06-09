@@ -5,6 +5,7 @@ entryTypes:
     uid: 9912afa3-ca03-49ab-a46b-7aabfa7f263d # Error Page
 handle: error503
 maxAuthors: 1
+minAuthors: 1
 name: '503 Error'
 previewTargets:
   -

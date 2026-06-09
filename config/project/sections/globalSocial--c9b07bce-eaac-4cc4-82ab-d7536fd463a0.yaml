@@ -5,6 +5,7 @@ entryTypes:
     uid: 364133aa-0996-4ac2-8361-def609a990a0 # Global Social
 handle: globalSocial
 maxAuthors: 1
+minAuthors: 1
 name: 'Global Social'
 propagationMethod: all
 siteSettings:

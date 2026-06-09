@@ -1,22 +1,17 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 253489f3-4e59-48ac-a725-d8592cb0ed1e # Page
+  -
+    uid: 253489f3-4e59-48ac-a725-d8592cb0ed1e # Page
 handle: pages
 maxAuthors: 1
+minAuthors: 1
 name: Pages
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   0eec63d1-8a33-4f6a-83a5-00c027db46dc: # your-project-title

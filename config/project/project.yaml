@@ -1,4 +1,4 @@
-dateModified: 1773082337
+dateModified: 1781029602
 elementSources:
   craft\elements\Entry:
     -
@@ -151,7 +151,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 5.0.0.1
+    schemaVersion: 5.6.0.0
   craft-ray:
     edition: standard
     enabled: true
@@ -507,5 +507,5 @@ system:
   edition: pro
   live: true
   name: your-project-title
-  schemaVersion: 5.9.0.8
+  schemaVersion: 5.10.0.0
   timeZone: America/Los_Angeles
