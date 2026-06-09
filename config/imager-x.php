@@ -14,17 +14,4 @@ return [
     'fillTransforms' => true,
     'fillInterval' => 400,
     'useForCpThumbs' => true,
-
-    //'imgixApiKey' => App::env('IMGIX_API_KEY'),
-    //
-    //'imgixConfig' => [
-    //    'default' => [
-    //        'domain' => App::env('IMGIX_DOMAIN'),
-    //        'useHttps' => true,
-    //        'signKey' => App::env('IMGIX_SIGN_KEY'),
-    //        'useCloudSourcePath' => true,
-    //        'sourceIsWebProxy' => false,
-    //        'getExternalImageDimensions' => false,
-    //    ]
-    //]
 ];
