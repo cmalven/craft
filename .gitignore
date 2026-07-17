@@ -41,6 +41,10 @@ http-client.private.env.json
 # ---------------------------
 /dist/
 
+# Development
+# ---------------------------
+/.ddev/.env.web
+
 # AI Context
 # ---------------------------
 CLAUDE.md
