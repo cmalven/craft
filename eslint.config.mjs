@@ -1,6 +1,7 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import globals from 'globals';
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -8,6 +9,12 @@ export default tseslint.config(
   eslintConfigPrettier,
 
   {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
     ignores: ['/templates/**/*.twig', '/src/**/*.html'],
     rules: {
       camelcase: 'warn',

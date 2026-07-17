@@ -8,17 +8,17 @@ import legacy from '@vitejs/plugin-legacy';
 // https://vitejs.dev/config/
 
 export default defineConfig(({ command, mode }) => {
-  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+  const env = loadEnv(mode, process.cwd(), '');
 
   return {
     base: command === 'serve' ? '' : '/dist/',
     publicDir: './src/static',
     server: {
-      port: process.env.VITE_DEV_PORT || 3000,
+      port: env.VITE_DEV_PORT || 3000,
       host: false, // Set to `true` to enable network access
-      cors: { origin: 'https://your-project-slug.ddev.site' },
+      cors: { origin: env.PRIMARY_SITE_URL },
       hmr: {
-        host: process.env.VITE_DEV_BASE_ADDRESS, // Necessary only if `https` is true
+        host: env.VITE_DEV_BASE_ADDRESS, // Necessary only if `https` is true
       },
       https: true,
     },
@@ -54,7 +54,7 @@ export default defineConfig(({ command, mode }) => {
       }),
       vitePluginCraftCms({
         outputFile: './templates/_partials/vite.twig',
-        devServerBaseAddress: process.env.VITE_DEV_BASE_ADDRESS,
+        devServerBaseAddress: env.VITE_DEV_BASE_ADDRESS,
       }),
     ],
   };
