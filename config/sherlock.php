@@ -17,6 +17,10 @@
  * you do for 'general.php'
  */
 
+use craft\helpers\App;
+
+$localDevPort = App::env('VITE_DEV_PORT') ?? 3000;
+
 return [
     '*' => [
         // Whether to monitor scans. If enabled, control panel alerts will be shown to all users that have access to the Sherlock plugin and notification emails will be sent if the site scan status changes from pass to fail and if any critical updates are detected.
@@ -62,12 +66,12 @@ return [
                 [
                     true,
                     'script-src',
-                    "'self' 'unsafe-inline' 'unsafe-eval' https://localhost:3111 https://*.marker.io https://www.googletagmanager.com https://unpkg.com https://www.google.com https://www.gstatic.com",
+                    "'self' 'unsafe-inline' 'unsafe-eval' https://localhost:$localDevPort https://*.marker.io https://www.googletagmanager.com https://unpkg.com https://www.google.com https://www.gstatic.com",
                 ],
                 [
                     true,
                     'style-src',
-                    "'self' 'unsafe-inline' https://localhost:3111 https://unpkg.com https://fonts.googleapis.com",
+                    "'self' 'unsafe-inline' https://localhost:$localDevPort https://unpkg.com https://fonts.googleapis.com",
                 ],
                 [true, 'worker-src', 'blob: '],
                 [
@@ -81,16 +85,20 @@ return [
                     'https://servd-your-project-slug.b-cdn.net data: ',
                 ],
                 [true, 'child-src', 'blob: '],
-                [true, 'font-src', "'self' https://localhost:3111  data: "],
+                [
+                    true,
+                    'font-src',
+                    "'self' https://localhost:$localDevPort  data: ",
+                ],
                 [
                     true,
                     'img-src',
-                    "'self' https://localhost:3111 https://your-project-slug.files.svdcdn.com https://your-project-slug.transforms.svdcdn.com data: ",
+                    "'self' https://localhost:$localDevPort https://your-project-slug.files.svdcdn.com https://your-project-slug.transforms.svdcdn.com data: ",
                 ],
                 [
                     true,
                     'connect-src',
-                    "'self' wss://localhost:3111 https://www.google.com https://*.ingest.sentry.io https://*.marker.io https://www.google-analytics.com data:",
+                    "'self' wss://localhost:$localDevPort https://www.google.com https://*.ingest.sentry.io https://*.marker.io https://www.google-analytics.com data:",
                 ],
                 [true, 'manifest-src', "'self'"],
             ],
