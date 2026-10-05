@@ -1,0 +1,3 @@
+# Bake Claude Code into the web image so it survives `ddev restart`/rebuilds.
+# (Global npm installs into a running container vanish on restart — hence build-time.)
+RUN npm install -g @anthropic-ai/claude-code

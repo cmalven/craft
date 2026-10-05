@@ -1,0 +1,12 @@
+# Allowlist, not a blocklist: Claude writes credentials, transcripts, plugin
+# caches and session state into this directory, and a new one appearing later
+# must not become a surprise commit. Everything is ignored; add an exception
+# only for a file that genuinely belongs in version control.
+*
+!.gitignore
+!settings.json
+!statusline-command.sh
+!speech/
+speech/*
+!speech/speak.py
+!speech/play-queue.sh

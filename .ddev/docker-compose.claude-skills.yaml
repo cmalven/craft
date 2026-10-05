@@ -1,0 +1,7 @@
+# Mount the host's personal Claude Code skills into the web container at the
+# same absolute path, so symlinks in .claude-ddev/skills/ resolve inside the
+# container (e.g. for `ddev claude`). Read-only: skills are edited on the host.
+services:
+  web:
+    volumes:
+      - ${HOME}/.claude/skills:${HOME}/.claude/skills:ro

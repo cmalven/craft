@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+## Description: Run Claude Code inside the web container
+## Usage: claude [args...]
+## Example: ddev claude
+
+# Launch the interactive TUI with a real TTY. Piping into `ddev ssh` fails —
+# Claude sees non-TTY stdin, drops into --print mode, and errors.
+# Allocate -i/-t only when a terminal is actually present, so non-interactive
+# uses (e.g. `ddev claude --version`) still work.
+tty_flags=()
+[ -t 0 ] && tty_flags+=(-i)
+[ -t 1 ] && tty_flags+=(-t)
+
+# The container's Claude reads user-level skills from .claude-ddev/skills/
+# (CLAUDE_CONFIG_DIR), not ~/.claude/skills/. Link every host skill in on each
+# launch so new ones show up automatically; the links resolve inside the
+# container via .ddev/docker-compose.claude-skills.yaml. `synced/` is Claude's
+# own download directory, so it's skipped.
+skills_dir="$DDEV_APPROOT/.claude-ddev/skills"
+mkdir -p "$skills_dir"
+for link in "$skills_dir"/*; do
+  # Drop links to skills since removed from the host.
+  [ -L "$link" ] && [ ! -e "$link" ] && rm "$link"
+done
+for skill in "$HOME"/.claude/skills/*/; do
+  name=$(basename "$skill")
+  [ "$name" = synced ] && continue
+  [ -e "$skills_dir/$name" ] || ln -s "${skill%/}" "$skills_dir/$name"
+done
+
+# Herdr detects agents from the host-visible foreground process, which here is
+# `docker`, not the `claude` running inside the container. HERDR_AGENT is the
+# documented hint for that case; it must be set on the host wrapper command
+# (setting it inside the container is invisible to Herdr).
+# Requires Herdr >= 0.8.x; older versions ignore it.
+HERDR_AGENT=claude exec docker exec "${tty_flags[@]}" -w /var/www/html "ddev-${DDEV_SITENAME}-web" claude "$@"

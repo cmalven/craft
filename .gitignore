@@ -45,8 +45,10 @@ http-client.private.env.json
 # ---------------------------
 /.ddev/.env.web
 
-# AI Context
+# Agents
 # ---------------------------
+/.claude
 CLAUDE.md
+
 
 
