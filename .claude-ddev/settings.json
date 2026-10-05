@@ -30,29 +30,6 @@
     "defaultMode": "auto"
   },
   "model": "opus[1m]",
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "[ -x /opt/kokoro/bin/python ] && /opt/kokoro/bin/python \"$CLAUDE_CONFIG_DIR/speech/speak.py\" 2>/dev/null || true",
-            "async": true
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "[ -x /opt/kokoro/bin/python ] && /opt/kokoro/bin/python \"$CLAUDE_CONFIG_DIR/speech/speak.py\" --stop >/dev/null 2>&1 || true"
-          }
-        ]
-      }
-    ]
-  },
   "statusLine": {
     "type": "command",
     "command": "bash \"$CLAUDE_CONFIG_DIR/statusline-command.sh\""

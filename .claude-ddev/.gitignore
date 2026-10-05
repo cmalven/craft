@@ -6,7 +6,3 @@
 !.gitignore
 !settings.json
 !statusline-command.sh
-!speech/
-speech/*
-!speech/speak.py
-!speech/play-queue.sh
