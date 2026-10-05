@@ -1,0 +1,99 @@
+columnSuffix: null
+handle: textSet
+instructions: null
+name: 'Text Set'
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - d83fada0-5b1c-4001-86a2-32f01208894d
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - 971426d6-031e-4626-a55e-c56c1aa0ef4c
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-09-30T20:50:05+00:00'
+                            9:
+                              - uid
+                              - 6969da7d-ae90-417b-a381-a12f2ceaa606
+                            12:
+                              - fieldUid
+                              - 30fd7294-b415-41e8-8e46-ae01c775c289 # Subhead
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-09-30T20:50:05+00:00'
+                            9:
+                              - uid
+                              - 212e6467-c048-4122-936a-6fc2b538726b
+                            12:
+                              - fieldUid
+                              - 1eb79bf6-fb1c-4811-83fc-135aca7bfc89 # Heading
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - text
+                            2:
+                              - label
+                              - Text
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-09-30T20:50:22+00:00'
+                            9:
+                              - uid
+                              - 8cc3c453-8841-4928-96e6-f8a8f997cc8c
+                            12:
+                              - fieldUid
+                              - ac883b44-4cf4-426a-ac68-c28f9386f23b # Text (Rich - Text Set)
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

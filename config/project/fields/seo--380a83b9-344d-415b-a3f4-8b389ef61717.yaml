@@ -1,5 +1,4 @@
 columnSuffix: lrowimxv
-contentColumnType: text
 handle: seo
 instructions: null
 name: SEO
@@ -9,6 +8,7 @@ settings:
   facebookEnabledFields: ''
   facebookTabEnabled: ''
   generalEnabledFields:
+    - mainEntityOfPage
     - seoTitle
     - seoDescription
     - seoImage

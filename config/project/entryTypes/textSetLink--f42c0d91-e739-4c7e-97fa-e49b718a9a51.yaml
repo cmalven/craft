@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  265faa78-e918-4239-b3c4-f2575be1d833:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-09-30T20:49:44+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ac35dbca-18f6-4f3d-a9ac-94c95bd7bf1c # Link Item
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8f27c13-9536-4421-90cc-902dfcaf0635
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1384309d-637c-4473-a38e-7a5b93ce49b8
+        userCondition: null
+    thumbFieldKey: null
+handle: textSetLink
+hasTitleField: false
+icon: link-horizontal
+name: 'Text Set Link'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: 'Text Set Link - {linkItem.text}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,4 +1,4 @@
-dateModified: 1781029602
+dateModified: 1790801451
 elementSources:
   craft\elements\Entry:
     -
@@ -111,6 +111,8 @@ meta:
     7b4eb678-108a-4921-9361-93e866c44efa: 'User Editors' # User Editors
     7caedd88-5ce7-459a-b932-c8f6c230af49: Image # Image
     8e9916cc-4334-4a7e-9ba6-e6aae9238c81: 'Text (Plain - Single Line)' # Text (Plain - Single Line)
+    28cb9bd8-a3be-476a-9137-12796687acc8: 'Text Set' # Text Set
+    30fd7294-b415-41e8-8e46-ae01c775c289: Subhead # Subhead
     31abb75d-dc87-4ff3-a413-bb161bd3a59f: your-project-title # your-project-title
     109bc20e-6e6a-4466-885c-030237bbbc46: 'Text (Plain - Multiline)' # Text (Plain - Multiline)
     223e7dac-c6de-46ba-9144-0ee4c62734c4: 'Page Content' # Page Content
@@ -124,6 +126,7 @@ meta:
     a41668f7-a432-4cc4-a09b-609538ea0125: Homepage # Homepage
     a8919477-f7b3-4f9b-be48-596ba606e393: '404 Error' # 404 Error
     ac35dbca-18f6-4f3d-a9ac-94c95bd7bf1c: 'Link Item' # Link Item
+    ac883b44-4cf4-426a-ac68-c28f9386f23b: 'Text (Rich - Text Set)' # Text (Rich - Text Set)
     ad966c15-02a7-47c1-b099-8822cd581301: 'Image / Video (Multiple)' # Image / Video (Multiple)
     adacfc6e-cbe6-4bc6-b486-3c04cfbd4b0b: Text # Text
     b7a660f1-cbad-4067-8031-b237c204ab41: Pages # Pages
@@ -135,6 +138,7 @@ meta:
     db405b1d-69f1-4eca-8a10-2f1545594476: 'Public Schema' # Public Schema
     dbbb6437-d106-40f2-a3ca-d539087f53a6: 'Image / Video' # Image / Video
     e0423b18-682e-4623-ba3f-d8e6d2746bae: Images # Images
+    f42c0d91-e739-4c7e-97fa-e49b718a9a51: 'Text Set Link' # Text Set Link
     f213dd53-a8ec-4985-b00c-f544ba83c531: Editors # Editors
 plugins:
   aws-s3:
