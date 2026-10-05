@@ -1,4 +1,4 @@
-dateModified: 1790801451
+dateModified: 1791240173
 elementSources:
   craft\elements\Entry:
     -
@@ -149,7 +149,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: ONU7VUDYBB41UH09QCWVCXLC
-    schemaVersion: 5.12.0
+    schemaVersion: 5.13.0
     settings:
       maxUriLength: 2048
   ckeditor:
@@ -181,7 +181,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: BCF2C6GJK6PBE9DJ4ZEWC5IN
-    schemaVersion: 2.1.2
+    schemaVersion: 4.0.9
   queue-monitor:
     edition: standard
     enabled: true
@@ -511,5 +511,5 @@ system:
   edition: pro
   live: true
   name: your-project-title
-  schemaVersion: 5.10.0.0
+  schemaVersion: 5.11.0.2
   timeZone: America/Los_Angeles
