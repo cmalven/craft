@@ -12,7 +12,6 @@ export default class extends Modu {
 
   init = () => {
     // Off by default
-    // @ts-expect-error Turbo definition doesn't include session
     Turbo.session.drive = false;
 
     // Before frame renders
