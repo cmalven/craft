@@ -24,6 +24,11 @@ fi
 echo "Removing plugin license keys..."
 sed -i '' '/^    licenseKey: /d' config/project/project.yaml
 
+if [ -d "storage/backups" ]; then
+  echo "Emptying storage/backups directory..."
+  find storage/backups -mindepth 1 -delete
+fi
+
 if [ -d ".git" ]; then
   echo "Deleting .git directory..."
   rm -rf .git
