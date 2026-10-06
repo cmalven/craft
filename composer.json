@@ -3,6 +3,7 @@
     "craftcms/aws-s3": "^2.3.2",
     "craftcms/ckeditor": "^5.8.0",
     "craftcms/cms": "^5.11.4",
+    "doublesecretagency/craft-cpcss": "^3.0.0",
     "nystudio107/craft-autocomplete": "^1.10",
     "nystudio107/craft-retour": "5.0.14",
     "nystudio107/craft-seomatic": "^5.1.22",
@@ -14,7 +15,8 @@
     "verbb/hyper": "^2.3.15",
     "verbb/navigation": "^4.0.4",
     "verbb/queue-monitor": "^2.0.9",
-    "vlucas/phpdotenv": "^5.6.0"
+    "vlucas/phpdotenv": "^5.6.0",
+    "weareferal/matrix-field-preview": "^5.6.1"
   },
   "require-dev": {
     "craftcms/generator": "^2.1",
@@ -35,7 +37,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.2.0"
+      "php": "8.4.0"
     }
   },
   "scripts": {

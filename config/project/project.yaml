@@ -1,4 +1,4 @@
-dateModified: 1791240173
+dateModified: 1791299963
 elementSources:
   craft\elements\Entry:
     -
@@ -82,7 +82,7 @@ elementSourcesPages:
     Global:
       icon: globe
 email:
-  fromEmail: chris@malven.co
+  fromEmail: $CRAFT_EMAIL_ADDRESS
   fromName: $CRAFT_EMAIL_SENDER_NAME
   replyToEmail: $CRAFT_EMAIL_ADDRESS
   template: ''
@@ -132,6 +132,7 @@ meta:
     b7a660f1-cbad-4067-8031-b237c204ab41: Pages # Pages
     bcb6b0c7-7c1f-4d59-8d27-520b3d9ecca9: 'Social Site Name' # Social Site Name
     bdf04aed-258a-4c46-b577-0436c1c68003: 'Social Site URL' # Social Site URL
+    c3cd0427-3897-4d49-8da8-201a60332b43: 'Block Previews' # Block Previews
     c9b07bce-eaac-4cc4-82ab-d7536fd463a0: 'Global Social' # Global Social
     cdb419d9-a1e7-471e-ae31-20361997cf3b: 'Social Sites' # Social Sites
     d89eaa6c-1910-44f4-a943-5c8e27658de7: 'Social Site' # Social Site
@@ -156,6 +157,13 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 5.6.0.0
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: ''
+      cssFile: '@web/styles/cp-styles.css'
   craft-ray:
     edition: standard
     enabled: true
@@ -177,6 +185,17 @@ plugins:
     enabled: true
     licenseKey: 024IM8SZIVLFI0KQIYAOS7T5
     schemaVersion: 4.0.0
+  matrix-field-preview:
+    edition: standard
+    enabled: true
+    licenseKey: DWPVZ2CRYQLSB7I5LSAI7UIU
+    schemaVersion: 5.3.2
+    settings:
+      defaultFieldEnabledSetting: ''
+      defaultFieldTakeoverSetting: ''
+      defaultPreviewEnabledSetting: '1'
+      previewSubpath: ''
+      previewVolumeUid: c3cd0427-3897-4d49-8da8-201a60332b43 # Block Previews
   navigation:
     edition: standard
     enabled: true

@@ -1,0 +1,30 @@
+/* Matrix Field Preview Custom Styles */
+
+.mfp-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+  .mfp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mfp-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.mfp-grid-item__button {
+  height: auto;
+}
+
+.mfp-grid-item__content__name {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.mfp-block-type-preview {
+  display: none;
+}

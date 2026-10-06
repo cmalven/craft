@@ -232,6 +232,10 @@
       <path value="$PROJECT_DIR$/vendor/phpcollection/phpcollection" />
       <path value="$PROJECT_DIR$/vendor/symfony/clock" />
       <path value="$PROJECT_DIR$/vendor/pixelandtonic/graphql-php" />
+      <path value="$PROJECT_DIR$/vendor/craftcms/url-validator" />
+      <path value="$PROJECT_DIR$/vendor/weareferal/matrix-field-preview" />
+      <path value="$PROJECT_DIR$/vendor/doublesecretagency/craft-cpcss" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php86" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
@@ -338,7 +342,7 @@
       </interpreter>
     </phpInfoCache>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.4">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStan">

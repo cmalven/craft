@@ -206,6 +206,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/verbb/queue-monitor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pixelandtonic/graphql-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/craftcms/url-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doublesecretagency/craft-cpcss" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php86" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/weareferal/matrix-field-preview" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

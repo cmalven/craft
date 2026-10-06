@@ -6,6 +6,7 @@
 /web/*
 !/web/favicons/
 !/web/fonts/
+!/web/styles/
 !/web/.htaccess
 !/web/index.php
 !/web/*.txt
