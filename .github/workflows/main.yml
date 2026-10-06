@@ -142,7 +142,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ${{ vars.SSH_DEPLOY_PATH }}
-            ln -s ${{ vars.SSH_DEPLOY_PATH }}/web ${{ vars.SSH_DEPLOY_PATH }}/public
+            ln -sfn ${{ vars.SSH_DEPLOY_PATH }}/web ${{ vars.SSH_DEPLOY_PATH }}/public
             chmod a+x craft
             php craft db/backup
             php craft up
