@@ -1,0 +1,12 @@
+# Bake happycog/craft-skill's `agent-craft` CLI into the web image so Claude
+# Code can manage Craft content from inside the container (see
+# .claude/skills/agent-craft/). It bootstraps Craft in-process, so it has to
+# run here, where the `db` host resolves. Pinned to a release + checksum; bump
+# both together.
+ARG AGENT_CRAFT_VERSION=0.0.2
+ARG AGENT_CRAFT_SHA256=68a6cb4dedbe49157a5b94e3454cbbb7d5460abafed056cb34b731f51c45100a
+RUN curl -fLSs "https://github.com/happycog/craft-skill/releases/download/${AGENT_CRAFT_VERSION}/agent-craft.phar" \
+      -o /usr/local/lib/agent-craft.phar \
+    && echo "${AGENT_CRAFT_SHA256}  /usr/local/lib/agent-craft.phar" | sha256sum -c -
+COPY agent-craft /usr/local/bin/agent-craft
+RUN chmod +x /usr/local/bin/agent-craft

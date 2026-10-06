@@ -1,0 +1,13 @@
+#!/bin/sh
+# Wrapper for the agent-craft PHAR (installed by Dockerfile.agent-craft).
+#
+# The PHAR defines Craft's CRAFT_ENVIRONMENT from $ENVIRONMENT, not
+# $CRAFT_ENVIRONMENT, and falls back to "production" — which would load the
+# production branches of multi-environment configs (blitz, seomatic, sherlock).
+# DDEV is always local dev.
+export ENVIRONMENT="${ENVIRONMENT:-dev}"
+
+# It also looks for Craft in the working directory, so pin it to the project
+# root and calls from subdirectories still work.
+cd /var/www/html || exit 3
+exec php /usr/local/lib/agent-craft.phar "$@"
