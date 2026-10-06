@@ -1,4 +1,4 @@
-dateModified: 1791299963
+dateModified: 1791301112
 elementSources:
   craft\elements\Entry:
     -
@@ -45,6 +45,10 @@ elementSources:
         - uri
       type: native
     -
+      key: 'single:cae1e68c-f5cf-4b93-a18d-8b98be4db23c' # Block Guide
+      page: 'Dev Content'
+      type: native
+    -
       heading: Global
       key: 'heading:0ea7cbf3-7a05-4464-afac-6e698600f758'
       page: Global
@@ -79,6 +83,8 @@ elementSources:
       type: native
 elementSourcesPages:
   craft\elements\Entry:
+    'Dev Content':
+      icon: gear-complex-code
     Global:
       icon: globe
 email:
@@ -134,6 +140,7 @@ meta:
     bdf04aed-258a-4c46-b577-0436c1c68003: 'Social Site URL' # Social Site URL
     c3cd0427-3897-4d49-8da8-201a60332b43: 'Block Previews' # Block Previews
     c9b07bce-eaac-4cc4-82ab-d7536fd463a0: 'Global Social' # Global Social
+    cae1e68c-f5cf-4b93-a18d-8b98be4db23c: 'Block Guide' # Block Guide
     cdb419d9-a1e7-471e-ae31-20361997cf3b: 'Social Sites' # Social Sites
     d89eaa6c-1910-44f4-a943-5c8e27658de7: 'Social Site' # Social Site
     db405b1d-69f1-4eca-8a10-2f1545594476: 'Public Schema' # Public Schema

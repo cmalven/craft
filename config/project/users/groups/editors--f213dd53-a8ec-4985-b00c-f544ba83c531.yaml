@@ -14,8 +14,12 @@ permissions:
   - 'deleteentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
   - 'deletepeerassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
   - 'deletepeerentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'deletepeerentrydrafts:5cc0b089-1cd4-47a1-adab-d4bfc8a40fd2' # 503 Error
   - 'deletepeerentrydrafts:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'deletepeerentrydrafts:930338ca-e48d-48e8-9441-fbaa64a3d345' # General Error
+  - 'deletepeerentrydrafts:a8919477-f7b3-4f9b-be48-596ba606e393' # 404 Error
   - 'deletepeerentrydrafts:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'deletepeerentrydrafts:c9b07bce-eaac-4cc4-82ab-d7536fd463a0' # Global Social
   - 'editimages:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
   - 'editpeerimages:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
   - 'replacefiles:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
@@ -24,12 +28,20 @@ permissions:
   - 'retour:redirects'
   - 'retour:shortlinks'
   - 'saveassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'saveentries:5cc0b089-1cd4-47a1-adab-d4bfc8a40fd2' # 503 Error
   - 'saveentries:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'saveentries:930338ca-e48d-48e8-9441-fbaa64a3d345' # General Error
+  - 'saveentries:a8919477-f7b3-4f9b-be48-596ba606e393' # 404 Error
   - 'saveentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'saveentries:c9b07bce-eaac-4cc4-82ab-d7536fd463a0' # Global Social
   - 'savepeerassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
   - 'savepeerentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'savepeerentrydrafts:5cc0b089-1cd4-47a1-adab-d4bfc8a40fd2' # 503 Error
   - 'savepeerentrydrafts:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'savepeerentrydrafts:930338ca-e48d-48e8-9441-fbaa64a3d345' # General Error
+  - 'savepeerentrydrafts:a8919477-f7b3-4f9b-be48-596ba606e393' # 404 Error
   - 'savepeerentrydrafts:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'savepeerentrydrafts:c9b07bce-eaac-4cc4-82ab-d7536fd463a0' # Global Social
   - 'seomatic:content-meta'
   - 'seomatic:content-meta:facebook'
   - 'seomatic:content-meta:general'
@@ -52,9 +64,18 @@ permissions:
   - 'seomatic:site-settings:social'
   - 'utility:blitz-cache'
   - 'viewassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
+  - 'viewentries:5cc0b089-1cd4-47a1-adab-d4bfc8a40fd2' # 503 Error
   - 'viewentries:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'viewentries:930338ca-e48d-48e8-9441-fbaa64a3d345' # General Error
+  - 'viewentries:a8919477-f7b3-4f9b-be48-596ba606e393' # 404 Error
   - 'viewentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'viewentries:c9b07bce-eaac-4cc4-82ab-d7536fd463a0' # Global Social
   - 'viewpeerassets:762c90cb-e904-42b1-a0ea-a82b1ddbe561' # Images
   - 'viewpeerentries:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'viewpeerentrydrafts:5cc0b089-1cd4-47a1-adab-d4bfc8a40fd2' # 503 Error
   - 'viewpeerentrydrafts:90775891-8a83-4dd6-b2c0-0462aceb52d4' # Homepage
+  - 'viewpeerentrydrafts:930338ca-e48d-48e8-9441-fbaa64a3d345' # General Error
+  - 'viewpeerentrydrafts:a8919477-f7b3-4f9b-be48-596ba606e393' # 404 Error
   - 'viewpeerentrydrafts:b7a660f1-cbad-4067-8031-b237c204ab41' # Pages
+  - 'viewpeerentrydrafts:c9b07bce-eaac-4cc4-82ab-d7536fd463a0' # Global Social
+  - viewusers
