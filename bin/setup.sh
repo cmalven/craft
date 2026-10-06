@@ -16,6 +16,11 @@ grep -rl 3111 . --exclude-dir={.git,bin,node_modules,vendor} | xargs sed -i '' -
 echo "Renaming IDEA config file..."
 mv ./.idea/your-project-slug.iml ./.idea/$1.iml
 
+if [ -f "config/license.key" ]; then
+  echo "Deleting Craft license key..."
+  rm config/license.key
+fi
+
 if [ -d ".git" ]; then
   echo "Deleting .git directory..."
   rm -rf .git
