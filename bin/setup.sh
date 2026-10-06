@@ -21,6 +21,9 @@ if [ -f "config/license.key" ]; then
   rm config/license.key
 fi
 
+echo "Removing plugin license keys..."
+sed -i '' '/^    licenseKey: /d' config/project/project.yaml
+
 if [ -d ".git" ]; then
   echo "Deleting .git directory..."
   rm -rf .git
