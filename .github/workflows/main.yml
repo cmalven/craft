@@ -111,7 +111,8 @@ jobs:
           --exclude="/node_modules/" \
           --exclude="/resources/" \
           --exclude="/src/" \
-          --exclude="/storage/logs/" \
+          --include="/storage/rebrand/" \
+          --exclude="/storage/*" \
           --exclude="/tmp/" \
           --exclude="/web/assets/" \
           --exclude="Dockerfile" \
