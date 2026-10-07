@@ -4,32 +4,46 @@ Clip Reveal
 Reusable clip-path reveal animations.
 */
 
+@mixin clip-reveal-transition {
+  --duration: var(--clip-reveal-duration, 0.8s);
+  --ease: var(--clip-reveal-ease, var(--ease-wipe));
+  --properties: var(--clip-reveal-properties, clip-path);
+  --transition: var(--duration) var(--ease);
+  transition: var(--transition);
+  transition-property: var(--properties);
+}
+
 @mixin clip-reveal($direction) {
+  @include clip-reveal-transition;
+  /* stylelint-disable number-max-precision */
+  --offset: var(--clip-reveal-offset, 99.999999%);
+  will-change: transform, clip-path, opacity;
+
   @if $direction == 'right' {
-    /* stylelint-disable-next-line number-max-precision */
-    clip-path: inset(0px 99.99999% 0px 0px);
-    transition: clip-path 1.2s var(--ease-wipe);
+    clip-path: inset(
+      0px var(--clip-reveal-initial-percent, var(--offset)) 0px 0px
+    );
   }
 
   @if $direction == 'left' {
-    /* stylelint-disable-next-line number-max-precision */
-    clip-path: inset(0px 0px 0px 099.99999%);
-    transition: clip-path 1.2s var(--ease-wipe);
+    clip-path: inset(
+      0px 0px 0px var(--clip-reveal-initial-percent, var(--offset))
+    );
   }
 
   @if $direction == 'down' {
-    /* stylelint-disable-next-line number-max-precision */
-    clip-path: inset(0px 0px 99.99999% 0px);
-    transition: clip-path 1.2s var(--ease-wipe);
+    clip-path: inset(
+      0px 0px var(--clip-reveal-initial-percent, var(--offset)) 0px
+    );
   }
 
   @if $direction == 'up' {
-    /* stylelint-disable-next-line number-max-precision */
-    clip-path: inset(99.99999% 0px 0px 0px);
-    transition: clip-path 1.2s var(--ease-wipe);
+    clip-path: inset(
+      var(--clip-reveal-initial-percent, var(--offset)) 0px 0px 0px
+    );
   }
 }
 
 @mixin clip-reveal-visible {
-  clip-path: inset(0px 0px 0px 0px);
+  clip-path: inset(0.01px 0.01px 0.01px 0.01px);
 }
