@@ -206,6 +206,16 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/verbb/queue-monitor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pixelandtonic/graphql-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/backups" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/file-history" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/plugins" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/projects" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/session-env" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/sessions" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/shell-snapshots" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/skills" />
+      <excludeFolder url="file://$MODULE_DIR$/.claude-ddev/telemetry" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/craftcms/url-validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doublesecretagency/craft-cpcss" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php86" />
