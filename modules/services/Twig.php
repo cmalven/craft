@@ -79,7 +79,7 @@ class Twig extends Component
         $overflowHidden = [];
         $noMax = [];
         $bordered = [];
-        $bgDark = [];
+        $themeDark = [];
 
         // All Spacing
         if (!in_array($handle, $noSpacing)) {
@@ -135,21 +135,21 @@ class Twig extends Component
             array_push($classes, 'border-top', 'bleed-top');
         }
 
-        // Background Color
-        $blockColor = null;
+        // Theme
+        $blockTheme = null;
         try {
-            if (isset($block->color)) {
-                $blockColor = $block->color->value ?? null; // Background color from dropdown field
-            } elseif (isset($block['color'])) {
-                $blockColor = $block['color'] ?? null; // Background color set from Twig block
+            if (isset($block->theme)) {
+                $blockTheme = $block->theme->value ?? null; // Background color from dropdown field
+            } elseif (isset($block['theme'])) {
+                $blockTheme = $block['theme'] ?? null; // Background color set from Twig block
             }
         } catch (Throwable $e) {
-            $blockColor = null;
+            $blockTheme = null;
         }
-        if (in_array($handle, $bgDark) || $blockColor === 'dark') {
-            array_push($classes, 'bg-dark');
+        if (in_array($handle, $themeDark) || $blockTheme === 'dark') {
+            array_push($classes, 'theme-dark');
         } else {
-            array_push($classes, 'bg-light');
+            array_push($classes, 'theme-light');
         }
 
         return $classes;

@@ -99,15 +99,15 @@ spacing and relationships between various vertical blocks of the site.
 }
 
 // ---------------------------------------------------------------
-// Background Color
+// Theme
 // ---------------------------------------------------------------
 
-.l-block--bg-light {
+.l-block--theme-light {
   @include theme-light;
   background-color: var(--theme-bg);
 }
 
-.l-block--bg-dark {
+.l-block--theme-dark {
   @include theme-dark;
   background-color: var(--theme-bg);
 }
@@ -116,13 +116,13 @@ spacing and relationships between various vertical blocks of the site.
 // Adjacent Block Spacing
 // ---------------------------------------------------------------
 
-$bg-colors: light, dark;
+$themes: light, dark;
 
-@each $bg-color in $bg-colors {
-  $color: '' + $bg-color;
+@each $theme in $themes {
+  $color: '' + $theme;
   @include media('<medium') {
-    .l-block--bg-#{$color}:not(.l-block--bleed-bottom)
-      + .l-block--bg-#{$color}:not(.l-block--bleed-top):not(
+    .l-block--theme-#{$color}:not(.l-block--bleed-bottom)
+      + .l-block--theme-#{$color}:not(.l-block--bleed-top):not(
         .l-block--bleed--top-mobile
       ) {
       margin-top: calc(-1 * var(--size-block-vertical));
@@ -130,8 +130,8 @@ $bg-colors: light, dark;
   }
 
   @include media('>=medium') {
-    .l-block--bg-#{$color}:not(.l-block--bleed-bottom)
-      + .l-block--bg-#{$color}:not(.l-block--bleed-top) {
+    .l-block--theme-#{$color}:not(.l-block--bleed-bottom)
+      + .l-block--theme-#{$color}:not(.l-block--bleed-top) {
       margin-top: calc(-1 * var(--size-block-vertical));
     }
   }
