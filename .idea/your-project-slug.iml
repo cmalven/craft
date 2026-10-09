@@ -220,6 +220,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/doublesecretagency/craft-cpcss" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php86" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/weareferal/matrix-field-preview" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/config-backups" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/rebrand" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/runtime" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
