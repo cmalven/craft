@@ -1,30 +1,30 @@
 /* Matrix Field Preview Custom Styles */
 
 .mfp-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr) !important;
 }
 
 @media screen and (max-width: 1200px) {
   .mfp-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media screen and (max-width: 800px) {
   .mfp-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 .mfp-grid-item__button {
-  height: auto;
+  height: auto !important;
 }
 
 .mfp-grid-item__content__name {
-  font-weight: normal;
-  font-size: 13px;
+  font-weight: normal !important;
+  font-size: 13px !important;
 }
 
 .mfp-block-type-preview {
-  display: none;
+  display: none !important;
 }
