@@ -15,11 +15,13 @@
   } only %}
 #}
 
-{% set classes = craft.twig.modifiers('text-set', modifiers ?? []) %}
+{% set modifiers = modifiers ?? ['default'] %}
+
+{% set classes = craft.twig.modifiers('text-set', modifiers) %}
 
 <div class="text-set {{ classes }}">
   {# Subhead #}
-  <p class="text-set__subhead" data-module-reveal="up">{{ subhead }}</p>
+  <p class="text-set__subhead">{{ subhead }}</p>
 
   {# Heading #}
   <h2
@@ -29,7 +31,7 @@
 
   {# Text #}
   {% if text ??? null %}
-    <div class="text-set__text" data-module-reveal="up">
+    <div class="text-set__text">
       {% include '_partials/rich-text' with {
         content: text,
       } only %}
@@ -38,7 +40,7 @@
 
   {# Footer #}
   {% if footer ??? null %}
-    <div class="text-set__footer" data-module-reveal="up">
+    <div class="text-set__footer">
       {{ footer }}
     </div>
   {% endif %}

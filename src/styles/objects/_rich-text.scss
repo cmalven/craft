@@ -43,7 +43,7 @@ Styling for common HTML text elements
 
   // Links
 
-  a {
+  a:not([class]) {
     &:hover {
       text-decoration: underline;
       text-underline-offset: 0.1em;
@@ -115,5 +115,10 @@ Styling for common HTML text elements
 
   > * + * {
     margin-top: var(--rich-text-spacing);
+  }
+
+  // Non-Text Elements
+  > * + .button-basic {
+    margin-top: var(--size-32);
   }
 }

@@ -7,7 +7,6 @@ Common combinations of text.
 */
 
 .text-set {
-  color: var(--theme-text);
 }
 
 .text-set__subhead {
@@ -17,33 +16,22 @@ Common combinations of text.
 }
 
 .text-set__text {
-  margin-top: var(--size-32);
 }
 
 .text-set__footer {
-  margin-top: var(--size-32);
 }
 
 // ---------------------------------------------------------------
-// Modifier - Large
+// Modifier - Default
 // ---------------------------------------------------------------
 
-.text-set--large {
-  .text-set__heading {
-    margin-top: var(--size-32);
+.text-set--default {
+  .text-set__subhead {
   }
-}
 
-// ---------------------------------------------------------------
-// Reveal
-// ---------------------------------------------------------------
+  .text-set__heading {
+  }
 
-.js .text-set {
-  $base-transition-delay: 0.2s;
-
-  @for $idx from 1 through 10 {
-    > *:nth-child(#{$idx}) {
-      transition-delay: 0.3s * $idx + $base-transition-delay;
-    }
+  .text-set__text {
   }
 }

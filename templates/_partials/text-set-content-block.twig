@@ -1,0 +1,16 @@
+{# =============================================================== #}
+{# Text Set Content Block
+{# =============================================================== #}
+{#
+  {% include '_partials/text-set-content-block' with {
+    field: 'CraftCMSContentBlockField',
+  } only %}
+#}
+
+<div class="text-set-content-block">
+  {% include '_partials/text-set' with {
+    subhead: field.subhead ??? null,
+    heading: field.heading ??? null,
+    text: field.text ??? null,
+  } only %}
+</div>
