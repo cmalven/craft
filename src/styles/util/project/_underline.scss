@@ -6,8 +6,8 @@ Apply consistent underline to text.
 
 @mixin underline {
   text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.3em;
+  text-decoration-thickness: var(--underline-thickness, 1px);
+  text-underline-offset: var(--underline-offset, 0.3em);
   transition: text-decoration-color var(--transition-hover-color);
   text-decoration-color: transparent;
 }
