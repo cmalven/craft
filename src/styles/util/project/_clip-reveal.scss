@@ -5,7 +5,7 @@ Reusable clip-path reveal animations.
 */
 
 @mixin clip-reveal-transition {
-  --duration: var(--clip-reveal-duration, 0.8s);
+  --duration: var(--clip-reveal-duration, 1s);
   --ease: var(--clip-reveal-ease, var(--ease-wipe));
   --properties: var(--clip-reveal-properties, clip-path);
   --transition: var(--duration) var(--ease);
@@ -15,35 +15,28 @@ Reusable clip-path reveal animations.
 
 @mixin clip-reveal($direction) {
   @include clip-reveal-transition;
-  /* stylelint-disable number-max-precision */
-  --offset: var(--clip-reveal-offset, 99.999999%);
+  --offset: var(--clip-reveal-offset, 99.9999%);
+  --inset: var(--clip-reveal-initial-percent, var(--offset));
+  --radius: var(--clip-reveal-radius, 0px);
   will-change: transform, clip-path, opacity;
 
   @if $direction == 'right' {
-    clip-path: inset(
-      0px var(--clip-reveal-initial-percent, var(--offset)) 0px 0px
-    );
+    clip-path: inset(0px var(--inset) 0px 0px round var(--radius));
   }
 
   @if $direction == 'left' {
-    clip-path: inset(
-      0px 0px 0px var(--clip-reveal-initial-percent, var(--offset))
-    );
+    clip-path: inset(0px 0px 0px var(--inset) round var(--radius));
   }
 
   @if $direction == 'down' {
-    clip-path: inset(
-      0px 0px var(--clip-reveal-initial-percent, var(--offset)) 0px
-    );
+    clip-path: inset(0px 0px var(--inset) 0px round var(--radius));
   }
 
   @if $direction == 'up' {
-    clip-path: inset(
-      var(--clip-reveal-initial-percent, var(--offset)) 0px 0px 0px
-    );
+    clip-path: inset(var(--inset) 0px 0px 0px round var(--radius));
   }
 }
 
 @mixin clip-reveal-visible {
-  clip-path: inset(0.01px 0.01px 0.01px 0.01px);
+  clip-path: inset(0.01px round var(--clip-reveal-radius, 0px));
 }
