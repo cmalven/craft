@@ -368,6 +368,11 @@
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" />
     </phpunit_settings>
   </component>
+  <component name="Psalm">
+    <Psalm_settings>
+      <psalm_fixer_by_interpreter asDefaultInterpreter="true" interpreter_id="3cba21f4-1f52-4567-bbd6-534910bdde9b" timeout="60000" />
+    </Psalm_settings>
+  </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
