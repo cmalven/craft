@@ -2,22 +2,26 @@
 Underline Text
 
 Assists with adding flexible, animatable underlines to text.
+
+Customize with:
+  --underline-text-color
+  --underline-text-size
+  --underline-text-transition
 */
 
-@mixin underline-text(
-  $color: currentColor,
-  $size: 1px,
-  $transition: 0.4s var(--ease-out-expo)
-) {
-  background-image: linear-gradient($color, $color);
+@mixin underline-text {
+  background-image: linear-gradient(
+    var(--underline-text-color, currentColor),
+    var(--underline-text-color, currentColor)
+  );
   background-position: 0 100%;
   background-repeat: no-repeat;
-  background-size: 0 $size;
-  transition: $transition;
+  background-size: 0 var(--underline-text-size, 1px);
+  transition: var(--underline-text-transition, 0.5s var(--ease-wipe));
   transition-property: background-size;
   display: inline;
 }
 
-@mixin underline-text-reveal($size: 1px) {
-  background-size: 100% $size;
+@mixin underline-text-reveal {
+  background-size: 100% var(--underline-text-size, 1px);
 }
