@@ -7,6 +7,8 @@ Primary header for the site.
 */
 
 .global-header {
+  transition: transform var(--transition-sticky-global-header);
+  z-index: var(--z-index-global-header);
 }
 
 .global-header__inner {
@@ -33,4 +35,14 @@ Primary header for the site.
 }
 
 .global-header__toggle {
+}
+
+// ---------------------------------------------------------------
+// Scroll Behavior
+// ---------------------------------------------------------------
+
+.global-header {
+  &.is-scrolled:not(.is-scrolled-up):not(:has(:popover-open), :focus-within) {
+    transform: translateY(-100.5%);
+  }
 }

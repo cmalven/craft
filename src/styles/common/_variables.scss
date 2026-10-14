@@ -143,6 +143,11 @@ $sizes: (
   ),
 );
 
+// Non Toolkit Sizes
+:root {
+  --size-global-header-height: 75px; // Updated in GlobalHeader.ts
+}
+
 // ---------------------------------------------------------------
 // Z-Index
 // ---------------------------------------------------------------
@@ -210,6 +215,7 @@ $sizes: (
 
 :root {
   --transition-hover-color: 0.5s var(--ease-out-quint);
+  --transition-sticky-global-header: 0.4s var(--ease-out-expo);
 }
 
 // ---------------------------------------------------------------
