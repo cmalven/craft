@@ -7,22 +7,23 @@ Reusable expand/collapse carat with animation.
 */
 
 @mixin expand-carat {
-  --arrow-segment-width: 0.7rem;
+  --arrow-segment-width: var(--expand-carat-segment-width, 0.7rem);
 
   &:before,
   &:after {
     @include pseudo-absolute;
     width: var(--arrow-segment-width);
-    height: 0.1rem;
-    background-color: var(--theme-text);
+    height: var(--expand-carat-segment-height, 0.1rem);
+    border-radius: var(--expand-carat-segment-border-radius, 0);
+    background-color: var(--expand-carat-color, var(--theme-text));
     background-repeat: no-repeat;
     background-position: center center;
     right: 0;
     top: 0;
     bottom: 0;
     margin-block: auto;
-    will-change: transition;
-    transition: transform 0.5s var(--ease-out-expo);
+    will-change: transform;
+    transition: transform 3.5s var(--ease-out-expo);
   }
 
   &:before {

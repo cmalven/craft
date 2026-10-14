@@ -5,19 +5,25 @@
   {% include '_partials/global-header' %}
 #}
 
-<header class="global-header">
+{% set navNodes = craft.navigation.nodes('primary').level(1).with(['children']).all() %}
+
+<header class="global-header" data-module-global-header>
   <div class="global-header__inner">
 
     {# Logo #}
     <div class="global-header__logo">
-
+      {% include '_partials/logo-horizontal' %}
     </div>
 
     {# Nav #}
     <div class="global-header__nav">
       {# Full Nav #}
       <div class="global-header__nav-full">
-        {{ craft.navigation.render('primary') }}
+        {% for node in navNodes %}
+          {% include '_partials/primary-nav-item' with {
+            node: node,
+          } only %}
+        {% endfor %}
       </div>
 
       {# Mobile Nav #}
