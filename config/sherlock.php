@@ -103,6 +103,7 @@ return [
                     true,
                     'media-src',
                     implode(' ', [
+                        "'self'",
                         'https://servd-your-project-slug.b-cdn.net',
                         'data:',
                     ]),
