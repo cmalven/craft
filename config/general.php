@@ -20,6 +20,7 @@ return GeneralConfig::create()
     // Aliases
     ->aliases([
         '@assetPath' => App::env('PRIMARY_SITE_URL') . '/assets',
+        '@web' => App::env('PRIMARY_SITE_URL'),
         '@webroot' => CRAFT_BASE_PATH . '/web',
     ])
 
