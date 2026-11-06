@@ -20,6 +20,7 @@
 use craft\helpers\App;
 
 $localDevPort = App::env('VITE_DEV_PORT') ?? 3000;
+$reportToSentry = App::env('CRAFT_ENVIRONMENT') !== 'dev';
 
 return [
     '*' => [
@@ -43,7 +44,7 @@ return [
                 [true, 'Referrer-Policy', 'strict-origin-when-cross-origin'],
                 [true, 'Permissions-Policy', 'geolocation=()'],
                 [
-                    true,
+                    $reportToSentry,
                     'Expect-CT',
                     'max-age=86400, report-uri="https://xxxxx.ingest.sentry.io/api/xxxxx/security/?sentry_key=xxxxxxxxxxxxxxxxxxxx"',
                 ],
@@ -58,7 +59,7 @@ return [
             'header' => true,
             'directives' => [
                 [
-                    true,
+                    $reportToSentry,
                     'report-uri',
                     'https://xxxxx.ingest.sentry.io/api/xxxxx/security/?sentry_key=xxxxxxxxxxxxxxxxxxxx',
                 ],
