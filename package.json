@@ -20,7 +20,7 @@
     "typecheck-scripts": "tsc-files --noEmit",
     "lint-scripts": "eslint --fix",
     "lint-styles": "stylelint",
-    "check": "prettier . --write",
+    "format": "prettier . --write",
     "new:component": "plop component",
     "new:modu": "plop modu",
     "new:sass-util": "plop sass-util",
@@ -78,14 +78,14 @@
   "lint-staged": {
     "*.{js,ts,mjs,mts,cjs}": [
       "npm run lint-scripts",
-      "npm run check"
+      "prettier --write"
     ],
     "*.{ts,mts}": [
       "npm run typecheck-scripts"
     ],
     "*.{css,scss}": [
       "npm run lint-styles",
-      "npm run check"
+      "prettier --write"
     ]
   }
 }
