@@ -1,4 +1,4 @@
-dateModified: 1791920405
+dateModified: 1795572547
 elementSources:
   craft\elements\Entry:
     -
@@ -156,7 +156,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: ONU7VUDYBB41UH09QCWVCXLC
-    schemaVersion: 5.13.0
+    schemaVersion: 5.14.0
     settings:
       maxUriLength: 2048
   ckeditor:
@@ -206,7 +206,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: BCF2C6GJK6PBE9DJ4ZEWC5IN
-    schemaVersion: 4.0.9
+    schemaVersion: 4.0.10
   queue-monitor:
     edition: standard
     enabled: true
@@ -250,7 +250,7 @@ plugins:
   sherlock:
     edition: lite
     enabled: true
-    schemaVersion: 5.1.0
+    schemaVersion: 5.4.0
     settings:
       apiKey: zblzvmppfcewwwpsyxipdxrwqwtkhcuf
       blowfishHashCost:
@@ -388,10 +388,6 @@ plugins:
                 - true
                 - X-Frame-Options
                 - SAMEORIGIN
-              -
-                - true
-                - X-Xss-Protection
-                - '1; mode=block'
       highSecurityLevel: false
       httpsControlPanel:
         __assoc__:
@@ -430,19 +426,6 @@ plugins:
           -
             - canFail
             - true
-          -
-            - thresholds
-            -
-              __assoc__:
-                -
-                  - '8.0'
-                  - '2023-11-26'
-                -
-                  - '8.1'
-                  - '2024-11-25'
-                -
-                  - '8.2'
-                  - '2025-12-08'
       preventUserEnumeration:
         __assoc__:
           -
@@ -536,5 +519,5 @@ system:
   edition: pro
   live: true
   name: your-project-title
-  schemaVersion: 5.11.0.2
+  schemaVersion: 5.12.0.2
   timeZone: America/Los_Angeles

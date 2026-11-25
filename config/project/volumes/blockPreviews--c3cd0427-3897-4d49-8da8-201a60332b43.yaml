@@ -42,6 +42,7 @@ fieldLayouts:
 fs: local
 handle: blockPreviews
 name: 'Block Previews'
+propagationMethod: custom
 sortOrder: 2
 subpath: block-previews
 titleTranslationKeyFormat: null
